@@ -1,0 +1,78 @@
+<% content_for :title do %>
+	CMS Development
+<% end %>
+<div class="services-page">
+	<div class="mobile-page-main mobile-page-inner">
+		<div class="main-title">
+			<div class="container">
+				<h1>
+					<%= link_to web_development_path, :class => 'left' do %>
+						<%= image_tag image_path('mobile/back-arrow.png') %>
+					<% end %>
+					CMS Development
+				</h1>
+			</div>
+		</div>
+		<div class="container">
+			<div class="title-content">
+				<div class="services-img services-inner-img">
+					<%= image_tag image_path('mobile/cms-development-icon.png'), alt: 'services-inner-img' %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="services-text">
+		<div class="container">
+			<div class="cms-dev-article">
+				<article>
+					Content Management System is important for your business because it makes your content powerful and smarter. You may use the content multiple times but it is stored only once through CMS. This system makes it easy to track the happenings.
+				</article>
+				<%= link_to "Continue Reading", '#', :class => 'waves-effect waves-light btn hide' %>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="services-text services-inner-content">
+			<div class="cms-dev-benefits">
+				<h2>Benefits of CMS</h2>
+				<p>Happy Editors – They have to handle the content only one time while the changes are incorporated globally within and across all documens.</p>
+				<p>Happy Sharing – Because the content is centralized, i.e., consolidated into a single repository, content sharing among workers is easier.</p>
+			</div>
+			<div class="online-ppc">
+				<h2>Web Development Services offered by WebEnrich includes:</h2>
+				<p>Creating a visually appealing web design: What is your strategy to stand out amidst millions of websites on the internet? Having a superior or innovative products and services helps but with so many options available in the market you have very little time to convince potential customers to spend enough time on your website to enable yourself to market your products and services.</p>
+				<p>This is where our forte lies. Committed to our goal of designing innovative websites which give you that cutting edge, our team at WebEnrich enables you to market yourself better.</p>
+			</div>
+		</div>	
+	</div>
+	<div class="list-of-services list-of-detail-services">
+		<div class="container">
+			<div class="list-of-services-inner">
+				<h2>Other Web Development Services</h2>
+				<div class="card">
+					<ul>
+						<li>
+							<%= link_to ruby_on_rails_path do %>
+								<strong>Ruby on Rails</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to core_php_path do %>
+								<strong>Core PHP</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to ecommerce_development_path do %>
+								<strong>E-Commerce Development</strong>
+							<% end %>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Our Clients -->
+	<%= render 'layouts/widgets/our_clients' %>
+	<!-- start-project -->	
+	<%= render 'layouts/widgets/start_project' %>
+</div>

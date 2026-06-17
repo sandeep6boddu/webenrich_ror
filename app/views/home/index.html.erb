@@ -1,0 +1,504 @@
+<% content_for :title do %>
+	Website Designing, SEO, PPC Services Company in Hyderabad India
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="Internet marketing services: Web Enrich Solutions Pvt. Ltd. is a leading Hyderabad, Bangalore, India based company specializing in SEO, PPC, Online Branding & Advertising and Website Design & PHP Development works. Try WebEnrich hassle-free services!">
+	<meta name="keywords" content="SEO Company India, PPC, Link Building, Web Design, Web Development, Internet Marketing Company, Online Advertising, SMO, SMM, Link Building, Bangalore, Delhi, Hyderabad, India">
+<% end %>
+<!-- Slider -->
+<%= render 'layouts/parts/slider' %>
+<!-- Main Content -->
+<div class="main-content pull-left">
+	<!-- Services Range -->
+	<div class="services-range">
+		<div class="container">
+			<div class="range-heading">
+				<h1>
+					<span>&nbsp;</span>
+					We Provide Wide Range of Services
+				</h1>
+			</div>
+			<div class="col-md-12 col-lg-12 col-sm-12 service-levels">
+				<div class="ror serv-icon-bar">
+					<div class="img-hover-bar" data-target="#ruby-icon">
+						<%= image_tag 'icon2.png', size: '129x147', :class => 'img-responsive service-big service-big1' %>
+					</div>
+						<div class="darkgray-img"></div>
+						<div class="lightgray-img"></div>
+					<div id="ruby-icon" class="hover-img">
+						<%= link_to '#', :class => 'ror-hover' do %>
+							<%= image_tag 'white-bg1.png', size: '386x164', :class => 'whiebg-img' %>
+						<% end %>
+						<div class="ecom-bar">
+							<h3>Ruby On Rails</h3>
+							<p>We are one of India's top few Ruby on Rails development ... </p>
+							<%= link_to 'Read More', ruby_on_rails_path, :class => 'read-more btn' %>
+						</div>
+					</div>
+				</div>
+				<div class="ecomm serv-icon-bar">
+					<div class="img-hover-bar" data-target="#ecodev-icon">
+						<%= image_tag 'icon.png', size: '129x147', :class => 'img-responsive service-big' %>
+					</div>
+						<div class="darkgray-img"></div>
+						<div class="lightgray-img"></div>
+					<div id="ecodev-icon" class="hover-img">
+						<%= link_to '#', :class => 'ror-hover' do %>
+							<%= image_tag 'white-bg1.png', size: '386x164', :class => 'whiebg-img', :alt => 'RoR Icon' %>
+						<% end %>
+						<div class="ecom-bar">
+							<h3>E-Commerce Development</h3>
+							<p>Do you ship your products to different parts of the world? ... </p>
+							<%= link_to 'Read More', ecommerce_development_path, :class => 'read-more btn' %>
+						</div>
+					</div>
+				</div>
+				<div class="mob-app serv-icon-bar">
+					<div class="img-hover-bar" data-target="#mobile-icon">
+						<%= image_tag 'icon3.png', size: '129x147', :class => 'img-responsive service-big' %>
+					</div>
+						<div class="darkgray-img"></div>
+						<div class="lightgray-img"></div>
+					<div id="mobile-icon" class="hover-img">
+						<%= link_to '#', :class => 'ror-hover' do %>
+							<%= image_tag 'white-bg1.png', size: '386x164', :class => 'whiebg-img' %>
+						<% end %>
+						<div class="ecom-bar">
+							<h3>Mobile App Development</h3>
+							<p>Creating a visually appealing web design: What is your ... </p>
+							<%#= link_to 'Read More', '#', :class => 'read-more btn' %>
+						</div>
+					</div>
+				</div>
+				<div class="web-design serv-icon-bar">
+					<div class="img-hover-bar" data-target="#webdes-icon">
+						<%= image_tag 'icon4.png', size: '129x147', :class => 'img-responsive service-big' %>
+					</div>
+						<div class="darkgray-img"></div>
+						<div class="lightgray-img"></div>
+					<div id="webdes-icon" class="hover-img">
+						<%= link_to '#', :class => 'ror-hover' do %>
+							<%= image_tag 'white-bg1.png', size: '386x164', :class => 'whiebg-img' %>
+						<% end %>
+						<div class="ecom-bar">
+							<h3>Web Design</h3>
+							<p>Welcome to the magical world of WebEnrich where businesses ... </p>
+							<%= link_to 'Read More', web_design_path, :class => 'read-more btn' %>
+						</div>
+					</div>
+				</div>
+				<div class="web-dev serv-icon-bar">
+					<div class="img-hover-bar" data-target="#webdevlop-icon">
+						<%= image_tag 'icon5.png', size: '129x147', :class => 'img-responsive service-big' %>
+					</div>
+						<div class="darkgray-img"></div>
+						<div class="lightgray-img"></div>
+					<div id="webdevlop-icon" class="hover-img">
+						<%= link_to '#', :class => 'ror-hover' do %>
+							<%= image_tag 'white-bg1.png', size: '386x164', :class => 'whiebg-img' %>
+						<% end %>
+						<div class="ecom-bar">
+							<h3>Web Development</h3>
+							<p>WebEnrich with its sound knowledge and experience in web ... </p>
+							<%= link_to 'Read More', web_development_path, :class => 'read-more btn' %>
+						</div>
+					</div>
+				</div>
+				<div class="responsive serv-icon-bar">
+					<div class="img-hover-bar" data-target="#resp-icon">
+						<%= image_tag 'icon6.png', size: '129x147', :class => 'img-responsive service-big' %>
+					</div>
+						<div class="darkgray-img"></div>
+						<div class="lightgray-img"></div>
+					<div id="resp-icon" class="hover-img">
+						<%= link_to '#', :class => 'ror-hover' do %>
+							<%= image_tag 'white-bg1.png', size: '386x164', :class => 'whiebg-img' %>
+						<% end %>
+						<div class="ecom-bar">
+							<h3>Responsive Design</h3>
+							<p>Your website is the first glimpse of your business for most users...</p>
+							<%= link_to 'Read More', responsive_website_design_path, :class => 'read-more btn' %>
+						</div>
+					</div>
+				</div>
+				<div class="maintenance serv-icon-bar">
+					<div class="img-hover-bar" data-target="#websitemain-icon">
+						<%= image_tag 'icon7.png', size: '129x147', :class => 'img-responsive service-big' %>
+					</div>
+						<div class="darkgray-img"></div>
+						<div class="lightgray-img"></div>
+					<div id="websitemain-icon" class="hover-img">
+						<%= link_to '#', :class => 'ror-hover' do %>
+							<%= image_tag 'white-bg1.png', size: '386x164', :class => 'whiebg-img' %>
+						<% end %>
+						<div class="ecom-bar">
+							<h3>Website Maintenance</h3>
+							<p>Your website is the mirror of your businesses and like any... </p>
+							<%= link_to 'Read More', website_maintenance_path, :class => 'read-more btn' %>
+						</div>
+					</div>
+				</div>
+				<div class="seo serv-icon-bar">
+					<div class="img-hover-bar" data-target="#searcheng-icon">
+						<%= image_tag 'icon8.png', size: '129x147', :class => 'img-responsive service-big' %>
+					</div>
+						<div class="darkgray-img"></div>
+						<div class="lightgray-img"></div>
+					<div id="searcheng-icon" class="hover-img">
+						<%= link_to '#', :class => 'ror-hover' do %>
+							<%= image_tag 'white-bg1.png', size: '386x164', :class => 'whiebg-img' %>
+						<% end %>
+						<div class="ecom-bar">
+							<h3>Search Engine Optimization</h3>
+							<p>You might have the jazziest website ever put together by the... </p>
+							<%= link_to 'Read More', search_engine_optimization_path, :class => 'read-more btn' %>
+						</div>
+					</div>
+				</div>
+				<div class="ppc serv-icon-bar">
+					<div class="img-hover-bar" data-target="#payper-icon">
+						<%= image_tag 'icon9.png', size: '129x147', :class => 'img-responsive service-big' %>
+					</div>
+						<div class="darkgray-img"></div>
+						<div class="lightgray-img"></div>
+					<div id="payper-icon" class="hover-img">
+					<%= link_to '#', :class => 'ror-hover' do %>
+							<%= image_tag 'white-bg1.png', size: '386x164', :class => 'whiebg-img' %>
+						<% end %>
+						<div class="ecom-bar">
+							<h3>Pay Per Click</h3>
+							<p>PPC is one of the popular internet marketing strategies that ... </p>
+							<%= link_to 'Read More', pay_per_click_path, :class => 'read-more btn' %>
+						</div>
+					</div>
+				</div>
+				<div class="smm serv-icon-bar">
+					<div class="img-hover-bar" data-target="#socialmed-icon">
+						<%= image_tag 'icon10.png', size: '129x147', :class => 'img-responsive service-big' %>
+					</div>
+						<div class="darkgray-img"></div>
+						<div class="lightgray-img"></div>
+					<div id="socialmed-icon" class="hover-img">
+						<%= link_to '#', :class => 'ror-hover' do %>
+							<%= image_tag 'white-bg1.png', size: '386x164', :class => 'whiebg-img' %>
+						<% end %>
+						<div class="ecom-bar">
+							<h3>Social Media Marketing</h3>
+							<p>Social media creates kinship between companies and customers... </p>
+							<%= link_to 'Read More', social_media_marketing_path, :class => 'read-more btn' %>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- ipad only -->
+			<div class="col-sm-12 no-padding">
+				<div class="service-levels-ipad">
+					<div class="row">
+						<div class="services-for-ipad">
+							<button type="button" class="" data-toggle="modal" data-target=".bs-example-modal-lg1">
+								<%= image_tag 'icon2.png', :class => 'img-responsive service-big service-big1' %>
+							</button>
+							<div class="modal fade bs-example-modal-lg1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+								<div class="modal-dialog modal-lg">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+											<h4 class="modal-title" id="myLargeModalLabel">Ruby On Rails</h4>
+										</div>
+										<div class="modal-body">
+											<p>We are one of India's top few Ruby on Rails development companies. We are passionate about ...</p>
+											<%= link_to 'Read More', ruby_on_rails_path, :class => 'read-more btn' %>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="services-for-ipad">
+							<button type="button" class="" data-toggle="modal" data-target=".bs-example-modal-lg2">
+								<%= image_tag 'icon.png', :class => 'img-responsive service-big service-big1' %>
+							</button>
+							<div class="modal fade bs-example-modal-lg2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+								<div class="modal-dialog modal-lg">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+											<h4 class="modal-title" id="myLargeModalLabel">Ecommerce Development</h4>
+										</div>
+										<div class="modal-body">
+											<p>Do you ship your products to different parts of the world? Do you offer services ...</p>
+											<%= link_to 'Read More', ecommerce_development_path, :class => 'read-more btn' %>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="services-for-ipad">
+							<button type="button" class="" data-toggle="modal" data-target=".bs-example-modal-lg3">
+								<%= image_tag 'icon3.png', :class => 'img-responsive service-big1' %>
+							</button>
+							<div class="modal fade bs-example-modal-lg3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+								<div class="modal-dialog modal-lg">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+											<h4 class="modal-title" id="myLargeModalLabel"><h3>Mobile App Development</h3></h4>
+										</div>
+										<div class="modal-body">
+											<p>Creating a visually appealing web design: What is your strategy to stand out ...</p>
+											<%#= link_to 'Read More', '#', :class => 'read-more btn' %>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="services-for-ipad">
+							<button type="button" class="" data-toggle="modal" data-target=".bs-example-modal-lg4">
+								<%= image_tag 'icon4.png', :class => 'img-responsive service-big1' %>
+							</button>
+							<div class="modal fade bs-example-modal-lg4" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+								<div class="modal-dialog modal-lg">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+											<h4 class="modal-title" id="myLargeModalLabel">Web Design</h4>
+										</div>
+										<div class="modal-body">
+											<p>Welcome to the magical world of WebEnrich where businesses are transformed to look...</p>
+											<%= link_to 'Read More', web_design_path, :class => 'read-more btn' %>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="services-for-ipad">
+							<button type="button" class="" data-toggle="modal" data-target=".bs-example-modal-lg5">
+								<%= image_tag 'icon5.png', :class => 'img-responsive service-big1' %>
+							</button>
+							<div class="modal fade bs-example-modal-lg5" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+								<div class="modal-dialog modal-lg">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+											<h4 class="modal-title" id="myLargeModalLabel">Web Development</h4>
+										</div>
+										<div class="modal-body">
+											<p>WebEnrich with its sound knowledge and experience in web design and development ...</p>
+											<%= link_to 'Read More', web_development_path, :class => 'read-more btn' %>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="services-for-ipad">
+							<button type="button" class="" data-toggle="modal" data-target=".bs-example-modal-lg6">
+								<%= image_tag 'icon6.png', :class => 'img-responsive service-big1' %>
+							</button>
+							<div class="modal fade bs-example-modal-lg6" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+								<div class="modal-dialog modal-lg">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+											<h4 class="modal-title" id="myLargeModalLabel">Responsive Design</h4>
+										</div>
+										<div class="modal-body">
+											<p>Your website is the first glimpse of your business for most users. Can you afford ...</p>
+											<%= link_to 'Read More', responsive_website_design_path, :class => 'read-more btn' %>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="services-for-ipad">
+							<button type="button" class="" data-toggle="modal" data-target=".bs-example-modal-lg7">
+								<%= image_tag 'icon7.png', :class => 'img-responsive service-big1' %>
+							</button>
+							<div class="modal fade bs-example-modal-lg7" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+								<div class="modal-dialog modal-lg">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+											<h4 class="modal-title" id="myLargeModalLabel">Website Maintenance</h4>
+										</div>
+										<div class="modal-body">
+											<p>Your website is the mirror of your businesses and like any mirror can develop ...</p>
+											<%= link_to 'Read More', website_maintenance_path, :class => 'read-more btn' %>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="services-for-ipad">
+							<button type="button" class="" data-toggle="modal" data-target=".bs-example-modal-lg8">
+								<%= image_tag 'icon8.png', :class => 'img-responsive service-big1' %>
+							</button>
+							<div class="modal fade bs-example-modal-lg8" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+								<div class="modal-dialog modal-lg">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+											<h4 class="modal-title" id="myLargeModalLabel">Search Engine Optimization</h4>
+										</div>
+										<div class="modal-body">
+											<p>You might have the jazziest website ever put together by the best design team ever ...</p>
+											<%= link_to 'Read More', search_engine_optimization_path, :class => 'read-more btn' %>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="services-for-ipad">
+							<button type="button" class="" data-toggle="modal" data-target=".bs-example-modal-lg9">
+								<%= image_tag 'icon9.png', :class => 'img-responsive service-big1' %>
+							</button>
+							<div class="modal fade bs-example-modal-lg9" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+								<div class="modal-dialog modal-lg">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+											<h4 class="modal-title" id="myLargeModalLabel">Pay Per Click</h4>
+										</div>
+										<div class="modal-body">
+											<p>PPC is one of the popular internet marketing strategies that involves posting ...</p>
+											<%= link_to 'Read More', pay_per_click_path, :class => 'read-more btn' %>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="services-for-ipad">
+							<button type="button" class="" data-toggle="modal" data-target=".bs-example-modal-lg10">
+								<%= image_tag 'icon10.png', :class => 'img-responsive service-big1' %>
+							</button>
+							<div class="modal fade bs-example-modal-lg10" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+								<div class="modal-dialog modal-lg">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+											<h4 class="modal-title" id="myLargeModalLabel">Social Media Marketing</h4>
+										</div>
+										<div class="modal-body">
+											<p>Social media creates kinship between companies and customers, and kinship equals purchase ...</p>
+											<%= link_to 'Read More', social_media_marketing_path, :class => 'read-more btn' %>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- About Content -->
+			<div class="clear"></div>
+			<div class="col-md-12">
+				<div class="col-md-8 about-content col-sm-6">
+					<div class="about-title">
+						<h2>About WebEnrich</h2>
+					</div>
+					<div class="about-we">
+						<p>WebEnrich believes that you are not here just to make your website look good; rather you are here to outdo your previous sales records. We understand that you want new clients to line up before your office besides retaining your existing client base. WebEnrich enables you to realize this dream and empower you to dominate the market. We present you the list of services offered by us which help you to reach this goal.</p>
+						<p>WebEnrich is a rapidly developing company based in India that provides Internet Marketing, Web Design &amp; Development services. We are a performance driven company with a team of creative professionals who are focused on nothing but excellence.</p>
+
+						<%= link_to 'Read More', about_us_path, :class => 'read-more btn btn-primary' %>
+					</div>
+				</div>
+				<div class="col-md-1 col-sm-1">
+					<div class="spacer"></div>
+				</div>
+				<div class="col-md-3 col-sm-5 certifications">
+					<div class="certification-title">
+						<h2>Certifications</h2>
+					</div>
+					<div class="certifications-content">
+						<div class="google-ads-home">
+							<%= link_to google_adwords_certified_partner_path do %>
+								<%= image_tag 'google-img.jpg', size: '186x57', :class => 'img-responsive' %>
+							<% end %>
+						</div>
+						<div class="bing-ads">
+							<%= link_to microsoft_bing_certified_partner_path do %>
+								<%= image_tag 'bing-img.jpg', size: '186x57', :class => 'img-responsive' %>
+							<% end %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- External links -->
+	<div class="external-links">
+		<div class="container">
+			<div class="col-md-4 col-sm-12">
+				<div class="blog-brief blog-align">
+					<div class="blog-img">
+						<%= image_tag 'blog-bg.png', size: '370x351', :class => 'img-responsive' %>
+					</div>
+					<div class="external-content">
+						<h2 class="text-uppercase text-center">
+							<%= image_tag 'blog-icon.png', :class => 'tab-iocn', size: '50x50' %>
+							<span>Blog</span>
+						</h2>
+						<h3 class="text-capitalize text-center">How To Spice Up Your Relationship With Google in 2015</h3>
+						<p>You feel like you’re putting in the time and making a real effort. Like you’ve been pushing all the right buttons but not getting the results you deserve...</p>
+						<p>
+							<%= link_to 'Read More', '#', :class => 'read-more btn btn-primary' %>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-12">
+				<div class="case-study-brief blog-align">
+					<div class="blog-img">
+						<%= image_tag 'case-studies-bg.png', size: '370x351', :class => 'img-responsive' %>
+					</div>
+					<div class="external-content">
+						<h2 class="text-uppercase text-center">
+							<%= image_tag 'case-studies-icon.png', :class => 'tab-iocn', size: '50x50' %>
+							<span>Case Studies</span>
+						</h2>
+						<div class="case-study-img">
+							<ul>
+								<li><%= image_tag "case-img.png", size: '48x66', :class => 'img-responsive pull-left' %></li>
+								<li>
+									<strong>PdotG.in</strong><br/>
+									<em>6 Jun 2015</em>
+								</li>
+							</ul>
+						</div>
+						<p>P dot G are known for building quality &amp; affordable Residential Apartments, Flats Our Projects are in Chennai,..</p>
+						<p>
+							<%= link_to 'Read More', '#', :class => 'read-more btn btn-primary' %>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-12">
+				<div class="testimonial-brief blog-align">
+					<div class="blog-img">
+						<%= image_tag 'testimonials-bg.png', size: '370x351', :class => 'img-responsive' %>
+					</div>
+					<div class="external-content">
+						<h2 class="text-uppercase text-center">
+							<%= image_tag 'testimonials-icon.png', :class => 'tab-iocn', size: '50x50' %>
+							<span>Testimonials</span>
+						</h2>
+						<div class="case-study-img">
+							<ul>
+								<li><%= image_tag 'testi-img.jpg', size: '52x58', :class => 'img-responsive pull-left' %></li>
+								<li>
+									<strong>Andy Woan</strong><br/>
+									<em>CEO | Aviamp </em>
+								</li>
+							</ul>
+						</div>
+						<p>“Their help and expertise has been invaluable to our business. Affordable prices and very friendly support team...“</p>
+						<p>
+							<%= link_to 'See More', testimonials_home_path, :class => 'read-more btn btn-primary' %>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,26 @@
+<div class="content-heading">Clients</div>
+<%#= form_for Client.new, :html => {:multipart => true}  do |f| %>
+	<div class="row">
+		<div class="col-md-12 col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<fieldset>
+						<legend>New Client</legend>
+					</fieldset>
+					<fieldset>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Upload Client Image: </label>
+							<div class="col-md-3">
+								<%= form_for @client, :html => {:multipart => true}  do |f| %>
+									<%= f.file_field(:logo, :name => "client[logo]", class: "form-control", :multiple => true, required: true) %>
+									<%= @client.errors[:logo].join(', ') %>
+									<%= f.submit class: "btn btn-primary", value: "Add Client" %>
+								<% end %>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+	</div>
+<%# end %>

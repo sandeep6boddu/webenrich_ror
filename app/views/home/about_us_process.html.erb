@@ -1,0 +1,101 @@
+<% content_for :title do %>
+	Our Process | WebEnrich
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="Our Process, WebEnrich">
+	<!-- <meta name="keywords" content=" "> -->
+<% end %>
+<div class="page-banner">
+	<div class="aboutus-page about-us-process">
+		<div class="about-content about-us-process-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="about-we">
+							<div class="col-md-9">
+								<div class="banner-title our-process-title">
+									<h2>Our Process</h2>
+								</div>
+								<div class="about-intro about-us-process-intro">
+									<%= image_tag 'team/process-img.png', :class =>'pull-left' %>
+									<h2>We adhere a well-defined process which focuses our energy on the core content and strategy, unique to your product and needs.</h2>
+								</div>
+							</div>
+							<div class="col-md-3 hidden-sm">
+								<div class="about-links">
+									<ul>
+										<li>
+											<%= link_to 'About Us', about_us_path %>
+										</li>
+										<li>
+											<%= link_to 'Our Process', '#', :class => 'active' %>
+										</li>
+										<li>
+											<%= link_to 'WebEnrich Team', about_our_team_path %>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="our-process-steps">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="col-md-9">
+							<div class="our-process-steps-content">
+								<div class="our-process-step">
+									<div class="steps-content step1-content1">
+										<h3>Learn</h3>
+										<p>Tell us about your business, your industry and your aspirations. The first stage of planning is learning all the facts.</p>
+									</div>
+									<div class="steps-content step1-content2">
+										<h3>ANALYSIS</h3>
+										<p>Great strategies require true understanding. We devote considerable thinking time and research into each of our projects.</p>
+									</div>
+									<div class="steps-content step1-content3">
+										<h3>STRATEGY</h3>
+										<p>Once we understand you and your market, we apply creativity, experience and expertise to create a winning strategy.</p>
+									</div>
+								</div>
+								<div class="our-process-step our-process-step1">
+									<div class="steps-content step2-content1">
+										<h3>Design</h3>
+										<p>Based on our learning we use all our skills to produce the industry specific designs.</p>
+									</div>
+									<div class="steps-content step2-content2">
+										<h3>Build</h3>
+										<p>Our developers jump in to take it to the next level by bringing learning to the reality.</p>
+									</div>
+									<div class="steps-content step2-content3">
+										<h3>Test</h3>
+										<p>During all the process testing to the details to ensure project quality and on time delivery.</p>
+									</div>
+								</div>
+								<div class="our-process-step our-process-step2 our-process-step3">
+									<div class="steps3-content step3-content1">
+										<p>As we complete the project cycle we deploy the application to the server to go live.</p>
+										<div class="clear"></div>
+										<%= link_to 'Visit Portfolio', portfolio_home_path %> | <%= link_to 'View Services', services_path %>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="testimonials-part">
+								<%= render 'layouts/widgets/testimonials' %>
+							</div>
+							<div class="certifications">
+								<%= render 'layouts/widgets/certifications' %>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

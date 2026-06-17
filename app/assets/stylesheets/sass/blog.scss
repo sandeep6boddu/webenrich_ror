@@ -1,0 +1,610 @@
+// header css starts here
+header {
+
+	.header-right {
+
+		&.blog-header {
+			margin-top: 0;
+
+			.fb-like {
+				margin: 20px 10px 0 0;
+			}
+
+			.mdl-textfield {
+
+				.mdl-button {
+					bottom: 17px;
+				}
+			}
+		}
+	}
+}
+
+.waterfall-demo-header-nav {
+
+	.mdl-navigation__link:last-of-type  {
+		padding-right: 0;
+	}
+}
+
+
+.mdl-layout {
+	// min-height: 1660px;
+	overflow: visible;
+
+	header.mdl-layout__header {
+		background: $white;
+		color: $gray-alto;
+	}	
+}
+
+.mdl-layout__drawer {
+	bottom: 0;
+	//min-height: 1200px;
+
+	.mdl-layout-drawer-icons {
+		padding: 0 25px;
+
+		a {
+			display: inline-block;
+			line-height: 60px;
+		}
+	}
+
+	.demo-drawer-header {
+		padding: 20px;
+
+		.user-avatar {
+			float: left;
+		}
+
+		.user-details {
+			padding-left: 10px;
+			float: left;
+			width: 65%;
+
+			.user-name {
+				font-size: $font-size-base + 2;
+			}
+
+			.user-location {
+				font-size: $font-size-base - 2;
+			}
+		}
+	}
+
+	.user-post-details {
+		width: 100%;
+		float: left;
+		border-bottom: 3px solid $gray-gallery-light;
+		text-transform: uppercase;
+
+		li {
+			border-top: 1px solid $gray-gallery-light;
+			padding: 13px 18px;
+			color: $dove-gray-light;
+			font-size: $font-size-base - 2;
+
+			a {
+				display: inline-block;
+			}
+
+			strong {
+				color: $pomagranate-red;
+			}
+		}
+	}
+
+	nav.blog-categories {
+
+		h2 {
+			font-size: $font-size-base + 8;
+			text-transform: uppercase;
+		}
+
+		.blog-technologies {
+
+			a {
+				font-size: $font-size-base ;
+			}
+		}
+		.logout-btn {
+			background: $gray-silver-dark;
+
+			a {
+				color: $white;
+				text-transform: uppercase;
+
+				.material-icons {
+					float: left;
+					line-height: 50px;
+				}
+			}
+		}
+	}
+}
+
+.mdl-layout__drawer-button {
+	color: $gray-alto-dark;
+}
+.mdl-layout__obfuscator {
+	min-height: 1835px;
+}
+// header css ends here
+
+
+.blogs-main-page {
+	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+
+	.mdl-fullwidth {
+		width: 100%;
+	}
+	
+	// futured or latest blog css starts here
+	.futured-blog {
+
+		.blog-title {
+			margin: 30px 0;
+		}
+		
+		.recent-blog {
+			width: 100%;
+			float: left;
+			position: relative;
+
+			.recent-blog-description {
+				padding: 0 20px 70px 30px;
+				float: left;
+
+				h5, h6 {
+					margin: 20px 0;
+				}
+
+				.mdl-divider {
+					margin-top: 5px;
+				}
+			
+				h5 {
+					font-size: $font-size-base + 4;
+				}
+				
+				p {
+					color: $white;
+					font-weight: 300;
+					font-size: $font-size-base - 2;
+					margin: 20px 0 0 0;
+				}
+			}
+
+			.comment-section {
+				float: left;
+				position: relative;
+				width: 100%;
+				padding-bottom: 30px;
+
+				button {
+					position: absolute;
+					top: -25px;
+					right: 28px;
+				}
+
+			}
+		}
+
+		.mdl-card1 {
+			margin-top: 20px;
+		}
+
+		.mdl-cell--divider {
+			margin: 30px 0;
+			border-top: 1px solid $gray-silver-dark;
+		}
+	}
+
+	.blogcomments-icons {
+		float: left;
+		width: 100%;
+		margin-top: 50px;
+		font-size: $font-size-base - 2;
+		line-height:24px;
+
+		.post-time {
+			float: left;
+		}
+
+		.post-comments {
+			float: right;
+			margin-right: 28px;
+			color: $white;
+
+			li {
+				display: inline-block;
+				border-right: 1px solid $white;
+				padding: 0 10px;
+
+				&:last-child {
+					border: none;
+				}
+			}
+		}
+
+		.material-icons {
+			float: left;
+			margin-right: 5px;
+		}
+	}
+
+	.mdl-button--fab {
+
+		.material-icons {
+			font-size: $font-size-base + 21;
+			transform: translate(-17px, -12px);
+		}
+	}
+
+	.mdl-card {
+		float: left;
+		width: 100%;
+		position: relative;
+
+		.mdl-card_title1 {
+			background: image-url(blog/blg-thumb1) no-repeat center;
+			min-height: 207px;
+			
+			
+			.mdl-card-text {
+				margin:120px 20px 0 20px;
+
+				span {
+					font-size: $font-size-base;
+				}
+
+				.mdl-card__title_text {
+					font-size: $font-size-base + 4;
+					font-weight: 500;
+					width: 100%;
+				}
+			}
+		}
+
+		.mdl-card_title2 {
+			background: image-url(blog/blg-thumb2) no-repeat center;
+		}
+
+		.blog-comments {
+			display: none;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			color: $white;
+			padding: 20px;
+			background-color: rgba(65,126,154,0.5); 
+
+			.mdl-time-anchor {
+				margin-top: 100px;
+
+				.post-time {
+					float: left;
+					margin-top: 10px;
+				}
+
+				a {
+					margin-left: 25px;
+					display: inline-block;
+				}
+			}
+
+			.post-comments {
+				width: 100%;
+
+				li {
+					display: inline-block;
+					border-right: 1px solid $white;
+					padding: 0 12px;
+
+					&:last-child {
+						border: none;
+					}
+				}
+			}
+			
+			.material-icons {
+				float: left;
+				margin-right: 5px;
+				color: $white;
+			}
+		}
+
+		&:hover {
+
+			.blog-comments {
+				display: block;
+			}
+		}
+	}
+
+	// individual blogcard css starts here
+
+	.individual-blogs {
+
+		.blogs-thumbnail {
+			float: left;
+			width: 100%;
+			margin-bottom: 25px;
+
+			.mdl-card {
+				background: none;
+				min-width: 100%;
+
+				.post-comments {
+					width: 100%;
+					text-align: right;
+					padding-right: 16px;
+					position: absolute;
+					top: 0;
+
+					li {
+						display: inline-block;
+
+						a {
+							color: $white;
+							display: block;
+							height: 40px;
+							width: 40px;
+							padding: 10px 0;
+							text-align: center;
+
+							&:hover {
+								background: rgba(65,126,154,0.5);
+								border-radius: 50%;
+							}
+						}
+					}
+				}
+
+				.mdl-card_thumbnail {
+					width: 100%;
+					min-height: 258px;
+				}
+
+				button {
+					float: right;
+					margin: -30px 28px 0 0;
+				}
+			}
+
+			.mdl-card__supporting-text {
+				width: 100%;
+				padding: 20px 24px 30px 27px;
+
+				h3 {
+					font-size: $font-size-base + 8;
+					margin: 20px 0;
+					width: 100%;
+				}
+
+				.post-time {
+					line-height: 24px;
+
+					.material-icons {
+						float: left;
+					}
+				}
+			}
+
+			.mdl-content-blog {
+
+				.mdl-card {
+					min-height: 70px;
+				}
+
+				.post-comments {
+					width: 60%;
+					right: 0;
+				}
+
+				.mdl-readmore {
+					float: left;
+					margin: 48px 0 0 30px;
+				}
+
+				.blogcomments-icons {
+					margin: 0;
+
+					.post-comments {
+						float: left;
+						color: $dove-gray-light;
+
+						li {
+							border-color: $gray-mercury;
+							padding: 0 5px;
+						}
+					}
+				}
+
+				p {
+					margin: 15px 0 15px 0;
+				}
+			}
+		}
+	}
+}
+// blog categories css starts here
+
+.blog-categories {
+
+	h2 {
+		float: left;
+		width: 100%;
+		line-height: 60px;
+		padding-left: 23px;
+		font-size: $font-size-base + 6;
+		text-transform: uppercase;
+	}
+	
+	.blog-technologies {
+		
+		li {
+			line-height: 55px;
+			border-bottom: 1px solid $gray-gallery-light;
+			
+			a {
+				display: block;
+				color: $dove-gray-light;
+				text-transform: capitalize;
+				margin-left: 23px;
+
+				&:hover, .active {
+					color: $pomagranate-red;
+				}					
+			}
+
+			&:last-child {
+				border: 0;
+			}
+		}
+	}
+}
+
+.blog-innerpage {
+
+	h3 {
+
+		span {
+			font-size: $font-size-base + 2;
+			color: $dove-gray-light;
+		}
+	}
+
+	.banner {
+		float: left;
+		width: 100%;
+		margin: 20px 0 40px 0
+	}
+
+	.blog-related-details {
+		position: relative;
+		float: left;
+		width: 100%;
+		padding: 25px 0;
+
+		.mdl-button {
+			position: absolute;
+			top: -30px;
+    		left: 500px;
+		}
+
+		.blog-user-details {
+			float: left;
+			width: 50%;
+
+			.user-avatar {
+				float: left;
+				margin: 0 10px 0 0;				
+			}
+
+			.user-details {
+				line-height: 45px;
+			}
+
+			li {
+				border-right: 1px solid $Cerulean;
+				float: left;
+				width: 30%;
+
+				.material-icons {
+					float: left;
+				}
+
+				&:last-child {
+					border: 0;
+				}
+			}
+
+			li.post-time {
+				line-height: 25px;
+				margin: 11px 0 0 15px;
+			}
+		}
+
+		.blogcomments-icons {
+			width: 40%;
+			float: right;
+			margin-top: 11px;
+		}
+	}
+
+	.blog-content {
+		padding-top: 30px;
+
+		h3 {
+			font-size: $font-size-base + 14;
+			color: $dove-gray-light;
+			margin-bottom: 15px;
+		}
+
+		p {
+			font-size: $font-size-base + 2;
+			margin: 12px 0;
+			color: $dove-gray-light;
+		}
+
+		.spacer {
+			width: 10%;
+			min-height: 895px;
+			margin-top: 20px;
+		}
+
+		.comment-section {
+			
+			h3 {
+				font-weight: 500;
+				border-bottom: 1px solid $gray-alto-light;
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	.popular-blogs {
+
+		.blog-group {
+
+			li {
+				min-height: 95px;
+				display: inline-block;
+    			width: 100%;
+
+				.blog {
+					float: left;
+					margin: 25px 0;
+					padding: 0 28px;
+
+					a {
+						margin: 0;
+
+						h4 {
+							font-size: $font-size-base + 2;
+							color: $dove-gray-light;
+						}						
+					}
+
+					.blog-image {
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.mdl-layout header.mdl-layout__header {
+	float: left;
+	width: 100%;
+	// margin-bottom: 400px;
+}
+
+.mdl-layout {
+	height: auto !important;
+}

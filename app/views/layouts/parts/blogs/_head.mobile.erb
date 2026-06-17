@@ -1,0 +1,7 @@
+<head>
+	<title>WebEnrich<%= content_for?(:title) ? " - " + yield(:title) : "" %></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<%= stylesheet_link_tag 'mobile' %>
+	<%= javascript_include_tag 'mobile' %>
+	<%= csrf_meta_tags %>
+</head>

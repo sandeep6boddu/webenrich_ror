@@ -1,0 +1,10 @@
+<head>
+	<title>WebEnrich<%= content_for?(:title) ? " - " + yield(:title) : "" %></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<%#= rails_amp_amphtml_link_tag %>
+	<%#= rails_amp_html_header %>
+	<%= stylesheet_link_tag 'mobile' %>
+	<%= javascript_include_tag 'mobile', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
+</head>

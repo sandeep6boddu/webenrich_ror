@@ -1,0 +1,77 @@
+<% content_for :title do %>
+	Who We Are | About WebEnrich! WebEnrich Solutions Pvt. Ltd.
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="WebEnrich Solutions Pvt. Ltd. Is a Registered Company In India. In this section, we share about us, our vision & mission of our company that has helped us become the fastest growing Web Marketing company">
+	<meta name="keywords" content="About WebEnrich, mission, vision, about us, webenrich.com">
+<% end %>
+<div class="page-banner">
+	<div class="aboutus-page">
+		<div class="about-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="about-we">
+							<div class="col-md-9">
+								<div class="banner-title">
+									<h2>About WebEnrich</h2>
+								</div>
+								<div class="about-intro">
+									<%= image_tag 'about-content-img.png', :class => 'img-responsive about-img' %>
+									<p>WebEnrich provides Internet Marketing, Web Design &amp; Development services. We are located in Jubilee Hills, in the heart of Hyderabad, India and also have an office in Melbourne, Australia. We are a performance driven company with a team of creative, marketing and technical professionals who are focused on nothing but excellence. Our wide experience in the vast world of the web, allows us to tailor our ideas to fit our clients marketing needs.</p>
+									<p>Over the past eight years, we have successfully added many major clients to our list of clientele.</p>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-12">
+								<div class="about-links">
+									<ul>
+										<li>
+											<%= link_to 'About Us', '', :class => 'active' %>
+										</li>
+										<li>
+											<%= link_to 'Our Process', about_us_process_path %>
+										</li>
+										<li>
+											<%= link_to 'WebEnrich Team', about_our_team_path %>
+										</li>
+									</ul>
+								</div>
+								<div class="testimonials-part">
+									<%= render 'layouts/widgets/testimonials' %>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="vision-mission">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="vision-mission-content">
+							<div class="col-md-4 col-sm-12">
+								<div class="vision">
+									<h2>Vision:</h2>
+									<p>At WebEnrich, our vision is to be the best Web Marketing Company in the world. Our prompt and efficient services make us a popular choice for our customers, employees and vendors across the globe.</p>
+								</div>
+							</div>
+							<div class="col-md-1 spacer"></div>
+							<div class="col-md-4 col-sm-12">
+								<div class="mission">
+									<h2>Mission:</h2>
+									<p>To achieve the highest possible standards in all that we do and to help clients achieve their most ambitious marketing goals. To deliver the highest levels of quality, professionalism and experience to every project that comes our way.</p>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="certifications">
+									<%= render 'layouts/widgets/certifications' %>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

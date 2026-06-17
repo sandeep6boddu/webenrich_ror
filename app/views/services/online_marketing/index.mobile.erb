@@ -1,0 +1,91 @@
+<% content_for :title do %>
+	Online Marketing
+<% end %>
+<div class="services-page">
+	<div class="mobile-page-main">
+		<div class="main-title">
+			<div class="container">
+				<h1>
+					<%= link_to services_path, :class => 'left' do %>
+						<%= image_tag image_path('mobile/back-arrow.png') %>
+					<% end %>
+					Online Marketing
+					<a class='dropdown-button right' href='#' data-activates='dropdown1'>
+						<%= image_tag image_path('mobile/options-icon-white.png') %>
+					</a>
+					<ul id='dropdown1' class='dropdown-content custom-drpwn-content'>
+						<li>
+							<%= link_to search_engine_optimization_path do %>
+								<strong>Search Engine Optimization</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to social_media_marketing_path do %>
+								<strong>Social Media Marketing</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to pay_per_click_path do %>
+								<strong>Pay Per Click</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to email_marketing_path do %>
+								<strong>Email Marketing</strong>
+							<% end %>
+						</li>
+					</ul>
+				</h1>
+			</div>
+		</div>
+		<div class="container">
+			<div class="title-content">
+				<div class="services-img">
+					<%#= image_tag image_path('mobile/online-marketing-img.png') %>
+					<%= image_tag image_path('mobile/online-marketing-img-new.png') %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="services-text">
+		<div class="container">
+			<article>
+				Creating a visually appealing web design: What is your strategy to stand out amidst millions of websites on the internet? Having a superior or innovative products and services helps but with so many options available in the market you have very little time to convince potential customers to spend enough time on your website to enable yourself to market your products and services. 
+			</article>
+			<%= link_to "Continue Reading", '#', :class => 'waves-effect waves-light btn hide' %>
+		</div>
+	</div>
+	<div class="list-of-services list-of-detail-services">
+		<div class="container">
+			<h1>Web Design Services</h1>
+			<div class="card">
+				<ul>
+					<li>
+						<%= link_to search_engine_optimization_path do %>
+							<strong>Search Engine Optimization</strong>
+						<% end %>
+					</li>
+					<li>
+						<%= link_to social_media_marketing_path do %>
+							<strong>Social Media Marketing</strong>
+						<% end %>
+					</li>
+					<li>
+						<%= link_to pay_per_click_path do %>
+							<strong>Pay Per Click</strong>
+						<% end %>
+					</li>
+					<li>
+						<%= link_to email_marketing_path do %>
+							<strong>Email Marketing</strong>
+						<% end %>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- our clients -->
+	<%= render 'layouts/widgets/our_clients' %>	
+	<!-- start-project -->
+	<%= render 'layouts/widgets/start_project' %>
+</div>

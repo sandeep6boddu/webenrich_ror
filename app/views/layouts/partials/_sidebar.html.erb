@@ -1,0 +1,172 @@
+<!-- START Sidebar (left)-->
+<div class="aside-inner">
+	<% if user_signed_in? %>
+		<% if current_user.has_role?(:admin) %>
+			<nav class="sidebar">
+				<!-- START sidebar nav-->
+				<ul class="nav">
+					<li class="nav-heading">
+						<span>Main Navigation</span>
+					</li>
+					<li class="<%= 'active' if controller?('admin') && action?('dashboard') %>">
+						<a href="/admin" title="Dashboard">
+							<em class="icon-speedometer"></em>
+							<span>Dashboard</span>
+						</a>
+					</li>
+					<li class="<%= 'active' if controller?('admin/portfolios') && action?('index') %>">
+						<a href="#portfolio" title="Portfolio" data-toggle="collapse">
+							<em class="icon-speedometer"></em>
+							<span>Portfolio</span>
+						</a>
+						<ul id="portfolio" class="nav sidebar-subnav collapse">
+							<li class="<%= 'active' if controller?('admin/portfolio') && action?('index') %>">
+								<%= link_to portfolios_path, title: "list" do %>
+								<span>List</span>
+								<% end %>
+							</li>
+							<li class="<%= 'active' if controller?('admin/portfolio') && action?('new') %>">
+								<%= link_to new_portfolio_path, title: "New" do %>
+								<span>Create</span>
+								<% end %>
+							</li>
+						</ul>
+					</li>
+					<li class="<%= 'active' if controller?('clients') && action?('index') %>">
+						<a href="#clients" title="Clients" data-toggle="collapse">
+							<em class="icon-speedometer"></em>
+							<span>Clients</span>
+						</a>
+						<ul id="clients" class="nav sidebar-subnav collapse">
+							<li class="<%= 'active' if controller?('clients') && action?('index') %>">
+								<%= link_to clients_path, title: "List" do %>
+								<span>List</span>
+								<% end %>
+							</li>
+						</ul>
+					</li>
+					<li class="<%= 'active' if controller?('blogs') && action?('blog') %>">
+						<a href="#testimonials" title="Single View" data-toggle="collapse">
+							<em class="icon-speedometer"></em>
+							<span>Testimonials</span>
+						</a>
+						<ul id="testimonials" class="nav sidebar-subnav collapse">
+							<li class="<%= 'active' if controller?('admin/testmonials') && action?('index') %>">
+								<%= link_to testimonials_path, :title => "List" do %>
+								<span>List</span>
+								<% end %>
+							</li>
+							<li class"<%= 'active' if controller?('admin/testimonials') && action?('new') %>">
+								<%= link_to new_testimonial_path, :title => "New" do %>
+								<span>Create</span>
+								<% end %>
+							</li>
+						</ul>
+					</li>
+					<li class="<%= 'active' if controller?('admin/careers') && action?('index') %>">
+						<a href="#careers" title="Careers" data-toggle="collapse">
+							<em class="icon-speedometer"></em>
+							<span>Careers</span>
+						</a>
+						<ul id="careers" class="nav sidebar-subnav collapse">
+							<li class="<%= 'active' if controller?('admin/careers') && action?('index') %>">
+								<a href="<%= careers_path %>" title="List">
+									<span>List</span>
+								</a>
+							</li>
+							<li class="<%= 'active' if controller?('admin/careers') && action?('new') %>">
+								<a href="<%= new_career_path %>" title="Post">
+									<span>Create</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="<%= 'active' if controller?('admin/categories') && action?('index') %>">
+						<a href="#categories" title="Careers" data-toggle="collapse">
+							<em class="icon-speedometer"></em>
+							<span>Categories</span>
+						</a>
+						<ul id="categories" class="nav sidebar-subnav collapse">
+							<li class="<%= 'active' if controller?('admin/categories') && action?('index') %>">
+								<a href="<%= categories_path %>" title="List">
+									<span>List</span>
+								</a>
+							</li>
+							<li class="<%= 'active' if controller?('admin/categories') && action?('new') %>">
+								<a href="<%= new_category_path %>" title="Post">
+									<span>Create</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="<%= 'active' if controller?('admin/blog') && action?('index') %>">
+						<a href="#blog" title="Blogs" data-toggle="collapse">
+							<em class="icon-speedometer"></em>
+							<span>Blogs</span>
+						</a>
+						<ul id="blog" class="nav sidebar-subnav collapse">
+							<li class="<%= 'active' if controller?('admin/blog') && action?('index') %>">
+								<a href="<%= blogs_path %>" title="List">
+									<span>List</span>
+								</a>
+							</li>
+							<li class="<%= 'active' if controller?('admin/blog') && action?('new') %>">
+								<a href="<%= new_blog_path %>" title="Post">
+									<span>Create</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li class="<%= 'active' if controller?('admin/team') && action?('index') %>">
+						<a href="#team" title="Team" data-toggle="collapse">
+							<em class="icon-speedometer"></em>
+							<span>Team</span>
+						</a>
+						<ul id="team" class="nav sidebar-subnav collapse">
+							<li class="<%= 'active' if controller?('admin/team') && action?('index') %>">
+								<a href="<%= teams_path %>" title="List">
+									<span>List</span>
+								</a>
+							</li>
+							<li class="<%= 'active' if controller?('admin/team') && action?('new') %>">
+								<a href="<%= new_team_path %>" title="Post">
+									<span>Create</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li><%= link_to 'Clear Cache', clear_cache_path %></li>
+					<!--  <li class="nav-heading ">
+							<span data-localize="sidebar.heading.HEADER">Working</span>
+					</li> -->
+				</ul>
+				<!-- END sidebar nav-->
+			</nav>
+		<% else %>
+			<nav class="sidebar">
+				<!-- START sidebar nav-->
+				<ul class="nav">
+					<li class="<%= 'active' if controller?('admin/blog') && action?('index') %>">
+						<a href="#blog" title="Careers" data-toggle="collapse">
+							<em class="icon-speedometer"></em>
+							<span>Blogs</span>
+						</a>
+						<ul id="blog" class="nav sidebar-subnav collapse">
+							<li class="<%= 'active' if controller?('admin/blog') && action?('index') %>">
+								<a href="<%= blogs_path %>" title="List">
+									<span>List</span>
+								</a>
+							</li>
+							<li class="<%= 'active' if controller?('admin/blog') && action?('new') %>">
+								<a href="<%= new_blog_path %>" title="Post">
+									<span>Create</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		<% end %>
+	<% end %>
+</div>
+<!-- END Sidebar (left)-->

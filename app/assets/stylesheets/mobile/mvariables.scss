@@ -1,0 +1,90 @@
+$font-family-price: 	'open_sanssemibold';
+$font-family-base:		'ralewaymedium';
+$font-family-light:		'ralewaylight';
+
+@mixin size($width, $height) {
+	width: $width;
+	height: $height;
+}
+
+@mixin font($family, $size, $color) {
+	font-family: $family;
+	font-size: $size;
+	color: $color;
+}
+
+// Variables
+$font-size-base:			14px !default;
+$gray:						#333333;
+$dusty-gray:				#999999;
+$blue-matisse:				#216996;
+$blue-shakespeare:			#3f97ce;
+$orang:						#ff5722;
+$picton-blue:				#42a5f5;
+$alto:						#e0e0e0;
+$dove-gray:					#666666;
+$viking:					#68ADDD;
+$wild-sand:					#F5F5F5;
+$linen:						#FBE9E7;
+$gray-seashell:				#f1f1f1;
+$redorange:					#FF4F31;
+$blueviolet:				#515EAE;
+$silverchalice:				#9D9D9D;
+$gray-mercury:				#e3e3e3;
+$gray-alto:					#dcdcdc;
+$orange-cinnabar:			#e84d3b;
+$white:						#ffffff;
+$gray-seashell:				#f1f1f1;
+$gray-silver:				#cccccc;
+$gray-alto-light:			#d9d9d9;
+$dove-gray:					#666666;
+$green-chelsia-cucumber:	#74ae57;
+$green-apple:				#669638;
+$orange-sunglo:				#E3756B;
+$blue-matisse:				#216996;
+$dusty-gray:				#999999;
+$gray-alabaster:			#f7f7f7;
+$gray-alto-solid:			#dbdbdb;
+$gray-gallery:				#efefef;
+$blue-botticelli:			#d3e7ea;
+$blue-shakespeare:			#3f97ce;
+$catskill-white: 			#DCECEF;
+$edward-gray:				#AAADAD;
+$blue-jungle-mist:			#adcacf;
+$green-tradewind:			#6aafba;
+$catskill-blue:				#E4F1F3;
+$catskill-white-light:		#f5f9fa;
+$red-solid:					#ff0000;
+$gray-wild-sand:			#f5f5f5;
+$gray-gallery-light:		#eeeeee;
+$gray-silver-dark:			#bdbdbd;
+$dove-gray-light:			#616161;
+$pomagranate-red:			#f44336;
+$gray-alto-dark:			#8b8b8b;
+$Cerulean:					#03A9F4;
+$gray-alto-light:			#e0e0e0;
+$sanmarino:					#4876A3;
+$anakiwa-light-blue:		#80DDFF;
+$valencia-red:				#D84545;
+$elephant-dark:				#0E3245;
+$puerto-light-green:		#56C7B2;
+$carnation-red:				#F05050;
+
+
+
+
+
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-base:					#000 !default;
+$gray-darker:				lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:					lighten($gray-base, 20%) !default;   // #333
+$gray:						lighten($gray-base, 33.5%) !default; // #555
+$gray-light:				lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:				lighten($gray-base, 93.5%) !default; // #eee
+
+$brand-primary:				darken(#216996, 6.5%) !default; // #337ab7
+$brand-success:				#5cb85c !default;
+$brand-info:				#5bc0de !default;
+$brand-warning:				#f0ad4e !default;
+$brand-danger:				#d9534f !default;

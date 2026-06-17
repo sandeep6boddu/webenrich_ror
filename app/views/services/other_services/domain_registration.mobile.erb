@@ -1,0 +1,107 @@
+<% content_for :title do %>
+	Domain Registration | Register your new domain with WebEnrich
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="WebEnrich offers you with affordable domain registering and hosting solutions Hyderabad, Bangalore, India. Take the first step and grow your business online.">
+	<meta name="keywords" content="domain registering, domain registration, affordable, cheap, best, professional, India">
+<% end %>
+<div class="services-page">
+	<div class="mobile-page-main mobile-page-inner">
+		<div class="main-title">
+			<div class="container">
+				<h1>
+					<%= link_to other_services_path, :class => 'left' do %>
+						<%= image_tag image_path('mobile/back-arrow.png') %>
+					<% end %>
+					Domain Registration
+				</h1>
+			</div>
+		</div>
+		<div class="container">
+			<div class="title-content">
+				<div class="services-img services-inner-img">
+					<%= image_tag image_path('mobile/domain-registration-icon.png'), alt: 'services-inner-img' %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="services-text">
+		<div class="container">
+			<div class="corporate-article">
+				<p>
+					WebEnrich offers you affordable domain registering and hosting solutions so that you can watch your business grow online. We give you a choice of a number of combinations for a domain name in terms of search results and if your choice clicks with us, you can then be a part of our quick and easy registration process. We offer non- case sensitive alphabets, numerics and all the possible characters to make your domain name sound catchy. We host your domain name for a period of two years with the flexible option of renewing it.
+				</p>
+				<p>
+					Unlike other domain hosting services, we don't charge any online management, delegation or set up fees. Our quotes are straight forward and there are no hidden costs swept under the carpet. Type in your domain name into our search box to check for availability and should you require our support, do call us up, we'd be glad to assist you with this important step for your business. Trust us. Try us.
+				</p>
+				<%= link_to "Continue Reading", '#', :class => 'waves-effect waves-light btn hide' %>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<h1>
+			<strong>
+				There are many business benefits of an RWD but here are the most prominent ones:
+			</strong>
+		</h1>
+	</div>
+	<div class="container">
+		<div class="services-text services-inner-content">
+			<div class="corporate-branding-logo">
+				<div class="online-corporate-branding">
+					<h2>Increases your reach</h2>
+					<p>With an RWD, your reach is immensely increased for you will be able to cater to mobile phone and tablet users. So instead of creating a device-specific app, you can reach out to users of different devices through a single RWD.</p>
+					<p>This will save you technology cost, designing time and make it easier to update any changes to the website.</p>
+				</div>
+				<div class="online-corporate-branding">
+					<h2>Improves sales and conversion rates</h2>
+					<p>Hassle-free, non-redirecting consistent user experience will certainly have a positive impact on leads, sales and conversion rates. That's because users are familiar with your site's navigation and system use across different devices.</p>
+					<p>Responsive website design eliminates some of the barriers that having multiple sites can present, viz. in functionality, performance and in terms of consistency in look and feel.</p>
+				</div>
+				<div class="online-corporate-branding">
+					<h2>Saves you time and money on mobile development</h2>
+					<p>Responsive design takes less time than creating an additional stand-alone mobile site. By using standardized testing methodologies, one can get rid of the development, support and maintenance overheads that are incurred in creating device-specific sites.</p>
+					<p>Moral of the story - a smartly crafted responsive website can easily be your biggest asset.</p>
+				</div>
+				<div class="online-corporate-branding">
+					<h2>User Friendly</h2>
+					<p>t all boils down to this – great user experience which comes from user friendly designs. Our RWD is thoroughly user-friendly, thanks to our adaptive web program.</p>
+				</div>
+				<div class="online-corporate-branding">
+					<h2>Why WebEnrich</h2>
+					<p>We put our customers before our interests. We work closely with them and understand their needs and challenges. Then we put in necessary research, experience, data and create a solution that is innovative and effective. At WebEnrich, we constantly strive to create a completely new user experience through RWD.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="list-of-services list-of-detail-services">
+		<div class="container">
+			<div class="other-services-list">
+				<h1>Other Services</h1>
+				<div class="card">
+					<ul>
+						<li>
+							<%= link_to web_hosting_path do %>
+								<strong>Web Hosting</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to content_development_path do %>
+								<strong>Content Development</strong>
+							<% end %>
+						</li>
+						<!-- <li>
+							<%#= link_to corporate_video_presentation_path do %>
+								<strong>Corporate Video Presentation</strong>
+							<%# end %>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Our Clients -->
+	<%= render 'layouts/widgets/our_clients' %>
+	<!-- start-project -->
+	<%= render 'layouts/widgets/start_project' %>
+</div>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<%= render 'layouts/parts/head' %>
+	<body>
+		<div class="fulloverlay"></div>
+		<div class="main">
+			<%= render 'layouts/parts/header' %>
+			<div id="wrapper">
+				<%= render 'layouts/parts/nav' %>
+				<div id="page-content-wrapper">
+					<%= yield %>
+				</div>
+			</div>
+			<%= render 'layouts/parts/footer' %>
+		</div>
+	</body>
+</html>

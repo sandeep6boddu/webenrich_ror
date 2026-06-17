@@ -1,0 +1,869 @@
+
+.visit-website-btn {
+	display: none;
+}
+
+// ipad portrait
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)  {
+	
+	.main-content .external-links .blog-brief {
+		height: 300px;
+	}
+
+	.slick-prev, .slick-next {
+		display: none !important;
+	}
+
+	.services-for-ipad {
+		// margin-right: 10px;
+		margin-bottom: 10px;
+	}
+	
+	.visit-arrow {
+		position: absolute;
+		top: 6px;
+		right: -44px;
+	}
+
+	.our-process-title {
+		top: -63px !important;
+	}
+
+	.services-block {
+		background: none !important;
+	}
+
+	body {
+		// text-align: justify;
+	}
+
+	.main-content .services-range {
+		float: left;
+		width: 100%;
+		min-height: 100px;
+		background-size: 100% 503px;
+	}
+
+	nav {
+
+		.main-nav {
+			width: 100%;
+
+			li {
+				padding: 0 8px !important;
+
+				a {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+
+	.left-margin {
+		margin-left: 30px;
+	}
+
+	.main-content {
+
+		.services-range {
+
+			.range-heading {
+				margin-top: 8px;
+			}
+
+			.about-content {
+				margin-bottom: 20px;
+			}
+		}
+
+		.blog-img {
+			display: none;
+		}
+
+		.external-links {
+
+			.blog-brief, .case-study-brief, .testimonial-brief {
+
+				.external-content {
+					// width: 47%;
+					// left: 210px;
+					background: #fff;
+					padding: 20px;
+					border-radius: 15px;
+				}
+			}
+		}
+
+		.external-links {
+			padding-bottom: 20px;
+		}
+	}
+
+	.service-levels {
+		display: none;
+	}
+	
+	.service-levels-ipad {
+		display: block;
+		padding: 0 20px 0 20px;
+	}
+
+	.our-clients {
+
+		.clients-title {
+			
+			h2 { 
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+
+	.web-dev-page {
+
+		.web-dev-intro {
+
+			.web-dev-content-inner {
+
+				.web-content-para {
+					margin-top: 4px;
+				}
+			}
+		}
+	}
+
+	.services-page {
+
+		.services-content {
+
+			.service-inner-title {
+
+				ul {
+
+					li {
+						padding: 0 10px;
+
+						a {
+							font-size: 9px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.start-project {
+
+		p {
+			width: auto;
+		}
+	}
+
+	.blog-align {
+		padding-left: 150px;
+	}
+
+	.row {
+		margin: 0;
+	}
+		
+	// about-us page
+
+	.banner-title {
+		background: #3f97ce;
+		border-radius: 5px;
+	}
+
+	.aboutus-page .vision-mission .spacer {
+		display: none;
+	}
+
+
+	.certifications-widget {
+
+		.certifications-widget-content {
+
+			ul {
+
+				li {
+					float: left;
+					margin: 17px;
+					width: 42%;
+				}
+			}
+		}
+	}
+
+	.we-services {
+		background: none !important;
+	}
+
+	// services page
+
+	.services-page {
+
+		.services-content {
+
+			.services-intro {
+				overflow: hidden;
+				padding-bottom: 20px;
+				margin-bottom: 20px;
+ 
+				.left-content {
+					width: 100%;
+					text-align: center;
+				}
+
+				.right-content {
+					width: 99%;
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+
+	// clients
+
+	.clients-page {
+
+		.about-intro {
+			float: left;
+			width: 100%;
+			margin-top: 40px;
+		}
+	}
+
+
+	.clients-page {
+
+		.client-inner-content {
+
+			.client-logos {
+
+				ul {
+
+					li {
+						
+						&:nth-child(4n) {
+							margin-right: 26px !important;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// contact-us
+
+	.no-padding-left {
+		padding-left: 15px !important;
+	}
+
+	.no-padding-right {
+		padding-right: 15px !important;
+	}
+
+	.no-padding {
+		padding: 0 15px !important;
+	}
+
+	.contact-page {
+
+		.contact-inner-content {
+
+			.contact-form {
+
+				.form-fields {
+
+					form {
+						width: 100%;
+						padding-bottom: 20px;
+					}
+				}
+			}
+		}
+	}
+
+	.form-fields {
+		margin-bottom: 20px;
+	}
+
+	.footer-nav {
+		// display: none;
+	}
+
+	.testimonials-part {
+		display: none;
+	}
+
+	// career
+
+	.career-desc-right, .career-desc-left {
+		background: none !important;
+	}
+
+	.career-brief {
+		width: 100% !important;
+	}
+	
+	.career-brief {
+		margin-left: 0 !important;
+	}
+
+	.sl-number {
+		display: none !important;
+	}
+
+	// partner-with-us
+
+	.partners-page {
+
+		.partner-inner-content {
+			margin-top: 120px;
+		}
+	}
+
+	// web development
+
+
+	.web-dev-page {
+
+		.web-dev-intro {
+
+			.web-dev-content {
+				width: 100%;
+				margin-top: 40px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.clients-page .client-inner-content .client-logos ul li img {
+		width: 138px !important;
+	}
+
+	.web-dev-page .web-dev-intro .web-dev-content-inner .web-content-para {
+		width: 72%;
+	}
+
+	.tparrows.preview2 {
+		min-width: 52px !important;
+		min-height: 52px !important;
+	}
+
+	.about-us-process {
+
+		.our-process-steps {
+
+			.our-process-step {
+				min-height: 412px;
+				background-size: 50%;
+
+				.step1-content1 {
+					top: -68px;
+					right: 36px;
+				}
+
+				.step1-content2 {
+					top: 50px;
+					right: 14px;
+				}
+
+				.step1-content3 {
+					top: 198px;
+				}
+
+				.steps-content p {
+					line-height: 20px;
+					text-align: -webkit-left;
+				}
+
+				.step2-content1 {
+					top: -50px;
+					right: 8px;
+				}
+
+				.step2-content2 {
+					top: 83px;
+				}
+
+				.step2-content3 {
+					top: 218px;
+					right: 16px;
+				}
+			}
+
+			.our-process-step2 {
+				background-size: 44%;
+
+				.steps3-content {
+					background-size: 61%;
+					top: -30px;
+					right: -53px;
+
+					p {
+						width: 70%;
+						clear: both;
+					}
+				}
+			}
+		}
+	}
+
+	// testimonials
+
+	.testimonials-page .testimonials-inner-content .client-testimonials .testimonials-widget .testimonials-widget-img {
+		width: 22%;
+	}
+
+	.our-process-step1 {
+		background-size: 48% !important;
+	}
+
+	.person-image {
+		width: 250px !important;
+	}
+
+	.person-content {
+		width: 400px !important;
+		margin: 145px 10px 0 30px !important;
+	}
+
+	.about-our-team .our-team-content .team-details .team-members ul li {
+		float: left;
+		margin: 8px 44px 40px 38px;
+		width: 38%;
+	}
+
+	.career-desc-right .career-brief span {
+		display: none !important;
+	}
+
+	.career-desc-left .career-brief span {
+		display: none !important;
+	}
+
+	.about-title {
+		top: 11px !important;
+	}
+
+	.certification-title {
+		top: -60px !important;
+	}
+
+	.main-content .external-links .blog-brief .external-content h2, .main-content .external-links .case-study-brief .external-content h2, .main-content .external-links .testimonial-brief .external-content h2 {
+		text-align: left;
+		float: left;
+		width: 100%;
+		line-height: 48px;
+	}
+
+	.tab-iocn {
+		display: block;
+		margin-left: 32%;
+		width: 50px;
+		height: 50px;
+		float: left;
+		margin-right: 12px;
+	}
+
+
+	.main-content .external-links .blog-brief .external-content .case-study-img ul, .main-content .external-links .case-study-brief .external-content .case-study-img ul, .main-content .external-links .testimonial-brief .external-content .case-study-img ul {
+		width: 35%;
+		margin: 8px auto;
+	}
+
+	.request-quote .request-inner-content .request-block .quote-item .other-web.active-tab .website-type input, .request-quote .request-inner-content .request-block .quote-item .other-request.active-tab .website-type input, .request-quote .request-inner-content .request-block .quote-item1 .other-web.active-tab .website-type input, .request-quote .request-inner-content .request-block .quote-item1 .other-request.active-tab .website-type input {
+		width: 53%;
+		margin-right: 10px;
+	}
+
+	.visit-website-btn {
+		display: block;
+	}
+
+	.nextButton, .prevButton {
+		display: none !important;
+	}
+
+	.approach-content {
+
+		img {
+			max-width: 100%;
+		}
+	}
+	
+	.portfolio-details-page .pf-slider {
+		margin-top: 60px;
+		overflow-x: hidden;
+		height: 450px;
+	}
+
+	.services-page .services-content .services-menu-list {
+		width: 79.8%;
+		left: 196px;
+	}
+
+	.slideItem {
+
+		img {
+			width: 500px !important;
+		}
+	}
+
+	.portfolio-details-page .portfolio-inner-content .approach .approach-title h3 {
+		width: 30%;
+	}
+
+	.approach-team {
+		width: 50% !important;
+	}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)  {
+
+	.visit-website-btn {
+		display: block;
+	}
+
+	.about-our-team .our-team-content .team-details .team-members ul li {
+		float: left;
+		margin: 8px 22px 40px 22px;
+		width: 28%;
+	}
+
+	.portfolio-page .portfolio-content .list-portfolio .portfolio-project-details {
+		float: left;
+	}
+
+	.portfolio-page .portfolio-content .list-portfolio .portfolio-project-details .portfolio-links ul {
+		margin-top: 0;
+	}
+	
+	.main-content .external-links .blog-brief .external-content h2, .main-content .external-links .case-study-brief .external-content h2, .main-content .external-links .testimonial-brief .external-content h2 {
+		float: left;
+		width: 100%;
+		padding: 0 0 0 15%;
+
+		span {
+			float: left;
+			margin-top: 10px;
+		}
+	}
+
+	.portfolio-details-page .pf-slider {
+		margin-top: 60px;
+		overflow-x: hidden;
+		height: 450px;
+	}
+
+	.nextButton, .prevButton {
+		display: none !important;
+	}
+
+	.slick-next, .slick-prev {
+		display: none !important;
+	}
+
+	.approach-team {
+		width: 50% !important;
+	}
+
+	.approach-content {
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	.tab-iocn {
+		display: block;
+		float: left;
+		margin-right: 10px;
+	}
+
+	.visit-arrow {
+		position: absolute;
+		top: 2px;
+		right: -20px;
+	}
+
+	.services-block {
+		background: none;
+	}
+
+	.service-levels {
+		display: none;
+	}
+
+	.service-levels-ipad {
+		display: block !important;
+	}
+
+	.services-for-ipad {
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+
+	.service-levels-ipad {
+		// display: none;
+		float: none;
+		width: 75%;
+		margin: 60px auto;
+		text-align: center;
+		padding: 0 0 0 28px;
+	}
+
+	.main-content .services-range {
+		float: left;
+		width: 100%;
+		min-height: 100px;
+		background-size: 100% 523px;
+	}
+
+	.main-content {
+
+		.blog-img {
+			display: none;
+		}
+
+		.external-links {
+			margin-top: 20px;
+
+			.blog-brief, .case-study-brief, .testimonial-brief {
+
+				.external-content {
+					width: 95%;
+					left: 8px;
+					background: #fff;
+					padding: 10px;
+					border-radius: 15px;
+					top: 26px;
+					height: 300px;
+				}
+			}
+		}
+
+		.external-links {
+			padding-bottom: 20px;
+		}
+
+		.about-title {
+			top: 11px !important;
+		}
+	}
+
+	.rc-anchor-normal {
+		width: 206px !important;
+	}
+
+	.main-content {
+
+		.services-range {
+
+			.certifications {
+
+				.certifications-content {
+					width: 250px;
+				}
+				
+				.certification-title {
+					right: -31px;
+					top: -67px;
+				}
+			}
+		}
+	}
+
+	.services-page {
+
+		.services-list {
+
+			.services-block {
+				background: none;
+			}
+		}
+	}
+
+	.services-page .services-list .web-design-services .services-list-content ul li a, .services-page .services-list .we-services .services-list-content ul li a {
+		font-size: 10px;
+	}
+
+	#map-canvas {
+		width: 100% !important;
+	}
+
+	.web-dev-page .web-dev-intro .web-dev-content-inner .web-content-para {
+		width: 73%;
+	}
+
+	.quick-enquiry .g-recaptcha iframe {
+		width: 57%;
+	}
+
+	.about-us-process {
+
+		.our-process-steps {
+
+			.our-process-step {
+				min-height: 412px;
+				background-size: 50%;
+
+				.step1-content1 {
+					top: -68px;
+					right: 44px;
+				}
+
+				.step1-content2 {
+					top: 50px;
+					right: 20px;
+				}
+
+				.step1-content3 {
+					top: 198px;
+				}
+
+				.steps-content p {
+					line-height: 20px;
+					text-align: -webkit-left;
+				}
+
+				.step2-content1 {
+					top: -62px;
+					right: 10px;
+				}
+
+				.step2-content2 {
+					top: 83px;
+				}
+
+				.step2-content3 {
+					top: 224px;
+					right: 5px;
+				}
+			}
+
+			.our-process-step2 {
+				background-size: 48%;
+
+				.steps3-content {
+					background-size: 70%;
+					top: -20px;
+					right: -60px;
+
+					p {
+						width: 70%;
+						clear: both;
+					}
+				}
+			}
+
+		}
+	}
+
+	.person-image {
+		width: 300px !important;
+	}
+
+	.job-title {
+		font-size: 16px !important;
+		padding-bottom: 4px !important;
+	}
+
+	.request-quote .request-inner-content .request-block .quote-item .other-web.active-tab .website-type input, .request-quote .request-inner-content .request-block .quote-item .other-request.active-tab .website-type input, .request-quote .request-inner-content .request-block .quote-item1 .other-web.active-tab .website-type input, .request-quote .request-inner-content .request-block .quote-item1 .other-request.active-tab .website-type input {
+		width: 50%;
+		margin-right: 10px;
+	}
+
+	.careers-page .careers-list .show-careers .career-desc-left .career-brief, .careers-page .careers-list .show-careers .career-desc-right .career-brief {
+		min-height: 280px;
+	}
+
+	.careers-page .careers-list .show-careers .career-desc-left .career-brief .job-code-block, .careers-page .careers-list .show-careers .career-desc-right .career-brief .job-code-block {
+		min-height: 280px;
+	}
+}
+
+//1024 mediaqueries
+
+@media screen and (min-width:1024px) and (max-width:1264px) {
+
+
+	.our-clients {
+
+		.clients-title {
+			
+			h2 { 
+				width: 100%;
+				text-align: center;
+			}
+		}
+	}
+
+
+	// header
+
+	nav {
+
+		.main-nav {
+
+			li {
+				padding: 0 11px;
+			}
+		}
+	}
+
+	// clients
+
+	.client-logos {
+
+		ul {
+
+			li {
+
+				&:nth-child(4n) {
+					margin-right: 26px !important;
+				}
+			}
+		}
+	}
+
+	// footer
+
+	footer {
+
+		.copyright {
+
+			span {
+				font-size: 13px;
+			}
+		}
+	}
+
+	.contact_address {
+
+		.address-details {
+
+			.contact-person {
+
+				.contact-person-details {
+
+					p {
+						padding: 20px 0 20px 45px;
+						background-size: 16%;
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+
+	.careers-page .careers-list .show-careers .career-desc-left, .careers-page .careers-list .show-careers .career-desc-right {
+		background: image-url(careers-list-bg) no-repeat top right 33px;
+	}
+
+	.careers-page .careers-list .show-careers .career-desc-right {
+		background: image-url(careers-list-bg) no-repeat top left 67px;
+	}
+}

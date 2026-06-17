@@ -1,0 +1,11 @@
+<%= content_tag_for :li, uploads, :class => 'col-md-3' do %>
+	<%= image_tag uploads.logo.url(:original) %>
+	<div class="btn-actions">
+		<%#= link_to edit_client_path(client.id), :class => "btn btn-sm btn-default" do %>
+			<!-- <em class="fa fa-pencil"></em> -->
+		<%# end %>
+		<%= link_to "/admin/clients/#{uploads.id}", :class => "btn btn-sm btn-danger", method: :delete, :data => {:confirm => "Are you sure?"} do %>
+			<em class="fa fa-trash"></em>
+		<% end %>
+	</div>
+<% end %>

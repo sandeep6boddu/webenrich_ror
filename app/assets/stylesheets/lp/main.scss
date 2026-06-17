@@ -1,0 +1,687 @@
+body {
+	font-family: "ralewayregular", Arial, sans-serif;
+	background-color: $white;
+}
+
+.container {
+	width: 1170px;
+	margin: 0 auto;
+}
+
+.no-gutter {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.no-gutter-right {
+	padding-right: 0;
+}
+
+.no-gutter-left {
+	padding-left: 0 !important;
+}
+
+.extra-margin-top {
+	margin-top: 10px;
+}
+
+.margin-top {
+	margin-top: 30px;
+}
+
+.clear {
+	clear: both;
+	width: 100%;
+}
+
+.top-header {
+	float: left;
+	@include size(100%, 103px);
+
+	.logo a {
+		float: left;
+		margin: 35px auto;
+	}
+
+	.contact-number {
+
+		ul {
+			float: left;
+			width: 100%;
+			margin-top: 44px;
+
+			li {
+				float: left;
+				list-style: none;
+				padding: 0 15px;
+
+				 span {
+					float: left;
+					@include font($font-family-price, $font-size-base + 2, $dusty-gray);
+
+					em {
+						font-style: normal;
+						color: $orange-cinnabar;
+					}
+				}
+
+				&:last-child {
+					border-left: 1px solid $gray-silver;
+					padding-right: 0;
+
+					span em {
+						color: $danube-light-blue;
+					}
+				}
+			}
+		}
+	}
+}
+
+//ror css start here
+.ror-banner {
+	background: image-url(ror-banner-bg) no-repeat top center;
+	@include size(100%, 430px);
+
+	.ror-development, .ror-application {
+		margin: 30px 0;
+	}
+
+	.ror-development {
+		background-color: rgba(230, 251, 251, 0.75);
+
+		img {
+			margin: 0 auto;
+			padding-top: 40px;
+		}
+
+		.title {
+			padding-bottom: 38px;
+
+			h2 {
+				font-size: $font-size-base + 18;
+				color: $keppel-dark-blue;
+				padding-top: 2px;
+			}
+
+			span {
+				font-size: $font-size-base + 4;
+				color: $dove-gray;
+			}
+		}
+	}
+
+	.ror-application {
+		background-color: rgba(167, 225, 225, 0.8);
+		float: left;
+
+		h3 {
+			padding: 0px 60px 5px 60px;
+			color: $white;
+		}
+
+		.left-lists, .right-lists {
+			width: 50%;
+			float: left;
+		}
+
+		.left-lists li, .right-lists li {
+			background: image-url(lp/lp-sprite) no-repeat;
+			background-position: -25px -20px;
+			list-style: none;
+			line-height: 50px;
+			margin-bottom: 17px;
+			@include font($font-family-base, $font-size-base + 2, $gray-dark);
+		}
+
+		.left-lists li {
+			padding-left: 60px;
+
+			&.web-application {
+				background-position: -25px -100px;
+			}
+
+			&.classifieds {
+				background-position: -25px -180px;
+			}
+
+			&.ecommerce {
+				background-position: -25px -260px;
+			}
+		}
+
+		.right-lists {
+			padding-left: 0;
+
+			li {
+				padding-left: 60px;
+
+				&.data-visualization {
+					background-position: -25px -340px;
+				}
+
+				&.portals {
+					background-position: -25px -420px;
+				}
+
+				&.management {
+					background-position: -25px -500px;
+				}
+			}
+		}
+	}
+}
+
+.ror-process {
+	float: left;
+	width: 100%;
+	margin-top: 35px;
+
+	h3 {
+		font-family: 'ralewaysemibold';
+		color: $dove-gray;
+
+		span {
+			border: 1px solid $gray-silver;
+			padding: 14px 6%;
+		}
+	}
+
+	.ror-content {
+		background: image-url(lp/flow-image) no-repeat top center;
+		@include size(100%, 665px);
+		position: relative;
+		float: left;
+		margin-top: 5px;
+
+		p {
+			position: absolute;
+			bottom: 15%;
+			text-align: center;
+			padding: 0 9%;
+			color: $gray-dark;
+
+			&:last-child {
+				bottom: 5%;
+			}
+		}
+	}
+}
+
+.about-company {
+	background: image-url(lp/bg-img) no-repeat top center;
+	@include size(100%, 400px);
+	margin-top: 40px;
+	float: left;
+
+	.company-details {
+		float: left;
+		width: 100%;
+
+		img {
+			padding-top: 32px;
+		}
+	}
+
+	.details {
+		float: left;
+
+		p {
+			font-size: $font-size-base + 10;
+			color: $white;
+			text-align: center;
+			padding: 18px 14%;
+			text-shadow: 0 0 0 $white;
+
+			span {
+				font-size: $font-size-base + 20;
+			}
+		}
+	}
+}
+
+.portfolio-details-page {
+
+	.pf-slider {
+		float: left;
+		width: 100%;
+		margin-top: 60px;
+
+		.carousel .slides .slideItem img {
+			box-shadow: 0px 53px 59px -43px rgba(0,0,0,0.7);
+			-webkit-box-shadow: 0px 53px 59px -43px rgba(0,0,0,0.7);
+			-moz-box-shadow: 0px 53px 59px -43px rgba(0,0,0,0.7);
+		}
+
+		.carousel .nextButton {
+			right: -180px !important;
+		}
+
+		.carousel .prevButton {
+			left: -180px !important;
+		}
+	}
+}
+
+.ror-slide-show {
+	float: left;
+	width: 100%;
+
+	.pf-slider {
+		float: left;
+		@include size(100%, 500px);
+		width: 100%;
+		padding-top: 50px;
+		overflow: hidden;
+
+		.nextButton, .prevButton {
+			position : absolute;
+			right : -205px !important;
+			top : 196px;
+			@include size(18px, 30px);
+			background : image-url(lp/right-arrow) no-repeat center right;
+			cursor : pointer;
+			z-index : 9999;
+		}
+
+		.prevButton {
+			background : image-url(lp/left-arrow) no-repeat center;
+			left: -205px !important;
+		}
+	}
+}
+
+.ror-form {
+	background-color: $Jagged-Ice-light-blue;
+	@include size(100%, 390px);
+	float: left;
+
+	h3 {
+		font-size: $font-size-base + 12;
+		color: $keppel-dark-blue;
+		padding: 17px 0 20px 0;
+	}
+
+	.left-form, .right-form {
+		line-height: 42px;
+		float: left;
+		width: 100%;
+
+		.error {
+			line-height: 1;
+
+			span {
+				color: $sunglo-light-orange;
+				font-size: $font-size-base - 2;
+			}
+		}
+
+		.form-group {
+			float: left;
+			width: 100%;
+
+			label {
+				text-align: left;
+				background: image-url(lp/small-arrow) no-repeat top center;
+				background-position: 29px 18px;
+				padding-left: 45px;
+				@include font($font-family-base, $font-size-base + 2, $dove-gray);
+			}
+
+			.ror-form-input {
+				height: 38px;
+				border-radius: 0;
+				border: 1px solid $jungle-mist-light-blue;
+			}
+		}
+	}
+
+	.ror-submit-btn {
+		text-align: center;
+		padding-top: 25px;
+
+		.submit-btn {
+			padding: 9px 54px;
+			background-color: $Sunglo-tomato;
+			border: 0;
+			@include font($font-family-price, $font-size-base + 2, $white);
+
+			&:focus {
+				border: none;
+				outline: none;
+			}
+
+			&:hover {
+				background-color: $orange-cinnabar;
+			}
+		}
+	}
+}
+
+.copy-rights-bar {
+	float: left;
+	width: 100%;
+	padding: 60px 0;
+	text-align: center;
+}
+
+.landing-page-clients {
+	padding: 0;
+
+	.clients-title h2 {
+		margin: 56px auto;
+		width: 18%;
+		text-transform: uppercase;
+		@include font($font-family-light, $font-size-base + 18, $orange-cinnabar);
+	}
+
+	.autoplay{
+		width: 100%;
+		margin: -20px auto -36px auto;
+
+		.slick-list {
+
+			.gray-img {
+				-webkit-filter: grayscale(100%);
+				-moz-filter: grayscale(100%);
+				filter: grayscale(100%);
+				filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+				box-shadow: 0 2px 1px rgba(0,0,0,0.17);
+				-webkit-transition: .5s;
+				-moz-transition: .5s;
+				transition: .5s;
+				margin-right: 19px;
+				display: inline-block;
+				opacity: .7;
+				width: 177px !important;
+
+				&:hover {
+					-webkit-filter: grayscale(0);
+					-moz-filter: grayscale(0);
+					filter: grayscale(0);
+					filter: none;
+					box-shadow: 0 5px 11px 0 rgba(0,0,0,0.25);
+					opacity: 1;
+				}
+			}
+		}
+
+		.slick-prev, .slick-next {
+			top: 24%;
+		}
+
+		.slick-next {
+			right: -88px;
+		}
+
+		.slick-prev {
+			left: -88px;
+		}
+	}
+}
+//ror css end
+
+//mobile-app css start
+.mobile-app-banner {
+	background: image-url(lp/header-bg) no-repeat top center;
+	@include size(100%, 600px);
+
+	.banner-title {
+
+		h3 {
+			color: $azure-radiance-sky-blue;
+			font-size: $font-size-base + 18;
+			padding: 18px 0 2px 0;
+		}
+
+		p {
+			padding: 0 10%;
+			font-size: $font-size-base + 6;
+			text-align: center;
+
+			span {
+				font-family: 'ralewaysemibold';
+			}
+		}
+	}
+
+	.banner-phone-img {
+		float: left;
+		width: 100%;
+		padding-top: 32px;
+	}
+
+	.successful-projects {
+		float: left;
+		width: 100%;
+		padding-bottom: 34px;
+
+		h3 {
+			padding: 35px 0 40px 0;
+
+			span {
+				color: $dove-gray;
+				border-bottom: 2px solid $mercury-light-gray;
+				padding-bottom: 10px;
+
+				em {
+					color: $orange-cinnabar;
+					font-style: normal;
+					font-family: 'ralewaysemibold';
+				}
+			}
+		}
+
+		.rapid-bg, .transparency-bg, .quality-bg, .guarantee-bg {
+			position: relative;
+			min-height: 310px;
+
+			.content {
+				position: absolute;
+				text-align: center;
+				top: 115px;
+
+				span {
+					@include font($font-family-base, $font-size-base + 2, $apple-green); 
+				}
+
+				p {
+					padding: 0 15px;
+					color: $dove-gray;
+				}
+			}
+		}
+
+		.rapid-bg {
+			background: image-url(lp/rapid) no-repeat top center;
+		}
+
+		.transparency-bg {
+			background: image-url(lp/transparency) no-repeat top center;
+		}
+
+		.quality-bg {
+			background: image-url(lp/quality) no-repeat top center;
+		}
+
+		.guarantee-bg {
+			background: image-url(lp/guarantee) no-repeat top center;
+		}
+	}
+
+	.starting-project {
+		text-align: center;
+		border: 1px solid $mercury-light-gray;
+		padding: 14px 0;
+		float: left;
+		width: 100%;
+
+		.title {
+			float: left;
+			width: 100%;
+			@include font('ralewaysemibold', $font-size-base + 10, $orange-cinnabar);
+		}
+
+		.content {
+			color: $dove-gray;
+			font-size: $font-size-base + 4;
+			float: left;
+			width: 100%;
+			padding-bottom: 6px;
+		}
+
+		.submit-btn {
+			background-color: $Sunglo-tomato;
+			color: $white;
+			border: 0;
+			padding: 8px 26px;
+			font-family: 'ralewaysemibold';
+			margin: 12px 0;
+
+			&:focus {
+				border: none;
+				outline: none;
+			}
+
+			&:hover {
+				background-color: $orange-cinnabar;
+			}
+		}
+	}
+}
+//mobile app css end
+
+//ecommerce css start
+.ecommerce-part {
+
+	.ecommerce-banner {
+		background: image-url(lp/header-bg) no-repeat top center;
+		@include size(100%, 100%);
+
+		.banner-title {
+
+			h3 {
+				font-size: $font-size-base + 18;
+				color: $pomegranate-orange;
+				padding-top: 22px;
+			}
+
+			p {
+				color: $tundora-light-gray;
+				font-size: $font-size-base + 6;
+			}
+		}
+
+		.banner-icons {
+			margin-left: 14px;
+			padding-bottom: 40px;
+		}
+
+		.magento-img {
+			padding: 0px 0 0px 8px;
+		}
+
+		.ror-icon, .megento-icon, .wordpress {
+			text-align: center;
+			padding: 26px 0 0 0;
+			float: left;
+
+			img {
+				margin: 0 auto;
+			}
+
+			span {
+				@include font($font-family-price, $font-size-base + 4, $white);
+				padding-top: 12px;
+				float: left;
+				width: 100%;
+				text-shadow: 0px 0px 9px $gray-base;
+			}
+		}
+	}
+
+	.world-store-online-content {
+		float: left;
+		width: 100%;
+
+		.ship-wrapper {
+			float: left;
+			width: 100%;
+
+			h6 {
+				text-align: center;
+				padding: 71px 0 0px 0;
+
+				span {
+					color: $danube-light-blue;
+					font-size: $font-size-base + 6;
+					border: 1px solid $mercury-light-gray;
+					padding: 20px 7%;
+				}
+			}
+
+			h5 {
+				float: left;
+
+				em {
+					background: image-url(lp/single-line) no-repeat top center;
+					@include size(1px, 40px);
+					position: absolute;
+					right: 50%;
+				}
+			}
+
+			h3 {
+				text-align: center;
+				@include font($font-family-base, $font-size-base + 16, $sunglo-light-orange);
+				padding: 36px 0 42px 0;
+			}
+		}
+
+		.online-store-wrapper {
+			background: image-url(lp/ecommerce-online) no-repeat top center;
+			@include size(100%, 100%);
+			padding-bottom: 68px;
+
+			.top-wrapper, .bottom-wapper {
+				color: $gray-dark;
+				font-family: 'ralewaymedium';
+				line-height: 28px;
+			}
+
+			.top-wrapper {
+				padding: 58px 49px 0 45%;
+			}
+
+			.bottom-wapper {
+				padding: 25px 49px 0 45%;
+			}
+		}
+	}
+}
+// Smooth Scrolling css
+.botlink {
+	position: fixed;
+	left: 5%;
+	margin: 0 -20px 0 0;
+	background: image-url(lp/request-a-quote) no-repeat;
+	width: 125px;
+	height: 30px;
+	z-index: 99;
+	bottom: 5%;
+	opacity: 0;
+}
+
+.botlink.cd-is-visible {
+	visibility: visible;
+	opacity: 1;
+}
+
+.new_lp_contact {
+
+	.contact-errors {
+		color: $sunglo-light-orange;
+		font-size: $font-size-base - 2;
+		line-height: 14px;
+	}
+}

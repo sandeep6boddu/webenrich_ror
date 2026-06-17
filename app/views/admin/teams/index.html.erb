@@ -1,0 +1,34 @@
+<div class="content-heading">Team</div>
+<!-- Zero Configuration-->
+<div class="panel panel-default">
+	<div class="panel-body">
+		<div class="table-responsive b0">
+			<table id="datatable1" class="table table-striped table-hover">
+				<%= link_to new_team_path, {class: "btn btn-sm btn-primary pull-right", :style => 'margin-bottom:20px;'} do %>
+					<em class="fa fa-plus"></em> Add New Member
+				<% end %>
+				<tbody>
+					<ul id="uploads" class="sortable" data-update-url="<%= sort_teams_path %>" >
+						<% if @team.count > 0 %>
+							<% @team.each do |team| %>
+								<%= content_tag_for :li, team, :class => 'col-md-3' do %>
+									<%= image_tag team.team_img.url(:original) %>
+									<div class="btn-actions">
+										<%= link_to edit_team_path(team.id), :class => "btn btn-sm btn-danger" do %>
+											<em class="fa fa-pencil"></em>
+										<% end %>
+										<%= link_to "/admin/teams/#{team.id}", :class => "btn btn-sm btn-danger", method: :delete, :data => {:confirm => "Are you sure?"} do %>
+											<em class="fa fa-trash"></em>
+										<% end %>
+									</div>
+								<% end %>
+							<% end %>
+						<% else %>
+							<tr><td><%= flash.now[:notice] = "No records found." %></td></tr>
+						<% end %>
+					</ul>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

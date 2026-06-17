@@ -1,0 +1,168 @@
+<div class="content-heading">Portfolio</div>
+<%= form_for @portfolio, :data => {:parsley_validate=>""}, :html => {class: "form-horizontal", :multipart => true} do |f| %>
+	<div class="row">
+			<!-- Job Content-->
+			<!-- START panel-->
+			<div class="col-lg-9">
+				<div class="panel panel-default">
+					<div class="panel-body">
+							<fieldset>
+								<legend>New Portfolio</legend>
+							</fieldset>
+							<fieldset>
+								<div class="form-group">
+									<label class="col-md-2 control-label">Upload Slides:</label>
+									<div class="col-md-8">
+										<%= f.file_field :slides, class: 'form-control filestyle', classinput: 'form-control inline', data: {:classbutton => "btn btn-default"}, :multiple => "true" %>
+										<%= @portfolio.errors[:slides].join(', ') %>
+										<span>*Upload only JPG or PNG images. You need to upload 3 images at a time.</span>
+									</div>
+								</div>
+							</fieldset>
+							<fieldset>
+								<div class="form-group">
+									<label class="col-md-2 control-label">Upload Thumb:</label>
+									<div class="col-md-8">
+										<%= f.file_field :thumb, class: 'form-control filestyle', classinput: 'form-control inline', data: {:classbutton => "btn btn-default"} %>
+										<%= @portfolio.errors[:thumb].join(', ') %>
+										<span>*Upload only JPG or PNG images</span>
+									</div>
+								</div>
+							</fieldset>
+							<fieldset>
+								<div class="form-group">
+									<label class="col-md-2 control-label">Category Belongs To:</label>
+									<div class="col-md-8">
+										<%= select_tag "categories[]", options_from_collection_for_select(Category.roots.find("portfolio").children, 'id', 'name', @portfolio.categories.pluck(:id)),  :multiple => 'multiple' %>
+										<%= @portfolio.errors[:category].join(', ') %>
+										<span>*You can select Multiple categories</span>
+									</div>
+								</div>
+							</fieldset>
+							<fieldset>
+								<div class="form-group">
+									<label class="col-md-2 control-label">Title:</label>
+									<div class="col-md-8">
+										<%= f.text_field :title, class: "form-control", placeholder: "Title...", required: true %>
+										<%= @portfolio.errors[:title].join(', ') %>
+									</div>
+								</div>
+							</fieldset>
+							<fieldset>
+								<div class="form-group">
+									<label class="col-md-2 control-label">Description:</label>
+									<div class="col-md-8">
+										<%= f.text_area :description, class: "form-control", placeholder: "Description...", required: true %>
+										<%= @portfolio.errors[:description].join(', ') %>
+									</div>
+								</div>
+							</fieldset>
+							<fieldset>
+								<div class="form-group">
+									<label class="col-md-2 control-label">Team Size:</label>
+									<div class="col-md-8">
+										<%= f.select :team_size, options_for_select((0..10), @portfolio.team_size), { :prompt => 'Select'},{:class=>"form-control", required: true} %>
+
+										<%= @portfolio.errors[:team_size].join(', ') %>
+									</div>
+								</div>
+							</fieldset>
+							<fieldset>
+								<div class="form-group">
+									<label class="col-md-2 control-label">Technology:</label>
+									<div class="col-md-8">
+										<%= select_tag "technologies[]", options_from_collection_for_select(Category.roots.find_by(name: "Technology").children, 'id', 'name', @portfolio.technologies), :multiple => 'multiple' %>
+										<%= @portfolio.errors[:technologies].join(', ') %>
+									</div>
+								</div>
+							</fieldset>
+							<fieldset>
+								<div class="form-group">
+									<label class="col-md-2 control-label">Duration:</label>
+									<div class="col-md-4">
+										<%= f.text_field :duration, class: "form-control", placeholder: "Duration...", required: true %>
+										<%= @portfolio.errors[:duration].join(', ') %>
+									</div>
+									<div class="col-md-4">
+										<%= f.select :calender, enum_option_pairs(Portfolio, :calender), {prompt: "select"}, class: "form-control", required: true %>
+										<%= @portfolio.errors[:calender].join(', ') %>
+									</div>
+								</div>
+							</fieldset>
+							<!-- <fieldset>
+								<div class="form-group">
+									<label class="col-md-2 control-label">Conclusion:</label>
+									<div class="col-md-8">
+										<%#= f.text_area :conclusion, class: "form-control", placeholder: "Conclusion...", required: true %>
+										<%#= @portfolio.errors[:conclusion].join(', ') %>
+									</div>
+								</div>
+							</fieldset> -->
+							<fieldset>
+								<div class="form-group">
+									<label class="col-md-2 control-label">Link:</label>
+									<div class="col-md-8">
+										<%= f.text_field :link, class: "form-control", placeholder: "Link or Url..." %>(Please do not include http:// in the url)
+										<%= @portfolio.errors[:link].join(', ') %>
+									</div>
+								</div>
+							</fieldset>
+							<fieldset>
+								<div class="form-group">
+									<label class="col-md-2 control-label">Status:</label>
+									<div class="col-md-8">
+										<%= f.select :status, enum_option_pairs(Portfolio, :status), { :prompt => 'Please select status'}, {class: "form-control", required: true} %>
+										<%= @portfolio.errors[:status].join(', ') %>
+									</div>
+								</div>
+							</fieldset>
+					</div>
+				</div>
+			</div>
+			<!-- END panel-->
+			<!-- Job sidebar-->
+			<div class="col-lg-3">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<p class="lead">SEO Metadata</p>
+						<div class="form-group col-md-12">
+							<p>Meta Title:</p>
+							<%= f.text_field :meta_title, class: "form-control", placeholder: "Meta Title...", required: true %>
+							<%= @portfolio.errors[:meta_title].join(', ') %>
+						</div>
+						<div class="form-group col-md-12">
+							<p>Description:</p>
+							<%= f.text_area :meta_description, class: "form-control", placeholder: "Max 255 characters...", rows: 5, required: true %>
+							<%= @portfolio.errors[:meta_description].join(', ') %>
+						</div>
+						<div class="form-group col-md-12">
+							<p>Keywords:</p>
+							<%= f.text_area :meta_keywords, class: "form-control", placeholder: "Max 1000 characters...", rows: 5, required: true %>
+							<%= @portfolio.errors[:meta_keywords].join(', ') %>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-9">
+			<div class="clearfix">
+				<div class="pull-right">
+					<%= f.button "Save", :class => "btn btn-primary m-t-10" do %>
+						<em class="fa fa-check fa-fw"></em> save
+					<% end %>
+				</div>
+				<div class="pull-left">
+					<%= link_to portfolios_path, :class => "btn btn-danger" do %>
+						<i class="fa fa-undo"></i> Cancel
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#portfolio_category').multiselect();
+    });
+</script>

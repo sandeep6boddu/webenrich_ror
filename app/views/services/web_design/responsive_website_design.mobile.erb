@@ -1,0 +1,107 @@
+<% content_for :title do %>
+	Responsive Website Designing Services Company Hyderabad, Bangalore, India
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="Web Enrich Solutions Pvt. Ltd. being one of the top website designing companies in India offers best responsive web design services. Our team of responsive web designers helps you to convert or create a website with clean, high quality, easy to edit, well commented HTML5 and CSS3 Responsive Web Design that works perfect on all devices including iPhone, Android, iPad, small laptop screens, and large desktop screens.">
+	<meta name="keywords" content="responsive web design services, responsive web designers, responsive display web designs, responsive web developer, responsive web design company, psd to html India, psd to html responsive, psd to html5 responsive, psd to responsive html, psd to responsive html5, Bangalore, Hyderabad, Delhi, India">
+<% end %>
+<div class="services-page">
+	<div class="mobile-page-main mobile-page-inner">
+		<div class="main-title">
+			<div class="container">
+				<h1>
+					<%= link_to web_design_path, :class => 'left' do %>
+						<%= image_tag image_path('mobile/back-arrow.png') %>
+					<% end %>
+					Responsive Website Design
+				</h1>
+			</div>
+		</div>
+		<div class="container">
+			<div class="title-content">
+				<div class="services-img services-inner-img">
+					<%= image_tag image_path('mobile/responsive-icon-big.png'), alt: 'services-inner-img' %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="services-text">
+		<div class="container">
+			<div class="rwd-article">
+				<p>
+					Your website is the first glimpse of your business for most users. Can you afford to get it wrong? No. According to Search Engine Watch's 2013 report, of the 6.8 billion people in the world, almost 5.1 billion own a cell phone – that's about 75% of world's population. Add to it the fact that about 30% of internet usage comes from mobile users and you have pretty huge potential client base.
+				</p>
+				<article>
+					So how do you impress your client base? By creating a website that is user-friendly, easy-to-read, easy-to-navigate, and offers options for viewing the content - in short, by creating a 'responsive website design'.
+				</article>
+				<%= link_to "Continue Reading", '#', :class => 'waves-effect waves-light btn hide' %>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="services-text rwd-content">
+			<div class="rwd-inner-content">
+				<h2>What is Responsive Web Design</h2>
+				<p>Responsive design is a web design and development technique that crafts a website that reacts to the user's screen size. Responsive design provides an optimal viewing experience by creating a flexible and responsive web page that is optimized for the device that accesses it, for instance desktop, laptop, smart phone, tablet, etc.</p>
+			</div>
+			<div class="rwd-inner-content">
+				<h2>Benefits of RWD:</h2>
+				<p>Websites are critical for the success of a business. And given today's on-the-go, device-happy culture, a website needs to win the race of being the most responsive one, one that offers seamless experience irrespective of the device they appear on. Even marketers today acknowledge the importance of RWD in generating revenues.</p>
+				<p><strong>There are many business benefits of an RWD but here are the most prominent ones:</strong></p>
+			</div>
+			<div class="rwd-inner-content">
+				<h2>Increases your reach</h2>
+				<p>With an RWD, your reach is immensely increased for you will be able to cater to mobile phone and tablet users. So instead of creating a device-specific app, you can reach out to users of different devices through a single RWD.</p>
+				<p>This will save you technology cost, designing time and make it easier to update any changes to the website.</p>
+			</div>
+			<div class="rwd-inner-content">
+				<h2>Saves you time and money on mobile development</h2>
+				<p>Responsive design takes less time than creating an additional stand-alone mobile site. By using standardized testing methodologies, one can get rid of the development, support and maintenance overheads that are incurred in creating device-specific sites.</p>
+				<p>Moral of the story - a smartly crafted responsive website can easily be your biggest asset.</p>
+			</div>
+			<div class="rwd-inner-content">
+				<h2>Improves sales and conversion rates</h2>
+				<p>Hassle-free, non-redirecting consistent user experience will certainly have a positive impact on leads, sales and conversion rates. That's because users are familiar with your site's navigation and system use across different devices.</p>
+				<p>Responsive website design eliminates some of the barriers that having multiple sites can present, viz. in functionality, performance and in terms of consistency in look and feel.</p>
+			</div>
+			<div class="rwd-inner-content">
+				<h2>User Friendly</h2>
+				<p>It all boils down to this – great user experience which comes from user friendly designs. Our RWD is thoroughly user-friendly, thanks to our adaptive web program.</p>
+			</div>
+			<div class="rwd-inner-content">
+				<h2>Why WebEnrich</h2>
+				<p>We put our customers before our interests. We work closely with them and understand their needs and challenges. Then we put in necessary research, experience, data and create a solution that is innovative and effective. At WebEnrich, we constantly strive to create a completely new user experience through RWD.</p>
+			</div>
+		</div>
+	</div>
+	<div class="list-of-services list-of-detail-services">
+		<div class="container">
+			<div class="list-of-services-inner">
+				<h1>Other Web Design Services</h1>
+				<div class="card">
+					<ul>
+						<li>
+							<%= link_to corporate_branding_path do %>
+								<strong>Corporate Branding</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to mobile_website_design_path do %>
+								<strong>Mobile Website Design</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to website_maintenance_path do %>
+								<strong>Website Maintenance</strong>
+							<% end %>
+						</li>
+					</ul>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<!-- Our Clients -->
+	<%= render 'layouts/widgets/our_clients' %>
+	<!-- start-project -->		
+	<%= render 'layouts/widgets/start_project' %>
+</div>

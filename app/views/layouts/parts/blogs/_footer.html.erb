@@ -1,0 +1,79 @@
+<footer>
+	<div class="container">
+		<div class="mdl-cell--12-col mdl-grid mdl-fullwidth no-padding">
+			<div class="mdl-cell--6-col">
+				<ul class="footer-nav">
+					<li>
+						<%= link_to 'Home', '/' %>
+					</li>
+					<li>
+						<%= link_to 'Services', services_path %>
+					</li>
+					<li>
+						<%#= link_to 'Blog', '#' %>
+					</li>
+					<li>
+						<%= link_to 'Careers', career_home_path %>
+					</li>
+					<li>
+						<%= link_to 'Partner with us', partner_with_us_path %>
+					</li>
+					<li>
+						<%= link_to 'Privacy Policy', privacy_policy_path %>
+					</li>
+					<li>
+						<%= link_to 'Contact Us', contact_us_path %>
+					</li>
+				</ul>
+				<ul class="social-icons">
+					<li>
+						<%= link_to '', 'http://www.facebook.com/TryWebenrich', :target => '_blank', :class => 'fb-footer' %>
+					</li>
+					<li>
+						<%= link_to '', 'http://plus.google.com/+WebenrichSolutions/about', :target => '_blank', :class => 'gp-footer' %>
+					</li>
+					<li>
+						<%= link_to '', 'http://twitter.com/webenrich', :target => '_blank', :class => 'tw-footer' %>
+					</li>
+					<li>
+						<%= link_to '', 'http://www.linkedin.com/company/webenrich', :target => '_blank', :class => 'ln-footer' %>
+					</li>
+				</ul>
+			</div>
+			<div class="mdl-cell--6-col">
+				<div class="footer-logo">
+					<%= link_to '/' do %>
+						<%= image_tag 'f-logo.png', size: "136x30", :class => 'img-responsive', :alt => 'Footer Logo' %>
+					<% end %>
+				</div>
+				<div class="copyright">
+					<span>
+						Copyrights © 2009-2018. All Rights Reserved.
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!--Start of Zopim Live Chat Script-->
+<script type="text/javascript">
+	window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+	d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+	_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+	$.src='//v2.zopim.com/?BANeZSDZ121wt8Pi8nB1o5IFTzQXZnu5';z.t=+new Date;$.
+	type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+</script>
+<!--End of Zopim Live Chat Script-->
+<!-- Google Analytics Code -->
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-20266566-1']);
+	_gaq.push(['_setDomainName', '.webenrich.com']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>

@@ -1,0 +1,21 @@
+<div class="mdl-cell--4-col-desktop mdl-cell--8-col-tablet ">
+	<div class="blog-categories popular-blogs mdl-shadow--4dp">
+		<h2 class="mdl-color--red mdl-color-text--white">Popular Blogs</h2>
+		<ul class="blog-technologies blog-group mdl-color--white">
+			<% @popular_blogs.each do |blog| %>
+				<li>
+					<div class="blog">
+						<%= link_to blog_show_path(blog.slug) do %>
+							<%= image_tag blog.banner.url(:thumb), :alt => 'Blog Image', :class => 'left blog-image' %>
+						<% end %>
+						<h4 class="left">
+							<%= link_to blog_show_path(blog.slug) do %>
+								<%= blog.title %>
+							<% end %>
+						</h4>
+					</div>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+</div>

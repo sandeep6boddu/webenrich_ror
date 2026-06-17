@@ -1,0 +1,86 @@
+<% content_for :title do %>
+	Mobile Website Designing Services Hyderabad, Bangalore, India Company
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="WebEnrich offers mobile website design and development services in Hyderabad, Bangalore, India. We build websites compatible for all mobile browsers, smart-phones, iPhone, blackberry, PDA's, android!">
+	<meta name="keywords" content="mobile website design, mobile website designing, development, India, mobile browsers, smart-phones, iPhone, blackberry, PDA's, android">
+<% end %>
+<div class="services-page">
+	<div class="mobile-page-main mobile-page-inner">
+		<div class="main-title">
+			<div class="container">
+				<h1>
+					<%= link_to web_design_path, :class => 'left' do %>
+						<%= image_tag image_path('mobile/back-arrow.png') %>
+					<% end %>
+					Mobile Website Design
+				</h1>
+			</div>
+		</div>
+		<div class="container">
+			<div class="title-content">
+				<div class="services-img services-inner-img">
+					<%= image_tag image_path('mobile/mobile-website-icon.png'), alt: 'services-inner-img' %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="services-text">
+		<div class="container">
+			<div class="mobile-web-article">
+				<p>
+					Is there an urgent business deal that you need to finalize and you can't wait to get back to your good old' PC at home? Well there's a cheaper option available rather than buying yourself a portable laptop or notebook- A smart phone. Some of the most advanced Smartphone's available in the market today help users to access World Wide Web functionalities.
+				</p>
+				<article>
+					A well designed Mobile Website spells instant profits for your business. No wonder a number of businesses have begun to invest heavily on mobile websites in order to serve their customers across the world instantly. We have a team of highly qualified Mobile Website Designers and enjoy working on the Agile development methodology besides complying with the International standards for the Web and Mobile design.
+				</article>
+				<%= link_to "Continue Reading", '#', :class => 'waves-effect waves-light btn hide' %>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="card web-design-services">
+			<div class="card-content">
+				<h2>Some of our Mobile Website Development services include:</h2>
+				<ul class="collection">
+					<li class="collection-item">Apple iphone mobile website development</li>
+					<li class="collection-item">Palm Mobile Web Design</li>
+					<li class="collection-item">Google android mobile website development</li>
+					<li class="collection-item">Rim Blackberry mobile website development</li>
+				</ul>
+				<p>Our customers are happy with our high quality services and most innovative designs at cost-effective prices.</p>
+				<p>To know more about our Mobile Website services please <%= link_to 'Contact', contact_us_path %> us.</p>
+			</div>
+		</div>
+	</div>
+	<div class="list-of-services list-of-detail-services">
+		<div class="container">
+			<div class="list-of-services-inner">
+				<h1>Other Web Design Services</h1>
+				<div class="card">
+					<ul>
+						<li>
+							<%= link_to corporate_branding_path do %>
+								<strong>Corporate Branding</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to responsive_website_design_path do %>
+								<strong>Responsive Website Design</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to website_maintenance_path do %>
+								<strong>Website Maintenance</strong>
+							<% end %>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Our Clients -->
+	<%= render 'layouts/widgets/our_clients' %>
+	<!-- start-project -->
+	<%= render 'layouts/widgets/start_project' %>
+</div>

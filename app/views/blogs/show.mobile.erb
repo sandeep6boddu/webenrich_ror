@@ -1,0 +1,81 @@
+<% content_for :title do %>
+	<%= @blog.meta_title %>
+<% end %>
+<div class="container">
+	<h1 class="breadcrumb margin-top">
+		<%= link_to '/' do %>Blog<% end %> / <span><%= @blog.categories.pluck(:name).join(', ') %></span>
+	</h1>
+</div>
+<div class="row">
+	<div class="col s12">
+		<div class="container">
+			<div class="card margin-top">
+				<div class="card-image">
+					<% if @blog.banner.present? %>
+						<div class="banner">
+							<%= image_tag @blog.banner.url(:medium), :alt => 'Banner Image', :class => 'img-responsive' %>
+						</div>
+					<% end %>
+					<div class="left">
+						<span class="card-title cust-card-title">
+							<%= raw truncate(@blog.title, length: 26, escape: false) %>
+						</span>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="card-content">
+					<div class="user-details">
+						<span class="user-name mdl-color-text--gray">
+						<%=  @blog.user.firstname.present? &&  @blog.user.lastname.present? ?  @blog.user.firstname + " "+ @blog.user.lastname : @blog.user.email %>
+						</span>
+					</div>
+					<div class="clear"></div>
+					<div class="post-time">
+						<span >
+							<i class="material-icons left">schedule</i>
+							<% subs = {"about" => '', "almost" => '', "over" => ''} %>
+							<%= distance_of_time_in_words_to_now(@blog.created_at).gsub(/\w+/) { |word| subs[word] || word} %> ago
+						</span>
+					</div>
+					<div class="clear"></div>
+					<p class="margin-top">
+						<%= raw @blog.content %>
+					</p>
+				</div>
+			</div>
+			<div class="blogcomments-icons">
+				<ul class="post-comments">
+					<li>
+					<%= link_to '#comments' do %>
+						<i class="material-icons mdl-color-text--white">comment</i>
+					<% end %>
+					<span class="fb-comments-count" data-href="<%= request.original_url %>"></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<!-- popular blogs -->
+	<%= render 'blogs/parts/popular' , object: @popular_blogs %>
+</div>
+<div class="claer"></div>
+<div class="container">
+	<div class="card">
+		<div class="card-content">
+			<b class="left margin-right">Share: </b>
+			<div class="addthis_sharing_toolbox"></div>
+		</div>
+	</div>
+</div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=176982515827523";
+	fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55cacf8251352b24" async="async"></script>

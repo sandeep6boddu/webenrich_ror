@@ -1,0 +1,3840 @@
+// CUSTOM CSS HERE
+
+body {
+	font-family: "Raleway", Arial, sans-serif;
+	background-color: $white;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+
+	li {
+		list-style: none;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0; 
+}
+
+a, a:hover, a:focus {
+	text-decoration: none;
+}
+
+button, input {
+	border: none;
+	outline: none;
+}
+
+textarea {
+	resize: none;
+}
+
+em {
+	font-style: normal;
+}
+
+sup {
+	color: $red-solid;
+	font-family: 'robotobold';
+}
+
+hr {
+	width: 100%;
+	float: left;
+	margin: 0;
+}
+
+.full-row {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.extra-margin {
+	margin-bottom: 10px;
+}
+
+.extra-margin-right {
+	margin-right: 30px;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.extra-padding {
+	padding: 20px;
+}
+
+.extra-padding-right {
+	padding-right: 30px;
+}
+
+.extra-padding-left {
+	padding-left: 30px;
+}
+
+.no-padding-left {
+	padding-left: 0;
+}
+
+.no-padding-right {
+	padding-right: 0;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.no-margin-top {
+	margin-top: 0;
+}
+.no-margin-bottom {
+	margin-bottom: 0 !important;
+}
+
+p {
+	float: left;
+	width: 100%;
+}
+
+header {
+	width: 100%;
+	min-height: 90px;
+
+	.brand-logo {
+		width: 83.3%;
+		margin-top: 20px;
+	}
+
+	.header-right {
+		margin-top: 20px;
+		padding: 0;
+		float: right;
+
+		li {
+			float: left;
+
+			a {
+				display: block;
+			}
+		}
+
+		.fb-share {
+			border-right: 1px solid $gray-mercury;
+			padding-right: 10px;
+			margin-top: 10px;
+		}
+
+		.f-like {
+			margin-top: 10px;
+		}
+
+		.request-quote {
+			height: 28px;
+			border: 1px solid $gray-alto;
+			padding: 0 8px;
+			line-height: 28px;
+			border-radius: 5px;
+			margin-top: 10px;
+			margin-left: 10px;
+			color: $orange-cinnabar;
+			background: $white;
+			font-family: 'open_sanssemibold';
+
+			&:hover {
+				color: $white;
+				background: $orange-cinnabar;
+				border: 1px solid $orange-cinnabar;
+			}
+		}
+	}
+}
+
+nav {
+	width: 100%;
+	min-height: 40px;
+	background: $gray-seashell;
+	border-top: 1px solid $gray-silver;
+	border-bottom: 4px solid $gray-alto-light;
+
+	.main-nav {
+		padding: 0;
+		height: 40px;
+		text-align: center;
+
+		li {
+			display: inline-block;
+			padding: 0 18px;
+			background: image-url(nav-li-bg) no-repeat top right;
+
+			&:last-child {
+				background: none;
+			}
+
+			a {
+				line-height: 40px;
+				color: $dove-gray;
+				font-size: $font-size-base;
+				text-transform: uppercase;
+				font-weight: normal;
+
+				&.active, &:hover {
+					color: $green-chelsia-cucumber;
+					border-bottom: 2px solid $green-chelsia-cucumber;
+					padding-bottom: 5px;
+				}
+			}
+		}
+	}
+}
+
+.main-slider{
+	width: 100%;
+	display: block;
+	float: left;
+
+	img {
+		width: 100%;
+	}
+}
+
+.read-more {
+	float: left;
+	line-height: 30px;
+	padding: 0 10px;
+	font-size: $font-size-base - 1;
+	background: $white;
+	color: $blue-matisse;
+	border: 1px solid $gray-alto;
+	border-radius: 3px;
+	font-family: 'ralewaysemibold';
+	text-transform: capitalize;
+	display: inline-block;
+
+	&:hover {
+		background: $blue-matisse;
+		color: $white;
+		border: none;
+	}
+}
+
+// Main Content CSS
+.main-content {
+	width: 100%;
+	background: $white;
+	min-height: 1190px;
+
+	.services-range {
+		float: left;
+		width: 100%;
+		background: image-url(main-content-bg) no-repeat top center;
+		min-height: 820px;
+		
+		// Service Levels CSS
+		.service-levels {
+			float: left;
+			margin-top: 30px;
+			position: relative;
+			margin-bottom: 40px;
+			height: 445px;
+
+			.serv-icon-bar {
+				position: absolute;
+
+				.service-content {
+					display: block;
+					position: absolute;
+					top: 30px;
+					left: 172px;
+					width: 55%;
+
+					h3 {
+						color: $gray-dark;
+						font-size: $font-size-base + 4;
+						font-family: 'ralewaybold';
+						margin: 5px 0;
+					}
+
+					p {
+						font-size: $font-size-base - 3;
+						color: $gray-dark;
+						text-align: left;
+						font-family: 'ralewaysemibold';
+						margin-bottom: 5px;
+					}
+
+					.service-readmore {
+						background: $green-apple;
+						color: $white;
+						line-height: 26px;
+
+						&:hover {
+							background: $green-chelsia-cucumber;
+						}
+					}
+
+					span {
+						position: absolute;
+						right: -5px;
+						top: 0px;
+						color: $orange-sunglo;
+						cursor: pointer;
+						font-weight: bold;
+					}
+				}
+			}
+
+			.ror {
+				left: 30%;
+				top: 0;
+			}
+
+			.ecomm {
+				top: 0;
+				left: 44%;
+			}
+
+			.mob-app {
+				top: 0;
+				left: 58%;
+			}
+
+			.web-design {
+				top: 145px;
+				left: 23%;
+			}
+
+			.web-dev {
+				left: 37%;
+				top: 145px;
+			}
+
+			.responsive {
+				left: 51%;
+				top: 145px;
+			}
+
+			.maintenance {
+				left: 65%;
+				top: 145px;
+			}
+
+			.seo {
+				left: 30%;
+				top: 290px;
+			}
+
+			.ppc {
+				left: 44%;
+				top: 290px;
+			}
+
+			.smm {
+				left: 58%;
+				top: 290px;
+			}
+
+			.ror, .ecomm, .web-design, .web-dev, .responsive, .seo, .ppc {
+				margin-right: 40px;
+			}
+		}
+
+		// About Content CSS
+		.about-content {
+			float: left;
+
+			.about-title {
+				background: image-url(about-title-bg) no-repeat;
+				position: absolute;
+				left: 0;
+				top: 1px;
+				width: 272px;
+				height: 54px;
+
+				h2 {
+					font-size: $font-size-base + 9;
+					font-family: 'ralewaylight';
+					color: $white;
+					padding-left: 45px;
+					line-height: 54px;
+				}
+			}
+
+			.about-we {
+				float: left;
+				padding-top: 90px;
+
+				p {
+					color: $gray-base;
+					font-size: $font-size-base;
+					font-family: 'ralewaymedium';
+					margin: 12px 0;
+					float: left;
+					line-height: 22px;
+				}
+
+				.read-more {
+					margin-top: 30px;
+				}
+			}
+		}
+
+		.spacer {
+			height: 360px;
+		}
+
+		.certifications {
+			float: left;
+			min-height: 380px;
+			margin-top: 40px;
+
+			.certification-title {
+				background: image-url(certification-title-bg) no-repeat;
+				position: absolute;
+				right: 0;
+				top: -62px;
+				width: 269px;
+				height: 78px;
+
+				h2 {
+					font-size: $font-size-base + 10;
+					font-family: 'ralewaylight';
+					color: $white;
+					padding-left: 30px;
+					line-height: 98px;
+				}
+			}
+
+			.certifications-content {
+				background: image-url(certifications-bg) no-repeat;
+				width: 280px;
+				height: 320px;
+				background-position: 0px 50px;
+
+				.google-ads, .google-ads-home {
+					position: absolute;
+					top: 92px;
+					left: 60px;
+				}
+
+				.bing-ads {
+					position: absolute;
+					bottom: 98px;
+					left: 60px;
+				}
+			}
+		}
+	}
+
+	// External Links CSS
+	.external-links {
+		float: left;
+		width: 100%;
+		min-height: 390px;
+		background: image-url(external-bg) no-repeat top center;
+		background-size: 100% 100%;
+		padding-top: 30px;
+
+		.blog-brief, .case-study-brief, .testimonial-brief {
+			width: 100%;
+			height: 351px;
+
+			.blog-img, .casestudies-img, .testimonials-img {
+				position: relative;
+				z-index: 1;
+			}
+
+			.external-content {
+				position: absolute;
+				top: 40px;
+				left: 70px;
+				width: 75%;
+				z-index: 9999;
+
+				h2, h3 {
+					color: $gray-dark;
+					font-size: $font-size-base + 6;
+					font-family: 'ralewaymedium';
+					margin: 20px 0 10px 0;
+				}
+
+				h3 {
+					color: $green-apple;
+					font-size: $font-size-base + 2;
+					line-height: 24px;
+				}
+
+				p {
+					color: $gray-base;
+					font-size: $font-size-base - 1;
+					line-height: 22px;
+					font-family: 'ralewaymedium';
+					text-align: center;
+					float: left;
+					width:100%;
+				}
+
+				.read-more {
+					float: none;
+				}
+
+				.case-study-img {
+					width: 100%;
+					float: left;
+					margin-bottom: 20px;
+
+					ul {
+						width: 60%;
+						margin: 0 auto;
+
+						li {
+							float: left;
+
+							strong {
+								font-family: 'ralewaybold';
+								font-size: $font-size-base + 2;
+								color: $green-apple;
+								font-weight: normal;
+							}
+
+							em {
+								font-style: normal;
+								font-size: $font-size-base - 3;
+								font-family: 'open_sansregular';
+								color: $dusty-gray;
+							}
+
+							&:last-child {
+								border-left: 1px solid $gray-mercury;
+								padding-left: 10px;
+								margin: 6px 0 0 10px ;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.range-heading {
+	width: 100%;
+	float: left;
+	background: $white;
+	min-height: 50px;
+	margin-top: 25px;
+	text-align: center;
+
+	h1 {
+		position: relative;
+		font-size: $font-size-base + 12;
+		font-family: 'ralewaylight';
+		line-height: 50px;
+		padding-left: 15px;
+		color: $dove-gray;
+
+		span {
+			position: absolute;
+			background: image-url(range-down-arrow) no-repeat bottom left;
+			height: 11px;
+			width: 18px;
+			left: 49%;
+			bottom: -11px;
+		}
+	}
+}
+
+.spacer {
+	display: block;
+	background: image-url(spacer) repeat-y center center;
+	height: 60px;
+	margin-top: 20px;
+}
+
+// Start a project widget css
+.start-project {
+	width: 100%;
+	float: left;
+	background: $gray-alabaster;
+	height: 75px;
+	
+	p {
+		float: left;
+		width: 80%;
+		line-height: 70px;
+		color: $dove-gray;
+		font-size: $font-size-base + 6;
+		font-family: 'ralewaylight';
+	}
+
+	.start-project-btn {
+		height: 46px;
+		background: $white;
+		border: 1px solid $orange-cinnabar;
+		color: $orange-cinnabar;
+		font-size: $font-size-base;
+		font-family: 'ralewaysemibold';
+		display: block;
+		line-height: 46px;
+		padding: 0 15px;
+		float: right;
+		margin-top: 12px;
+		text-transform: uppercase;
+
+		&:hover {
+			background: $orange-cinnabar;
+			color: $white;
+		}
+	}
+}
+
+// Our Clients Widget CSS
+.our-clients {
+	float: left;
+	width: 100%;
+	height: 230px;
+	padding-top: 30px;
+	background: image-url(clients-bg) repeat-x top;
+
+	.clients-title h2 {
+		color: $orange-cinnabar;
+		margin: 0 auto;
+		width: 18%;
+		text-transform: uppercase;
+		font-size: $font-size-base + 14;
+		font-family: 'ralewaylight';
+	}
+
+	.autoplay{
+		width: 95%;
+		margin: 30px auto 0 auto;
+
+		.gray-img {
+			-webkit-filter: grayscale(100%);
+			-moz-filter: grayscale(100%);
+			filter: grayscale(100%);
+			filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+			box-shadow: 0 2px 1px rgba(0,0,0,0.17);
+			-webkit-transition: .5s;
+			-moz-transition: .5s;
+			transition: .5s;
+			margin-right: 17px;
+			display: inline-block;
+			opacity: .7;
+
+			&:hover {
+				-webkit-filter: grayscale(0);
+				-moz-filter: grayscale(0);
+				filter: grayscale(0);
+				filter: none;
+				box-shadow: 0 5px 11px 0 rgba(0,0,0,0.25);
+				opacity: 1;
+			}
+		}
+	}
+}
+
+//footer css
+footer {
+	float: left;
+	width: 100%;
+	padding-bottom: 30px;
+	border-top: 4px solid $gray-alto-solid;
+	
+	.footer-nav {
+		width: 100%;
+		padding: 0;
+		margin: 24px 0 20px 0;
+		float: left;
+
+		li {
+			float: left;
+			padding: 0 14px;
+
+			a {
+				font-size: $font-size-base - 1;
+				color: $dove-gray;
+				text-transform: capitalize;
+				font-family: 'ralewaymedium';
+
+				&:hover {
+					color: $gray-dark;
+				}
+			}
+
+			&:first-child {
+				padding-left: 0;
+			}
+		}
+	}	
+
+	.footer-logo {
+		width: 100%;
+		float: left;
+		text-align: right;
+		padding: 18px 0;
+
+		a {
+			float: right;
+		}
+	}
+
+	.copyright {
+		float: left;
+		width: 100%;
+
+		span {
+			color: $gray-light;
+			font-family: 'ralewaymedium';
+			text-align: right;
+			float: left;
+			width: 100%;
+		}
+	}
+}
+
+.social-icons {
+		float: left;
+		width: 100%;
+		padding: 0;
+
+		li {
+			padding: 0;
+			display: inline-block;
+			width: 35px;
+			margin-right: 5px;
+
+			a {
+				display: block;
+				background: image-url(social-sprite) no-repeat top left;
+				background-position: -10px 0px;
+				height: 30px;
+				width: 30px;
+
+				&.gp-footer {
+					background-position: -10px -48px;
+				}
+
+				&.tw-footer {
+					background-position: -10px -98px;
+				}
+
+				&.ln-footer {
+					background-position: -10px -146px;
+				}
+			}
+		}
+	}
+
+// Inner Pages CSS Here
+
+.page-banner {
+	margin-top: 50px;
+}
+
+.banner-title {
+	background: image-url(about-title-bg) no-repeat;
+	position: absolute;
+	left: 0;
+	top: -33px;
+	width: 272px;
+	height: 54px;
+
+	h2 {
+		font-size: $font-size-base + 9;
+		font-family: 'ralewaylight';
+		color: $white;
+		padding-left: 45px;
+		line-height: 54px;
+	}
+}
+
+// About Page CSS
+.aboutus-page {
+	width: 100%;
+
+	.about-content {
+		background: image-url(about-content-bg) no-repeat top center;
+		background-size: 100% 100%;
+		min-height: 537px;
+		width: 100%;
+
+		.about-we {
+			float: left;
+
+			.about-intro {
+				padding: 65px 0 0 30px;
+
+				.about-img {
+					margin-bottom: 30px;
+				}
+
+				p {
+					font-size: $font-size-base;
+					color: $gray-base;
+					font-family: 'ralewaymedium';
+					margin: 15px 0 5px 0;
+					line-height: 22px;
+					float: left;
+					width: 100%;
+				}
+			}
+
+			.about-links {
+				float: left;
+				width: 100%;
+				min-height: 145px;
+				background: $gray-gallery;
+
+				ul {
+
+					li {
+						height: 50px;
+						border-bottom: 1px solid $gray-alto-light;
+						margin-left: 15px;
+						background: image-url(about-li-bg) no-repeat left center;
+
+						&:last-child {
+							border: none;
+						}
+
+						a {
+							display: block;
+							line-height: 50px;
+							padding-left: 25px;
+							color: $blue-matisse;
+							font-family: 'ralewaymedium';
+							font-size: $font-size-base + 2;
+
+							&:hover, &.active {
+								color: $green-apple;
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.vision-mission {
+		float: left;
+		width: 100%;
+
+		.vision-mission-content {
+			margin-top: 50px;
+			margin-bottom: 10px;
+			float: left;
+		}
+		
+		.vision, .mission {
+			float: left;
+			background: image-url(vision-bg) no-repeat left top;
+			min-height: 78px;
+			padding-left: 100px;
+			font-family: 'ralewayregular';
+
+			h2 {
+				font-size: $font-size-base + 14;
+				color: $dove-gray;
+				margin: 10px 0 0 0;
+			}
+
+			p {
+				float: left;
+				width: 100%;
+				padding: 30px 0;
+				font-size: $font-size-base;
+				color: $gray-base;
+				text-align: justify
+			}
+		}
+
+		.mission {
+			background: image-url(mission-bg) no-repeat left top;
+		}
+
+		.spacer {
+			height: 220px;
+			margin-top: 0;
+		}
+	}
+}
+
+// Services page CSS
+.services-page {
+	width: 100%;
+
+	.services-content {
+		background: image-url(services-content-bg) no-repeat top center;
+		background-size: 100% 100%;
+		min-height: 500px;
+		width: 100%;
+
+		.banner-title {
+			background: image-url(service-title-bg) no-repeat;
+			width: 194px;
+			height: 48px;
+			top: -22px;
+			z-index: 9;
+
+			h2 {
+				line-height: 48px;
+				float: left;
+				width: 80%;
+			}
+
+			a {
+				float: left;
+				display: inline-block;
+				color: #B3D6DC;
+				line-height: 49px;
+				font-size: $font-size-base + 8;
+
+				&:hover {
+					color: $white;
+				}
+
+				&:hover {
+
+					.tooltip.bottom  {
+						display: block !important;
+					}
+				}
+			}
+
+			.tooltip {
+				opacity: inherit;
+				display: none;
+
+				&.bottom {
+					margin: 0 0 0 -112px;
+					display: none;
+
+					.tooltip-arrow {
+						margin-left: 40px;
+						border-bottom-color: rgba(211, 231, 234, 0.8);
+					}
+
+					.tooltip-inner {
+						background: rgba(211, 231, 234, 0.8);
+						color: $gray-dark;
+						font-size: $font-size-base - 2;
+					}
+				}
+			}
+		}
+
+		.services-menu-list {
+			float: left;
+			width: 90.8%;
+			position: absolute;
+			top: -20px;
+			left: 190px;
+			z-index: 0;
+
+			li {
+				float: left;
+				border-right: 1px solid $gray-alto;
+
+				a {
+					display: block;
+					padding: 0 5px;
+					color: $dove-gray;
+					line-height: 14px;
+					font-size: $font-size-base - 3;
+
+					&:hover {
+						color: #256895;
+					}
+				}
+
+				&:first-child {
+					padding-left: 10px;
+				}
+
+				&:last-child {
+					border: none;
+				}				
+			}
+		}
+
+		.services-intro {
+			width: 100%;
+			min-height: 400px;
+			background: rgba($blue-botticelli, 0.8);
+			margin: 60px 0 40px 0;
+			padding: 25px 0 0 1.5%;
+			overflow: hidden;
+
+			.left-content {
+				float: left;
+				width: 40%;
+
+				img {
+					max-width: 100%;
+					margin-top: 70px;
+				}
+			}
+
+			.right-content {
+				float: left;
+				width: 56.5%;
+				padding-left: 1.5%;
+			}
+
+			p {
+				color: $gray-base;
+				font-size: $font-size-base;
+				font-family: 'ralewaymedium';
+				padding: 0 0 20px 0;
+			}
+		}
+
+		.service-inner-title {
+			width: 100%;
+			float: left;
+
+			h1 {
+				height: 45px;
+				width: 100%;
+				background: rgba($white, .7);
+				font-size: $font-size-base + 12;
+				font-family: 'ralewaylight';
+				color: $dove-gray;
+				margin: 45px 0 0 0;
+				line-height: 45px;
+				padding-left: 15px;
+
+				span {
+					color: $blue-matisse;
+					font-size: $font-size-base + 4;
+					font-family: 'ralewaymedium';
+				}
+			}
+
+			ul {
+				float: left;
+				width: 100%;
+				height: 34px;
+				background: $blue-shakespeare;
+				margin-bottom: 20px;
+
+				li {
+					float: left;
+					background: image-url(service-inner-li-bg) no-repeat right top;
+					padding: 0 15px;
+
+					a {
+						display: block;
+						line-height: 30px;
+						color: $white;
+						text-transform: uppercase;
+						font-size: $font-size-base - 3;
+						padding: 0;
+
+						&:hover, &.active {
+							border-bottom: 4px solid $white;
+							background: none;
+						}
+					}
+				}
+			}
+		}
+
+		.mobile-app-content {
+			float: left;
+			width: 100%;
+
+			img {
+				margin: 10px auto 30px auto;
+			}
+		}
+	}
+
+	.services-content-bg {
+		background: image-url(services-content-bg7) no-repeat top center;
+		background-size: 100% 100%;
+	}
+
+	.services-list {
+		margin-top: 30px;
+
+		hr {
+			border-top: 2px solid $gray-mercury;
+		}
+
+		.services-block {
+			float: left;
+			background: image-url(service-bg) repeat-y left top 25px;
+			width: 100%;
+			min-height: 410px;
+			margin: 20px 0;
+		}
+
+		.web-design-services, .we-services {
+			float: left;
+			width: 96%;
+
+			&:hover {
+				background-color: #f6fbfb;
+				
+				.services-bg {
+					background-position: 10px -110px;
+				}
+
+				.services-list-content h3 a {
+					color: $dove-gray !important;
+				}
+			}
+
+			.services-bg {
+				display: block;
+				background: image-url(services-sprite) no-repeat center top;
+				background-position: 10px 20px;
+				min-height: 125px;
+				width: 140px;
+				margin: 0 auto;
+			}
+
+			.services-list-content {
+				float: left;
+				width: 100%;
+
+				h3 a {
+					font-size: $font-size-base;
+					font-family: 'ralewaybold';
+					color: $blue-matisse;
+					text-transform: uppercase;
+					text-align: center;
+					padding: 25px;
+					display: block;
+				}
+
+				ul {
+					width: 75%;
+					margin: 0 auto;
+					display: block;
+
+					li {
+						background: image-url(service-li-bg) no-repeat left 20px center;
+						height: 48px;
+						border-bottom: 1px solid $gray-mercury;
+						width: 100%;
+
+						&:last-child {
+							border: none;
+						}
+
+						a {
+							display: block;
+							line-height: 48px;
+							padding-left: 48px;
+							font-size: $font-size-base;
+							font-family: 'ralewaymedium';
+							color: $dove-gray;
+
+							&:hover {
+								color: $blue-matisse;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.web-dev-services {
+
+			&:hover {
+				background-color: #f6fbfb;
+				
+				.services-bg {
+					background-position: -110px -110px;
+				}
+			}
+
+			.services-bg {
+				background-position: -110px 20px;
+			}
+		}
+
+		.online-marketing-services {
+			background: none;
+			
+			&:hover {
+				background-color: #f6fbfb;
+				
+				.services-bg {
+					background-position: -230px -110px;
+				}
+			}
+
+			.services-bg {
+				background-position: -230px 20px;
+			}
+		}
+
+		.mobile-app-services {
+
+			&:hover {
+				background-color: #f6fbfb;
+				
+				.services-bg {
+					background-position: -350px -110px;
+				}
+			}
+
+			.services-bg {
+				background-position: -350px 20px;
+			}
+		}
+
+		.ui-dev-services {
+
+			&:hover {
+				background-color: #f6fbfb;
+				
+				.services-bg {
+					background-position: -470px -110px;
+				}
+			}
+
+			.services-bg {
+				background-position: -470px 20px;
+			}
+		}
+
+		.other-services {
+			background: none;
+
+			&:hover {
+				background-color: #f6fbfb;
+				
+				.services-bg {
+					background-position: -590px -110px;
+				}
+			}
+
+			.services-bg {
+				background-position: -590px 20px;
+			}
+		}
+	}
+
+	.service-inner-content {
+
+		.mobile-content {
+			float: left;
+			margin: 20px 0 20px 0;
+
+			h2 {
+				font-size: $font-size-base + 5;
+				font-family: 'ralewaymedium';
+				color: $dove-gray;
+				margin: 10px 0 15px 0;
+			}
+
+			p {
+				font-size: $font-size-base;
+				font-family: 'ralewaymedium';
+				color: $dove-gray;
+				text-align: justify;
+			}
+
+			.mobile-services {
+				float: left;
+
+				li {
+					background: image-url(about-li-bg) no-repeat left top 8px;
+					padding-left: 20px;
+					font-size: $font-size-base;
+					font-family: 'ralewaymedium';
+					line-height: 28px;
+				}
+			}
+
+			.mobile-content-list {
+
+				li {
+					background: image-url(about-li-bg) no-repeat left top 3px;
+
+					h2 {
+						font-size: $font-size-base + 1;
+						margin: 10px 0 10px 0 ;
+					}
+
+					p {
+						float: none;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		.mobile-content1 {
+			margin: 0;
+
+			h2 {
+				
+				margin: 15px 0 0 15px;
+			}
+		}
+
+		.benefits {
+			font-size: $font-size-base + 3;
+			color: $green-chelsia-cucumber;
+		}
+	}
+}
+
+//Testimonials widget css starts here
+.testimonials-widget, .clients-widget {
+	width: 100%;
+	float: left;
+	background: $gray-gallery;
+	margin: 20px 0 10px 0;
+
+	.testimonials-title {
+		background: #3f97ce;
+
+		h3 {
+			line-height: 40px;
+			position: relative;
+			color: #fff;
+			font-family: 'ralewaymedium';
+			font-size: $font-size-base + 6;
+			text-align: center;
+
+			span {
+				position: absolute;
+				bottom: -8px;
+				left: 120px;
+			}
+		}
+	}
+
+	.testimonials-widget-img {		
+		margin: 20px 0 10px 0;
+
+		img {
+			border: 5px solid #fff;
+			margin: 0 auto;
+		}
+
+	}
+
+	.testimonials-widget-content {
+		text-align: center;
+
+		strong {
+			font-family: 'ralewaybold';
+			font-size: $font-size-base + 2;
+			color: $green-apple;
+		}
+
+		em {
+			font-style: normal;
+			font-size: $font-size-base - 3;
+			font-family: 'open_sansregular';
+			color: $dusty-gray;
+		}
+
+		p {
+			font-family: 'ralewaymedium';
+			font-size: $font-size-base - 1;
+			line-height: 20px;
+			padding: 0 20px;
+		}
+
+		.divider {
+			border-top: 1px solid $white;
+			width: 85%;
+			margin: 0 auto;
+			display: block;
+		}
+
+	}
+
+	a {
+		float: right;
+		display: block;
+		padding-right: 40px;
+		line-height: 40px;
+		text-transform: capitalize;
+		background: image-url(about-li-bg) no-repeat 40px center;
+	}
+}
+//Testimonials widget css ends here
+//Certifications-widget css
+.certifications-widget {
+	float: left;
+	width: 100%;
+	min-height: 195px;
+
+	.certifications-widget-title {
+		float: left;
+		height: 40px;
+		background: $green-apple;
+		width: 100%;
+		text-align: center;
+
+		h3 {
+			font-family: 'ralewaymedium';
+			font-size: $font-size-base + 6;
+			color: $white;
+			line-height: 40px;
+			margin: 0;
+		}
+	}
+
+	.certifications-widget-content {
+		float: left;
+		border: 1px solid $gray-alto-light;
+		width: 100%;
+		text-align: center;
+
+		ul {
+
+			li {
+				margin: 20px auto 0 auto;
+				width: 74%;
+
+				&:last-child {
+					margin-bottom: 20px;
+				}
+
+				a {
+					display: block;
+				}
+			}
+		}
+	}
+}
+//Certifications-widget css ends
+//quick-enquiry form widget css starts here
+.quick-enquiry {
+	width: 100%;
+	float: left;
+	min-height: 430px;
+	background: $catskill-white;
+	position: relative;
+	margin-bottom: 60px;
+
+	.quick-form-title {
+		background: $edward-gray;
+		line-height: 40px;
+		font-family: 'ralewaymedium';
+		font-size: $font-size-base + 2;
+		color: $white;
+		padding-left: 14px;
+	}
+
+	.form-fields {
+		width: 85%;
+		margin: 20px auto 0 auto;
+
+		input, textarea {
+			border: none;
+			border-radius: 0;
+			margin-bottom: 15px;
+			font-family: 'ralewaymedium';
+			font-size: $font-size-base - 3;
+		}
+
+		.form-group {
+			float: left;
+			width: 100%;
+
+			label {
+				width: 100%;
+				float: left;
+				font-size: $font-size-base - 3;
+				font-family: 'ralewaymedium';
+				color: $dove-gray;
+			}
+		}
+
+		.btn {
+			float: left;
+			background: none;
+			border: 1px solid $white;
+			float: right;
+			color: $blue-matisse;
+			font-family: 'open_sanssemibold';
+
+			&:hover {
+				background: $blue-matisse;
+				color: $white;
+				border: none;
+			}
+		}
+	}
+
+	span {
+		position: absolute;
+		bottom: -41px;
+		right: 0;
+	}
+}
+//quick-enquiry form widget css ends here
+
+.quick-enquiry {
+
+	.g-recaptcha {
+
+		iframe {
+			width: 70%;
+			border-right: 1px solid $gray-silver;
+		}
+	}
+}
+
+// Address Information Widget CSS
+.contact_address {
+	min-height: 380px;
+
+	.address-details {
+		width: 87%;
+		margin: 20px auto 0 auto;
+
+		.address-field {
+			background: image-url(address-li-bg) no-repeat left top;
+			font-family: 'open_sansregular';
+			font-size: $font-size-base - 1;
+			padding-left: 20px;
+			border-bottom: 1px solid $blue-jungle-mist;
+			margin-bottom: 0;
+			padding-bottom: 10px;
+			color: $gray-dark;
+		}
+
+		ul {
+
+			li {
+				border-bottom: 1px solid $blue-jungle-mist;
+				min-height: 44px;
+				width: 100%;
+				font-family: 'open_sansregular';
+				font-size: $font-size-base - 1;
+				line-height: 44px;
+				color: $gray-dark;
+				padding-left: 25px;
+
+				&.phone-field {
+					background: image-url(phone-li-bg) no-repeat left center;
+				}
+
+				&.email-li{
+					background: image-url(email-li-bg) no-repeat left center;
+					border: none;
+
+					a {
+						color: $gray-dark;
+
+						&:hover {
+							color: $dove-gray;
+						}
+					}
+				}
+			}
+		}
+		
+		.contact-person {
+			background: $catskill-white;
+			min-height: 115px;
+			float: left;
+
+			.address-title {
+				background: $green-tradewind;
+				float: left;
+				width: 100%;
+
+				h3 {
+					line-height: 36px;
+					position: relative;
+					color: $white;
+					font-family: 'ralewaymedium';
+					font-size: $font-size-base + 2;
+					text-align: center;
+
+					span {
+						position: absolute;
+						bottom: -7px;
+						left: 100px;
+					}
+				}
+			}
+
+			.contact-person-details {
+				background: $catskill-white-light;
+				float: left;
+				width: 100%;
+
+				p {
+					background: image-url(contact-person-bg) no-repeat 10px 20px;
+					padding: 20px 0 5px 70px;
+					font-family: 'ralewaymedium';
+					font-size: $font-size-base - 1;
+					color: $gray-dark;
+
+					em {
+						font-family: 'open_sansregular';
+						font-style: normal;
+					}
+				}
+			}
+		}
+	}
+}
+// Address Information Widget CSS Ends
+// core-php css here
+.web-dev-page, .mobile-app-page {
+
+	.php-content, .iphone-content {
+		background: image-url(services-content-bg) no-repeat top center;
+		min-height: 134px;
+	}
+}
+// core-php css ends here
+//clients page css starts here
+.clients-page, .about-us-process {
+
+	.clients-content, .about-us-process-content {
+		background: image-url(innerpages-bg) no-repeat top center;
+		background-size: 100% 100%;
+		min-height: 130px;
+		width: 100%;
+		padding-bottom: 3px;
+		border-bottom: 2px dashed #ece7e7;
+	}
+
+	.about-intro {
+		margin-top: 40px;
+		font-family: 'ralewaymedium';
+		font-size: $font-size-base;
+		color: $gray-dark;
+	}
+
+	.client-inner-content {
+		margin-top: 30px;
+		float: left;
+		width: 100%;
+
+		.client-logos {
+			float: left;
+			width: 100%;
+
+			ul {
+				width: 100%;
+
+				li {
+					float: left;
+					margin: 0 26px 30px 0;
+
+					&:nth-child(4n) {
+						margin-right: 0;
+					}
+				}
+			}
+
+			.enquiry-form-part, .testimonials-part {
+				width: 100%;
+				float: left;
+			}
+
+			.spacer {
+				min-height: 1625px;
+				margin-top: 0;
+			}
+		}
+	}
+}
+//clients page css ends here
+// contact Page css starts
+.contact-page {
+
+	.contact-content {
+
+		.banner-title {
+			background: image-url(service-title-bg) no-repeat;
+			top: -24px;
+		}
+
+		.about-intro {
+			margin-top: 50px;
+
+			p {
+				margin-bottom: 0;
+			}
+
+			strong {
+				float: left;
+				font-family: 'ralewaymedium';
+				font-size: $font-size-base + 4;
+				color: $gray-dark;
+			}
+		}
+	}
+
+	.contact-inner-content {
+
+		.contact-form {
+
+			.mdl-textfield {
+				width: 100%;
+				font-weight: normal;
+
+				.mdl-textfield__label {
+					font-weight: 300;
+					margin-bottom: 0;
+					color: $gray-darker;
+
+					sup {
+						color: $red-solid;
+						font-family: 'robotobold';
+					}
+
+					&:after {
+						background-color: $green-chelsia-cucumber;
+					}
+				}
+			}
+
+			span {
+				color: $dusty-gray;
+			}
+
+			.form-fields {
+
+				form {
+					float: left;
+					border-bottom: 1px solid $gray-silver;
+					margin-bottom: 20px;
+				}
+
+				.form-group {
+
+					label {
+						float: left;
+						width: 100%;
+						font-family: 'ralewayregular';
+						font-size: $font-size-base;
+						color: $gray-dark;
+						text-transform: capitalize;
+					}
+
+					.form-control {
+						background: $gray-wild-sand;
+						border-radius: 0;
+						margin-bottom: 30px;
+					}
+
+					.web-url {
+						margin-bottom: 0;
+					}
+
+					span {
+						margin-bottom: 30px;
+						float: left;
+					}
+				}
+				
+				.btn {
+					float: left;
+					height: 36px;
+					background: none;
+					border: 1px solid $gray-silver;
+					color: $blue-matisse;
+					font-family: 'ralewayregular';
+					font-size: $font-size-base;
+					line-height: 36px;
+					text-align: center;
+					padding: 0 15px;
+					margin-bottom: 20px;
+					margin-top: 20px;
+
+					&:hover {
+						background: $blue-matisse;
+						color: $white;
+						border: none;
+					}
+				}
+			}
+
+			.google-map {
+				float: left;
+				width:100%;
+				margin: 30px 0;
+
+				.btn {
+					margin-top: 20px;
+				}
+			}
+		}
+
+		.spacer {
+			min-height: 1000px;
+			margin-bottom: 30px;
+		}
+
+		.contact-address-part {
+
+			ul {
+
+				li {
+					margin: 0;
+				}
+			}
+		}
+	}
+}
+
+.contact-errors {
+	background: none;
+	color: #F05050;
+	font-size: $font-size-base - 3;
+	margin-top: 4px;
+}
+// contact Page css ends
+//partner page css starts here
+.partners-page {
+
+	.partner-content {
+		background: image-url(partners-banner-bg) no-repeat top center;
+		min-height: 327px;
+
+		.partner-intro {
+			margin-top: 60px;
+		}
+
+		.enquiry-form-part {
+			margin-top: 25px;
+		}
+	}
+
+	.partner-inner-content {
+		margin-top: 70px;
+
+		.partner-content-description {
+			float: left;
+			width: 100%;
+			font-family: 'ralewaymedium';
+			color: $gray-dark;
+
+			h2 {
+				font-size: $font-size-base + 6;
+				margin-bottom: 15px;
+			}
+
+			p {
+				font-size: $font-size-base - 1;
+				margin-top: 16px;
+				text-align: justify;
+				float: left;
+				width: 100%;
+			}
+		}
+	}
+}
+//partner page css ends here
+
+// Careers Pge CSS starts
+.careers-page {
+	float: left;
+
+	.careers-content {
+
+		.careers-intro {
+			padding: 30px 0 0 5%;
+
+			.left-content, .right-content {
+				width: 45%;
+			}
+
+			.right-content {
+
+				h2 {
+					font-family: 'ralewaymedium';
+					color: $blue-matisse;
+					font-size: $font-size-base + 22;
+					text-align: center;
+					padding-top: 55px;
+				}
+
+				h3 {
+					font-family: 'ralewaylight';
+					color: $gray-base;
+					font-size: $font-size-base + 12;
+					text-align: center;
+					padding: 30px 0;
+					line-height: 36px;
+				}
+			}
+		}
+	}
+
+	.careers-list {
+		margin-bottom: 40px;
+
+		.show-careers {
+			float: left;
+			width: 100%;
+			margin-bottom: 15px;
+
+			.career-desc-left, .career-desc-right {
+				background: image-url(careers-list-bg) no-repeat top right 60px;
+				min-height: 275px;
+				width: 100%;
+
+				.career-brief {
+					width: 80%;
+					min-height: 245px;
+					background: $gray-gallery-light;
+					border-radius: 10px;
+					position: relative;
+
+					.job-code-block {
+						float: left;
+						width: 15%;
+						min-height:245px;
+						background: $blue-shakespeare;
+						border-radius: 10px 0 0 10px;
+
+						.job-code-title, .job-code {
+							background: image-url(job-code-bg) no-repeat bottom left 15px;
+							font-family: 'ralewaymedium';
+							color: $white;
+							font-size: $font-size-base + 4;
+							padding: 15px 15px 15px 12px;
+							text-align: center;
+							text-transform: uppercase;
+						}
+
+						.job-code {
+							background: none;
+							font-family: 'open_sanssemibold';
+						}
+					}
+
+					.job-title-block {
+						float: left;
+						width: 83%;
+						padding: 15px;
+
+						.job-title {
+							float: left;
+							width: 100%;
+							padding-bottom: 15px;
+							border-bottom: 1px solid $gray-alto-solid;
+
+							h2 {
+								font-family: 'ralewaymedium';
+								color: $gray-dark;
+								font-size: $font-size-base + 6;
+							}
+
+							ul {
+
+								li {
+									float: left;
+									width: 40%;
+									font-family: 'ralewaymedium';
+									color: $gray-dark;
+									font-size: $font-size-base;
+									padding: 10px 0 0 0;
+
+									strong {
+										font-family: 'ralewaybold';
+									}
+
+									&.job-location {
+										width: 58%;
+									}
+								}
+							}
+						}
+
+						.job-description {
+							float: left;
+							padding: 15px 15px 15px 0;
+
+							p {
+								font-family: 'ralewaymedium';
+								color: $gray-dark;
+								font-size: $font-size-base;
+								line-height: 24px;
+							}
+
+							.know-more {
+								margin-top: 5px;
+								background: $dusty-gray;
+								color: $white;
+								line-height: 36px;
+								font-size: $font-size-base;
+								border: none;
+							}
+						}
+					}
+
+					em {
+						position: absolute;
+						top: 13px;
+						right: -56px;
+						font-family: 'open_sanssemibold';
+						color: $dove-gray;
+						font-size: $font-size-base + 2;
+					}
+
+					span {
+						position: absolute;
+						top: 15px;
+						right: -7px;
+					}
+				}
+			}
+
+			.career-desc-right {
+				background: image-url(careers-list-bg) no-repeat top left 69px;
+
+				.career-brief {
+					margin-left: 135px;
+					position: relative;
+
+					.job-code-block {
+						float: right;
+						width: 15%;
+						min-height:245px;
+						background: $blue-shakespeare;
+						border-radius: 0 10px 10px 0;
+
+						.job-code-title, .job-code {
+							background: image-url(job-code-bg) no-repeat bottom left 15px;
+							font-family: 'ralewaymedium';
+							color: $white;
+							font-size: $font-size-base + 4;
+							padding: 15px 15px 15px 12px;
+							text-align: center;
+							text-transform: uppercase;
+						}
+
+						.job-code {
+							background: none;
+							font-family: 'open_sanssemibold';
+						}
+					}
+
+					em {
+						left: -53px;
+						right: 0;
+						display: inline-table;
+					}
+
+					span {
+						left: -7px;
+						right: 0;
+					}
+				}
+			}
+
+			.send-resume {
+				float: left;
+				width: 553px;
+				background: image-url(send-resume-bg) no-repeat top left;
+				height: 81px;
+				margin-top: 10px;
+
+				p {
+					line-height: 80px;
+					text-align: center;
+					padding: 0 30px;
+					font-family: 'ralewayregular';
+					color: $dove-gray;
+					font-size: $font-size-base + 6;
+
+					a {
+						color: $blue-shakespeare;
+					}
+				}
+			}
+		}
+	}
+}
+// Careers Pge CSS ends
+
+//clients single slide widget css starts here
+.clients-slider {	
+	float: left;
+	width: 100%;
+
+	.clients-widget {
+		margin: 0 0 60px 0;
+		background: $gray-gallery;
+
+		.client-logo {
+			margin: 20px auto;
+			width: 66%;
+			display: block;
+			position: relative;
+
+			.left-arrow, .right-arrow {
+				position: absolute;
+				-moz-filter: grayscale(100%);
+				-webkit-filter: grayscale(100%);
+				filter: grayscale(100%);
+				filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+				-webkit-transition: .5s;
+				-moz-transition: .5s;
+				transition: .5s;
+
+				&:hover {
+					-moz-filter: grayscale(0);
+					-webkit-filter: grayscale(0);
+					filter: grayscale(0);
+					filter: none;
+				}
+			}
+
+			.left-arrow {
+				top: 38px;
+				left: -30px;
+			}
+
+			.right-arrow {
+				top: 38px;
+				right: -30px;
+			}
+		}
+	}	
+}
+//clients single slide widget css ends here
+//web development page css starts here
+.web-dev-page {
+
+	.web-dev-intro {
+		float: left;
+		clear: both;
+		padding-bottom: 20px;
+
+		.ror-banner-img {
+			width: 75%;
+			margin: 0 auto;
+		}
+
+		.web-dev-content {
+			min-height: 250px;
+			border-top: 5px solid $white;
+			background: rgba($blue-botticelli, 0.8);
+			padding: 18px;
+			width: 87%;
+			margin-top: 20px;
+			color: $gray-base;
+			font-size: $font-size-base - 2;
+			font-family: 'ralewaymedium';
+
+			strong {
+				font-size: $font-size-base + 4;
+				font-weight: normal;
+			}
+		}
+
+		.web-dsgn-img {
+			margin-top: 50px;
+		}
+
+		.web-dev-content-inner {
+			width: 100%;
+			overflow: hidden;
+
+			.web-dev-img {
+				width: 23%;
+				float: left;
+				margin: 4px 20px 0 0;
+				opacity: 0.7;
+			}
+			.web-content-para {
+				float: left;
+				width: 75%;
+				margin-top:32px;
+			}
+		}
+
+		.web-content-img {
+			text-align: center;
+			margin-top: 53px;
+		}
+	}
+}
+//web development page css ends here
+//testimonials page css starts here
+.testimonials-page {
+
+	.testimonials-inner-content {
+
+		.client-testimonials {
+			float: left;
+			width: 100%;
+			clear: both;
+			margin-top: 30px;
+
+			.testimonials-widget {
+				background: none;
+				  margin: 0 0 40px 0;
+
+				.testimonials-widget-img {
+					border-radius: 50%;
+					width: 50%;
+					margin: 10px auto;
+					border: 12px solid $gray-gallery-light;
+
+					img {
+						border: 2px solid $white;
+					}
+				}
+
+				.testimonials-widget-content p {
+					margin: 22px 0 5px 0;
+				}
+			}
+		}
+	}
+}
+//testimonials page css ends here
+//careers-inner page css starts here
+.careers-page {
+
+	.careers-inner {
+		background: image-url(careers-inner-bg) no-repeat top center;
+		background-size: 100% 100%;
+		min-height: 50px;
+		width: 100%;
+	}
+
+	.careers-list {
+		width: 100%;
+		float: left;
+
+		.job-objects, .job-description {
+			width: 95%;
+			float: right;
+
+			li {
+				margin-bottom: 20px;
+
+				label {
+					display: block;
+					padding: 10px 0 10px 18px;
+					background: $green-chelsia-cucumber;
+					color: $white;
+					font-size: $font-size-base + 2;
+					font-weight: 600;
+					text-transform: capitalize;
+				}
+			}
+		}
+
+		.job-description {
+			width: 100%;
+			float: left;
+
+			li {
+
+				p {
+					padding: 14px 0;
+					color: $gray-base;
+					font-weight: 500;
+
+					strong {
+						font-size: $font-size-base;
+					}
+				}
+			}
+		}
+
+		.spacer {
+			min-height: 600px;
+		}
+
+		.job-require-title {
+			float: left;
+			width: 100%;
+
+			h3 {
+				background: $blue-shakespeare;
+				color: $white;
+				font-weight: 500;
+				padding: 12px 0 12px 12px;
+				font-size: $font-size-base + 2;
+			}
+		}
+
+		.job-requirement {
+			float: left;
+			width: 100%;
+
+			li {
+				background: image-url(carrier-inner-li-bg) no-repeat 10px 0px;
+				margin-top: 10px;
+				padding-left: 40px;
+				color: $gray-base;
+				font-weight: 500;
+				line-height: 22px;
+			}
+		}
+
+		.btn-lg {
+			background: $orange-cinnabar;
+			text-transform: uppercase;
+			color: $white;
+			font-weight: 500;
+			font-size: $font-size-base;
+			margin: 10px 0;
+		}
+
+		.apply-alternative {
+			font-weight: 500;
+			font-size: $font-size-base - 1;			
+
+			a {
+				color: $blue-shakespeare;
+			}
+		}
+	}
+	//modal form css
+	.modal-body .form-horizontal .col-sm-2, .modal-body .form-horizontal .col-sm-10 {
+		width: 100%
+	}
+
+	.modal-body {
+
+		.form-horizontal {
+
+			.control-label {
+				text-align: left;
+			}
+
+			.col-sm-offset-2 {
+				margin-left: 15px;
+			}
+		}
+	}
+}
+//careers-inner page css ends here
+//services ui-development page css starts here
+.ui-dev-page {
+
+	.ui-dev-content {
+
+		.ui-dev-title {
+			min-height: 60px;
+			background: rgba(#eff6f8, 0.8);
+			position: relative;
+			overflow: visible !important;
+			padding-top: 0;
+
+			h3 {
+				color: $dove-gray;
+				font-size: $font-size-base + 14;
+				font-weight: 300;				
+				line-height: 60px;
+
+				span {
+					position: absolute;
+					bottom: -33px;
+					left: 30px;
+				}
+
+				em {
+					color: $blue-matisse;
+					font-size: $font-size-base + 4;
+					font-family: 'ralewaymedium';
+					font-style: 'normal';
+				}
+			}
+		}
+
+		.ui-dev-process {
+			float: left;
+			width: 100%;
+			background: image-url(ui-process-bg) no-repeat top 50px center;
+
+			.ui-dev-bg {
+				min-height: 132px;
+				text-align: center;
+
+				a {
+					display: block;
+					width: 70%;
+					margin: 0 auto;
+				}
+
+				.img-normal {
+					display: block;
+				}
+
+				.img-hover {
+					display: none;
+				}
+
+				&:hover{
+
+					.img-normal {
+						display: none;
+					}
+
+					.img-hover {
+						display: block;
+					}
+				}
+			}
+
+			.ui-dev-inner-content {
+				padding: 22px 0 0 0;
+				color: $gray-dark;
+				font-size: $font-size-base;
+				font-weight: 500;
+			}
+		}
+	}
+}
+//services ui-development page css ends here
+// Portfolio Page CSS starts
+.portfolio-page {
+	float: left;
+	width: 100%;
+
+	.portfolio-level {
+		float: left;
+		width: 100%;
+		margin-bottom: 30px;
+
+		.pagination-list .pagination {
+			float: right;
+		}
+	}
+
+	.portfolio-content {
+
+		.portfolio-list {
+			float: left;
+			width: 100%;
+			margin-top: 40px;
+
+			.portfolio-inner-title {
+
+				ul {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.list-portfolio {
+			float: left;
+			width: 100%;
+			background: image-url(portfolio-bg) no-repeat top left;
+			padding: 20px 0 30px 0;
+
+			.portfolio-img {
+				float: left;
+				padding: 0 0 0 10px;
+
+				img {
+					border: 4px solid $white;
+					box-shadow: 0 0 10px 0px rgba(0,0,0,0.3);
+					width: 335px;
+					height: 194px;
+				}
+			}
+
+			.portfolio-project-details {
+				padding: 10px 0 0 10px;
+				display: table;
+
+				h3 {
+					color: $gray-dark;
+					font-size: $font-size-base + 3;
+					font-weight: 500;
+					text-transform: capitalize;
+					height: 60px;
+					margin: 5px 0 0 10px;
+				}
+
+				.portfolio-links {
+					float: left;
+
+					ul {
+						float: left;
+						margin-top: 40px;
+						width: 100%;
+
+						li {
+							float: left;
+							text-align: center;
+							padding: 0 12px;
+
+							a {
+								padding-top: 50px;
+								display: block;
+								color: $white;
+								text-transform: uppercase;
+								font-size: $font-size-base - 3;
+
+								&:hover {
+									color: $dove-gray;
+								}
+							}
+
+							&.portfolio-more {
+								background: image-url(portfolio-details) no-repeat top center;
+								min-height: 45px;
+							}
+
+							&.portfolio-website {
+								background: image-url(portfolio-website) no-repeat top center;
+								min-height: 45px;
+								border-left: 1px solid $ziggurat-blue-light;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.portfolio-level2 {
+			float: left;
+			margin: 20px 0;
+			width: 100%;
+
+			.portfolio-level-bar {
+				float: left;
+				width: 100%;
+				margin-top: 20px;
+			}
+
+			.pager-list {
+				float: right;
+				width: 100%;
+				text-align: right;
+
+				.pager {
+					text-align: center;
+					padding: 3px 10px;
+					margin: 10px 0;
+				}
+
+				.page-number {
+					border: none;
+					box-shadow: none;
+					padding: 3px 6px;
+
+					&.active {
+						color: $gray-dark;
+						background: $ziggurat-blue-lighter;
+					}
+				}
+
+				span {
+
+					&.page-number {
+						background: none;
+					}
+
+					&.btn {
+						background: none;
+						box-shadow: none;
+						padding: 5px 12px;
+						color: $white;
+						border-radius: 50%;
+						font-weight: 600;
+					}
+
+					&.page-next, &.page-prev {
+						background: image-url('portfolio-arrow-right') no-repeat right 0px top;
+						font-size: 0;
+					}
+
+					&.page-prev {
+						background: image-url('portfolio-arrow-left') no-repeat left 0px top;	
+					}
+				}
+			}
+		}
+	}
+}
+// Portfolio Page CSS ends
+/* service hover css add */
+.darkgray-img {
+	position: absolute;
+	top: -5px;
+	left: 57px;
+	display: none;
+	z-index: 1;
+	background: image-url('dark-grey') no-repeat;
+	width: 96px;
+	height: 130px;
+}
+
+.lightgray-img {
+	position: absolute;
+	top: 3px;
+	left: 94px;
+	z-index: 27;
+	display: none;
+	background: image-url('light-grey') no-repeat;
+	width: 60px;
+	height: 123px;
+}
+
+.hover-img {
+	position: absolute;
+	top: 10px;
+	left: 93px;
+	z-index: 30;
+	display: none;
+}
+
+.ecom-bar {
+	position: absolute;
+	top: 20px;
+	left: 50px;
+	width: 80%;
+
+	p {
+		font-size: $font-size-base;
+		line-height: 18px;
+		font-family: 'ralewayregular';
+		padding-top: 5px;
+	}
+}
+
+.img-hover-bar {
+	position: relative;
+	z-index: 20;
+}
+
+.img-responsive {
+	position: relative;
+}
+/* service hover css add */
+/* Testimonials css */
+.quotes {
+	display: none;
+}
+/* Testimonials css */
+.clients-slider {
+
+	.clients-widget {
+
+		.single-item {
+			width: 68%;
+
+			img {
+				height: 100px;
+				width: 173px;
+			}
+
+			.slick-prev {
+				left: -30px;
+
+				&:before {
+					content: image-url(left-arrow);
+				}
+			}
+
+			.slick-next {
+				right: -30px;
+				
+				&:before {
+					content: image-url(about-li-bg);
+				}
+			}
+		}
+	}
+}
+
+.service-levels-ipad {
+	display: none;
+	float: left;
+	width: 100%;
+	margin: 60px 0;
+	text-align: center;
+	padding: 0 30px 0 66px;
+
+	.service-big1 {
+		width: 100px;
+		height: 120px;
+		left: 0;
+	}
+
+	button {
+		background: none;
+	}
+}
+
+.services-for-ipad {
+	float: left;
+
+	.modal-dialog .modal-content {
+		height: 240px;
+		margin-top: 146px;
+		background-color: $white;
+	}
+}
+//portfolio-details-page css statrs here
+.portfolio-details-page {
+
+	.pf-slider {
+		float: left;
+		width: 100%;
+		margin-top: 60px;
+	}
+
+	.portfolio-inner-content {
+		float: left;
+		width: 100%;
+
+		.about {
+			text-align: justify;
+			float: left;
+			width: 100%;
+
+			.about-title {
+				background: image-url(spacer) repeat-x center;
+				width: 100%;
+				float: left;
+				margin: 30px 0 20px 0;
+
+				p {
+					font-size: $font-size-base ;
+					font-weight: 500;
+				}
+			}
+		}
+
+		h3 {
+			width: 25%;
+			min-height: 50px;
+			border: 1px solid $gray-mercury;
+			text-align: center;
+			color: $orange-cinnabar;
+			margin: 0 auto;
+			font-size: $font-size-base + 6;
+			font-weight: 300;
+			background: $white;
+			padding: 15px 0 0 0;
+			text-transform: capitalize
+		}
+
+		.approach {
+
+			.approach-title {
+				margin-top: 40px;
+
+				h3 {
+					width: 15%;
+				}
+			}
+
+			.approach-content {
+				text-align: center;
+
+				.approach-team {
+					width: 90%;
+				}
+
+				.approach-duration {
+					width: 84%;
+					float: right;
+				}
+
+				.approach-technologies {
+
+					ul {
+						margin: 0 auto;
+						width: 100%;
+
+						li {
+							display: inline-block;
+							border-right: 1px solid $gray-mercury;
+							text-align: center;
+							margin: 5px 5px 10px 0;
+
+							&:last-child {
+								border-right: none;
+							}
+
+							&.photoshop {
+								background: image-url(portfolio-details-tech-ps) no-repeat center;
+								width: 60px;
+								min-height: 48px;
+							}
+
+							&.html5-css3 {
+								background: image-url(portfolio-details-tech-html) no-repeat center;
+								width: 85px;
+								min-height: 47px;
+							}
+
+							&.ruby-on-rails {
+								background: image-url(portfolio-details-tech-ror) no-repeat center;
+								width: 75px;
+								min-height: 49px;
+							}
+
+							&.jquery {
+								background: image-url(portfolio-details-tech-jquery) no-repeat center;
+								width: 48px;
+								min-height: 52px;
+							}
+
+							&.bootstrap {
+								background: image-url(portfolio-details-tech-bs) no-repeat center;
+								width: 58px;
+								min-height: 53px;
+							}
+
+							&.ffmpeg {
+								background: image-url(portfolio-details-tech-ffmpeg) no-repeat center;
+								width: 50px;
+								min-height: 54px;
+							}
+
+							&.google-api {
+								background: image-url(portfolio-details-tech-googleapi) no-repeat center;
+								width: 66px;
+								min-height: 58px;
+							}
+
+							&.less {
+								background: image-url(portfolio-details-tech-less) no-repeat center;
+								width: 55px;
+								min-height: 50px;
+							}
+
+							&.mongo-db {
+								background: image-url(portfolio-details-tech-mdb) no-repeat center;
+								width: 56px;
+								
+								min-height: 57px;
+							}
+
+							&.node-js {
+								background: image-url(portfolio-details-tech-nodejs) no-repeat center;
+								width: 42px;
+								min-height: 53px;
+							}
+
+							&.payu {
+								background: image-url(portfolio-details-tech-payu) no-repeat center;
+								width: 60px;
+								min-height: 50px;
+							}
+
+							&.youtube-api {
+								background: image-url(portfolio-details-tech-youtube) no-repeat center;
+								width: 69px;
+								min-height: 46px;
+							}
+
+							&.laraval {
+								background: image-url(portfolio-details-tech-laraval) no-repeat center;
+								width: 47px;
+								min-height: 52px;
+							}
+
+							&.magento {
+								background: image-url(portfolio-details-tech-magento) no-repeat center;
+								width: 52px;
+								min-height: 59px;
+							}
+
+							&.mysql {
+								background: image-url(portfolio-details-tech-mysql) no-repeat center;
+								width: 48px;
+								min-height: 56px;
+							}
+
+							&.paypal {
+								background: image-url(portfolio-details-tech-paypal) no-repeat center;
+								width: 46px;
+								min-height: 49px;
+							}
+
+							&.payzippy {
+								background: image-url(portfolio-details-tech-payzippy) no-repeat center;
+								width: 60px;
+								min-height: 48px;
+							}
+
+							&.phonegap {
+								background: image-url(portfolio-details-tech-phonegap) no-repeat center;
+								width: 62px;
+								min-height: 57px;
+							}
+
+							&.php {
+								background: image-url(portfolio-details-tech-php) no-repeat center;
+								width: 47px;
+								min-height: 52px;
+							}
+
+							&.sass {
+								background: image-url(portfolio-details-tech-sass) no-repeat center;
+								width: 44px;
+								min-height: 52px;
+							}
+
+							&.sendgrid {
+								background: image-url(portfolio-details-tech-sendgrid) no-repeat center;
+								width: 58px;
+								min-height: 53px;
+							}
+
+							&.stripe {
+								background: image-url(portfolio-details-tech-stripe) no-repeat center;
+								width: 40px;
+								min-height: 59px;
+							}
+
+							&.windows-app {
+								background: image-url(portfolio-details-tech-windows) no-repeat center;
+								width: 63px;
+								min-height: 51px;
+							}
+
+							&.wordpress {
+								background: image-url(portfolio-details-tech-wordpress) no-repeat center;
+								width: 64px;
+								min-height: 58px;
+							}
+						}
+					}
+				}
+
+				.approach-team, .approach-duration, .approach-technologies {
+					padding-top: 14px;
+				}
+
+				p {
+					font-size: $font-size-base;
+					font-weight: 500;
+					text-transform: capitalize;
+
+					strong {
+						font-size: $font-size-base + 30;
+						font-weight: normal;
+						color: $orange-cinnabar;
+					}
+				}
+
+				span {
+					color: $orange-cinnabar;
+				}
+			}
+		}
+
+		.conclusion {
+
+			.conclusion-title {
+				margin-top: 40px;
+
+				h3 {
+					width: 16%;
+				}
+			}
+		}
+	}
+
+	.website-link {
+		
+		font-weight: 500;
+		display: block;
+		width: 30%;
+		margin: 20px auto;
+
+		a {
+			color: $blue-matisse;
+			text-transform: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		p {					
+			width: 100%;
+			min-height: 36px;
+			line-height: 36px;
+			border: 1px solid $gray-mercury;
+			text-align: center;
+			color: $dove-gray;
+			font-size: $font-size-base - 1;
+			font-weight: 500;
+			text-transform: capitalize;
+			margin-bottom: 60px;
+		}
+	}
+}
+//portfolio-details-page ends here
+// Request Quote CSS starts here
+.request-quote {
+
+	.request-content .banner-title {
+		background: image-url(about-title-bg) no-repeat;
+		top: -33px;
+	}
+
+	.request-inner-content {
+		float: left;
+
+		form {
+			border-bottom: none !important;
+
+			.clear {
+
+				.request-quote-captcha {
+					color: $red-carnation;
+					font-size: $font-size-base - 4;
+				}	
+			}
+		}
+
+		.request-block {
+			float: left;
+			width: 100%;
+
+			.form-titles {
+				float: left;
+				width: 100%;
+				color: $gray-dark;
+				text-transform: uppercase;
+				font-size: $font-size-base + 6;
+				font-weight: 500;
+				padding: 10px 0 15px 0;
+				border-bottom: 1px solid $gray-mercury;
+				margin-bottom: 15px;
+			}
+
+			.request-questions {
+				display: block;
+				margin : 15px 0;
+				float: left;
+				width: 100%;
+
+				span {
+					color: $red-carnation;
+					font-size: 10px;
+					font-weight: normal;
+				}
+			}
+
+			.quote-item,.quote-item1{
+				width: 100%;
+
+				.project-type {
+					width: 100%;
+					min-height: 60px;
+					border: 1px solid $gray-mercury;
+					padding: 18px 0 10px 0px;
+					background: image-url(request-icons-sprite) no-repeat;
+					background-position: -15px -10px;
+					margin-bottom: 20px;
+					cursor: pointer;
+
+					.website-type {
+						float: left;
+						margin-left: 50px;
+						border-left: 1px solid $gray-mercury;
+						padding-left: 15px;
+						min-height: 30px;
+
+						h3 {
+							text-transform: none;
+							font-size: $font-size-base - 2;
+							font-weight: 500;
+							color: $gray-dark;
+							padding-top: 5px;
+							float: left;
+
+							span {
+								text-transform: none;
+								color: $dusty-gray;
+								display: block;
+							}
+						}
+
+						input {
+							display: none;
+							border: 1px solid #ccc;
+						}
+					}
+
+					&.active-tab {
+						background-color: $orange-cinnabar;
+						border: none;
+						background-position: -15px -65px;
+
+						.website-type {
+
+							h3 {
+								color: $white;
+
+								span {
+									color: $white;
+								}
+							}
+						}
+					}
+				}
+
+				.ecommerce-web {
+					background-position: -15px -120px;
+
+					&.active-tab {
+						background-position: -15px -175px;
+					}
+				}
+
+				.cms {
+					background-position: -15px -230px;
+
+					&.active-tab {
+						background-position: -15px -280px;
+					}
+				}
+
+				.social {
+					background-position: -15px -340px;
+
+					&.active-tab {
+						background-position: -15px -395px;
+					}
+				}
+
+				.portal {
+					background-position: -15px -445px;
+
+					&.active-tab {
+						background-position: -15px -500px;
+					}
+				}
+
+				.seo-request {
+					background-position: -15px -665px;
+
+					&.active-tab {
+						background-position: -15px -708px;
+					}
+				}
+
+				.smm-request {
+					background-position: -15px -760px;
+
+					&.active-tab {
+						background-position: -15px -815px;
+					}
+				}
+
+				.ppc-request {
+					background-position: -15px -870px;
+
+					&.active-tab {
+						background-position: -15px -925px;
+					}
+				}
+
+				.other-web, .other-request {
+					background-position: -15px -555px;
+
+					&.active-tab {
+						background-position: -15px -610px;
+
+						.website-type {
+
+							input {
+								display: inline-block;
+								float: right;
+								margin-left : 20px;
+								font-size: $font-size-base - 2;
+								padding-left: 5px;
+								line-height: 24px;
+							}
+						}
+					}
+				}
+
+				.other-request {
+					background-position: -15px -990px;
+
+					&.active-tab {
+						background-position: -15px -1045px;
+					}
+				}
+
+				.request-budget {
+					background: none;
+
+					.website-type {
+						border: none;
+						text-align: center;
+						margin: 0;
+						padding: 0;
+						width: 100%;
+
+						h3 {
+							float: none;
+							color: $orange-cinnabar;
+							font-family: 'open_sansbold';
+
+							span {
+								color: $gray-dark;
+								display: inline-block;
+								font-family: 'ralewayregular';
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		.contact-form {
+
+			.personal-info {
+
+				.mdl-textfield {
+
+					.field_with_errors .mdl-textfield__input {
+						border: none;
+						text-transform: uppercase;
+						border-bottom: 1px solid $gray-mercury;
+					}
+
+					.mdl-textfield__label .contact-errors {
+						position: absolute;
+						right: 0;
+						top: 0;
+					}
+				}
+			}
+		}
+
+		.spacer {
+			min-height: 1830px;
+		}
+	}
+}
+// Request Quote CSS ends here
+// Privacy Policy page
+.privacy-policy-page, .certifications-page {
+
+	.privacy-policy-content, .certifications-content {
+		margin: 20px 0 0 0;
+
+		p {
+			font-size: $font-size-base - 1;
+			font-family: 'ralewaymedium';
+			color: $dove-gray;
+			padding: 5px 0;
+			text-align: left;
+		}
+
+		h2 {
+			font-size: $font-size-base + 6;
+			font-family: 'ralewaysemibold';
+			color: $dove-gray;
+			margin: 0 0 15px 0;
+		}
+	}
+}
+//certifications-page starts
+.certifications-page {
+	
+	.services-content {
+		background: image-url(google-bing-bg) no-repeat top center;
+	}
+
+	.certification-logo {
+		width: 30%;
+		margin: 10px auto 20px auto;
+	}
+
+	.certification-title {
+		background: image-url(certifications-title-bg) no-repeat;
+		width: 540px;
+		position: absolute;
+		left: 0;
+		top: -33px;
+
+		h2 {
+			font-size: $font-size-base + 9;
+			font-family: 'ralewaylight';
+			color: $white;
+			padding-left: 45px;
+			line-height: 54px;
+		}
+	}
+
+	.certifications-content {
+		margin-top: 40px;
+	}
+}
+//certifications-page ends
+.vist-btn {
+	width: 145px;
+	text-align: left;
+	color: $white !important;
+	font-size: $font-size-base - 1;
+}
+// Googlemap integration
+#map-canvas {
+	width: 100%;
+	height: 420px;
+}
+/*blogs*/
+.mix {
+	display: none;
+}
+
+.ceogcc {
+	display: none;
+}
+
+.inner-text {
+	font-size: $font-size-base + 2;
+	padding: 20px;
+}
+//about-us-process css starts here
+.about-us-process {
+
+	.about-content {
+		min-height: 180px;
+
+		.about-we .about-intro {
+			padding: 0;
+
+			h2 {
+				color: $dove-gray;
+				font-size: $font-size-base + 10;
+				margin: 12px 0 0 15px;
+				float: left;
+				width: 79%;
+			}
+		}
+	}
+
+	.about-us-process-content {
+		border-bottom: 0;
+	}
+
+	.our-process-steps {
+		float: left;
+		width: 100%;
+
+		.our-process-steps-content {
+			padding-top: 100px;
+			position: relative;
+		}
+
+		.our-process-step {
+			background: image-url(about-our-process-step-1) no-repeat left top;
+			min-height: 636px;
+			position: relative;
+
+			.steps-content {
+				background: image-url(step1-content-img) no-repeat left center;
+				color: $gray-dark;
+				position: absolute;
+				width: 330px;
+				padding-left:115px;
+
+				h3 {
+					font-weight: 700;
+					font-size: $font-size-base + 4;
+					text-transform: uppercase;
+				}
+
+				p {
+					font-size: $font-size-base;
+					margin-top: 10px;
+				}
+			}
+
+			.step1-content1 {
+				top: -60px;
+				right: 45px;
+			}
+
+			.step1-content2 {
+				background: image-url(step1-content2-img) no-repeat left center;
+				top: 107px;
+				right: 0;
+				width: 320px;
+			}
+
+			.step1-content3 {
+				background: image-url(step1-content3-img) no-repeat left center;
+				top: 312px;
+				right: 45px;
+			}
+
+			.step2-content1 {
+				background: image-url(step2-content1-img) no-repeat left center;
+				top: -70px;
+				right: 56px;
+			}
+
+			.step2-content2 {
+				background: image-url(step2-content2-img) no-repeat left center;
+				top: 125px;
+				right: -8px;
+			}
+
+			.step2-content3 {
+				background: image-url(step2-content3-img) no-repeat left center;
+				top: 310px;
+				right: 56px;
+			}
+		}
+
+		.our-process-step1 {
+			background: image-url(about-our-process-step-2) no-repeat 42px top;
+		}
+
+		.our-process-step2 {
+			background: image-url(about-our-process-step-3) no-repeat 24px top;
+
+			.steps3-content {
+				background: image-url(step3-content-img) no-repeat left center;
+				color: $gray-dark;
+				position: absolute;
+				width: 400px;
+				height: 364px;
+				padding: 70px  0 90px 115px;
+				top: 4px;
+				right: 31px;
+
+				a {
+					font-weight: 700;
+					font-size: $font-size-base - 2;
+				}
+
+				p {
+					font-size: $font-size-base;
+					margin-top: 70px;
+				}
+			}
+		}
+
+		.our-process-step3 {
+			min-height: 450px;
+		}
+	}
+}
+//about-our-team css starts here
+.about-our-team {
+	
+	.about-content {
+		min-height: 180px;
+
+		.about-we .about-intro h2 {
+			font-size: $font-size-base + 10;
+			margin-top: 10px;
+			float: left;
+			width: 79%;
+		}
+	}
+
+	.our-team-content {
+		float: left;
+		width: 100%;
+
+		.our-team-details {
+			
+			.our-team-description {
+				text-align: center;
+
+				p {
+					font-size: $font-size-base ;
+					color: $dove-gray;
+					padding: 50px 0 45px 0;
+				}
+			}
+		}
+
+		.person-details {
+			float: left;
+			width: 100%;
+			min-height: 516px;
+			background: image-url(team/md-bg) no-repeat top left;
+			background-size: 100% 100%;
+
+			.person-image {
+				width: 450px;
+				float: left;
+				text-align: center;
+				
+				img {
+					margin-top: 37px;
+					display: inline-block;
+				}
+			}
+
+			.person-content {
+				width: 480px;
+				float: left;
+				background: rgba(255, 255, 255, 0.3);
+				min-height: 225px;
+				padding: 30px 30px 0 30px;
+				position: relative;
+				margin-top: 155px;
+
+				h2 {
+					font-size: $font-size-base + 8;
+					color: $blue-shakespeare;
+					text-transform: uppercase;
+				}
+
+				span {
+					color: $dove-gray;
+					font-size: $font-size-base;
+					margin-top: 10px;
+				}
+
+				p {
+					color: $gray-dark;
+					font-size: $font-size-base;
+					margin: 10px 0 30px 0;
+				}
+
+				a {
+					line-height: 44px;
+					background: $blue-shakespeare;
+					float: left;
+					color: $white;
+					font-size: $font-size-base;
+					padding-right: 10px;
+					text-transform: uppercase;
+					position: absolute;
+					bottom: -20px;
+					left: 30px;
+
+					strong {
+						background: $downy-blue;
+						padding: 14px 10px;
+						margin-right: 10px;
+
+						.fa-envelope {
+							color: $white;
+							margin: 0;
+							font-size: $font-size-base;
+						}
+					}
+				}
+			}
+		}
+
+		.person1-details {
+			background: image-url(team/coo-bg) no-repeat  top left;
+
+			.person-image img {
+				margin-top: 43px;
+			}
+
+			.person-content {
+				margin:145px 0 0 100px;
+			}
+		}
+
+		.person2-details {
+			background: image-url(team/cto-bg) no-repeat top right;
+
+			.person-image img {
+				margin-top: 62px;
+			}
+
+			.person-content {
+				margin: 165px 0 0 60px;
+			}
+		}
+
+		.person3-details {
+			background: image-url(team/ch-bg) no-repeat top left;
+
+			.person-image img {
+				margin-top: 56px;
+			}
+
+			.person-content {
+				margin-left: 100px;
+			}
+		}
+
+		.team-details {
+			float: left;
+			width: 100%;
+			background: image-url(team/team-btm-bg) top center;
+
+			.team-members {
+				float: left;
+				width: 100%;
+
+				ul {
+					margin-top: 45px;
+					float: left;
+					width: 100%;
+
+					li {
+						float: left;
+						margin: 0 44px 40px 0;
+						width: 22%;
+
+						.img-circle {
+							background: $gray-mercury;
+							border: 1px solid $white;
+							padding-top: 15px;
+						}
+
+						&:nth-child(4n) {
+							margin-right: 0;
+						}
+
+						h4 {
+							float: left;
+							width: 100%;
+							text-align: center;
+							text-transform: uppercase;
+							margin-top: 12px;
+						}
+					}
+				}	
+			}
+		}
+	}
+}
+
+.clear {
+	clear: both;
+	width: 100%;
+	overflow: hidden;
+}
+
+// select dropdown css
+.demo {
+	margin-top: 25px;
+}
+
+.contact-form .browser-default {
+	font-family: inherit;
+	background-color: transparent;
+	width: 100%;
+	padding: 4px 0;
+	margin-bottom: 20px;
+	font-size: $font-size-base + 2;
+	color: $gray-dark;
+	border: none;
+	border-bottom: 1px solid $gray-mercury;
+}
+
+.contact-form .call-time {
+	width: 40%;
+}
+
+/* Remove focus */
+.contact-form select:focus {
+	outline: none;
+	border-bottom: 2px solid $green-chelsia-cucumber;
+}
+
+/* Hide label */
+.contact-form .mdl-selectfield label {
+	display: none;
+}
+
+/* Use custom arrow */
+.contact-form .mdl-selectfield select {
+	appearance: none;
+}
+
+.preferred-time {
+	display: none;
+}
+
+.contact-captcha {
+	clear: both;
+	margin-top: 20px;
+}
+
+/*team image ripple effect*/
+.team-imgbar {
+	-webkit-box-shadow:0 0 0 20px rgba(32,149,209,0);
+	-moz-box-shadow:0 0 0 20px rgba(32,149,209,0);
+	box-shadow:0 0 0 20px rgba(32,149,209,0);
+	-webkit-transition:box-shadow .6s;
+	-moz-transition:box-shadow .6s;
+	transition:box-shadow .6s;
+}
+
+.team-list-bar:hover .team-imgbar {
+	-webkit-box-shadow:0 0 0 0px rgba(32,149,209,0.2);
+	-moz-box-shadow:0 0 0 0px rgba(32,149,209,0.2);
+	box-shadow:0 0 0 0px rgba(32,149,209,0.2);
+}
+
+.hoverripple {
+	position: relative;
+	overflow: hidden;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	z-index:0;
+}
+
+.inkwave {
+	background:rgba(255, 255, 255, 0.5);
+	border-radius: 100%;
+	position: absolute;
+	-webkit-transform:scale(0);
+	-moz-transform:scale(0);
+	-o-transform:scale(0);
+	transform:scale(0);
+}
+
+.animatewave {
+	-webkit-animation:ripples 0.65s linear;
+	-moz-animation:ripples 0.65s linear;
+	-ms-animation:ripples 0.65s linear;
+	-o-animation:ripples 0.65s linear;
+	animation:ripples 0.65s linear;
+}
+
+@-webkit-keyframes ripples {
+	100% {opacity: 0; -webkit-transform: scale(1.2);}
+}
+
+@-moz-keyframes ripples {
+	100% {opacity: 0; -moz-transform: scale(1.2);}
+}
+
+@-o-keyframes ripples {
+	100% {opacity: 0; -o-transform: scale(1.2);}
+}
+
+@keyframes ripples {
+	100% {opacity: 0; transform: scale(1.2);}
+}
+
+.tab-iocn {
+	display: none;
+}
+
+//Animation css for blogs
+@-webkit-keyframes mymove {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(-200px);
+	}
+	
+	100% {
+		-webkit-transform: translateX(0);
+	}
+}
+
+@-moz-keyframes mymove {
+	0% {
+		opacity: 0;
+		-moz-transform: translateY(-200px);
+	}
+	
+	100% {
+		-moz-transform: translateY(0);
+	}
+}
+
+@-o-keyframes mymove {
+	0% {
+		opacity: 0;
+		-o-transform: translateY(-200px);
+	}
+	
+	100% {
+		-o-transform: translateY(0);
+	}
+}
+
+@keyframes mymove {
+	0% {
+		opacity: 0;
+		transform: translateY(-200px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@-webkit-keyframes mymoves {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(200px);
+	}
+	
+	100% {
+		-webkit-transform: translateX(0);
+	}
+}
+
+@-moz-keyframes mymoves {
+	0% {
+		opacity: 0;
+		-moz-transform: translateY(200px);
+	}
+	
+	100% {
+		-moz-transform: translateY(0);
+	}
+}
+
+@-o-keyframes mymoves {
+	0% {
+		opacity: 0;
+		-o-transform: translateY(200px);
+	}
+	
+	100% {
+		-o-transform: translateY(0);
+	}
+}
+
+@keyframes mymoves {
+	0% {
+		opacity: 0;
+		transform: translateY(200px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+//Animation for blogs
+.visit-website-btn {
+	color: $orange-cinnabar;
+	font-family: 'robotomedium';
+	font-size: $font-size-base - 1;
+	text-transform: uppercase;
+	border: 1px solid $gray-alto;
+	padding: 6px;
+	border-radius: 5px;
+	display: none;
+	float: left;
+
+	&.btn {
+		padding: 0 10px;
+		background-color: $white;
+
+		&:hover {
+			background-color: $orange-cinnabar;
+			color: $white;
+		}
+	}
+}

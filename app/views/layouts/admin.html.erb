@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="Bootstrap Admin App + Ruby on Rails">
+	<meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
+	<title>Webenrich - Dashboard</title>
+	<!-- =============== VENDOR and APP STYLES ===============-->
+	<%= stylesheet_link_tag 'admin' %>
+	<%= csrf_meta_tags %>
+</head>
+<body>
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.4&appId=171013599747177";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+	<div class="wrapper">
+		<!-- top navbar-->
+		<header class="topnavbar-wrapper">
+			<%= render partial: "layouts/partials/topnavbar" %>
+		</header>
+		<!-- sidebar-->
+		<aside class="aside">
+			<%= render partial: "layouts/partials/sidebar" %>
+		</aside>
+		<!-- offsidebar-->
+		<aside class="offsidebar hide">
+			<%= render partial: "layouts/partials/offsidebar" %>
+		</aside>
+		<!-- Main section-->
+		<section>
+			<!-- Page content-->
+			<div class="content-wrapper">
+				<%#= render 'layouts/partials/messages' %>
+				<%#= flash_messages %>
+				<%= yield %>
+			</div>
+		</section>
+		<!-- Page footer-->
+		<footer>
+			<%= render partial: "layouts/partials/footer" %>
+		</footer>
+	</div>
+	<!-- =============== VENDOR and APP SCRIPTS ===============-->
+	<%= javascript_include_tag 'admin' %>
+	<%= flash_messages %>
+</body>
+</html>

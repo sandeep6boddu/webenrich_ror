@@ -1,0 +1,10 @@
+jQuery('#new_applicant').find('.form-group').removeClass("has-error");
+<% if @status %>
+	<% @applicant_errors.each do |ele, msg| %>
+		jQuery('#applicant_<%= ele %>').closest('.form-group').addClass("has-error");
+	<% end %>
+<% else %>
+	jQuery('#new_applicant').find('.form-group').removeClass("has-error");
+<% end %>
+// $(function() {    $( '#myModal' ).show();  });
+  $(function() {    $( '#myModal' ).modal('show');  });

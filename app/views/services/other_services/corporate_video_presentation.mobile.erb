@@ -1,0 +1,77 @@
+<% content_for :title do %>
+	Corporate Video Presentation
+<% end %>
+<div class="services-page">
+	<div class="mobile-page-main mobile-page-inner">
+		<div class="main-title">
+			<div class="container">
+				<h1>
+					<%= link_to other_services_path, :class => 'left' do %>
+						<%= image_tag image_path('mobile/back-arrow.png') %>
+					<% end %>
+					Corporate Video Presentation
+				</h1>
+			</div>
+		</div>
+		<div class="container">
+			<div class="title-content">
+				<div class="services-img services-inner-img">
+					<%= image_tag image_path('mobile/corp-presentation-icon.png'), alt: 'services-inner-img' %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<h1>
+			<strong>
+				HOW WE HELP?
+			</strong>
+		</h1>
+	</div>
+	<div class="services-text">
+		<div class="container">
+			<div class="corporate-article">
+				<p>
+					We develop content that 'talks' directly to your users. That means they not only are captivated by your website but also decide to stay on for a little longer, just enough to tell them about your product or service.
+				</p>
+				<p>
+					Our team of professional content developers blends your website's purpose with user's requirements and creates content that is search engine friendly and appeals to your target audience. We closely watch the changing search engine algorithms and design fresh and unique content for our clients. WebEnrich's Copy Writing Team comprises language experts with proficiency and experience needed of a 'perfect content writer'.
+				</p>
+				<p>
+					In today's era of sharing, blogging, viral marketing, tagging, podcasting and social networking, content is truly a king. The biggest challenge for a content developer today is creating user-centric content that has strong customer appeal. At WebEnrich, we have already tamed this beast. Try our content developing services and you'll know what we're talking about.
+				</p>
+				<%= link_to "Continue Reading", '#', :class => 'waves-effect waves-light btn hide' %>
+			</div>
+		</div>
+	</div>
+	<div class="list-of-services list-of-detail-services">
+		<div class="container">
+			<div class="other-services-list">
+				<h1>Other Services</h1>
+				<div class="card">
+					<ul>
+						<li>
+							<%= link_to web_hosting_path do %>
+								<strong>Web Hosting</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to domain_registration_path do %>
+								<strong>Domain Registration</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to content_development_path do %>
+								<strong>Content Development</strong>
+							<% end %>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Our Clients -->
+	<%= render 'layouts/widgets/our_clients' %>
+	<!-- start-project -->
+	<%= render 'layouts/widgets/start_project' %>
+</div>

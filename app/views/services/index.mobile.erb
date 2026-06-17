@@ -1,0 +1,119 @@
+<% content_for :title do %>
+	What We Do | WebEnrich Internet Marketing & Web Based services
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="Web Enrich Services: Select from the list of Internet Marketing & Web Based services that we offer and Hire us to handle you project successfully">
+	<meta name="keywords" content="WebEnrich services, India, internet marketing, online marketing, web based services, hire us, consultant">
+<% end %>
+<div class="services-page">
+	<div class="mobile-page-main">
+		<div class="main-title">
+			<div class="container">
+				<h1>
+					<%= link_to root_path, :class => 'left' do %>
+						<%= image_tag image_path('mobile/back-arrow.png') %>
+					<% end %>
+					Services
+					<a class='dropdown-button right' href='#' data-activates='dropdown1'>
+						<%= image_tag image_path('mobile/options-icon-white.png') %>
+					</a>
+					<ul id='dropdown1' class='dropdown-content custom-drpwn-content'>
+						<li>
+							<%= link_to web_design_path do %>
+								<strong>Web Design</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to web_development_path do %>
+								<strong>Web Development</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to online_marketing_path do %>
+								<strong>Online Marketing</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to mobile_app_development_path do %>
+								<strong>Mobile App Development</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to ui_development_path do %>
+								<strong>UI Development</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to other_services_path do %>
+								<strong>Other Services</strong>
+							<% end %>
+						</li>
+					</ul>
+				</h1>
+			</div>
+		</div>
+		<div class="container">
+			<div class="title-content">
+				<div class="services-img">
+					<%= image_tag image_path('mobile/services-mobile-banner-new.png') %>
+					<%#= image_tag image_path('mobile/services-main.png'), class: 'ipad-service-img' %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="services-text">
+		<div class="container">
+			<div class="services-inner-content">
+				<p>WebEnrich is a fast growing Web Marketing cum Development Company with offices in India and Australia. We have a proven track record for getting websites a top search engine ranking and significantly more traffic and conversions with a good return on investment (ROI).</p>
+				<p>We offer a comprehensive collection of tools and professional services to propel your website to dizzying heights of success in all areas of Internet marketing. We design and develop website for you, support with SEO and PPC, expand your reach in the virtual space through social media, and we provide everything else you'd need to succeed online, all in one place!</p>
+				<p>Innovative designs, customer-centric services and a talented and experienced team that constantly strives to provide effective solutions to the customers - WebEnrich takes pride in all of them.</p>
+				<article>The world of web design and web marketing is fast changing. New algorithms, new product launches, new competitors – all these can out tremendous pressure on the organizations. It is imperative that the business organizations have a reliable, cost-effective and efficient web marketing and development provider on their side. That is why a number of companies have come to rely on WebEnrich.</article>
+				<%= link_to "Continue Reading", '#', :class => 'waves-effect waves-light btn hide' %>
+			</div>
+		</div>
+	</div>
+	<div class="list-of-services">
+		<div class="container">
+			<h1>List of Services</h1>
+			<div class="card">
+				<ul>
+					<li>
+						<%= link_to web_design_path do %>
+							<span>&nbsp;</span><strong>Web Design</strong>
+						<% end %>
+					</li>
+					<li>
+						<%= link_to web_development_path, :class => 'web-development' do %>
+							<span>&nbsp;</span><strong>Web Development</strong>
+						<% end %>
+					</li>
+					<li>
+						<%= link_to online_marketing_path, :class => 'online-marketing' do %>
+							<span>&nbsp;</span><strong>Online Marketing</strong>
+						<% end %>
+					</li>
+					<li>
+						<%= link_to mobile_app_development_path, :class => 'mobile-app-development' do %>
+							<span>&nbsp;</span><strong>Mobile App Development</strong>
+						<% end %>
+					</li>
+					<li>
+						<%= link_to ui_development_path, :class => 'ui-development' do %>
+							<span>&nbsp;</span><strong>UI Development</strong>
+						<% end %>
+					</li>
+					<li>
+						<%= link_to other_services_path, :class => 'web-development' do %>
+							<span>&nbsp;</span><strong>Other Services</strong>
+						<% end %>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<!-- Our Clients -->
+	<%= render 'layouts/widgets/our_clients' %>
+	<!-- start-project -->
+	<%= render 'layouts/widgets/start_project' %>
+</div>

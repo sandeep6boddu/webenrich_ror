@@ -1,0 +1,77 @@
+<% content_for :title do %>
+	Blog Search
+<% end %>
+<div class="">
+	<div class="mdl-layout blogs-main-page page-content">
+		<div class="mdl-layout__content mdl-color--grey-100">
+			<div class="container">
+				<div class="mdl-cell--12-col mdl-grid mdl-fullwidth no-padding futured-blog">
+					<h3 class="mdl-cell--12-col mdl-color-text--grey blog-title mdl-typography--text-uppercase">Search Results</h3>
+					<div class="mdl-cell--8-col mdl-cell--12-col-tablet extra-margin-right search-blog-message">
+						<p>Showing Results for <span class="mdl-color-text--light-blue"><%= params[:text]%></span></p>
+					</div>
+					<div class="mdl-cell--4-col-desktop mdl-cell--8-col-tablet blog-pagination">
+						<ul class="right">
+							<%= paginate @blogs, :params => { authenticity_token: nil, utf8: nil}, :window => 1  %>
+						</ul> 
+					</div>
+					<hr class="mdl-cell--12-col mdl-fullwidth no-padding mdl-cell--divider">
+				</div>
+				<div class="mdl-cell--12-col mdl-grid mdl-fullwidth no-padding individual-blogs">
+					<div class="mdl-cell--8-col mdl-cell--12-col-tablet extra-margin-right">
+						<div class="mdl-cell--12-col mdl-grid--no-spacing mdl-grid no-margin mdl-fullwidth">
+							<% if @blogs.present? %>
+										
+								<% @blogs.each_slice(2) do |blog|%>
+										<div class="blogs-thumbnail">
+									<% blog.each do |b| %>
+											<div class="mdl-cell--6-col left <%= cycle("extra-margin-right", "") -%> mdl-shadow--4dp">
+												<div class="mdl-card">
+													<div class="mdl-card_thumbnail mdl-card--expand ">
+														<%= link_to blog_show_path(b.slug) do %>
+															<%= image_tag b.banner.url(:medium), :alt => 'Blog Image', :class => 'img-responsive' %>
+														<% end %>
+														<ul class="post-comments">
+															<!-- <li>
+																<%#= link_to '' do %>
+																	<i class="material-icons">favorite</i>
+																<%# end %>
+															</li> -->
+															<li>
+																<%= link_to blog_show_path(b.slug) + "#comments" do %>
+																	<i class="material-icons">comment</i>
+																<% end %>
+															</li>
+														</ul>
+														<!-- Colored FAB button with ripple -->
+														<%= link_to blog_show_path(b.slug), method: 'get' do %>
+															<%= button_tag :class => 'mdl-button mdl-innerlink mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--orange' do %>
+																<i class="material-icons mdl-color-text--white">chevron_right</i>
+															<% end %>
+														<% end %>
+													</div>
+												</div>
+												<div class="mdl-card__supporting-text mdl-color-text--grey-600">
+													<span class="mdl-color-text--red"><%= b.categories.name %></span>
+													<h3 class="mdl-color-text--grey-700">
+														<%= link_to blog_show_path(b.slug) do %>
+															<%= b.title.html_safe %>
+														<% end %>
+													</h3> 
+													<span class="post-time"><i class="material-icons">schedule</i><%= time_ago_in_words(b.created_at) %> ago</span>
+												</div>
+											</div>
+									<% end %>
+										</div>
+								<% end %>
+							<% else %>
+								<strong>There are no blogs for <span class="mdl-color-text--light-blue"><%= params[:text]%></span> keyword </strong>
+							<% end %>
+						</div>
+					</div>
+					<%= render "/blogs/parts/categories" %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

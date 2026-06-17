@@ -1,0 +1,139 @@
+<% content_for :title do %>
+	Contact Us | WebEnrich Solutions Pvt Ltd
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="Please contact WebEnrich for your Web Marketing, Design, Development or any other related information.">
+	<meta name="keywords" content="contact us, webenrich, seo, ppc, sem, web design, development">
+<% end %>
+<div class="mobile-page-main">
+	<div class="main-title">
+		<div class="container">
+			<h1>
+				<%= link_to root_path, :class => 'left' do %>
+					<%= image_tag image_path('mobile/back-arrow.png') %>
+				<% end %>
+				Contact Us
+				<%= link_to root_path, :class => 'right' do %>
+					<%= image_tag image_path('mobile/close-icon.png') %>
+				<% end %>
+			</h1>
+		</div>
+	</div>
+	<div class="container">
+		<div class="title-content">
+			<h2>
+				Hear more about	what we can offer Get in Touch with us!
+			</h2>
+		</div>
+	</div>
+</div>
+<!-- contact deatils starts here -->
+<div class="form-content">
+	<div class="container">
+		<div class="card">
+			<%= form_for @contact, :url => {:action => 'contact_details'} do |f| %>
+				<div class="input-field col s12">
+					<div class="right contact-errors"><%= @contact.errors[:full_name].join(', ') %>
+					</div>
+					<%= f.text_field :full_name %>
+					<%= label_tag 'Full Name' %>
+				</div>
+				<div class="input-field col s12">
+					<div class="right contact-errors"><%= @contact.errors[:email_address].join(', ') %></div>
+					<%= f.email_field :email_address %>
+					<%= label_tag 'Email' %>
+				</div>
+				<div class="input-field col s12">
+					<div class="right contact-errors"><%= @contact.errors[:phone].join(', ') %></div>
+					<%= f.text_field :phone %>
+					<%= label_tag 'Phone' %>
+				</div>
+				<div class="input-field col s12">
+					<div class="right"><%= @contact.errors[:company_name].join(', ') %>
+					</div>
+					<%= f.text_field :company_name, :class => 'mdl-textfield__input' %>
+					<%= label_tag 'Company Name' %>
+				</div>
+				<div class="input-field col s12">
+					<div class="right"><%= @contact.errors[:website_url].join(', ') %></div>
+					<%= f.text_field :website_url %>
+					<%= label_tag 'Website URL' %>
+					<em class="example-text">(eg;- http://www.yourwebsite.com)</em>
+				</div>
+				<div class="custom-row">
+					<div class="input-field col s12">
+						<div class="right contact-errors"><%= @contact.errors[:message].join(', ') %></div>
+						<%= f.text_area :message %>
+						<%= label_tag 'Message' %>
+					</div>
+				</div>
+				<div class="input-field col s12 mobile-captcha">
+					<%= recaptcha_tags %>
+					 <div class="alert-danger pull-left contact-errors"><%= @contact.errors["g-recaptcha-response"].join(', ') %></div>
+				</div>
+				<%= submit_tag 'Submit', :class => 'btn margin-top' %>
+			<% end %>
+		</div>
+	</div>
+</div>
+<!-- contact-details -->
+<div class="contact-details">
+	<div class="container">
+		<div class="card">
+			<h6>Contact Address:</h6>
+			<div class="address">
+				<span class="location-icon">
+					<%= image_tag image_path('location-icon-m.png'), alt: 'address' %>
+				</span>
+				<address class="">
+					201, Plot # 45, Aditya Sudeepth Pristine,<br>Bharani Layout,
+			Film Nagar, Jubilee Hills,<br>
+			Hyderabad-500033, Telangana, India
+				</address>
+			</div>
+			<div class="phone">
+				<%= image_tag image_path('phone-icon-m.png'), alt: 'phone' %> +91 91770 33330, +91 40 4539 0333
+			</div>
+			<div class="mail-to">
+				<%= image_tag image_path('mail-icon-m.png'), alt: 'email' %>
+				<a href="mailto:info@webenrich.com" target="_top">info@webenrich.com</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- map -->
+<div class="contact-details">
+	<div class="container">
+		<div class="card">
+			<div class="col s12">
+				<div class="google-map">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d724.9542169731671!2d78.39885896948296!3d17.414711578601025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb96b11bd7bf11%3A0x69fd9be37eee3f5!2s201%2C%2045%2C%20Bharani%20Layout%2C%20Jubilee%20Hills%2C%20Hyderabad%2C%20Telangana%20500033%2C%20India!5e1!3m2!1sen!2sus!4v1752591208065!5m2!1sen!2sus"
+    width="100%"
+    height="350"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+
+  <%= link_to 'View on Google Map', 'https://www.google.com/maps/place/201,+45,+Bharani+Layout,+Jubilee+Hills,+Hyderabad,+Telangana+500033,+India', target: '_blank', class: 'btn pull-right read-more' %>
+
+</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	function initialize() {
+	var mapCanvas = document.getElementById('map-canvas');
+	var mapOptions = {
+		center: new google.maps.LatLng(17.426303, 78.536666),
+		zoom: 18,
+	mapTypeId: google.maps.MapTypeId.ROADMAP
+	}
+	var map = new google.maps.Map(mapCanvas, mapOptions)
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+</script>

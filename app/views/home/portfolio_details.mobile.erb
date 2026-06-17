@@ -1,0 +1,74 @@
+<% content_for :title do %>
+	<%= @portfolio.meta_title %>
+<% end %>
+<div class="portfolio-page-content">
+	<div class="main-title">
+		<div class="container">
+			<h1>
+				<%= link_to portfolio_home_path, :class => 'left' do %>
+					<%= image_tag image_path('mobile/back-arrow.png') %>
+				<% end %>
+				<%= @portfolio.title %>
+				<%= link_to portfolio_home_path, :class => 'right' do %>
+					<%= image_tag image_path('mobile/close-icon.png') %>
+				<% end %>
+			</h1>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="portfolio-content porfolio-inner">
+	<div class="container">
+		<div class="pager-list custom-page-list">
+			<% unless @previous_portfolio.nil? %>
+				<%= link_to "Previous", "/portfolio/#{@cat}/#{@previous_portfolio.slug}", class: 'previous' %>
+			<% end %>
+			<% unless @next_portfolio.nil? %>
+				<%= link_to "Next", "/portfolio/#{@cat}/#{@next_portfolio.slug}", class: 'next' %>
+			<% end %>
+		</div>
+		<div class="clear"></div>
+		<div class="col s12 m7">
+			<div class="card portfolio-card">
+				<div class="card-content white-text">
+					<h1 class="portfolio-title"><%= @portfolio.title %></h1>
+						<div class="card-image">
+							<!-- SLIDE ITEM --> 
+							<%= image_tag @portfolio.slides.first.slide.url(:original) %>
+							<div class="shadow" style="width: 400px; z-index: -1; position: absolute; margin: 0px; padding: 0px; border: none; overflow: hidden; left: 0px; bottom: 0px;">
+							</div>
+						</div>
+					<p class="gray-text">
+						<%= @portfolio.description %>
+					</p>
+					<div class="card-action">
+						<%#= link_to "visit website", :class => 'left' %>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="pager-list custom-page-list">
+			<% unless @previous_portfolio.nil? %>
+				<%= link_to "Previous", "/portfolio/#{@cat}/#{@previous_portfolio.slug}", class: 'previous' %>
+			<% end %>
+			<% unless @next_portfolio.nil? %>
+				<%= link_to "Next", "/portfolio/#{@cat}/#{@next_portfolio.slug}", class: 'next' %>
+			<% end %>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-36251023-1']);
+	_gaq.push(['_setDomainName', 'jqueryscript.net']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+</script>

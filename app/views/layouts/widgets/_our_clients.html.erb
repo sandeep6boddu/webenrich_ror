@@ -1,0 +1,20 @@
+<div class="our-clients">
+	<div class="col-md-12">
+		<div class="container landing-page-clients">
+			<div class="clients-title">
+				<h2>Our Clients</h2>
+			</div>
+			<div class="autoplay">
+				<% cache [ 'clent_list', Client.get_sweep_id ] do %>
+					<% if @clients.count > 0 %>
+						<% @clients.each do |client| %>
+							<% cache [ 'clent_list', client ] do %>
+								<%= image_tag client.logo.url(:original), size: '170x97', :class => 'img-responsive gray-img', :alt => 'Client Logo' %>
+							<% end %>
+						<% end %>
+					<% end %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>

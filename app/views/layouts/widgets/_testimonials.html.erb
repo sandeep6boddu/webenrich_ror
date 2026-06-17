@@ -1,0 +1,33 @@
+<div class="testimonials-widget">
+	<div class="testimonials-title">
+		<h3>Testimonials
+		<span>
+			<%= image_tag 'testimonial-title-span.png', :class => 'img-responsive ', :alt => 'Arrow Image' %>
+		</span>
+		</h3>
+	</div>
+	<% cache ['testimonials_slider', Testimonial.get_sweep_id] do %>
+		<% if @testimonials.count > 0  %>
+			<% @testimonials.each_slice(3) do |testimonial| %>
+				<% testimonial.each do |item| %>
+					<% cache ['testimonial_slide', item] do %>
+						<div class="quotes pull-left">
+							<div class="testimonials-widget-img">
+								<%= image_tag item.avatar.url(:original), :class => 'img-responsive img-circle' %>
+							</div>
+							<div class="testimonials-widget-content">
+							<strong><%= item.name %></strong>
+							<br/>
+							<em><%= item.designation %> <% if item.app_name? %>|<% end %> <%= item.app_name %>  </em>
+							<p><%= raw item.content %> </p>
+							</div>
+						</div>
+					<% end %>
+				<% end %>
+			<% end %>
+			<%= link_to 'more', testimonials_home_path %>
+		<% else %>
+			<h2 class="inner-text">There are no testimonials to display now!</h2>
+		<% end %>
+	<% end %>
+</div>

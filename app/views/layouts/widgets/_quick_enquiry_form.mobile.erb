@@ -1,0 +1,23 @@
+<div class="quick-enquiry hidden-sm">
+	<div class="quick-form-title">
+		Quick Enquiry
+	</div>
+	<%= form_tag do %>
+		<div class="form-fields">
+			<%= text_field_tag "name", 'Full Name', :class => 'form-control' %>
+			<%= email_field_tag "email", 'Email@Address', :class => 'form-control' %>
+			<%= telephone_field_tag "tel", 'Phone with Country Code', :class => 'form-control' %>
+			<%= text_area_tag  "textarea", 'Message',:rows => '3', :class => 'form-control' %>
+			<div class="form-group">
+				<%= label_tag 'Captcha:' %>
+				<%= text_field_tag "", '3 + 1', :class => 'form-control captcha' %>
+				<em class="captcha-em">=</em>
+				<%= text_field_tag "", 'Enter Value', :class => 'form-control captcha-result' %>
+			</div>
+			<%= submit_tag 'Submit', :class => 'btn' %>
+		</div>
+	<% end %>
+	<span>
+		<%= image_tag "query-form-btm-img.png" %>
+	</span>
+</div>

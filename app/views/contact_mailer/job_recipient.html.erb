@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WebEnrich -Job Application</title>
+</head>
+	<body style="margin:0; padding:0;">
+		<table class="table main-table" cellspacing="0" cellpadding="0" style = "width:100%; height: 420px; background: url(<%= image_url('job-field-bg.jpg')%>) repeat-x top #EBEBEB;">
+			<thead>
+				<tr>
+					<th class="logo" style= "border: 0; text-align: left;">
+						<%= image_tag "logo.png", :alt => 'logo', :class => 'img-responsive' %>	
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr style="height: 50px;">
+					<td style= "border: 0;">
+						<h2 style= "font-size: 24px; color:#ffffff; margin: 55px 0 0 56px;">
+						Applicantion for <%= @job_title %>
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td style= "">
+						<table class="table sub-table" style="background: #fff; width: 85%; margin: 0 auto;">
+							<tbody>
+								<tr>
+									<td style="border-top: 1px solid #eeeeee; width: 35%; padding: 8px 8px 8px 20px;">Name</td>
+									<td style= "border-top:1px solid #ebebeb; padding: 8px;">
+										<%= @applicant_name %>
+									</td>
+								</tr>
+								<tr>
+									<td style="border-top: 1px solid #eeeeee; width: 35%; padding: 8px 8px 8px 20px;">Email</td>
+									<td style= "border-top:1px solid #ebebeb; padding: 8px;"><%= @from_email %></td>
+								</tr>
+								<tr>
+									<td style="border-top: 1px solid #eeeeee; width: 35%; padding: 8px 8px 8px 20px;">Mobile</td>
+									<td style= "border-top:1px solid #ebebeb; padding: 8px;"><%= @mobile %></td>
+								</tr>								
+								<% if @location.present? %>
+									<tr>
+										<td style="border-top: 1px solid #eeeeee; width: 35%; padding: 8px 8px 8px 20px;">Location</td>
+										<td style= "border-top:1px solid #ebebeb; padding: 8px;">
+												<%= @location %>
+										</td>
+									</tr>
+								<% end %>
+								<% if @job_url.present? %>
+								<tr>
+									<td style="border-top: 1px solid #eeeeee; width: 35%; padding: 8px 8px 8px 20px;">Url</td>
+									<td style= "border-top:1px solid #ebebeb; padding: 8px;"><%= link_to  "Job link ", "http://webenrich.com/careers/#{@job_url}" %></td>
+								</tr>
+								<% end %>
+								<% if @experience.present? %>
+									<tr>
+										<td style="border-top: 1px solid #eeeeee; width: 35%; padding: 8px 8px 8px 20px;">Experience</td>
+										<td style= "border-top:1px solid #ebebeb; padding: 8px;"><%= @experience %> Years</td>
+									</tr>
+								<% end %>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

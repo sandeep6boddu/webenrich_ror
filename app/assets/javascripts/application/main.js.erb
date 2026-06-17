@@ -1,0 +1,231 @@
+var onReady = function(){
+	// start revolution slider
+	jQuery('.tp-banner').show().revolution(
+	{
+		dottedOverlay:"none",
+		startwidth:1170,
+		startheight:400,
+		hideThumbs:200,
+
+		thumbWidth:100,
+		thumbHeight:50,
+		thumbAmount:5,
+
+		navigationType:"bullet",
+		navigationArrows:"solo",
+		navigationStyle:"preview2",
+
+		touchenabled:"on",
+		onHoverStop:"on",
+
+		swipe_velocity: 0.7,
+		swipe_min_touches: 1,
+		swipe_max_touches: 1,
+		drag_block_vertical: false,
+		parallax:"mouse",
+		parallaxBgFreeze:"on",
+		parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
+		keyboardNavigation:"off",
+
+		navigationHAlign:"center",
+		navigationVAlign:"bottom",
+		navigationHOffset:0,
+		navigationVOffset:20,
+
+		soloArrowLeftHalign:"left",
+		soloArrowLeftValign:"center",
+		soloArrowLeftHOffset:20,
+		soloArrowLeftVOffset:0,
+
+		soloArrowRightHalign:"right",
+		soloArrowRightValign:"center",
+		soloArrowRightHOffset:20,
+		soloArrowRightVOffset:0,
+		shadow:0,
+		fullWidth:"on",
+		fullScreen:"off",
+
+		spinner:"spinner4",
+
+		stopLoop:"off",
+		stopAfterLoops:-1,
+		stopAtSlide:-1,
+		shuffle:"off",
+		autoHeight:"off",
+		forceFullWidth:"off",
+		hideThumbsOnMobile:"off",
+		hideNavDelayOnMobile:1500,
+		hideBulletsOnMobile:"off",
+		hideArrowsOnMobile:"off",
+		hideThumbsUnderResolution:0,
+		hideSliderAtLimit:0,
+		hideCaptionAtLimit:0,
+		hideAllCaptionAtLilmit:0,
+		startWithSlide:0,
+		fullScreenOffsetContainer: "",
+		lazyLoad:"on"
+	});
+	// end revolution slide
+	//icon hover effect
+	$(".serv-icon-bar > *:not(.img-hover-bar)").on("mouseleave, mouseenter", function(e){e.stopPropagation()});
+	$('.serv-icon-bar').on('mouseenter',function(){
+		cancelAllAnimations();
+		$('.serv-icon-bar .darkgray-img').hide('fast');
+		$('.serv-icon-bar .lightgray-img').hide('fast');
+		$(this).find('.service-big').animate({width: '160px', height: '185px', left: '-22px', top: '-12px'}, 200);
+		$(this).find('.darkgray-img').delay(200).show("slide", { direction: "left" }, 200);
+		$(this).find('.lightgray-img').delay(400).show("slide", { direction: "right" }, 200);
+		$($(this).find('.img-hover-bar').attr('data-target')).delay(500).show("slide", { direction: "left" }, 200);
+	});
+	$('.serv-icon-bar').on('mouseleave',function(){
+		cancelAllAnimations();
+	});
+
+	var cancelAllAnimations = function() {
+		jQuery('.service-big').stop(true, true).animate({width: '129px', height: '147px', left: '0px', top: '0px'}, 200);
+		jQuery('.lightgray-img').stop(true, true).fadeOut(100);
+		jQuery('.darkgray-img').stop(true, true).fadeOut(100);
+		jQuery('.hover-img').stop(true, true).fadeOut(100);
+	}
+	//icon hover effect
+	jQuery('.clients-slider-part').load("/partial/our-clients", function(){
+		//clients
+		$('.autoplay').slick({
+			slidesToShow: 6,
+			slidesToScroll: 1,
+			autoplay: false,
+			autoplaySpeed: 3000,
+			focusOnSelect: true,
+			pauseOnHover: false,
+			arrows: true,
+			lazyLoad: 'ondemand'
+		});
+		//clients
+	});
+	//testimonials
+	var quotes = $(".quotes");
+		var quoteIndex = -1;
+		function showNextQuote() {
+		quoteIndex++;
+		quotes.eq(quoteIndex % quotes.length)
+		.fadeIn(400)
+		.delay(3000)
+		.fadeOut(400, showNextQuote);
+		}
+	showNextQuote();
+	//testimonials
+	//single clienr slide show
+	$('.single-item').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		autoplay: true,
+		autoplaySpeed: 3000,
+		focusOnSelect: true,
+		pauseOnHover: false,
+		arrows: true
+	});
+	//single client slide show
+	//mixitup jquery//
+		$('#portfolio-level-bar').mixItUp({
+			pagination: {
+				limit: 6,
+				loop: false,
+				generatePagers: true,
+				pagerClass: 'btn'
+			},
+			controls: {
+				 enable: true
+			}
+		});
+		//mixitup jquery//
+	// google map script starts
+	$('#map-canvas').gmap3({
+		map: {
+			options: {
+			maxZoom: 18
+			}
+		},
+		marker:{
+			latLng:[17.426303, 78.536666],
+			options: {
+				icon: new google.maps.MarkerImage(
+				"http://webenrich.com/assets/we-map-icon-58ee281789e59825312e2ebf1ff4ff05a86a2a3cee2a47fd25fb36da1c401aca.png",
+				new google.maps.Size(32, 39, "px", "px")
+				),
+				content:  '',
+			}
+		}
+	},
+	"autofit" );
+	// google map script ends
+	// Job Applicant Script starts
+	$('body #applicant_resume').on('change', function(){
+		$(this).jqExtension({
+			allowed: 'pdf,doc,docx,rtf,odt',
+			validMessage: 'Validated!',
+			invalidMessage: 'Invalid selected file.'
+		});
+	});
+	// Request a quote
+	$(".interested-in .quote-item").on("click", function () {
+		jQuery(this).find('.project-type').toggleClass('active-tab');
+		if ($(this).find('.project-type input[type=hidden]').val() == '') {
+			$(this).find('.project-type input[type=hidden]').val(jQuery(this).attr('data-value'));
+		} else {
+			$(this).find('.project-type input[type=hidden]').val('');
+		}
+	});
+	$(".also-interested-in .quote-item").on("click", function () {
+		jQuery(this).find('.project-type').toggleClass('active-tab');
+		if ($(this).find('.project-type input[type=hidden]').val() == '') {
+			$(this).find('.project-type input[type=hidden]').val(jQuery(this).attr('data-value'));
+		} else {
+			$(this).find('.project-type input[type=hidden]').val('');
+		}
+	});
+	$( ".quote-budget-input .quote-budget" ).click(function() {
+		jQuery('.quote-budget-input .quote-budget .project-type').removeClass('active-tab');
+		jQuery(this).find('.project-type').addClass('active-tab');
+		jQuery('.quote-budget-input #quote_budget').val( $( this ).attr('data-value') );
+	});
+	$( ".start-date-input .start-date" ).click(function() {
+		jQuery('.start-date-input .start-date .project-type').removeClass('active-tab');
+		jQuery(this).find('.project-type').addClass('active-tab');
+		jQuery('.start-date-input #quote_start_date').val( $( this ).attr('data-value') );
+	});
+	jQuery('.other-text').click(function(){
+		return false;
+	});
+	// Contact Dropdown
+	$(function() {
+		$('.browser-default').change(function(){
+			$('.preferred-time').show();
+		});
+	});
+	// Contact Dropdown
+	// Team page effects
+	var ink, d, x, y;
+	$(".hoverripple").mouseenter(function(e){
+	if($(this).find(".inkwave").length === 0){
+		$(this).prepend("<span class='inkwave'></span>");
+	}
+	ink = $(this).find(".inkwave");
+	ink.removeClass("animatewave");
+	if(!ink.height() && !ink.width()){
+		d = Math.max($(this).outerWidth(), $(this).outerHeight());
+		ink.css({height: d, width: d});
+	}
+	x = e.pageX - $(this).offset().left - ink.width()/2;
+	y = e.pageY - $(this).offset().top - ink.height()/2;
+	ink.css({top: y+'px', left: x+'px'}).addClass("animatewave");
+	});
+	// Team page effects
+	//services menu js
+	$( ".services-menu-list" ).hide();
+		$( "#service-menu" ).click(function() {
+		$( ".services-menu-list" ).toggle("slide", { direction: "left" }, 1000);
+	});
+	//services menu js ends
+}
+jQuery(document).ready(onReady);
+jQuery(document).on('page:load', onReady);

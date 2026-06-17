@@ -1,0 +1,74 @@
+<% content_for :title do %>
+	PSD to XHTML
+<% end %>
+<div class="services-page">
+	<div class="mobile-page-main mobile-page-inner">
+		<div class="main-title">
+			<div class="container">
+				<h1>
+					<%= link_to ui_development_path, :class => 'left' do %>
+						<%= image_tag image_path('mobile/back-arrow.png') %>
+					<% end %>
+					PSD to XHTML
+				</h1>
+			</div>
+		</div>
+		<div class="container">
+			<div class="title-content">
+				<div class="services-img services-inner-img">
+					<%= image_tag image_path('mobile/psd-to-xhtml.png'), alt: 'services-inner-img' %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="online-ecommerce-article services-text">
+		<div class="container">
+			<p>
+				Do you ship your products to different parts of the world? Do you offer services to customers worldwide? Then you surely need an out-of-the-world online store.
+			</p>
+			<article>
+				Magento is an e-commerce platform that is best suited for all business related websites. But identifying the right platform is only half battle won. Unless you have a specialist Magento professional on your side, you cannot count on getting a perfect online shopping experience for your users.
+			</article>
+			<%= link_to "Continue Reading", '#', :class => 'waves-effect waves-light btn hide' %>
+		</div>
+	</div>
+	<div class="container">
+		<div class="services-text services-inner-content">
+			<h2>Why WebEnrich</h2>
+			<p>WebEnrich is like that expert pilot who knows where to go, how to go and what to do upon reaching the destination. Our team of Magento professionals begin with thorough understanding of your business needs. You have your customers on your mind; WebEnrich has both you and your customer on our minds while working on solutions that would solve your various business tasks.</p>
+			<p>When we deliver you a solution, we make sure that you have a solution that is unmatchable and unbeatable in the market. Our primary aim is to have a sustainable long-term relation with our potential customers and we plan to achieve that through delivering ‘out-of-the-world’ Magento services.</p>
+			<p>Our team has years of experience and track record of delivering successful shopping carts to clients from many industries. Our ability to create beautiful, commercially focused websites has helped us to achieve truly amazing results for our clients.</p>
+			<p><%= link_to 'Contact', contact_us_path %> us to know more about our extensive Magento development services.</p>
+		</div>
+	</div>
+	<div class="list-of-services list-of-detail-services">
+		<div class="container">
+			<div class="list-of-services-inner">
+				<h2>Other Mobile App Development Services</h2>
+				<div class="card">
+					<ul>
+						<li>
+							<%= link_to psd_to_html5_path do %>
+								<strong>PSD to HTML5 / CSS3</strong>
+							<% end %>
+						</li>
+						<!-- <li>
+							<%#= link_to ajax_path do %>
+								<strong>Ajax/JQuery</strong>
+							<%# end %>
+						</li> -->
+						<!-- <li>
+							<%#= link_to jquery_path do %>
+								<strong>JQuery</strong>
+							<%# end %>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- our clients -->
+	<%= render 'layouts/widgets/our_clients' %>	
+	<!-- start-project -->
+	<%= render 'layouts/widgets/start_project' %>
+</div>

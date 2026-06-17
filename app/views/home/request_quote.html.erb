@@ -1,0 +1,361 @@
+<% content_for :title do %>
+	Request A Quote from WebEnrich!
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="Web Enrich Services: Select from the list of Internet Marketing & Web Based services that we offer and Hire us to handle you project successfully">
+	<meta name="keywords" content="WebEnrich services, India, internet marketing, online marketing, web based services, hire us, consultant">
+<% end %>
+<div class="page-banner">
+	<div class="services-page clients-page contact-page request-quote">
+		<div class="clients-content contact-content request-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-sm-12">
+						<div class="about-we">
+							<div class="banner-title">
+								<h2>Request a Quote</h2>
+							</div>
+							<div class="about-intro">
+								<p>Request for a quote form helps us to get back to you quickly with an estimated cost for your project based on your specific needs. Since every project is unique, we need to know exactly what you are looking to have created. The more information you provide, the more accurate our estimate will be.</p>
+							</div>							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="client-inner-content contact-inner-content request-inner-content">
+			<div class="container">
+				<div class="col-md-12 col-sm-12">
+					<div class="row">
+						<div class="contact-form">
+							<div class="col-md-8 col-sm-12">
+								<div class="form-fields">
+									<%= form_for @quote do |f| %>
+										<div class="request-block personal-info">
+											<h2 class="form-titles">Personal Info</h2>
+											<div class="col-md-6 col-sm-6 no-padding-left">
+												<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+													<%= f.text_field :full_name, :class => 'mdl-textfield__input' %>
+													<%= label_tag 'name', :class => 'mdl-textfield__label' do %>
+														Full Name: <sup>*</sup>
+														<div class="alert-danger pull-right contact-errors"><%= @quote.errors[:full_name].join(', ') %></div>
+													<% end %>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 no-padding-right">
+												<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+													<%= f.email_field :email_address, :class => 'mdl-textfield__input' %>
+													<%= label_tag 'name', :class => 'mdl-textfield__label' do %>
+														Email Address: <sup>*</sup>
+														<div class="alert-danger pull-right contact-errors"><%= @quote.errors[:email_address].join(', ') %></div>
+													<% end %>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 no-padding-left">
+												<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+													<%= f.text_field :phone, :class => 'mdl-textfield__input', :pattern => '-?[0-9]*(\.[0-9]+)?' %>
+													<%= label_tag 'name', :class => 'mdl-textfield__label' do %>
+														Phone: <sup>*</sup>
+														<div class="alert-danger pull-right contact-errors"><%= @quote.errors[:phone].join(', ') %></div>
+													<% end %>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 no-padding-right">
+												<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+													<%= f.text_field :company_name, :class => 'mdl-textfield__input' %>
+													<%= label_tag 'name', :class => 'mdl-textfield__label' do %>
+														Business Name: <sup>*</sup>
+														<div class="alert-danger pull-right contact-errors"><%= @quote.errors[:company_name].join(', ') %></div>
+													<% end %>
+												</div>
+											</div>
+											<div class="col-md-12 col-sm-12 no-padding">
+												<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+													<%= f.text_field :website_url, :class => 'mdl-textfield__input' %>
+													<%= label_tag 'name', :class => 'mdl-textfield__label' do %>
+														Website URL (eg:- http://www.yourwebsite.com)
+														<div class="alert-danger pull-right contact-errors"><%= @quote.errors[:website_url].join(', ') %></div>
+													<% end %>
+												</div>
+											</div>
+										</div>
+										<div class="request-block interested-in">
+											<h2 class="form-titles">Project Details</h2>
+											<label class="request-questions">What are you interested in? <span>
+												<% @arry =  @quote.interested_in.reject {|a| a.empty?} %>
+												<%= "Please select atleast one option." if @arry.length <= 0 %>
+											</span></label>
+											<div class="col-md-6 col-sm-6 no-padding-left">
+												<div class="quote-item" data-value="business">
+													<div class="project-type business <%= (@quote.interested_in.nil? ? '' : (@quote.interested_in.include?('business') ? 'active-tab' : '' )) %>">
+														<%= hidden_field_tag 'quote[interested_in][]', (@quote.interested_in.nil? ? '' : (@quote.interested_in.include?('business') ? 'business' : '' )) %>
+														<div class="website-type">
+															<h3>Business/Professional Website
+																<span>(To market your services)</span>
+															</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 no-padding-right">
+												<div class="quote-item"  data-value="ecommerce">
+													<div class="project-type ecommerce-web <%= (@quote.interested_in.nil? ? '' : (@quote.interested_in.include?('ecommerce') ? 'active-tab' : '' )) %>">
+														<%= hidden_field_tag 'quote[interested_in][]', (@quote.interested_in.nil? ? '' : (@quote.interested_in.include?('ecommerce') ? 'ecommerce' : '' )) %>
+														<div class="website-type">
+															<h3>E-commerce Website
+																<span>(For selling/promoting your products)</span>
+															</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 no-padding-left">
+												<div class="quote-item" data-value="cms">
+													<div class="project-type cms <%= (@quote.interested_in.nil? ? '' : (@quote.interested_in.include?('cms') ? 'active-tab' : '' )) %>">
+														<%= hidden_field_tag 'quote[interested_in][]', (@quote.interested_in.nil? ? '' : (@quote.interested_in.include?('cms') ? 'cms' : '' )) %>
+														<div class="website-type">
+															<h3>Content Management System
+																<span>(Control of website data through backend)</span>
+															</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 no-padding-right">
+												<div class="quote-item" data-value="social">
+													<div class="project-type social  <%= (@quote.interested_in.nil? ? '' : (@quote.interested_in.include?('social') ? 'active-tab' : '' )) %>">
+														<%= hidden_field_tag 'quote[interested_in][]', (@quote.interested_in.nil? ? '' : (@quote.interested_in.include?('social') ? 'social' : '' )) %>
+														<div class="website-type">
+															<h3>Social Website
+																<span>(Community/peoples network website)</span>
+															</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 no-padding-left">
+												<div class="quote-item" data-value="portal">
+													<div class="project-type portal  <%= (@quote.interested_in.nil? ? '' : (@quote.interested_in.include?('portal') ? 'active-tab' : '' )) %>">
+														<%= hidden_field_tag 'quote[interested_in][]', (@quote.interested_in.nil? ? '' : (@quote.interested_in.include?('portal') ? 'portal' : '' )) %>
+														<div class="website-type">
+															<h3>Portal
+																<span>(Control of website data through backend)</span>
+															</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 no-padding-right">
+												<div class="quote-item" data-value="other-web">
+													<div class="project-type other-web  <%= (params['quote']['interested_in'][5].nil?  ? '' : (params['quote']['interested_in'][5].present? ? 'active-tab' : '' )) if @quote.interested_in.present? %>">
+														<div class="website-type other-website">
+															<h3>Other Website</h3>
+															<input type="text"  name="quote[interested_in][]" class="other-text" value="<%= params['quote']['interested_in'][5] if @quote.interested_in.present? %>" />
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="request-block also-interested-in">
+											<label class="request-questions">Also interested in? <span>
+												<% @arry =  @quote.also_interested_in.reject {|a| a.empty?} %>
+												<%= "Please select atleast one option." if @arry.length <= 0 %>
+											</span></label>
+											<div class="col-md-6 col-sm-6 no-padding-left">
+												<div class="quote-item" data-value="seo">
+													<div class="project-type seo-request <%= (@quote.also_interested_in.nil? ? '' : (@quote.also_interested_in.include?('seo') ? 'active-tab' : '' )) %>">
+														<%= hidden_field_tag 'quote[also_interested_in][]', (@quote.also_interested_in.nil? ? '' : (@quote.also_interested_in.include?('seo') ? 'seo' : '' )) %>
+														<div class="website-type">
+															<h3>Search Engine Optimization
+																<span>(To market your services)</span>
+															</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 no-padding-right">
+												<div class="quote-item" data-value="smm">
+													<div class="project-type smm-request <%= (@quote.also_interested_in.nil? ? '' : (@quote.also_interested_in.include?('smm') ? 'active-tab' : '' )) %>">
+														<%= hidden_field_tag 'quote[also_interested_in][]', (@quote.also_interested_in.nil? ? '' : (@quote.also_interested_in.include?('smm') ? 'smm' : '' )) %>
+														<div class="website-type">
+															<h3>Social Media Marketing
+																<span>(For selling/promoting your products)</span>
+															</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 no-padding-left">
+												<div class="quote-item" data-value="ppc">
+													<div class="project-type ppc-request  <%= (@quote.also_interested_in.nil? ? '' : (@quote.also_interested_in.include?('ppc') ? 'active-tab' : '' )) %>">
+														<%= hidden_field_tag 'quote[also_interested_in][]', (@quote.also_interested_in.nil? ? '' : (@quote.also_interested_in.include?('ppc') ? 'ppc' : '' )) %>
+														<div class="website-type">
+															<h3>Pay Per Click
+																<span>(Control of website data through backend)</span>
+															</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 no-padding-right">
+												<div class="quote-item" data-value="other-request">
+													<div class="project-type other-request  <%= (params['quote']['also_interested_in'][3].nil?  ? '' : (params['quote']['also_interested_in'][3].present? ? 'active-tab' : '' )) if @quote.also_interested_in.present? %>">
+		    											<%#= hidden_field_tag 'quote[also_interested_in][]', (@quote.also_interested_in.nil? ? '' : (@quote.also_interested_in.include?('other-request') ? 'other-request' : '' )) %>
+														<div class="website-type other-website">
+															<h3>Other</h3>
+															<input type="text"  name="quote[also_interested_in][]" class="other-text" value="<%= params['quote']['also_interested_in'][3] if @quote.also_interested_in.present? %>" />
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="request-block quote-budget-input">
+											<label class="request-questions">What is your approximate website budget? <span><%= "Please select any one option." if @quote.budget.nil? %></span></label>
+											<div class="col-md-6 col-sm-6 no-padding-left">
+												<div class="quote-item quote-budget" data-value="dollars_0_25k">
+													<div class="project-type request-budget  <%= "active-tab" if @quote.budget.present? && params["quote"]["budget"] == 'dollars_0_25k' %>">
+														<div class="website-type">
+															<h3>USD 5k - USD 10k</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 no-padding-right">
+												<div class="quote-item quote-budget" data-value="dollars_25k_50k">
+													<div class="project-type request-budget <%= "active-tab" if @quote.budget.present? && params["quote"]["budget"] == 'dollars_25k_50k' %>">
+														<div class="website-type">
+															<h3>USD 10k - USD 25k</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 no-padding-left">
+												<div class="quote-item quote-budget" data-value="dollars_50k_1lakh">
+													<div class="project-type request-budget <%= "active-tab" if @quote.budget.present? && params["quote"]["budget"] == 'dollars_50k_1lakh' %>">
+														<div class="website-type">
+															<h3>USD 25k - USD 50k</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 no-padding-right">
+												<div class="quote-item quote-budget" data-value="not_sure">
+													<div class="project-type request-budget <%= "active-tab" if @quote.budget.present? && params["quote"]["budget"] == 'not_sure' %>">
+														<div class="website-type">
+															<h3>USD 50k and above</h3>
+														</div>
+													</div>
+												</div>
+											</div>
+											<%= hidden_field_tag 'quote[budget]', @quote.budget %>
+										</div>
+										<div class="request-block start-date-input">
+											<label class="request-questions">Select an ideal start date: <span><%= "Please select any one option." if @quote.start_date.nil? %></span></label>
+											<div class="col-md-6 col-sm-6 no-padding-left">
+												<div class="quote-item start-date" data-value="immediately">
+													<div class="project-type request-budget <%= "active-tab" if @quote.start_date.present? && params["quote"]["start_date"] == 'immediately' %>">
+														<div class="website-type">
+															<h3><span>Immediately</span></h3>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 no-padding-right">
+												<div class="quote-item start-date" data-value="this_month">
+													<div class="project-type request-budget <%= "active-tab" if @quote.start_date.present? && params["quote"]["start_date"] == 'this_month' %>">
+														<div class="website-type">
+															<h3><span>This Month</span></h3>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 no-padding-left">
+												<div class="quote-item start-date" data-value="near_future">
+													<div class="project-type request-budget <%= "active-tab" if @quote.start_date.present? && params["quote"]["start_date"] == 'near_future' %>">
+														<div class="website-type">
+															<h3><span>Near Future</span></h3>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6 col-sm-6 no-padding-right">
+												<div class="quote-item start-date" data-value="this_year">
+													<div class="project-type request-budget <%= "active-tab" if @quote.start_date.present? && params["quote"]["start_date"] == 'this_year' %>">
+														<div class="website-type">
+															<h3><span>This Year</span></h3>
+														</div>
+													</div>
+												</div>
+											</div>
+											<%= hidden_field_tag 'quote[start_date]', @quote.start_date %>
+										</div>
+										<div class="request-block project-details">
+											<div class="col-md-12 col-sm-12 no-padding">
+												<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+													<%= f.text_area :project_details, :class => 'mdl-textfield__input' %>
+													<%= label_tag 'name', :class => 'mdl-textfield__label' do %>
+														Describe your project:
+														<div class="alert-danger pull-right contact-errors"><%= @quote.errors[:project_details].join(', ') %></div>
+													<% end %>
+												</div>
+											</div>
+										</div>
+										<div class="request-block competitors">
+											<div class="col-md-12 col-sm-12 no-padding">
+												<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+													<%= f.text_area :competitors, :class => 'mdl-textfield__input' %>
+													<%= label_tag 'name', :class => 'mdl-textfield__label' do %>
+														List your competitors or reference websites you like in terms of design or funcitonality: <sup>*</sup>
+														<div class="alert-danger pull-right contact-errors"><%= @quote.errors[:competitors].join(', ') %></div>
+													<% end %>
+												</div>
+											</div>
+										</div>
+										<div class="request-block target-audience">
+											<div class="col-md-12 col-sm-12 no-padding">
+												<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+													<%= f.text_area :target_audience, :class => 'mdl-textfield__input' %>
+													<%= label_tag 'name', :class => 'mdl-textfield__label' do %>
+														Who is your target audience?:
+														<div class="alert-danger pull-right contact-errors"><%= @quote.errors[:target_audience].join(', ') %></div>
+													<% end %>
+												</div>
+											</div>
+										</div>
+										<div class="request-block anything-else">
+											<div class="col-md-12 col-sm-12 no-padding">
+												<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+													<%= f.text_area :anything_else, :class => 'mdl-textfield__input' %>
+													<%= label_tag 'name', :class => 'mdl-textfield__label' do %>
+														Anything Else You Want Us To Know?:
+														<div class="alert-danger pull-right contact-errors"><%= @quote.errors[:anything_else].join(', ') %></div>
+													<% end %>
+												</div>
+											</div>
+										</div>
+										<div class="clear">
+											<%= recaptcha_tags %>
+											<%#= @quote.errors["g-recaptcha-response"].join(', ') %>
+											<div class="request-quote-captcha"><%= @quote.errors["g-recaptcha-response"].join(', ') %>
+											</div>
+										</div>
+										<%= submit_tag 'REQUEST A QUOTE NOW!', :class => 'btn' %>
+									<% end %>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-1 spacer col-sm-12 hidden-sm"></div>
+						<div class="col-md-3">
+							<div class="contact-address-part">
+								<%= render 'layouts/widgets/contact_address' %>
+							</div>
+							<div class="testimonials-part">
+								<%= render 'layouts/widgets/testimonials' %>
+							</div>
+						</div>
+					</div>						
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

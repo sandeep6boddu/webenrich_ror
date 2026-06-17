@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WebEnrich -Contact Details</title>
+</head>
+	<body style="margin:0; padding:0;">
+		<table class="table main-table" cellspacing="0" cellpadding="0" style = "width:100%; height: 420px; background: url(<%= image_url('job-field-bg.jpg')%>) repeat-x top #EBEBEB;">
+			<thead>
+				<tr>
+					<th class="logo" style= "border: 0; text-align: left;">
+						<%= image_tag "logo.png", :alt => 'logo', :class => 'img-responsive' %>	
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr style="height: 50px;">
+					<td style= "border: 0;">
+						<h2 style= "font-size: 24px; color:#ffffff; margin: 40px 0 15px 78px;">
+						Message From Request a Quote Page
+						</h2>
+					</td>
+				</tr>
+				<tr>
+					<td style= "">
+						<table class="table sub-table" style="background: #fff; width: 85%; margin: 0 auto;">
+							<tbody>
+								<tr>
+									<td style="border-top: 1px solid #eeeeee; width: 35%; padding: 8px 8px 8px 20px;">Name</td>
+									<td style= "border-top:1px solid #ebebeb; padding: 8px;">
+										<%= @name %>
+									</td>
+								</tr>
+								<tr>
+									<td style="border-top: 1px solid #eeeeee; width: 35%; padding: 8px 8px 8px 20px;">Email</td>
+									<td style= "border-top:1px solid #ebebeb; padding: 8px;"><%= @email %></td>
+								</tr>
+								<tr>
+									<td style="border-top: 1px solid #eeeeee; width: 35%; padding: 8px 8px 8px 20px;">Mobile</td>
+									<td style= "border-top:1px solid #ebebeb; padding: 8px;"><%= @phone %></td>
+								</tr>								
+								<% if @company.present? %>
+									<tr>
+										<td style="border-top: 1px solid #eeeeee; width: 35%; padding: 8px 8px 8px 20px;">Company Name</td>
+										<td style= "border-top:1px solid #ebebeb; padding: 8px;">
+												<%= @company %>
+										</td>
+									</tr>
+								<% end %>
+								<% if @url.present? %>
+									<tr>
+										<td style="border-top: 1px solid #eeeeee; width: 35%; padding: 8px 8px 8px 20px;">Url</td>
+										<td style= "border-top:1px solid #ebebeb; padding: 8px;"><%= @url %></td>
+									</tr>
+								<% end %>
+								<tr>
+									<td style="border-top: 1px solid #eeeeee; width: 35%; padding: 8px 8px 8px 20px;">Interested in:</td>
+									<td style= "border-top:1px solid #ebebeb; padding: 8px;"><%= @interested_in %></td>
+								</tr>
+								<tr>
+									<td style="border-top: 1px solid #eeeeee; width: 35%; padding: 8px 8px 8px 20px;">Also Interested in:</td>
+									<td style= "border-top:1px solid #ebebeb; padding: 8px;"><%= @also_interested_in %></td>
+								</tr>
+								<tr>
+									<td style="border-top: 1px solid #eeeeee; width: 35%; padding: 8px 8px 8px 20px;">Website Budget</td>
+									<td style= "border-top:1px solid #ebebeb; padding: 8px;"><%= @budget %></td>
+								</tr>
+								<tr>
+									<td style="border-top: 1px solid #eeeeee; width: 35%; padding: 8px 8px 8px 20px;">Start Date</td>
+									<td style= "border-top:1px solid #ebebeb; padding: 8px;"><%= @start_date %></td>
+								</tr>
+								<tr>
+									<td style="border-top: 1px solid #eeeeee; width: 35%; padding: 8px 8px 8px 20px;">Project Details</td>
+									<td style= "border-top:1px solid #ebebeb; padding: 8px;"><%= @project_details %></td>
+								</tr>
+								<tr>
+									<td style="border-top: 1px solid #eeeeee; width: 35%; padding: 8px 8px 8px 20px;">Competitors</td>
+									<td style= "border-top:1px solid #ebebeb; padding: 8px;"><%= @competitors %></td>
+								</tr>
+								<tr>
+									<td style="border-top: 1px solid #eeeeee; width: 35%; padding: 8px 8px 8px 20px;">Target Audience</td>
+									<td style= "border-top:1px solid #ebebeb; padding: 8px;"><%= @target_audience %></td>
+								</tr>
+								<tr>
+									<td style="border-top: 1px solid #eeeeee; width: 35%; padding: 8px 8px 8px 20px;">Anything else</td>
+									<td style= "border-top:1px solid #ebebeb; padding: 8px;"><%= @anything_else %></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

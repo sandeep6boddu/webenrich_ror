@@ -1,0 +1,76 @@
+source 'https://rubygems.org'
+
+
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '4.2.1'
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 5.0'
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
+# Use CoffeeScript for .coffee assets and views
+gem 'coffee-rails', '~> 4.1.0'
+gem 'bootstrap-sass'
+# See https://github.com/rails/execjs#readme for more supported runtimes
+# gem 'therubyracer', platforms: :ruby
+gem 'mixitup_rails'
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem 'turbolinks'
+gem 'jquery-turbolinks'
+# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jbuilder', '~> 2.0'
+# bundle exec rake doc:rails generates the API under doc/api.
+gem 'sdoc', '~> 0.4.0', group: :doc
+
+# Use ActiveModel has_secure_password
+# gem 'bcrypt', '~> 3.1.7'
+
+# Use Unicorn as the app server
+# gem 'unicorn'
+# paginate gem
+gem 'kaminari'
+# manage user roles
+gem "rolify"
+# Use Capistrano for deployment
+# gem 'capistrano-rails', group: :development
+# win specific start
+gem "tzinfo-data"
+gem 'coffee-script-source', '1.8.0'
+gem "jquery-ui-rails"
+gem "slick_rails"
+gem "material_design_lite-sass"
+gem "materialize-sass"
+gem "material_icons"
+gem "font-awesome-rails"
+gem "devise"
+gem "devise_invitable"
+gem 'mongoid', '~> 4.0.0'
+gem 'simple_enum', '~> 2.0.0' , require: 'simple_enum/mongoid'
+gem "mongoid_paranoia"
+gem "mongoid-simple-tags"
+gem "mongoid-slug"
+gem "mongoid-paperclip", :require => "mongoid_paperclip"
+gem "bootstrap-wysihtml5-rails"
+gem "paperclip", git: "https://github.com/thoughtbot/paperclip.git"
+gem "recaptcha", '1.1.0', :require => "recaptcha/rails"
+gem "jquery-fileupload-rails"
+gem 'mongoid_orderable'
+gem 'sweet-alert'
+gem 'mongoid-ancestry'
+gem 'mongoid_search'
+gem "wysiwyg-rails"
+gem "social-buttons", '~> 0.3'
+#gem "dimensions-rails"
+gem 'rails_amp'
+# end
+group :development, :test do
+	# Call 'byebug' anywhere in the code to stop execution and get a debugger console
+	gem 'byebug'
+
+	# Access an IRB console on exception pages or by using <%= console %> in views
+	gem 'web-console', '~> 2.0'
+
+	# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+	gem 'spring'
+end

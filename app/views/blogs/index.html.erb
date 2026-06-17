@@ -1,0 +1,129 @@
+<% content_for :title do %>
+	Blogs
+<% end %>
+<div class="">
+	<div class="mdl-layout blogs-main-page page-content">
+		<div class="mdl-layout__content mdl-color--grey-100">
+			<div class="container">
+				<div class="mdl-cell--12-col mdl-grid mdl-fullwidth no-padding futured-blog">
+					<div class=" mdl-cell--8-col mdl-cell--12-col-tablet extra-margin-right ">
+						<h3 class="mdl-color-text--grey blog-title mdl-typography--text-uppercase">
+							<%= link_to '/' do %>Blog
+							<% end %>
+						</h3>
+					</div>
+					<%= render "/blogs/parts/pagination" %>
+					<%= render "blogs/parts/featured" %>
+					<hr class="mdl-cell--12-col mdl-fullwidth no-padding mdl-cell--divider">
+				</div>
+				<div class="mdl-cell--12-col mdl-grid mdl-fullwidth no-padding individual-blogs">
+					<div class="mdl-cell--8-col mdl-cell--12-col-tablet extra-margin-right">
+						<div class="mdl-cell--12-col mdl-grid--no-spacing mdl-grid no-margin mdl-fullwidth">
+							<div class="blogs-thumbnail">
+								<% if @blogs.count > 0 %>
+									<% @blogs.each do |blog| %>
+										<% if blog.banner.present? %>
+											<div class="mdl-cell--6-col msl-cell--6-col left mdl-margin-right mdl-shadow--4dp">
+												<div class="mdl-card">
+													<div class="mdl-card_thumbnail mdl-card--expand ">
+														<%= link_to blog_show_path(blog.slug) do %>
+															<%= image_tag blog.banner.url(:medium), :alt => 'Banner Image', :class => 'img-responsive' %>
+														<% end %>
+														<ul class="post-comments">
+															<!-- <li>
+																<%# link_to '' do %>
+																	<i class="material-icons">favorite</i>
+																<%# end %>
+															</li> -->
+															<li>
+																<%= link_to blog_show_path(blog.slug) + "#comments" do %>
+																	<i class="material-icons">comment</i>
+																<% end %>
+															</li>
+														</ul>
+														<!-- Colored FAB button with ripple -->
+														<%= link_to blog_show_path(blog.slug) do %>
+															<%= button_tag :class => 'mdl-button mdl-innerlink mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--orange' do %>
+																<i class="material-icons mdl-color-text--white">chevron_right</i>
+															<% end %>
+														<% end %>
+													</div>
+												</div>
+												<div class="mdl-card__supporting-text mdl-color-text--grey-600">
+													<span class="mdl-color-text--red">
+														<%= blog.categories.pluck(:name).join(', ') %>
+													</span>
+													<h3 class="">
+														<%= link_to blog_show_path(blog.slug), :class =>'mdl-color-text--grey-700' do %>
+															<%= raw truncate(blog.title, length: 30, escape: false) %>
+														<% end %>
+													</h3>
+													<span class="post-time">
+														<i class="material-icons">schedule</i>
+														<% subs = {"about" => '', "almost" => '', "over" => ''} %>
+														<%= distance_of_time_in_words_to_now(blog.created_at).gsub(/\w+/) { |word| subs[word] || word} %> ago
+													</span>
+												</div>
+											</div>
+										<% else %>
+											<div class="mdl-cell--6-col mdl-cell--12-col-tablet left mdl-margin-right mdl-shadow--4dp mdl-content-blog">
+												<div class="mdl-card mdl-color--light-blue-700">
+													<div class="mdl-card--expand">
+														<%= link_to blog_show_path(blog.slug), :class => 'mdl-readmore' do %>
+															<%= button_tag 'Readmore', :class => 'mdl-readmore mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect left mdl-color-text--white' %>
+														<% end %>
+														<ul class="post-comments mdl-comments--noimage ">
+															<!-- <li>
+																<%#= link_to '' do %>
+																	<i class="material-icons">favorite</i>
+																<%# end %>
+															</li> -->
+															<li>
+																<%= link_to blog_show_path(blog.slug) + "#comments" do %>
+																	<i class="material-icons">comment</i>
+																<% end %>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<div class="mdl-card__supporting-text mdl-color-text--grey-600">
+													<span class="mdl-color-text--red">
+														<%= blog.categories.pluck(:name).join(', ') %>
+													</span>
+													<h3 class="">
+														<%= link_to blog_show_path(blog.slug), :class =>'mdl-color-text--grey-700' do %>
+															<%= raw truncate(blog.title, length: 30, escape: false) %>
+														<% end %>
+													</h3>
+													<span class="post-time">
+														<i class="material-icons">schedule</i>
+														<% subs = {"about" => '', "almost" => '', "over" => ''} %>
+														<%= distance_of_time_in_words_to_now(blog.created_at).gsub(/\w+/) { |word| subs[word] || word} %> ago
+													</span>
+													<p>
+														<%= raw truncate(blog.content, length: 240, escape: false) %>
+													</p>
+													<div class="blogcomments-icons">
+														<ul class="post-comments">
+															<!-- <li>
+																<i class="material-icons mdl-color-text--red">favorite</i>10
+															</li> -->
+															<li><i class="material-icons mdl-color-text--light-blue-500">comment</i>30</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										<% end %>
+									<% end %>
+								<% else %>
+									<span>No more blogs under this category.</span>
+								<% end %>
+							</div>
+						</div>
+					</div>
+					<%= render "/blogs/parts/categories" %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

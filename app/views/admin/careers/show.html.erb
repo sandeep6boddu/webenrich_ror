@@ -1,0 +1,41 @@
+<div class="content-heading">Careers</div>
+<!-- Zero Configuration-->
+<div class="panel panel-default">
+	 <div class="panel-heading">Applicants List</div>
+	 <div class="panel-body">
+			<div class="table-responsive b0">
+				 <table id="datatable1" class="table table-striped table-hover">
+						<thead>
+							 <tr>
+									<th class="wd-md">Email</th>
+									<th>Name</th>
+									<th>Mobile Number</th>
+									<th>Location</th>
+									<th>Experience</th>
+									<th>Resume</th>
+							 </tr>
+						</thead>
+						<tbody>
+							<% if @job.applicants.count > 0 %>
+									<% @job.applicants.each do |applicant| %>
+										<tr>
+							<td><%= applicant.email %></td>
+							<td><%= applicant.name %></td>
+							<td><%= applicant.mobile_no %></td>
+							<td><%= applicant.location %></td>
+							<td><%= applicant.experience %></td>
+							<td>
+								<%= button_tag(type: 'submit', class: 'mb-sm btn btn-default', data: { disable_with: "Please wait..." }) do %>
+									<%= link_to "View resume", applicant.resume.url(:original), :target => '_blank' %>
+								<% end %>
+							</td>
+											</tr>
+									<% end %>
+							<% else %>
+								<tr><td><%= flash.now[:info] = "No Applicants found." %></td></tr>
+							<% end %>
+						</tbody>
+				</table>
+			 </div>
+	 </div>
+	</div>

@@ -1,0 +1,204 @@
+<% content_for :title do %>
+	Website Designing, SEO, PPC Services Company in Hyderabad India
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="Internet marketing services: Web Enrich Solutions Pvt. Ltd. is a leading Hyderabad, Bangalore, India based company specializing in SEO, PPC, Online Branding & Advertising and Website Design & PHP Development works. Try WebEnrich hassle-free services!">
+	<meta name="keywords" content="SEO Company India, PPC, Link Building, Web Design, Web Development, Internet Marketing Company, Online Advertising, SMO, SMM, Link Building, Bangalore, Delhi, Hyderabad, India">
+<% end %>
+<div class="mobile-main-content">
+	<div class="mobile-slider">
+		<div class="moblie-slide-bar">
+			<div class="img-bg">
+				<%= image_tag image_path('mobile/slide-1.png'), :size => '467x108' %>
+			</div>
+			<div class="img-bg1">
+				<%= image_tag image_path('mobile/slide-2.png'), :size => '522x108' %>
+			</div>
+			<div class="img-bg2">
+				<%= image_tag image_path('mobile/slide-3.png'), :size => '435x108' %>
+			</div>
+			<div class="img-bg3">
+				<%= image_tag image_path('mobile/slide-4.png'), :size => '327x108' %>
+			</div>
+		</div>
+	</div>
+	<!-- services -->
+	<div class="container">
+		<div class="services">
+			<div class="col s12">
+				<div class="card">
+					<span class="card-title">Services
+						<a class='dropdown-button right' href='#' data-activates='dropdown1'>
+							<%= image_tag image_path('mobile/options-icon.png') %>
+						</a>
+						<!-- Dropdown Structure -->
+						<ul id='dropdown1' class='dropdown-content'>
+							<li>
+								<%= link_to 'Pay Per Click', pay_per_click_path %>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<%= link_to 'Social Media Marketing', social_media_marketing_path %>
+							</li>
+						</ul>
+					</span>
+					<div class="container">
+						<ul class="services-list">
+							<li>
+								<%= link_to '#modal1', class: 'modal-trigger' do %>
+									<%= image_tag image_path('mobile/ruby-icon.png') %>
+								<% end %>
+								<div id="modal1" class="modal modal-fixed-footer">
+									<div class="modal-content">
+										<h4>Ruby On Rails</h4>
+										<p>We are one of India's top few Ruby on Rails development companies. We are passionate about ...</p>
+									</div>
+									<div class="modal-footer">
+										<%= link_to 'Read More', ruby_on_rails_path, :class => 'left waves-effect read-more-btn btn' %>
+										<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<%= link_to '#modal2', class: 'modal-trigger' do %>
+									<%= image_tag image_path('mobile/ecommerce-icon.png') %>
+								<% end %>
+								<div id="modal2" class="modal modal-fixed-footer">
+									<div class="modal-content">
+										<h4>Ecommerce Development</h4>
+										<p>Do you ship your products to different parts of the world? Do you offer services ...</p>
+									</div>
+									<div class="modal-footer">
+										<%= link_to 'Read More', ecommerce_development_path, :class => 'left waves-effect read-more-btn btn' %>
+										<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<%= link_to '#modal3', class: 'modal-trigger' do %>
+									<%= image_tag image_path('mobile/mobile-app-icon.png') %>
+								<% end %>
+								<div id="modal3" class="modal modal-fixed-footer">
+									<div class="modal-content">
+										<h4>Mobile App Development</h4>
+										<p>Creating a visually appealing web design: What is your strategy to stand out ...</p>
+									</div>
+									<div class="modal-footer">
+										<%= link_to 'Read More', '#', :class => 'left waves-effect read-more-btn btn' %>
+										<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<%= link_to '#modal4', class: 'modal-trigger' do %>
+									<%= image_tag image_path('mobile/webdesign-icon.png') %>
+								<% end %>
+								<div id="modal4" class="modal modal-fixed-footer">
+									<div class="modal-content">
+										<h4>Web Design</h4>
+										<p>Welcome to the magical world of WebEnrich where businesses are transformed to look...</p>
+									</div>
+									<div class="modal-footer">
+										<%= link_to 'Read More', web_design_path, :class => 'left waves-effect read-more-btn btn' %>
+										<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<%= link_to '#modal5', class: 'modal-trigger' do %>
+									<%= image_tag image_path('mobile/web-dev-icon.png') %>
+								<% end %>
+								<div id="modal5" class="modal modal-fixed-footer">
+									<div class="modal-content">
+										<h4>Web Development</h4>
+										<p>WebEnrich with its sound knowledge and experience in web design and development ...</p>
+									</div>
+									<div class="modal-footer">
+										<%= link_to 'Read More', web_development_path, :class => 'left waves-effect read-more-btn btn' %>
+										<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<%= link_to '#modal6', class: 'modal-trigger' do %>
+									<%= image_tag image_path('mobile/responsive-icon.png') %>
+								<% end %>
+								<div id="modal6" class="modal modal-fixed-footer">
+									<div class="modal-content">
+										<h4>Responsive Design</h4>
+										<p>Your website is the first glimpse of your business for most users. Can you afford ...</p>
+									</div>
+									<div class="modal-footer">
+										<%= link_to 'Read More', responsive_website_design_path, :class => 'left waves-effect read-more-btn btn' %>
+										<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<%= link_to '#modal7', class: 'modal-trigger' do %>
+									<%= image_tag image_path('mobile/maintainence-icon.png') %>
+								<% end %>
+								<div id="modal7" class="modal modal-fixed-footer">
+									<div class="modal-content">
+										<h4>Website Maintenance</h4>
+										<p>Your website is the mirror of your businesses and like any mirror can develop ...</p>
+									</div>
+									<div class="modal-footer">
+										<%= link_to 'Read More', website_maintenance_path, :class => 'left waves-effect read-more-btn btn' %>
+										<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<%= link_to '#modal8', class: 'modal-trigger' do %>
+									<%= image_tag image_path('mobile/seo-icon.png') %>
+								<% end %>
+								<div id="modal8" class="modal modal-fixed-footer">
+									<div class="modal-content">
+										<h4>Search Engine Optimization</h4>
+										<p>You might have the jazziest website ever put together by the best design team ever ...</p>
+									</div>
+									<div class="modal-footer">
+										<%= link_to 'Read More', search_engine_optimization_path, :class => 'left waves-effect read-more-btn btn' %>
+										<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- About -->
+	<div class="container">
+		<div class="about-we">
+			<h1>About</h1>
+			<article>
+				WebEnrich is a rapidly developing company based in India that provides Internet Marketing, Web Design Development services. We are a performance driven company with a team of creative professionals who are focused on nothing but excellence.
+			</article>
+			<%= link_to 'READ MORE', about_us_path, :class => 'btn waves-effect' %>
+		</div>
+	</div>
+	<!-- certifications -->
+	<div class="certification">
+		<div class="container">
+			<h1>Certifications</h1>
+			<div class="google-partners">
+				<span class="left">
+						<%= image_tag image_path('google-img.jpg'), :size => '186x57' %>
+				</span>
+				<span class="left">
+						<%= image_tag image_path('bing-img.jpg'), :size => '186x57' %>
+				</span>
+			</div>
+		</div>
+	</div>
+	<!-- testimonial -->
+	<%= render 'layouts/widgets/testimonials' %>
+	<div class="clear"></div>
+	<!-- Our Clients -->
+	<%= render 'layouts/widgets/our_clients' %>
+	<!-- start-project -->
+	<%= render 'layouts/widgets/start_project' %>
+</div>

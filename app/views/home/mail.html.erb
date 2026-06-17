@@ -1,0 +1,54 @@
+<table class="table main-table" style = "background: url(<%= image_url('job-field-bg.jpg')%>) no-repeat top #EBEBEB;">
+	<thead>
+		<tr>
+			<th class="logo" style= "border: 0;">
+				<%= image_tag "logo.png", :alt => 'logo', :class => 'img-responsive' %>
+				<img src="<%= image_url('logo.png') %>" alt=""/>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr style="height: 50px;">
+			<td style= "border: 0;">
+				<h2>
+				Job Title
+				</h2>
+			</td>
+		</tr>
+		<tr>
+			<td style= "border: 0;">
+				<table class="table sub-table">
+					<thead>
+						
+					</thead>
+					<tbody>
+						<tr>
+							<td class="" style= "padding-left:20px;">24th July</td>
+							<td><a href="#" class="btn btn-xs btn-success pull-right">Download Resume</a></td>
+						</tr>
+						<tr>
+							<td class="labelname">Name</td>
+							<td><%= @name %></td>
+						</tr>
+						<tr>
+							<td class="labelname">Email</td>
+							<td><%= @email %></td>
+						</tr>
+						<tr>
+							<td class="labelname">Mobile</td>
+							<td><%= @phone %></td>
+						</tr>
+						<tr>
+							<td class="labelname">Message</td>
+							<td><%= @message %></td>
+						</tr>
+						<tr>
+							<td class="labelname">Experiance</td>
+							<td><%= @experiance %></td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	</tbody>
+</table>

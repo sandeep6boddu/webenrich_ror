@@ -1,0 +1,21 @@
+<div class="row">
+	<% if @featured_blogs.count > 0 %>
+		<div class="col s12 m7 margin-top">
+			<div class="card">
+				<div class="card-image">
+					<%= link_to blog_show_path(@featured_blogs.one.slug) do %>
+						<%= image_tag @featured_blogs.one.banner.url(:large), :alt => 'Blog Image' %>
+					<% end %>
+					<span class="card-title">Card Title</span>
+				</div>
+				<div class="card-content">
+					<p>I am a very simple card. I am good at containing small bits of information.
+					I am convenient because I require little markup to use effectively.</p>
+				</div>
+				<div class="card-action">
+					<a href="#">This is a link</a>
+				</div>
+			</div>
+		</div>
+	<% end %>
+</div>

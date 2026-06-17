@@ -1,0 +1,30 @@
+<div class="block-center mt-xl wd-xl">
+   <!-- START panel-->
+   <div class="panel panel-dark panel-flat">
+	  <div class="panel-heading text-center">
+		 <a href="#">
+			<img src="<%= image_path('logos/icon.png') %>" alt="Image" class="block-center img-rounded" />
+		 </a>
+	  </div>
+	  <div class="panel-body">
+		 <p class="text-center pv">PASSWORD RESET</p>
+		<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: "mb-lg", :role => "form", "data-parsley-validate" => "", :novalidate=>""}) do |f| %>
+			<%= devise_error_messages! %>
+			<p class="text-center">Fill with your mail to receive instructions on how to reset your password.</p>
+			<div class="form-group has-feedback">
+				
+				<div class="form-group">
+					<%= f.label :email, class: 'text-muted', required: true %>
+					<%= f.email_field :email, autofocus: true, class: 'form-control', placleholder: 'Enter Email', autocomplete: 'off', required: true %>
+					<span class="fa fa-envelope form-control-feedback text-muted"></span>
+				</div>
+			</div>
+			<%= f.submit "Reset", class: 'btn btn-danger btn-block' %>
+		<% end %>
+		<%- if controller_name != 'sessions' %>
+		  <%= link_to "Log in", new_session_path(resource_name), class: 'mb-sm btn btn-primary pull-right' %>
+		<% end -%>		
+		</div>
+   </div>
+   <!-- END panel-->
+</div>

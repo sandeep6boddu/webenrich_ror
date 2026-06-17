@@ -1,0 +1,101 @@
+<div class="mdl-cell--8-col mdl-color--light-blue extra-margin-right mdl-cell--12-col-tablet">
+	<% if @featured_blogs.count > 0 %>
+		<div class="recent-blog">
+			<div class="mdl-cell--12-col mdl-grid--no-spacing mdl-grid no-margin mdl-fullwidth ">
+				<div class="mdl-cell--6-col">
+					<div class="recent-blog-image">
+						<%= link_to blog_show_path(@featured_blogs.one.slug) do %>
+							<%= image_tag @featured_blogs.one.banner.url(:large), :alt => 'Blog Image', :class => 'img-responsive' %>
+						<% end %>
+					</div>
+				</div>
+				<div class="mdl-cell--6-col ">
+					<div class="recent-blog-description">
+						<h6 class="mdl-cell--12-col mdl-color-text--light-blue-100">TECHNOLOGY</h6>
+						<h5 class="">
+							<%= link_to blog_show_path(@featured_blogs.one.slug) do %>							
+								<%= @featured_blogs.one.title %>
+							<% end %>
+						</h5>
+						<hr class="mdl-color-text--light-blue-100 mdl-divider"/>
+						<%=raw truncate(@featured_blogs.one.content, length: 430, escape: false) %>
+					</div>
+					<div class="mdl-cell--12-col left mdl-fullwidth">
+						<div class="comment-section mdl-color--light-blue-700 extra-padding-left">
+							<!-- Colored FAB button with ripple -->
+							<%= link_to blog_show_path(@featured_blogs.one.slug) do %>
+								<%= button_tag :class => 'mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--orange' do %>
+									<i class="material-icons mdl-color-text--white">chevron_right</i>
+								<% end %>
+							<% end %>
+							<div class="blogcomments-icons">
+								<span class="post-time mdl-color-text--light-blue-100">
+									<i class="material-icons">schedule</i>
+									<% subs = {"about" => '', "almost" => '', "over" => ''} %>
+									<%= distance_of_time_in_words_to_now(@featured_blogs.one.created_at).gsub(/\w+/) { |word| subs[word] || word} %> ago
+								</span>
+								<ul class="post-comments">
+									<!-- <li><i class="material-icons">favorite</i>10</li> -->
+									<li class="">
+										<%= link_to blog_show_path(@featured_blogs.one.slug) + "#comments" do %>
+											<i class="material-icons mdl-color-text--white">comment</i>
+											<span class="fb-comments-count" data-href="<%= request.url %>/<%= @featured_blogs.one.slug %>"></span>
+										<% end %>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<% end %>
+</div>
+<div class="mdl-cell--4-col-desktop mdl-color--white mdl-cell--8-col-tablet extra-padding mdl-shadow--4dp">
+	<% @featured_blogs.skip(1).each do |blog| %>
+		<div class="mdl-card <%= cycle("", "mdl-card1") %>">
+			<%= image_tag blog.banner.url(:small), alt: 'Blog Image' %>
+			<div class="mdl-card_title mdl-card--expand mdl-color-text--white">
+					<div class="mdl-card-text">
+						<span><%= blog.created_at.strftime("%d %b %Y")%></span>
+							<h5 class="mdl-card__title_text ">
+							<%= link_to blog_show_path(blog.slug), :class => 'mdl-color-text--white' do %>
+								<%= blog.title %>
+							<% end %>
+						</h5>
+					</div>
+			</div>
+			<div class="blog-comments mdl-color-text--white">
+				<ul class="post-comments">
+					<li>
+						<%= link_to blog_show_path(blog.slug) + "#comments" do %>
+							<i class="material-icons">comment</i>
+							<span class="fb-comments-count" data-href="<%= request.url %>/<%= blog.slug %>"></span>
+						<% end %>
+					</li>
+				</ul>
+				<div class="mdl-card_title mdl-card--expand mdl-color-text--white">
+					<div class="mdl-card-text mdl-card-text-hover">
+						<span><%= blog.created_at.strftime("%d %b %Y")%></span>
+						<h5 class="mdl-card__title_text ">
+							<%= link_to blog_show_path(blog.slug), :class =>'mdl-color-text--white' do %>
+								<%= blog.title %>
+							<% end %>
+						</h5>
+					</div>
+				</div>
+				<div class="mdl-time-anchor">
+					<span class="post-time">
+						<i class="material-icons">schedule</i>
+						<% subs = {"about" => '', "almost" => '', "over" => ''} %>
+						<%= distance_of_time_in_words_to_now(blog.created_at).gsub(/\w+/) { |word| subs[word] || word} %> ago
+					</span>								
+					<%= link_to blog_show_path(blog.slug) do %>
+						<!-- Raised button with ripple -->
+						<%= button_tag 'Readmore', :class => 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect left mdl-color-text--light-blue-700 mdl-color--white' %>
+					<% end %>
+				</div>
+			</div> 
+		</div>
+	<% end %>
+</div>

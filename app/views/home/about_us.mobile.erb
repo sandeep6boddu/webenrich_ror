@@ -1,0 +1,98 @@
+<% content_for :title do %>
+	Who We Are | About WebEnrich! WebEnrich Solutions Pvt. Ltd.
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="WebEnrich Solutions Pvt. Ltd. Is a Registered Company In India. In this section, we share about us, our vision & mission of our company that has helped us become the fastest growing Web Marketing company">
+	<meta name="keywords" content="About WebEnrich, mission, vision, about us, webenrich.com">
+<% end %>
+<div class="mobile-page-main">
+	<div class="main-title">
+		<div class="container">
+			<h1>
+				<%= link_to root_path, :class => 'left' do %>
+					<%= image_tag image_path('mobile/back-arrow.png') %>
+				<% end %>
+				About Us
+			</h1>
+		</div>
+	</div>
+	<div class="container">
+		<div class="title-content">
+			<div class="about-img">
+				<%= image_tag image_path('mobile/about-banner.png') %>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="services-text margin-top">
+	<div class="container">
+		<p>
+			WebEnrich provides Internet Marketing, Web Design &amp; Development services. We are located in Jubilee Hills, in the heart of Hyderabad, India and also have an office in Melbourne, Australia. We are a performance driven company with a team of creative, marketing and technical professionals who are focused on nothing but excellence. Our wide experience in the vast world of the web, allows us to tailor our ideas to fit our clients marketing needs.
+		</p>
+		<p>
+			Over the past eight years, we have successfully added many major clients to our list of clientele.
+		</p>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="container">
+	<div class="card">
+		<div class="vision">
+			<div class="card-content">
+				<h2 class="">
+					<strong class="left">
+						<%= image_tag image_path('vision-bg.png') %>
+					</strong>
+					<span>
+						Vision:
+					</span>
+				</h2>
+				<p>At WebEnrich, our vision is to be the best Web Marketing Company in the world. Our prompt and efficient services make us a popular choice for our customers, employees and vendors across the globe.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="container">
+	<div class="card">
+		<div class="vision">
+			<div class="card-content">
+				<h2 class="">
+					<strong class="left">
+						<%= image_tag image_path('mission-bg.png') %>
+					</strong>
+					<span>
+						Mission:
+					</span>
+				</h2>
+				<p>To achieve the highest possible standards in all that we do and to help clients achieve their most ambitious marketing goals. To deliver the highest levels of quality, professionalism and experience to every project that comes our way.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="services-page">
+	<div class="about-list">
+		<div class="container">
+			<div class="">
+				<div class="card">
+					<ul>
+						<li>
+							<%= link_to about_us_process_path do %>
+								<span>&nbsp;</span><strong>Our Process</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to about_our_team_path, class: 'we-team' do %>
+								<span>&nbsp;</span><strong>WebEnrich Team</strong>
+							<% end %>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- our clients -->
+<%= render 'layouts/widgets/our_clients' %>
+<!-- start-project -->
+<%= render 'layouts/widgets/start_project' %>

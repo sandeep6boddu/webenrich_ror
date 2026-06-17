@@ -1,0 +1,102 @@
+// Admin CSS
+.no-padding {
+	padding-left: 0;
+	padding-right: 0;
+}
+.sortable {
+	float: left;
+	padding: 0;
+	width: 100%;
+
+	li {
+		list-style: none;
+		margin: 0 0 20px 0;
+		position: relative;
+		text-align: center;
+
+		.btn-actions {
+			display: none;
+		}
+
+		&:hover {
+
+			.btn-actions {
+				display: block;
+				position: absolute;
+				top: 40px;
+				right: 10%;
+			}
+		}
+
+		strong {
+			font-size: 20px;
+		}
+
+		img {
+			border: 1px solid #cccccc;
+			width: 100%;
+		}
+	}
+}
+
+.sub-catategories.sortable {
+
+	li:hover {
+
+		.btn-actions {
+			position: static;
+		}
+	}
+}
+
+.fileupload-buttonbar {
+
+	form {
+		padding: 0;
+
+		.fileinput-button {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.sub-catategories {
+	float: left;
+	width: 100%;
+	padding: 0;
+
+	li {
+		line-height: 36px;
+		border-bottom: 1px solid #ccc;
+		list-style: none;
+		width: 40%;
+		margin-right: 8%;
+		float: left;
+
+		.btn-actions {
+			display: inline-block;
+			float: right;
+		}
+	}
+}
+
+.field {
+	float: left;
+	margin-right: 20px;
+
+	label {
+		vertical-align: middle;
+	}
+}
+
+select[multiple] {
+	width: 100%;
+}
+
+span.mb-sm {
+	margin-top: 15px;
+}
+
+span.btn {
+	cursor: none;
+}

@@ -1,0 +1,184 @@
+<% content_for :title do %>
+	Our Team | WebEnrich
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="Our Team, WebEnrich">
+<% end %>
+<div class="page-banner">
+	<div class="aboutus-page about-us-process about-our-team">
+		<div class="about-content about-us-process-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="about-we">
+							<div class="col-md-9">
+								<div class="banner-title our-process-title">
+									<h2>WebEnrich Team</h2>
+								</div>
+								<div class="about-intro about-us-process-intro">
+									<%= image_tag 'team/we-team-img.png', :class =>'pull-left' %>
+									<h2>We have extensive experience &amp; expertise in all aspects of web development, web applications development, implementation, integration, support and maintenance.</h2>
+								</div>
+							</div>
+							<div class="col-md-3 hidden-sm">
+								<div class="about-links">
+									<ul>
+										<li>
+											<%= link_to 'About Us', about_us_path %>
+										</li>
+										<li>
+											<%= link_to 'Our Process', about_us_process_path %>
+										</li>
+										<li>
+											<%= link_to 'WebEnrich Team', '#', :class => 'active' %>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div class="our-team-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="our-team-details">
+							<div class="our-team-description">
+								<p>
+									We've built a talented, full service team. Our people lead and deliver projects with energy and accountability. We're flexible and responsive, adapting our approach to meet the needs of individual assignments. We stay close to our clients, partnering with them, to create and deliver as one team.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="person-details hoverripple">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="person-image">
+								<%= image_tag 'team/md.png', size:'264x478', :alt => 'Managing Director', :class => 'img-responsive' %>
+							</div>
+							<div class="person-content">
+								<h2>Nikhil Reddy</h2>
+								<span>Managing Director</span>
+								<p>
+									Is the founder of WebEnrich. Passionate about web design and development, he has helped the company go from strength to strength and continues to nurture its growth.
+								</p>
+								<%= link_to 'mailto:info@webenrich.com' do %>
+									<strong>
+										<i class="fa fa-envelope fa-lg"></i>
+									</strong>
+									Send An Email
+								<% end %>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="person-details person1-details hoverripple">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="person-content">
+								<h2>Indrasena Reddy</h2>
+								<span>Chief Operating Officer</span>
+								<p>
+									Is the multitasking king who organises the office. He keeps everything on track and makes sure we deliver our projects on spec and on time.
+								</p>
+								<%= link_to 'mailto:info@webenrich.com' do %>
+									<strong>
+										<i class="fa fa-envelope fa-lg"></i>
+									</strong>
+									Send An Email
+								<% end %>
+							</div>
+							<div class="person-image">
+								<%= image_tag 'team/coo.png', size:'281x473', :class => 'img-responsive' %>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="person-details person2-details hoverripple">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="person-image">
+								<%= image_tag 'team/cto.png', size:'276x454', :class => 'img-responsive' %>
+							</div>
+							<div class="person-content">
+								<h2>Anil Kumar</h2>
+								<span>Chief Technology Officer</span>
+								<p>
+									Is the brains &amp; force behind our development and database design. A master in multi-platform, he is the key to strengthen our Ruby on Rails team from ground zero.
+								</p>
+								<%= link_to 'mailto:info@webenrich.com' do %>
+									<strong>
+										<i class="fa fa-envelope fa-lg"></i>
+									</strong>
+									Send An Email
+								<% end %>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="person-details person3-details hoverripple">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="person-content">
+								<h2>R.Padmanabhan</h2>
+								<span>Creative Head</span>
+								<p>
+									Is our user interface design expert. He ensures our websites have great, user-centred design with new and exciting ways to make our clients' websites come to life and stand out..
+								</p>
+								<%= link_to 'mailto:info@webenrich.com' do %>
+									<strong>
+										<i class="fa fa-envelope fa-lg"></i>
+									</strong>
+									Send An Email
+								<% end %>
+							</div>
+							<div class="person-image">
+								<%= image_tag 'team/ch.png', size:'255x459', :class => 'img-responsive' %>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="team-details">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="team-members">
+								<div class="range-heading">
+									<h1>
+										<span>&nbsp;</span>
+										Meet the Team Behind WebEnrich
+									</h1>
+								</div>
+								<ul>
+									<% cache ['team_list', Team.get_sweep_id] do %>
+										<% @team.each do |team| %>
+											<li class="cyan team-list-bar">
+												<% cache ['team_image', team] do %>
+													<%= image_tag team.team_img.url(:original), :class => "img-circle team-imgbar" %>
+													<h4><%= team.name %></h4>
+												<% end %>
+											</li>
+										<% end %>
+									<% end %>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,138 @@
+<div class="content-heading">Careers</div>
+<%= form_for @job, html: {class: "form-horizontal"}, :data => {:parsley_validate=>""} do |f| %>
+	<div class="row">
+			<!-- Job Content-->
+			<!-- START panel-->
+			<div class="col-lg-9">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<fieldset>
+							<legend>New Job</legend>
+						</fieldset>
+						<fieldset>
+							<div class="form-group">
+								<label class="col-md-2 control-label">Code</label>
+								<div class="col-md-8">
+									<%= f.text_field :code, class: "form-control", placeholder: "Job code...", required: true %>
+									<%= @job.errors[:code].join(', ') %>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset>
+							<div class="form-group">
+								<label class="col-md-2 control-label">Title</label>
+								<div class="col-md-8">
+									<%= f.text_field :title, class: "form-control", placeholder: "Job title...", required: true %>
+									<%= @job.errors[:title].join(', ') %>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset>
+							<div class="form-group">
+								<label class="col-md-2 control-label">Tags</label>
+								<div class="col-md-8">
+									<%= f.text_field :tag_list, class: "form-control", placeholder: "html, rails, server etc", required: true %>
+									<%= @job.errors[:tag_list].join(', ') %>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset>
+							<div class="form-group">
+								<label class="col-md-2 control-label">Experience</label>
+								<div class="col-md-8">
+									<%= f.select :experience, options_for_select({ "1 Year" => "1", "2 Years" => "2", "3 Years" => "3", "4 Years" => "4",  "5 Years" => "5", "6 Years" => "6", "7 Years" => "7", "8 Years" => "8", "9 Years" => "9", "10 Years" => "10" }, selected: @job.experience ), { :prompt => 'Please select experience'},{:class=>"form-control", required: true} %>
+									<%= @job.errors[:experience].join(', ') %>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset>
+							<div class="form-group">
+								<label class="col-md-2 control-label">Location</label>
+								<div class="col-md-8">
+									<%= f.text_field :location, class: "form-control", placeholder: "Job location...", required: true %>
+									<%= @job.errors[:location].join(', ') %>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset>
+							<div class="form-group">
+								<label class="col-md-2 control-label">Description</label>
+								<div class="col-md-8">
+									<%= f.text_area :description, class: "form-control", placeholder: "Job description...", required: true %>
+									<%= @job.errors[:description].join(', ') %>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset>
+							<div class="form-group">
+								<label class="col-md-2 control-label">Education</label>
+								<div class="col-md-8">
+									<%= f.text_field :education, class: "form-control", placeholder: "Job education...", required: true %>
+									<%= @job.errors[:education].join(', ') %>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset>
+							<div class="form-group">
+								<label class="col-md-2 control-label">Desired Profile</label>
+								<div class="col-md-8">
+									<%= f.text_area :desired_profile, class: "wysihtml5 form-control", placeholder: "Job desired profile...", required: true %>
+									<%= @job.errors[:desired_profile].join(', ') %>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset>
+							<div class="form-group">
+								<label class="col-md-2 control-label">Status:</label>
+								<div class="col-md-8">
+									<%= f.select :job_status, enum_option_pairs(Career, :job_status), { :prompt => 'Please select status'}, {class: "form-control", required: true, required: true} %>
+									<%= @job.errors[:job_status].join(', ') %>
+								</div>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+			</div>
+			<!-- END panel-->
+			<!-- Job sidebar-->
+			<div class="col-lg-3">
+				<div class="panel panel-default">
+					<div class="panel-body">      
+						<p class="lead">SEO Metadata</p>
+						<div class="form-group col-md-12">
+							<p>Title</p>
+							<%= f.text_field :meta_title, class: "form-control", placeholder: "Job Title...", required: true %>
+							<%= @job.errors[:meta_title].join(', ') %>
+							<!-- <input type="text" placeholder="Brief description.." class="form-control"> -->
+						</div>
+						<div class="form-group col-md-12">
+							<p>Description</p>
+							<%= f.text_area :meta_description, class: "form-control", placeholder: "Max 255 characters...", rows: 5, required: true %>
+							<%= @job.errors[:meta_description].join(', ') %>
+						</div>
+						<div class="form-group col-md-12">
+							<p>Keywords</p>
+							<%= f.text_area :meta_keywords, class: "form-control", placeholder: "Max 1000 characters...", rows: 5, required: true %>
+							<%= @job.errors[:meta_keywords].join(', ') %>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-9">
+			<div class="clearfix">
+				<div class="pull-right">
+					<%= f.button "Save", :class => "btn btn-primary m-t-10" do %>
+						<em class="fa fa-check fa-fw"></em> save
+					<% end %>
+				</div>
+				<div class="pull-left">
+					<%= link_to careers_path, :class => "btn btn-danger" do %>
+						<i class="fa fa-undo"></i> Cancel
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>

@@ -1,0 +1,113 @@
+<% content_for :title do %>
+	Other Services
+<% end %>
+<div class="services-page">
+	<div class="mobile-page-main">
+		<div class="main-title">
+			<div class="container">
+				<h1>
+					<%= link_to services_path, :class => 'left' do %>
+						<%= image_tag image_path('mobile/back-arrow.png') %>
+					<% end %>
+					Other Services
+					<a class='dropdown-button right' href='#' data-activates='dropdown1'>
+						<%= image_tag image_path('mobile/options-icon-white.png') %>
+					</a>
+					<ul id='dropdown1' class='dropdown-content custom-drpwn-content'>
+						<li>
+							<%= link_to web_hosting_path do %>
+								<strong>Web Hosting</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to domain_registration_path do %>
+								<strong>Domain Registration</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to content_development_path do %>
+								<strong>Content Development</strong>
+							<% end %>
+						</li>
+						<!-- <li>
+							<%#= link_to corporate_video_presentation_path do %>
+								<strong>Corporate Video Presentation</strong>
+							<%# end %>
+						</li> -->
+					</ul>
+				</h1>
+			</div>
+		</div>
+		<div class="container">
+			<div class="title-content">
+				<div class="services-img services-inner-img">
+					<%= image_tag image_path('mobile/other-services-img2.png') %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="services-text">
+		<div class="container">
+			<div class="other-service-article">
+				<p>Welcome to the magical world of WebEnrich where businesses are transformed to look their very best, before they are ready to walk the virtual ramp. WebEnrich believes that a website not just projects your identity, but also protects it from virtual slander too.</p>
+				<p>WebEnrich with its sound knowledge and experience in web design and development can make your website match up to international standards in terms of content and user friendly navigability to an extent that Bing, Yahoo and Google would welcome your website on their first pages with a red carpet.</p>
+				<article>
+					<strong>Now isn’t that Wonderful?</strong>
+				</article>
+			</div>
+			<%= link_to "Continue Reading", '#', :class => 'waves-effect waves-light btn hide' %>
+		</div>
+	</div>
+	<div class="services-text">
+		<div class="container">
+			<div class="services-inner-content">
+				<div class="other-service-content">
+					<h2>Web Development Services offered by WebEnrich includes:</h2>
+					<p>Creating a visually appealing web design: What is your strategy to stand out amidst millions of websites on the internet? Having a superior or innovative products and services helps but with so many options available in the market you have very little time to convince potential customers to spend enough time on your website to enable yourself to market your products and services.</p>
+					<p>This is where our forte lies. Committed to our goal of designing innovative websites which give you that cutting edge, our team at WebEnrich enables you to market yourself better.</p>
+				</div>
+				<div class="other-service-content">
+					<h2>Web Development Services offered by WebEnrich includes:</h2>
+					<p>Creating a visually appealing web design: What is your strategy to stand out amidst millions of websites on the internet? Having a superior or innovative products and services helps but with so many options available in the market you have very little time to convince potential customers to spend enough time on your website to enable yourself to market your products and services.</p>
+					<p>This is where our forte lies. Committed to our goal of designing innovative websites which give you that cutting edge, our team at WebEnrich enables you to market yourself better.</p>
+				</div>
+				<%= link_to "Continue Reading", '#', :class => 'waves-effect waves-light btn hide' %>
+			</div>
+		</div>
+	</div>
+	<div class="list-of-services list-of-detail-services">
+		<div class="container">
+			<div class="other-services-list">
+				<h1>Other Services</h1>
+				<div class="card">
+					<ul>
+						<li>
+							<%= link_to web_hosting_path do %>
+								<strong>Web Hosting</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to domain_registration_path do %>
+								<strong>Domain Registration</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to content_development_path do %>
+								<strong>Content Development</strong>
+							<% end %>
+						</li>
+						<!-- <li>
+							<%#= link_to corporate_video_presentation_path do %>
+								<strong>Corporate Video Presentation</strong>
+							<%# end %>
+						</li> -->
+					</ul>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<!-- Our Clients -->
+	<%= render 'layouts/widgets/our_clients' %>
+	<!-- start-project -->	
+	<%= render 'layouts/widgets/start_project' %>
+</div>

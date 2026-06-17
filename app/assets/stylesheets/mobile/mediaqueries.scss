@@ -1,0 +1,433 @@
+// media-queries
+
+.lean-overlay {
+	height: auto !important;
+}
+
+.card {
+
+	.mdl-card {
+		width: 100%;
+	}
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px ) and (orientation:portrait) {
+
+	.only-mobile-layout-clients {
+		display: block;
+	}
+
+	.only-ipad-layout-clients {
+		display: none;
+	}
+
+	.margin-right {
+		margin-right: 13px;
+	}
+}
+
+// i-phone-6 portrait
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation:portrait) {
+
+	.services {
+
+		.services-list {
+
+			li {
+				margin: 10px 10px 0px 10px;
+			}
+		}
+	}
+
+	.margin-right {
+		margin-right: 13px;
+	}
+
+	footer {
+
+		.footer-content {
+
+			.social-icons {
+				margin: 0 26%;
+			}
+		}
+	}
+
+	.testimonials {
+		display: none;
+	}
+
+	.only-mobile-layout-clients {
+		display: block;
+	}
+
+	.only-ipad-layout-clients {
+		display: none;
+	}
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px ) and (orientation:landscape) {
+
+	.mobile-logo {
+		width: 34%;
+	}
+
+	.person-image {
+		width: 30%;
+		float: left;
+		padding-left: 10px;
+
+		img {
+			width: 150px;
+			height: 150px;
+		}
+	}
+
+	.person-content {
+		float: left;
+		width: 64%;
+	}
+
+	.team-members .team-list-bar {
+		width: 33.3%;
+	}
+
+	.certification {
+		text-align: center;
+	}
+
+	.img-bg, .img-bg1, .img-bg2, .img-bg3 {
+		padding: 20px 10px 10px 40px;
+	}
+
+	.services {
+
+		.services-list li {
+			margin: 10px 0px 0px 40px;
+
+			a img {
+				width: 64px;
+				height: 73px;
+			}
+		}
+
+		.card.small {
+			height: 174px;
+		}
+	}
+
+
+	footer {
+
+		.footer-content .social-icons {
+			margin: 0 34%;
+		}
+	}
+
+	.only-mobile-layout-clients {
+		display: block;
+	}
+
+	.only-ipad-layout-clients {
+		display: none;
+	}
+
+	.margin-right {
+		margin-right: 13px;
+	}
+}
+
+//iphone-6 landscape
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation:landscape) {
+
+	.mobile-logo {
+		width: 34%;
+	}
+
+	.only-mobile-layout-clients {
+		display: block;
+	}
+
+	.person-image {
+		width: 30%;
+		float: left;
+		padding-left: 10px;
+
+		img {
+			width: 150px;
+			height: 150px;
+		}
+	}
+
+	.person-content {
+		float: left;
+		width: 64%;
+	}
+
+	.team-members .team-list-bar {
+		width: 24.3%;
+	}
+
+	.only-ipad-layout-clients {
+		display: none;
+	}
+
+	.certification {
+		text-align: center;
+	}
+
+	.services {
+
+		.services-list li {
+			margin: 10px 0px 0px 40px;
+
+			a img {
+				width: 64px;
+				height: 73px;
+			}
+		}
+
+		.card.small {
+			height: 174px;
+		}
+	}
+
+	.testimonials {
+		display: none;
+	}
+
+	footer {
+
+		.footer-content {
+
+			.social-icons {
+				margin: 0 34%;
+			}
+		}
+	}
+
+	.img-bg, .img-bg1, .img-bg2, .img-bg3 {
+		padding: 20px 10px 10px 70px;
+	}
+
+	.slick-track img {
+		width: 75% !important;
+	}
+
+	.margin-right {
+		margin-right: 13px;
+	}
+}
+
+// i-pad portrait
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)  {
+
+	.person-image {
+		width: 30%;
+		float: left;
+		padding-left: 10px;
+
+		img {
+			width: 150px;
+			height: 150px;
+		}
+	}
+
+	.person-content {
+		float: left;
+		width: 64%;
+	}
+
+	.team-members .team-list-bar {
+		width: 24.3%;
+	}
+
+	.certification {
+		height: 100px;
+
+		h1 {
+			float: left;
+			width: 30%;
+			background: image-url('mobile/arrow-certifications.png') no-repeat left center;
+			margin-top: 24px;
+			margin-right: 20px;
+		}
+
+		.google-partners {
+			float: left;
+			width: 64%;
+			margin-top: 24px;
+		}
+	}
+
+	.portfolio-two-list {
+		width: 46%;
+		float: left;
+		margin-right: 13px;
+		margin-left: 13px;
+	}
+
+	.services {
+
+		.services-list li {
+			margin: 10px 10px 5px 40px;
+
+			a img {
+				width: 80px;
+				height: 93px;
+			}
+		}
+	}
+
+	.visit-website-btn {
+		display: block;
+	}
+
+	footer {
+
+		.footer-content {
+
+			.social-icons {
+				margin: 0 37%;
+			}
+		}
+	}
+
+	.modal.modal-fixed-footer {
+		height: 20% !important;
+	}
+
+	.img-bg, .img-bg1, .img-bg2, .img-bg3 {
+		padding: 20px 70px 10px 70px;
+	}
+
+	.slick-track img {
+		width: auto !important;
+		max-width: 100% !important;
+	}
+
+	.mobile-logo {
+		width: 30%;
+	}
+
+	.only-mobile-layout-clients {
+		display: none;
+	}
+
+	.only-ipad-layout-clients {
+		display: block;
+	}
+
+	.card-6 {
+		width: 48%;
+	}
+
+	.margin-right {
+		margin-right: 13px;
+	}
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)  {
+
+	.person-image {
+		width: 30%;
+		float: left;
+		padding-left: 10px;
+
+		img {
+			width: 150px;
+			height: 150px;
+		}
+	}
+
+	.person-content {
+		float: left;
+		width: 64%;
+	}
+
+	.team-members .team-list-bar {
+		width: 24.3%;
+	}
+
+	.certification {
+		height: 100px;
+
+		h1 {
+			float: left;
+			width: 36%;
+			background: image-url('mobile/arrow-certifications.png') no-repeat left center;
+			margin-top: 24px;
+			margin-right: 20px;
+		}
+
+		.google-partners {
+			float: left;
+			width: 59%;
+			margin-top: 24px;
+		}
+	}
+
+	.portfolio-two-list {
+		width: 45%;
+		float: left;
+		margin-right: 13px;
+		margin-left: 13px;
+	}
+
+	.only-mobile-layout-clients {
+		display: none;
+	}
+
+	.only-ipad-layout-clients {
+		display: block;
+	}
+
+	.services .services-list li {
+		margin: 10px 0px 5px 30px;
+
+		a img {
+			width: 64px;
+			height: 73px;
+		}
+	}
+
+	.visit-website-btn {
+		display: block;
+	}
+
+	.dropdown-icon {
+		display: none;
+	}
+
+	.main {
+		padding-left: 240px;
+	}
+
+	.img-bg, .img-bg1, .img-bg2, .img-bg3 {
+		padding: 20px 70px 10px 70px;
+	}
+
+	.slick-track img {
+		width: auto !important;
+		max-width: 100% !important;
+	}
+
+	footer {
+		padding-left: 0;
+
+		.footer-content .social-icons {
+			margin: 0 35%;
+		}
+	}
+
+	.card-6 {
+		width: 47%;
+	}
+
+	.margin-right {
+		margin-right: 13px;
+	}
+}

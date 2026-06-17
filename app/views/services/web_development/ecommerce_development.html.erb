@@ -1,0 +1,73 @@
+<% content_for :title do %>
+	e-Commerce Development
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="Contact us for your Magento Ecommerce website design, development or for monthly support and maintenance.">
+	<meta name="keywords" content="magento, ecommerce, design, development, Hyderabad, Bangalore, india Custom design, plugins, maintenance">
+<% end %>
+<div class="page-banner">
+	<div class="services-page web-dev-page">
+		<div class="services-content">
+			<div class="container">
+				<div class="col-md-12">
+					<div class="row">
+						<%= render 'layouts/parts/servicesmenu' %>
+						<div class="service-inner-title">
+							<h1>Web Development / <span>E-Commerce Development</span></h1>
+							<ul class="nav">
+								<li>
+									<%= link_to 'Ruby on Rails', ruby_on_rails_path %>
+								</li>
+								<li>
+									<%= link_to 'Core PHP', core_php_path %>
+								</li>
+								<li>
+									<%= link_to 'E-Commerce Development', ecommerce_development_path, :class =>'active' %>
+								</li>
+								<li>
+									<%= link_to 'CMS Development', cms_development_path %>
+								</li>
+							</ul>
+						</div>
+						<div class="web-dev-intro">
+							<div class="col-md-12">
+								<div class="row">
+									<div class="web-dev-content web-dev-content-inner">
+										<div class="web-dev-img">
+											<%= image_tag 'ecommerce-innerpage-icon-big.png', :class => 'img-responsive', :alt => 'Services Image' %>
+										</div>
+										<div class="web-content-para">
+											<p>Do you ship your products to different parts of the world? Do you offer services to customers worldwide? Then you surely need an out-of-the-world online store.</p>
+											<p>Magento is an e-commerce platform that is best suited for all business related websites. But identifying the right platform is only half battle won. Unless you have a specialist Magento professional on your side, you cannot count on getting a perfect online shopping experience for your users.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div> 
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="service-inner-content">
+			<div class="container">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-12 mobile-content mobile-content1">
+							<h2>Why WebEnrich</h2>							
+						</div>
+						<div class="col-md-12">
+							<div class="col-md-6 mobile-content">
+								<p>WebEnrich is like that expert pilot who knows where to go, how to go and what to do upon reaching the destination. Our team of Magento professionals begin with thorough understanding of your business needs. You have your customers on your mind; WebEnrich has both you and your customer on our minds while working on solutions that would solve your various business tasks.</p>
+								<p>When we deliver you a solution, we make sure that you have a solution that is unmatchable and unbeatable in the market. Our primary aim is to have a sustainable long-term relation with our potential customers and we plan to achieve that through delivering ‘out-of-the-world’ Magento services.</p>
+							</div>
+							<div class="col-md-6 mobile-content">
+								<p>Our team has years of experience and track record of delivering successful shopping carts to clients from many industries. Our ability to create beautiful, commercially focused websites has helped us to achieve truly amazing results for our clients.</p>
+								<p><%= link_to 'Contact', contact_us_path %> us to know more about our extensive Magento development services.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

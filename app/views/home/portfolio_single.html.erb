@@ -1,0 +1,118 @@
+<% content_for :title do %>
+	<%= @portfolio.meta_title %>
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="<%= @portfolio.meta_description %>">
+	<meta name="keywords" content="<%= @portfolio.meta_keywords %>">
+<% end %>
+<div class="page-banner">
+	<% cache ['portfolio_single', @portfolio] do %>
+		<div class="services-page portfolio-page portfolio-details-page">
+			<div class="services-content portfolio-content">
+				<div class="container">
+					<div class="col-md-12 col-sm-12">
+						<div class="row">
+							<div class="banner-title">
+								<h2>Portfolio</h2>
+							</div>
+							<div class="pf-slider">
+								<div class="carousel">
+								<!-- BEGIN CONTAINER -->
+									<% cache ['slides', @portfolio] do %>
+										<div class="slides" style=""> <!-- BEGIN CAROUSEL -->
+											<% @portfolio.slides.each do |slide| %>
+												<% cache ['slide', slide] do %>
+													<div class="slideItem" style="width: 256px; height: 211.2px; top: 54px; right: 34.6px; opacity: 1; z-index: 4; display: block;"> 
+														<!-- SLIDE ITEM --> 
+														<%= image_tag slide.slide.url(:original), :style => "width: 256px; height: 192px; display: inline-block;", :alt => 'Approach Image' %>
+														<div class="shadow" style="width: 400px; z-index: -1; position: absolute; margin: 0px; padding: 0px; border: none; overflow: hidden; left: 0px; bottom: 0px;">
+														</div>
+													</div>
+												<% end %>
+											<% end %>
+										</div>
+									<% end %>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="portfolio-inner-content">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="about">
+								<div class="about-title">
+									<h3>About <%= @portfolio.title %></h3>
+								</div>
+								<p><%= @portfolio.description %></p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="approach">
+								<div class="approach-title">
+									<h3>Our Approach</h3>
+								</div>
+								<div class="approach-content">
+									<%= image_tag 'portfolio-details-approach.png', :alt => 'Approach Image' %>
+									<div class="col-md-4 col-sm-4">
+										<div class="approach-team">
+											<p>Team Size</p>
+											<p><strong><%= @portfolio.team_size %></strong></p>
+											<span>Member(s)</span>
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-4">
+										<div class="approach-technologies">
+											<p>Technologies Used</p>
+											<ul>
+												<% @portfolio.technologies.each do |technology| %>
+													<li class="<%= Category.find(technology).slug %>" ></li>
+												<% end %>
+											</ul>
+										</div>
+									</div>
+									<div class="col-md-4 col-sm-4">
+										<div class="approach-duration">
+											<p>Duration</p>
+											<p><strong><%= @portfolio.duration %></strong></p>
+											<span><%= calender_of(@portfolio) %></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="row">
+							<div class="conclusion about approach">
+								<div class="about-title conclusion-title">
+									<h3>Conclusion</h3>
+								</div>
+								<p><%#= @portfolio.conclusion %></p>
+							</div>
+						</div> -->
+						<% if @portfolio.link.present? %>
+							<div class="website-link">
+								<p>Visit <%= link_to @portfolio.link, "http://#{@portfolio.link}", :target => '_blank' %> to see live site</p>
+							</div>
+						<% end %>
+					</div>
+				</div>
+			</div>
+		</div>
+	<% end %>
+</div>
+<script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-36251023-1']);
+	_gaq.push(['_setDomainName', 'jqueryscript.net']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+</script>

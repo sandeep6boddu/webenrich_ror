@@ -1,0 +1,28 @@
+<div class="container">
+	<% if @testimonials.count > 0  %>
+		<% @testimonials.each_slice(3) do |testimonial| %>
+				<div class="testimonial left">
+					<div class="col s12 m7">
+						<div class="card">
+							<% testimonial.each do |item| %>
+								<div class="quotes">
+									<div class="testimonial-details">
+										<%= image_tag item.avatar.url(:original), :class => 'img-responsive img-circle' %>
+										<div>
+											<span class="card-title"><%= item.name %></span>
+											<em><%= item.designation %> <% if item.app_name? %>|<% end %> <%= item.app_name %></em>
+										</div>
+									</div>
+									<div class="card-content">
+										<p><%= raw item.content %></p>
+									</div>
+								</div>
+							<% end %>
+						</div>
+					</div>
+				</div>
+		<% end %>
+	<% else %>
+		<h2 class="inner-text">There are no testimonials to display now!</h2>
+	<% end %>
+</div>

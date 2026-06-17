@@ -1,0 +1,91 @@
+<% content_for :title do %>
+	Email Marketing strategies & design services in Hyderabad, Bangalore India
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="Targeted E-mail Advertising & Email Marketing services that best work for your Newsletters designs, E-mail campaigns. Try Web Enrich services!">
+	<meta name="keywords" content="Email marketing, email advertising, bulk email marketing campaigns, hyderabad, bangalore India">
+<% end %>
+<div class="services-page">
+	<div class="mobile-page-main mobile-page-inner">
+		<div class="main-title">
+			<div class="container">
+				<h1>
+					<%= link_to online_marketing_path, :class => 'left' do %>
+						<%= image_tag image_path('mobile/back-arrow.png') %>
+					<% end %>
+					Email Marketing
+				</h1>
+			</div>
+		</div>
+		<div class="container">
+			<div class="title-content">
+				<div class="services-img services-inner-img">
+					<%= image_tag image_path('mobile/email-marketing-icon.png'), alt: 'services-inner-img' %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="services-text">
+		<div class="container">
+			<div class="benefits-of-ror">
+				<p>
+					Marketing team at WebEnrich helps you promote your products or services through the E-mails so that you can reach your prospective customers directly. Dedicated to excellence in the field of e-mail marketing, we introduce you to new dealers, prospective buyers, agents and channel partners related to your business as part of our services.
+				</p>
+				<article>
+					As a company, we're allergic to spam mails, and restrict our services to the data base you give us. We provide you with a comprehensive listing, categorized group wise and set up an automatic reply service for your clients all in line with the latest legislation. And last but not least... our free newsletter scheme to all your clients is an added advantage.
+				</article>
+				<%= link_to "Continue Reading", '#', :class => 'waves-effect waves-light btn hide' %>
+			</div>	
+		</div>
+	</div>
+	<div class="container">
+		<div class="card email-marketing">
+			<div class="card-content">
+				<div class="email-marketing-inner">
+					<h2>Why Email Marketing?</h2>
+					<p>Because of the above mentioned advantages E-mails have emerged as one of the versatile and organized marketing options available which convert prospective customers into actual ones thereby boosting your sales.</p>
+				</div>
+				<ul class="collection">
+					<li class="collection-item">An Email received from a business house talks to you on a personal level and that's what makes businesses more personal and humane.</li>
+					<li class="collection-item">E-mails are the most economical and quickest way of marketing a product or service. It does not involve printing or postage costs</li>
+					<li class="collection-item">E-mails have widespread usage.1.4 billion email users worldwide.</li>
+					<li class="collection-item">Studies have proved that E-mail marketing has high retention rate.</li>
+					<li class="collection-item">E-mail marketing enhances traffic to your website.</li>
+					<li class="collection-item">It Promotes Brand visibility.</li>
+					<li class="collection-item">Most importantly E-mails can be used to educate the potential customers.</li>
+				</ul>
+				<p><%= link_to 'Contact', contact_us_path %> us to know more about our extensive Email marketing services.</p>
+			</div>
+		</div>
+	</div>	
+	<div class="list-of-services list-of-detail-services">
+		<div class="container">
+			<div class="list-of-services-inner">
+				<h1>Online marketing</h1>
+				<div class="card">
+					<ul>
+						<li>
+							<%= link_to search_engine_optimization_path do %>
+								<strong>Search Engine Optimization</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to social_media_marketing_path do %>
+								<strong>Social Media Marketing</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to pay_per_click_path do %>
+								<strong>Pay Per Click</strong>
+							<% end %>
+						</li>
+					</ul>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<!-- our clients -->
+	<%= render 'layouts/widgets/our_clients' %>	
+	<!-- start-project -->
+	<%= render 'layouts/widgets/start_project' %>
+</div>

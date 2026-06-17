@@ -1,0 +1,27 @@
+<div class="container">
+	<div class="our-clients">
+		<h1>Our Clients</h1>
+		<div class="only-mobile-layout-clients">
+			<ul class="mobile-clients">
+				<% if @clients.count > 0 %>
+					<% @clients.each do |client| %>
+						<li>
+							<%= image_tag client.logo.url(:original), :class => 'img-responsive gray-img', :alt => 'Client Logo' %>
+						</li>
+					<% end %>
+				<% end %>
+			</ul>
+		</div>
+		<div class="only-ipad-layout-clients">
+			<ul class="ipad-clients">
+				<% if @clients.count > 0 %>
+					<% @clients.each do |client| %>
+						<li>
+							<%= image_tag client.logo.url(:original), :class => 'img-responsive gray-img', :alt => 'Client Logo' %>
+						</li>
+					<% end %>
+				<% end %>
+			</ul>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,76 @@
+<% content_for :title do %>
+	Social Media Marketing (SMM) Social Media Optimization (SMO) India Services Company
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="WebEnrich is a Hyderabad, Bangalore, India based social media marketing (SMM) services and online branding company that establishes a presence for your business in the fastest growing social media segment">
+	<meta name="keywords" content="Social media marketing, social media optimization, India, social media services, company, SMM, SMO">
+<% end %>
+<div class="services-page">
+	<div class="mobile-page-main mobile-page-inner">
+		<div class="main-title">
+			<div class="container">
+				<h1>
+					<%= link_to online_marketing_path, :class => 'left' do %>
+						<%= image_tag image_path('mobile/back-arrow.png') %>
+					<% end %>
+					Social Media marketing
+				</h1>
+			</div>
+		</div>
+		<div class="container">
+			<div class="title-content">
+				<div class="services-img services-inner-img">
+					<%= image_tag image_path('mobile/smm-icon.png'), alt: 'services-inner-img' %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="services-text smm-content">
+		<div class="container">
+			<p>
+				Social media creates kinship between companies and customers, and kinship equals purchase intent. Jay Baer, coauthor of, "The Now Revolution: 7 Shifts to Make Your Business Faster, Smarter and More Social."
+			</p>
+			<article>
+				That pretty much sums up why you require social media for marketing your product.
+			</article>
+		</div>
+	</div>
+	<div class="container">
+		<div class="services-text services-inner-content">
+			<p>Just having a Facebook page or a Twitter handle or a LinkedIn profile doesn't amount to social media marketing. There is a lot more to it. We at WebEnrich completely understand what 'more' it takes to build your brand identity online and enhance your online visibility. WebEnrich offers exhaustive range of content from sharing videos to events that are updated from time to time, rated and shared by users in the social circle. Our SMM experts will not only help design your social media marketing campaigns but also provide you regular review reports to better your SMM strategies. Industry experts say that social media is the best way to build relationships and drive repeat businesses. We at WebEnrich thoroughly understand this and invent and innovate concepts that best fit our customer's marketing needs.</p>
+			<p>The estimated global social network ad revenues for the year 2014 are $11.87 billion, over 50% more than last year's $7.72 billion. That gives us an idea of how big this thing called social media marketing is going to get . Your business needs SMM; that is established. But does your business have the best social media marketing strategy in place?</p>
+			<p>Your profile would be built with its minutest of details right from your company size and designation to the industry it falls under and the location. This would enable you to be portrayed in the best light to the right kind of customers. We strive to give you the best Returns On Investment. This includes placing advertisements relevant to your target audience and a regular study of the mini feeds, extent of viral marketing and news feeds that you receive from visitors to your site. Our job further includes a review report with suggestions on the campaign adjustments made throughout the course of our involvement with your business. This will enable you to clinch that effective B2B & B2C Marketing deals without any wastage.</p>
+			<p><%= link_to 'Contact', contact_us_path %> us to know more about our extensive SMM services.</p>
+		</div>
+	</div>
+	<div class="list-of-services list-of-detail-services">
+		<div class="container">
+			<div class="list-of-services-inner">
+				<h1>Online marketing</h1>
+				<div class="card">
+					<ul>
+						<li>
+							<%= link_to search_engine_optimization_path do %>
+								<strong>Search Engine Optimization</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to pay_per_click_path do %>
+								<strong>Pay Per Click</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to email_marketing_path do %>
+								<strong>Email Marketing</strong>
+							<% end %>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- our clients -->
+	<%= render 'layouts/widgets/our_clients' %>	
+	<!-- start-project -->
+	<%= render 'layouts/widgets/start_project' %>
+</div>

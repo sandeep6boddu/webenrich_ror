@@ -1,0 +1,21 @@
+/*
+	*= require jquery-ui
+	//= require material_icons
+	*= require font-awesome
+*/
+@import "material";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "sass/fonts";
+@import "sass/variables";
+@import "sass/blog";
+@import "sass/main";
+// @import "lp/main";
+@import "sass/media-queries";
+@import "font-awesome";
+@import "sass/slick";
+@import "sass/slick-theme";
+@import "sass/carousel";
+@import "slider/extralayers";
+@import "slider/settings";
+

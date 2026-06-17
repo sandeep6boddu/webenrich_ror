@@ -1,0 +1,98 @@
+<% content_for :title do %>
+	PHP web development company Hyderabad, Bangalore India | PHP Developers
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="WebEnrich is a PHP web, ecommerce development company in Hyderabad, Bangalore, India. Our PHP developers, programmers have expertise in open source Joomla, Drupal, Magento, Core PHP,  cake php, code igniter, etc">
+	<meta name="keywords" content="php web development, php development India, developers, os commerce, cakephp, code igniter, India">
+<% end %>
+<div class="services-page">
+	<div class="mobile-page-main mobile-page-inner">
+		<div class="main-title">
+			<div class="container">
+				<h1>
+					<%= link_to web_development_path, :class => 'left' do %>
+						<%= image_tag image_path('mobile/back-arrow.png') %>
+					<% end %>
+					Core PHP
+				</h1>
+			</div>
+		</div>
+		<div class="container">
+			<div class="title-content">
+				<div class="services-img services-inner-img">
+					<%= image_tag image_path('mobile/core-php-icon.png'), alt: 'services-inner-img' %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="services-text">
+		<div class="container">
+			<div class="ppc-content">
+				<p>
+					Building your little business online is no longer an easy task. That's because the entire herd of businessmen are looking in the same direction to generate an independent flow of income. With people buying their everyday essentials online, the potential for new businesses mushrooming is infinite but then so is the competition.
+				</p>
+				<article>
+					To stay abreast of competition, all our professionals at WebEnrich are up to date with the latest technologies and industry trends to provide you with the best combination of technology and experience.
+				</article>
+				<%= link_to "Continue Reading", '#', :class => 'waves-effect waves-light btn hide' %>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="services-text services-inner-content">
+			<div class="core-php-online">
+				<p>To stay abreast of competition, all our professionals at WebEnrich are up to date with the latest technologies and industry trends to provide you with the best combination of technology and experience. All our professionals at WebEnrich feel that PHP and MySql make a power packed duo and an economical solution for developing dynamic web applications. That's because its speed, compatibility with a variety of operating systems and platforms, supports various databases and what's best is its multilingual support which gives it its global dimension.</p>
+				<p>Our PHP professionals are qualified to develop superior websites with high performance in terms of interactive dynamism, ability and reliability for just about any business domain. Our clients have appreciated our services for the sudden generation of sales leads and a rise in business. This they owe to the ease with which their customers are now able to access their website.</p>
+				<p>The research team at WebEnrich discovers new ways of making your website an enriching experience. It is no wonder that most of our customer satisfaction, stems from customer loyalty. WebEnrich also offers a wide range of affordable MySQL and PHP database programming services for its domestic and international clients. Our services range from front-end to backend programming and its maintenance.</p>
+			</div>
+		</div>	
+	</div>
+	<div class="container">
+		<div class="card inner-core-php">
+			<div class="card-content">
+				<h2>Our domain experience in Website Development includes:</h2>
+				<ul class="collection">
+					<li class="collection-item">Corporate / Business Information Websites</li>
+					<li class="collection-item">Retail / Ecommerce</li>
+					<li class="collection-item">Communities & Network</li>
+					<li class="collection-item">Dating</li>
+					<li class="collection-item">B2B / B2C Internet Portals</li>
+					<li class="collection-item">eLearning / Online Training</li>
+					<li class="collection-item">Real Estate</li>
+					<li class="collection-item">Media Distribution</li>
+					<li class="collection-item">Customer Management</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="list-of-services list-of-detail-services">
+		<div class="container">
+			<div class="list-of-services-inner">
+				<h2>Other Web Development Services</h2>
+				<div class="card">
+					<ul>
+						<li>
+							<%= link_to ruby_on_rails_path do %>
+								<strong>Ruby on Rails</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to ecommerce_development_path do %>
+								<strong>E-Commerce Development</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to cms_development_path do %>
+								<strong>CMS Development</strong>
+							<% end %>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Our Clients -->
+	<%= render 'layouts/widgets/our_clients' %>
+	<!-- start-project -->	
+	<%= render 'layouts/widgets/start_project' %>
+</div>

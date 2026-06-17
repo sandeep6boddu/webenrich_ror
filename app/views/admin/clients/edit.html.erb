@@ -1,0 +1,24 @@
+<div class="content-heading">Clients</div>
+<%= form_for @client  do |f| %>
+	<div class="row">
+		<div class="col-md-12 col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<fieldset>
+						<legend>New Client</legend>
+					</fieldset>
+					<fieldset>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Upload Client Image: </label>
+							<div class="col-md-3">
+								<%= f.file_field(:logo, class: "form-control", required: true) %>
+								<%= @client.errors[:logo].join(', ') %>
+							</div>
+						</div>
+						<%= f.submit class: "btn btn-primary", value: "Update Client" %>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>

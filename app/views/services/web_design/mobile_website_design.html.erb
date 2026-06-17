@@ -1,0 +1,73 @@
+<% content_for :title do %>
+	Mobile Website Designing Services Hyderabad, Bangalore, India Company
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="WebEnrich offers mobile website design and development services in Hyderabad, Bangalore, India. We build websites compatible for all mobile browsers, smart-phones, iPhone, blackberry, PDA's, android!">
+	<meta name="keywords" content="mobile website design, mobile website designing, development, India, mobile browsers, smart-phones, iPhone, blackberry, PDA's, android">
+<% end %>
+<div class="page-banner">
+	<div class="services-page web-dev-page">
+		<div class="services-content">
+			<div class="container">
+				<div class="col-md-12">
+					<div class="row">
+						<%= render 'layouts/parts/servicesmenu' %>
+						<div class="service-inner-title">
+							<h1>Web Design / <span>Mobile Website Design</span></h1>
+							<ul class="nav" role="">
+								<li>
+									<%= link_to 'Corporate Branding', corporate_branding_path %>
+								</li>
+								<li>
+									<%= link_to 'Mobile Website Design', mobile_website_design_path, :class =>'active' %>
+								</li>
+								<li>
+									<%= link_to 'Responsive Website Design', responsive_website_design_path %>
+								</li>
+								<li>
+									<%= link_to 'Website Maintenance', website_maintenance_path %>
+								</li>
+							</ul>
+						</div>
+						<div class="web-dev-intro">
+							<div class="col-md-12">
+								<div class="row">
+									<div class="web-dev-content web-dev-content-inner">
+										<div class="web-dev-img">
+											<%= image_tag 'mobile-website-innerpage-icon-big.png', :class => 'img-responsive', :alt => 'Services Image' %>
+										</div>
+										<div class="web-content-para">
+											<p>Is there an urgent business deal that you need to finalize and you can't wait to get back to your good old' PC at home? Well there's a cheaper option available rather than buying yourself a portable laptop or notebook- A smart phone. Some of the most advanced Smartphone's available in the market today help users to access World Wide Web functionalities.</p>
+											<p>A well designed Mobile Website spells instant profits for your business. No wonder a number of businesses have begun to invest heavily on mobile websites in order to serve their customers across the world instantly. We have a team of highly qualified Mobile Website Designers and enjoy working on the Agile development methodology besides complying with the International standards for the Web and Mobile design.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="service-inner-content">
+			<div class="container">
+				<div class="col-md-12">
+					<div class="row">
+						<!-- <div class="col-md-6 mobile-content">			
+						</div> -->
+						<div class="col-md-12 mobile-content">
+							<h2>Some of our Mobile Website Development services include:</h2>
+							<ul class="mobile-services">
+								<li>Apple iphone mobile website development</li>
+								<li>Palm Mobile Web Design</li>
+								<li>Google android mobile website development</li>
+								<li>Rim Blackberry mobile website development</li>
+							</ul>
+							<p>Our customers are happy with our high quality services and most innovative designs at cost-effective prices.</p>
+							<p>To know more about our Mobile Website services please <%= link_to 'contact', contact_us_path %> us.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

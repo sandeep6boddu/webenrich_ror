@@ -1,0 +1,15 @@
+// wizard form
+<% if !@status %>
+	jQuery('#new_quote .contact-errors').empty();
+	<% if @quote.errors.count <= 8 %>
+		jQuery("#step-one").removeClass('active');
+		jQuery("#step-two").trigger('click');
+	<% else %>
+		  jQuery('#step-two').removeClass('disableClick');
+	<% end %>
+	<% @quote.errors.each do |ele, error| %>
+			jQuery("#quote_<%= ele %>").siblings('.contact-errors').empty();
+			jQuery("#quote_<%= ele %>").siblings('.contact-errors').append("<%= j error %>");
+	<% end %>
+<% else %>
+<% end %>

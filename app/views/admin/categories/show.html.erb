@@ -1,0 +1,75 @@
+<div class="content-heading">Categories</div>
+<!-- Zero Configuration-->
+<div class="panel panel-default">
+	<div class="panel-body">
+		<div class="table-responsive b0">
+			<table id="datatable1" class="table table-striped table-hover">
+				<tbody>
+					<div class="row">
+						<!-- Category Content-->
+						<!-- START panel-->
+						<div class="col-lg-12 col-md-12">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<fieldset>
+										<legend>New Sub Category</legend>
+									</fieldset>
+									<fieldset>
+										<div class="col-md-12">
+											<%= form_tag sub_categories_path %>
+												<%= hidden_field_tag "category", params[:id] %>
+												<div class="form-group">
+													<label class="col-md-2 control-label">Sub Category Name:</label>
+													<div class="col-md-8">
+														<%= text_field_tag :name, '', class: "form-control", placeholder: "Sub Category Name...", required: true %>
+														<%= @category.errors[:name].join(', ') %>
+													</div>
+												</div>
+												<div class="pull-right">
+													<%= button_tag "Save", :class => "btn btn-primary m-t-10" do %>
+													<em class="fa fa-check fa-fw"></em> Save
+												</div>
+												<div class="pull-left">
+													<%= link_to admin_path, :class => "btn btn-danger" do %>
+														<i class="fa fa-undo"></i> Cancel
+													<% end %>
+												</div>
+											<% end %>
+										</div>
+									</fieldset>
+									<fieldset>
+										<div class="col-md-12">
+											<h4>List Of Sub Categories</h4>
+											<ul id="uploads" class="sub-catategories sortable" data-update-url="<%= sort_categories_path %>" >
+												<% @category.children.order(:position => "asc").each do |child| %>
+												<%= content_tag_for :li, child, :class => 'col-md-3' do %>
+													<%= child.name %>
+														<div class="btn-actions">
+															<%= link_to edit_category_path(child), :class => "btn btn-sm btn-default" do %>
+															<em class="fa fa-pencil"></em>
+															<% end %>
+															<%= link_to "/admin/categories/#{child.id}", :class => "btn btn-sm btn-danger", method: :delete, :data => {:confirm => "Are you sure?"} do %>
+																<em class="fa fa-trash"></em>
+															<% end %>
+														</div>
+													<% end %>
+												<% end %>
+											</ul>
+										</div>
+									</fieldset>
+								</div>
+							</div>
+						</div>
+							<!-- END panel-->
+						</div>
+						<div class="row">
+							<div class="col-lg-12 col-md-12">
+								<div class="clearfix">
+								</div>
+							</div>
+						</div>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

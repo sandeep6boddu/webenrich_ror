@@ -1,0 +1,35 @@
+<header>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-sm-5">
+				<div class="brand-logo">
+					<%= link_to '/' do %>
+						<%= image_tag 'logo.png', size: "249x55", :class => 'img-responsive', :alt => 'Brand Logo' %>
+					<% end %>
+				</div>
+			</div>
+			<div class="col-md-5 col-sm-2"></div>
+			<div class="col-md-4 col-sm-5">
+				<ul class= "header-right">
+					<li class="f-like">
+						<div class="fb-like" data-href="http://www.facebook.com/TryWebenrich" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+					</li>
+					<li>
+						<%= link_to 'Request a Quote', request_a_quote_path, :class => 'request-quote' %>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		js.async = true;
+		fjs.parentNode.insertBefore(js, fjs);
+}
+(document, 'script', 'facebook-jssdk'));
+</script>

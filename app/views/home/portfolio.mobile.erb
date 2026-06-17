@@ -1,0 +1,59 @@
+<% content_for :title do %>
+	Portfolio
+<% end %>
+<div class="portfolio-page-content">
+	<div class="main-title">
+		<div class="container">
+			<h1>
+				<%= link_to root_path, :class => 'left' do %>
+					<%= image_tag image_path('mobile/back-arrow.png') %>
+				<% end %>
+				Portfolio
+				<a href="#" class="dropdown-button right"  data-activates='dropdown2'>
+					<%= image_tag image_path('mobile/options-icon-white.png') %>
+				</a>
+				<ul id='dropdown2' class='dropdown-content' id="FilterSelect">
+					<li><a href="#" class="filter active" data-filter="all">All Works</a></li>
+					<% Category.find("portfolio").children.each do |category| %>
+						<li><a href="#" class="filter" data-filter=".<%= category.slug %>"><%= category.name %></a></li>
+					<% end %>
+				</ul>
+			</h1>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="container">
+	<div class="pager-list top-margin"></div>
+</div>
+<div class="clear"></div>
+<div class="portfolio-content">
+	<div class="container">
+		<div id="portfolio-level-bar">
+			<div class="portfolio-item">
+				<% @portfolios.each do |portfolio| %>
+					<div class="col  portfolio-two-list mix all <% portfolio.categories.each do |category| %>
+						<%= @category = Category.find(category).slug %>
+						<% end %>"	data-myorder="1">
+						<div class="card portfolio-card">
+							<div class="card-content white-text">
+								<h1 class="portfolio-title"><%= portfolio.title %></h1>
+								<div class="card-image">
+									<%= image_tag portfolio.thumb.url(:original), :class => 'img-responsive', :alt => 'Portfolio Image' %>
+								</div>
+								<div class="card-action">
+									<%= link_to "View details",  portfolio_details_path(portfolio), :class => 'waves-effect waves-red left portfolio-details-link' %>
+								</div>
+							</div>
+						</div>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="container">
+	<div class="pager-list"></div>
+</div>
+<div class="clear"></div>

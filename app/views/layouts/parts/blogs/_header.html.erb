@@ -1,0 +1,87 @@
+<div class="container">
+	<header class="mdl-layout__header mdl-layout__header--waterfall">
+		<!-- Top row, always visible -->
+		<div class="mdl-layout__header-row">
+			<div class="mdl-cell--12-col mdl-grid mdl-fullwidth no-padding futured-blog">
+				<div class="mdl-cell--4-col mdl-cell--6-col-tablet">
+					<div class="brand-logo">
+						<%= link_to '/' do %>
+							<%= image_tag 'logo.png', size: "249x55", :class => 'img-responsive', :alt => 'Brand Logo' %>
+						<% end %>
+					</div>
+				</div>
+				<div class="mdl-cell--4-col"></div>
+				<div class="mdl-cell--4-col">
+					<ul class= "header-right blog-header">
+						<li class="f-like">
+							<div class="fb-like" data-href="http://www.facebook.com/TryWebenrich" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+						</li>
+						<li>
+							<!-- Expandable Textfield -->
+							<!-- <form action="#">
+									<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable textfield-demo search-field">
+										<label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
+											<i class="material-icons mdl-color-text--light-blue">search</i>
+										</label>
+										<div class="mdl-textfield__expandable-holder">
+											<input class="mdl-textfield__input" type="text" id="sample6" />
+											<label class="mdl-textfield__label" for="sample-expandable">Search</label>
+										</div>
+									</div>
+								</form> -->
+							<%= render 'layouts/parts/blogs/search' %>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+</div>
+<div class="mdl-layout__drawer">
+	<div class="mdl-layout-drawer-icons mdl-color--light-blue mdl-color-text--white">
+		<%=link_to do %>
+			<i class="material-icons mdl-color-text--white">chevron_left</i>
+		<% end %>
+		<%=link_to '/blog', :class => 'right' do %>
+			<i class="mdl-color-text--white material-icons" role="presentation">home</i>
+		<% end %>
+	</div>
+	<!-- <header class="demo-drawer-header">
+		<%#= image_tag 'blog/user-avatar.jpg', :class => 'user-avatar', :alt => 'User Avatar' %>
+		<div class="user-details">
+			<span class="user-name mdl-color-text--light-blue">Nate Swanner</span>
+			<span class="user-location mdl-color-text--grey-700">Portland, OR, US</span>
+		</div>
+	</header> -->
+	<!-- <ul class="user-post-details" >
+		<li><strong>43</strong> Posts</li>
+		<li>
+			<%#= link_to 'Account Settings', '#' %>
+		</li>
+	</ul> -->
+	<nav class="blog-categories mdl-navigation">
+		<h2 class="mdl-color--red mdl-color-text--white">Categories</h2>
+		<ul class="blog-technologies mdl-color--white">
+			<% Category.find("blog").children.each do |category| %>
+				<li>
+					<%= link_to category.name, blog_category_path(category.slug), :class => "#{ 'active' if category.slug == params[:category]}" %>
+				</li>
+			<% end %>
+			<!-- <li class="logout-btn">
+				<%#= link_to '', :class => '' %>
+				<i class="material-icons">lock</i>
+				Logout
+			</li> -->
+		</ul>
+	</nav>
+</div>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		fjs.parentNode.insertBefore(js, fjs);
+	}
+	(document, 'script', 'facebook-jssdk'));
+</script>

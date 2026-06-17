@@ -1,0 +1,110 @@
+<% content_for :title do %>
+	Web Development
+<% end %>
+<div class="services-page">
+	<div class="mobile-page-main">
+		<div class="main-title">
+			<div class="container">
+				<h1>
+					<%= link_to services_path, :class => 'left' do %>
+						<%= image_tag image_path('mobile/back-arrow.png') %>
+					<% end %>
+					Web Development
+					<a class='dropdown-button right' href='#' data-activates='dropdown1'>
+						<%= image_tag image_path('mobile/options-icon-white.png') %>
+					</a>
+					<ul id='dropdown1' class='dropdown-content custom-drpwn-content'>
+						<li>
+							<%= link_to ruby_on_rails_path do %>
+								<strong>Ruby On Rails</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to core_php_path do %>
+								<strong>Core PHP</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to ecommerce_development_path do %>
+								<strong>E-Commerce Development</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to cms_development_path do %>
+								<strong>CMS Development</strong>
+							<% end %>
+						</li>
+					</ul>
+				</h1>
+			</div>
+		</div>
+		<div class="container">
+			<div class="title-content">
+				<div class="services-img">
+					<%= image_tag image_path('mobile/webdev-bg.png') %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="services-text">
+		<div class="container">
+			<div class="web-dev-article">
+				<p>Welcome to the magical world of WebEnrich where businesses are transformed to look their very best, before they are ready to walk the virtual ramp. WebEnrich believes that a website not just projects your identity, but also protects it from virtual slander too.</p>
+				<article>
+					WebEnrich with its sound knowledge and experience in web design and development can make your website match up to international standards in terms of content and user friendly navigability to an extent that Bing, Yahoo and Google would welcome your website on their first pages with a red carpet.
+					<strong>Now isn’t that Wonderful?</strong>
+				</article>
+			</div>
+			<%= link_to "Continue Reading", '#', :class => 'waves-effect waves-light btn hide' %>
+		</div>
+	</div>
+	<div class="container">
+		<div class="services-text mobile-dev-content">
+			<div class="mobile-dev-inner-content">
+				<h2>Web Development Services offered by WebEnrich includes:</h2>
+				<p>Creating a visually appealing web design: What is your strategy to stand out amidst millions of websites on the internet? Having a superior or innovative products and services helps but with so many options available in the market you have very little time to convince potential customers to spend enough time on your website to enable yourself to market your products and services.</p>
+				<p>This is where our forte lies. Committed to our goal of designing innovative websites which give you that cutting edge, our team at WebEnrich enables you to market yourself better.</p>
+			</div>
+			<div class="mobile-dev-inner-content">
+				<h2>Web Development Services offered by WebEnrich includes:</h2>
+				<p>Creating a visually appealing web design: What is your strategy to stand out amidst millions of websites on the internet? Having a superior or innovative products and services helps but with so many options available in the market you have very little time to convince potential customers to spend enough time on your website to enable yourself to market your products and services.</p>
+				<p>This is where our forte lies. Committed to our goal of designing innovative websites which give you that cutting edge, our team at WebEnrich enables you to market yourself better.</p>
+			</div>
+		</div>
+	</div>
+	<div class="list-of-services list-of-detail-services">
+		<div class="container">
+			<div class="list-of-services-inner">
+				<h1>Web Development Services</h1>
+				<div class="card">
+					<ul>
+						<li>
+							<%= link_to ruby_on_rails_path do %>
+								<strong>Ruby On Rails</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to core_php_path do %>
+								<strong>Core PHP</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to ecommerce_development_path do %>
+								<strong>E-Commerce Development</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to cms_development_path do %>
+								<strong>CMS Development</strong>
+							<% end %>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- our clients -->
+	<%= render 'layouts/widgets/our_clients' %>	
+	<!-- start-project -->
+	<%= render 'layouts/widgets/start_project' %>
+</div>

@@ -1,0 +1,125 @@
+<% content_for :title do %>
+	<%= @blog.meta_title %>
+<% end %>
+<main class="">
+	<div class="mdl-layout blogs-main-page blog-innerpage page-content">
+		<div class="mdl-layout__content mdl-color--grey-100">
+			<div class="container">
+				<div class="mdl-cell--12-col mdl-grid mdl-fullwidth no-padding futured-blog" >
+						<h3 class="mdl-color-text--grey mdl-cell--12-col blog-title mdl-typography--text-uppercase">
+							<%= link_to '/blog' do %>
+								Blog
+						<% end %>/<span>
+						<%= @blog.categories.pluck(:name).join(', ') %></span>
+					</h3>
+				</div>
+			</div>
+			<div class="mdl-cell--12-col mdl-grid mdl-fullwidth no-padding mdl-color--light-blue">
+				<div class="container">
+					<% if @blog.banner.present? %>
+						<div class="banner">
+							<%= image_tag @blog.banner.url(:original), :alt => 'Banner Image', :class => 'img-responsive' %>
+						</div>
+					<% end %>
+				</div>
+			</div>
+			<div class="mdl-cell--12-col mdl-grid mdl-fullwidth no-padding mdl-color--light-blue-700">
+				<div class="container">
+					<div class="blog-related-details">
+						<% if @blog.banner.present? %>
+							<!-- Colored FAB button with ripple -->
+							<%= link_to '#blog-content' do %>
+								<%= button_tag :class => 'mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--orange' do %>
+									<i class="material-icons mdl-color-text--white">expand_more</i>
+								<% end %>
+							<% end %>
+						<% end %>
+						<ul class="blog-user-details">
+							<li>
+								<%#= image_tag 'blog/user-avatar.png', :class => 'user-avatar', :alt => 'User Avatar' %>
+								<div class="user-details">
+									<span class="user-name mdl-color-text--white">
+										<%=  @blog.user.firstname.present? &&  @blog.user.lastname.present? ?  @blog.user.firstname + " "+ @blog.user.lastname : @blog.user.email %>
+									</span>
+								</div>
+							</li>
+							<li class="post-time mdl-color-text--light-blue-100">
+								<span >
+									<i class="material-icons">schedule</i>
+									<% subs = {"about" => '', "almost" => '', "over" => ''} %>
+									<%= distance_of_time_in_words_to_now(@blog.created_at).gsub(/\w+/) { |word| subs[word] || word} %> ago
+								</span>
+							</li>
+						</ul>
+						<div class="blogcomments-icons">
+							<ul class="post-comments">
+								<!-- <li><i class="material-icons mdl-color-text--white">favorite</i>10</li> -->
+								<li>
+									<%= link_to '#comments' do %>
+										<i class="material-icons mdl-color-text--white">comment</i>
+									<% end %>
+									<span class="fb-comments-count" data-href="<%= request.original_url %>"></span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div id="blog-content" class="mdl-cell--12-col mdl-grid mdl-fullwidth blog-content">
+					<div class="mdl-cell--7-col mdl-cell--12-col-tablet">
+						<h3><%= @blog.title %></h3>
+						<%= raw @blog.content %>
+						<hr/>
+						<div class="mdl-cell--12-col left mdl-fullwidth">
+							<div id="comments" class="comment-section left mdl-fullwidth">
+								<div class="mdl-cell--12-col mdl-grid mdl-fullwidth no-padding futured-blog" >
+									<strong>Share: </strong>
+									<div class="addthis_sharing_toolbox"></div>
+								</div>
+								<div class="post-comments">
+									<!-- Go to www.addthis.com/dashboard to customize your tools -->
+								</div>
+								<div class="row">
+									<div class="fb-comments" data-href="<%= request.original_url %>" data-numposts="5"></div>
+								</div>
+								<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+									<a class="btn-floating btn-large red">
+										<i class="large material-icons">sync</i>
+									</a>
+									<ul class="social-icons">
+										<li>
+											<%= link_to '', 'http://www.facebook.com/TryWebenrich', :target => '_blank', :class => 'btn-floating fb-footer' %>
+										</li>
+										<li>
+											<%= link_to '', 'http://plus.google.com/+WebenrichSolutions/about', :target => '_blank', :class => 'btn-floating gp-footer' %>
+										</li>
+										<li>
+											<%= link_to '', 'http://twitter.com/webenrich', :target => '_blank', :class => 'tw-footer btn-floating' %>
+										</li>
+										<li>
+											<%= link_to '', 'http://www.linkedin.com/company/webenrich', :target => '_blank', :class => 'ln-footer btn-floating' %>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mdl-cell--1-col no-padding spacer ">
+					</div>
+					<%= render "blogs/parts/popular", object: @popular_blogs %>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=176982515827523";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55cacf8251352b24" async="async"></script>

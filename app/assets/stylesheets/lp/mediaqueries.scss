@@ -1,0 +1,583 @@
+.our-clients {
+	margin: 10px 0;
+	padding: 10px 0;
+
+	h1 {
+		font-family: 'robotomedium';
+		font-size: $font-size-base + 6;
+		color: $gray;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+
+	.slick-track img {
+		width: 90% !important;
+	}
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px ) and (orientation:portrait) {
+
+	.container {
+		width: 100%;
+	}
+
+	.only-mobile-layout-clients {
+		display: block;
+	}
+
+	.only-ipad-layout-clients {
+		display: none;
+	}
+
+	.top-header {
+		padding: 0 10px;
+
+		.logo {
+			width: 50%;
+
+			a {
+				width: 80%;
+			}
+		}
+
+		.contact-number {
+			width: 50%;
+
+			ul {
+				padding-left: 0;
+
+				li {
+					padding: 0;
+
+					span {
+						font-size: $font-size-base - 4 !important;
+					}
+
+					&:last-child {
+						border-left: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.ror-banner {
+
+		.ror-application, .ror-development {
+			margin: 0 !important;
+
+			h3 {
+				padding: 0px 6px 5px 4px !important;
+			}
+		}
+
+		.left-lists {
+			width: 100% !important;
+		}
+
+		.right-lists {
+			width: 100% !important;
+			padding-left: 36px !important;
+
+			li {
+				font-size: $font-size-base + 1 !important;
+			}
+		}
+	}
+
+	.ror-process {
+
+		.ror-content {
+			background-size: 100%;
+			height: 440px;
+		}
+
+		p {
+			bottom: 22% !important;
+		}
+
+		p:last-child {
+			bottom: -9% !important;
+		}
+	}
+
+	.only-mobile-layout-clients {
+
+		.slick-next, .slick-prev {
+			display: none !important;
+		}
+	}
+
+	.ror-form {
+		height: auto;
+
+		.ror-submit-btn {
+			float: left;
+
+			.submit-btn {
+				font-size: $font-size-base - 3;
+			}
+		}
+	}
+
+	.copy-rights-bar {
+		padding: 20px 0;
+	}
+
+	.ecommerce-part .ecommerce-banner .banner-title {
+
+		h3 {
+			font-size: 20px;
+			padding-top: 0;
+		}
+
+		p {
+			font-size: $font-size-base + 2;
+			line-height: 22px;
+		}
+	}
+
+	.ecommerce-part .ecommerce-banner .banner-icons {
+		margin-left: 0;
+	}
+
+	.ror-icon {
+		width: 100px;
+		float: left;
+	}
+
+	.ecommerce-part .ecommerce-banner .ror-icon img, .ecommerce-part .ecommerce-banner .megento-icon img, .ecommerce-part .ecommerce-banner .wordpress img {
+		width: 80px;
+	}
+
+	.ecommerce-part .ecommerce-banner .ror-icon span, .ecommerce-part .ecommerce-banner .megento-icon span, .ecommerce-part .ecommerce-banner .wordpress span {
+		font-size: $font-size-base - 1;
+		padding-bottom: 10px;
+	}
+
+	.portfolio-content, .pf-slider {
+		display: none;
+	}
+
+	.ecommerce-part .world-store-online-content {
+
+		.ship-wrapper {
+
+			h5, h6 {
+				display: none;
+			}
+
+			h3 {
+				font-size: $font-size-base + 10px;
+				padding-top: 0 !important;
+			}
+		}
+
+		.online-store-wrapper {
+			background: none;
+
+			.top-wrapper, .bottom-wapper {
+				padding: 0 10px;
+			}
+		}
+	}
+
+	.we-strength {
+		float: left;
+		width: 100px;
+		margin: 0 20px;
+	}
+
+	.about-company .details p {
+		font-size: $font-size-base + 2;
+		padding: 10px 0 0 0;
+
+		span {
+			font-size: $font-size-base + 2;
+		}
+	}
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+
+	.top-header .contact-number {
+		width: 50%;
+
+		span {
+			font-size: $font-size-base !important;
+		}
+	}
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px ) and (orientation:landscape) {
+
+	.container {
+		width: 100%;
+	}
+
+	.top-header {
+		padding: 0 10px;
+	}
+
+	.ror-process .ror-content {
+		background-size: 100%;
+		height: 420px;
+	}
+
+	.only-ipad-layout-clients {
+		display: none;
+	}
+
+	.only-mobile-layout-clients {
+
+		.slick-next, .slick-prev {
+			display: none !important;
+		}
+	}
+
+	.ror-form {
+		height: auto;
+
+		.ror-submit-btn {
+			float: left;
+			padding-top: 20px;
+			margin-left: 20%;
+
+			.submit-btn {
+				font-size: $font-size-base - 3;
+			}
+		}
+	}
+
+	.copy-rights-bar {
+		padding: 20px 0;
+	}
+
+	.ror-application, .ror-development {
+		margin: 21px !important;
+	}
+
+	.ror-banner .ror-application .left-lists li, .ror-banner .ror-application .right-lists li {
+		font-size: $font-size-base;
+	}
+
+	.ror-process .ror-content p:last-child {
+		bottom: -3%;
+	}
+
+	.ror-icon {
+		width: 150px;
+		margin: 0 20px 20px 0;
+	}
+
+	.portfolio-content, .pf-slider {
+		display: none;
+	}
+
+	.ecommerce-part .world-store-online-content {
+
+		.ship-wrapper {
+
+			h6 span {
+				padding: 20px 6px;
+			}
+
+			h3 {
+				font-size: $font-size-base + 10px;
+			}
+		}
+
+		.online-store-wrapper {
+			background: none;
+
+			.top-wrapper, .bottom-wapper {
+				padding: 0 10px;
+			}
+		}
+	}
+
+	.about-company .details p {
+		padding: 18px 0 !important;
+		font-size: 22px;
+	}
+
+	.we-strength {
+		float: left;
+		width: 114px;
+		margin: 0 10px;
+	}
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+
+	.container {
+		width: 100%;
+	}
+
+	.top-header {
+		padding: 0 10px;
+	}
+
+	.ror-process .ror-content {
+		background-size: 100%;
+		height: 420px;
+	}
+
+	.only-ipad-layout-clients {
+		display: none;
+	}
+
+	.only-mobile-layout-clients {
+
+		.slick-next, .slick-prev {
+			display: none !important;
+		}
+	}
+
+	.ror-form {
+		height: auto;
+
+		.ror-submit-btn {
+			float: left;
+			padding-top: 20px;
+			margin-left: 20%;
+
+			.submit-btn {
+				font-size: $font-size-base - 3;
+			}
+		}
+	}
+
+	.copy-rights-bar {
+		padding: 20px 0;
+	}
+
+	.ror-application, .ror-development {
+		margin: 21px !important;
+	}
+
+	.ror-banner .ror-application .left-lists li, .ror-banner .ror-application .right-lists li {
+		font-size: $font-size-base;
+	}
+
+	.ror-process .ror-content p:last-child {
+		bottom: -3%;
+	}
+
+	.ror-icon {
+		width: 186px;
+		margin: 0 20px 20px 0;
+	}
+
+	.ecommerce-part .world-store-online-content {
+
+		.online-store-wrapper {
+			background: none;
+
+			.top-wrapper, .bottom-wapper {
+				padding: 0 10px;
+			}
+		}
+	}
+
+	.about-company .details p {
+		padding: 18px 0 !important;
+		font-size: 22px;
+	}
+
+	.we-strength {
+		float: left;
+		width: 114px;
+		margin: 0 10px;
+	}
+
+	.portfolio-content, .pf-slider {
+		display: none;
+	}
+}
+
+// i-pad portrait
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+
+	.only-ipad-layout-clients {
+		display: block;
+	}
+
+	.only-mobile-layout-clients {
+		display: none;
+	}
+
+	.container {
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.lp-ror-mobile-main-content {
+
+		.ror-banner {
+
+			.ror-development .title {
+				padding-bottom: 27px;
+
+				h2 {
+					font-size: $font-size-base + 8;
+				}
+
+				span {
+					font-size: $font-size-base + 4;
+				}
+			}
+
+			.ror-application {
+
+				h3 {
+					font-size: $font-size-base;
+				}
+
+				.left-lists li, .right-lists li {
+					line-height: 57px;
+					margin-bottom: 17px;
+					font-size: $font-size-base - 4;
+					padding-left: 60px;
+				}
+
+				.right-lists li:last-child {
+					line-height: 25px;
+				}
+
+				.left-lists {
+					padding-left: 18px;
+				}
+			}
+		}
+	}
+
+	.ror-form {
+		height: 522px;
+	}
+
+	.about-company .details p {
+		font-size: $font-size-base + 4;
+
+		span {
+			font-size: $font-size-base + 13;
+		}
+	}
+
+	.pf-slider {
+		overflow-x: hidden;
+		height: 500px;
+	}
+
+	//mobile-apps css start
+	.successful-projects {
+
+		.rapid-bg, .transparency-bg, .quality-bg, .guarantee-bg {
+			background-size: 100%;
+
+			.content p {
+				padding: 0 54px !important;
+			}
+		}
+	}
+
+	//ecommerce css statrt
+	.ecommerce-banner {
+
+		.ror-icon, .megento-icon, .wordpress {
+			padding: 26px 0 9px 0 !important;
+		}
+	}
+
+	.world-store-online-content .online-store-wrapper {
+		background-size: 100% !important;
+		padding-bottom: 0 !important;
+
+		.top-wrapper {
+			padding: 33px 27px 0 45% !important;
+			font-size: $font-size-base + 2;
+		}
+
+		.bottom-wapper {
+			font-size: $font-size-base + 2;
+		}
+	}
+}
+
+// i-pad lands
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+
+	.container {
+		width: 100%;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.only-ipad-layout-clients {
+		display: block;
+	}
+
+	.only-mobile-layout-clients {
+		display: none;
+	}
+
+	.lp-ror-mobile-main-content {
+
+		.ror-banner {
+
+			.ror-development .title {
+				padding-bottom: 48px;
+
+				h2 {
+					font-size: $font-size-base + 16;
+				}
+
+				span {
+					font-size: $font-size-base + 2;
+				}
+			}
+
+			.ror-application {
+
+				h3 {
+					font-size: $font-size-base + 8;
+				}
+
+				.left-lists li, .right-lists li {
+					line-height: 52px;
+				}
+			}
+		}
+	}
+
+	.ror-form .left-form .form-group label, .ror-form .right-form .form-group label {
+		padding-left: 20px;
+		background-position: 5px 16px;
+	}
+
+	.about-company .details p {
+		font-size: $font-size-base + 6;
+	}
+
+	//mobile-apps css start
+	.successful-projects {
+
+		.rapid-bg, .transparency-bg, .quality-bg, .guarantee-bg {
+			background-size: 100% !important;
+		}
+	}
+
+	.world-store-online-content .online-store-wrapper {
+		background-size: 100% !important;
+		padding-bottom: 40px !important;
+
+		.top-wrapper {
+			padding: 50px 17px 0 45% !important;
+		}
+	}
+
+	.ecommerce-banner .panel-default .ipad-ror-icon img {
+		padding-right: 7px;
+	}
+}

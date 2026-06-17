@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<%= render 'layouts/parts/lp/head' %>
+	<body>
+        <script type="text/javascript">
+			jQuery(document).ready(function(){
+				var status = "<%= alert.present? %>";
+				if( status == "true"){
+					swal("<%= alert %>", "We will get back you soon!", "success");
+				}
+			});
+        </script>
+		<%= render 'layouts/parts/lp/header' %>
+		<%= yield %>
+		<%= link_to ' ', '#bot', class: 'botlink' %>
+		<!-- <a href="#bot" id="botlink" title="Go to bottom">↓</a> -->
+		<%= render 'layouts/parts/lp/footer' %>
+	</body>
+</html>

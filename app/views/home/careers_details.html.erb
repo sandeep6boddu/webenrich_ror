@@ -1,0 +1,167 @@
+<% content_for :title do %>
+	<%= @job.meta_title %>
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="<%= @job.meta_description %>">
+	<meta name="keywords" content="<%= @job.meta_keywords %>">
+<% end %>
+<div class="page-banner">
+	<div class="services-page careers-page">
+		<div class="services-content careers-inner">
+			<div class="container">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="banner-title">
+							<h2>Careers</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="services-list careers-list">
+			<div class="container">
+				<div class="show-careers">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-3 col-sm-6">
+								<ul class="job-objects">
+									<li>
+										<%= label_tag 'Job Title' %>
+									</li>
+									<li>
+										<%= label_tag 'Job Id' %>
+									</li>
+									<li>
+										<%= label_tag 'Experience' %>
+									</li>
+									<li>
+										<%= label_tag 'Education' %>
+									</li>
+									<li>
+										<%= label_tag 'Job Description' %>
+									</li>
+								</ul>
+							</div>
+							<% cache ['job_details', @job] do %>
+								<div class="col-md-4 col-sm-6">
+									<ul class="job-description">
+										<li>
+											<p><strong><%= @job.title.camelcase %></strong></p>
+										</li>
+										<li>
+											<p><%= @job.code.upcase %></p>
+										</li>
+										<li>
+											<p>Minimum <%= @job.experience %> years</p>
+										</li>
+										<li>
+											<p><%= @job.education %></p>
+										</li>
+										<li>
+											<p><%= @job.description %></p>
+										</li>
+									</ul>
+								</div>
+								<div class="col-md-1 spacer hidden-sm"></div>
+								<div class="col-md-4 col-sm-12">
+									<div class="job-require-title">
+										<h3>Desired Profile</h3>
+									</div>
+									<div class="job-requirement">
+										<%= raw @job.desired_profile %>
+									</div>
+									<!-- Button trigger modal -->
+									<!-- Button trigger modal -->
+									<button type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModal">
+									Apply for this Job
+									</button>
+									<p class="apply-alternative">Or  Send Your Resume to : <a href="mailto:info@webenrich.com">info@webenrich.com</a></p>
+								</div>
+							<% end %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Enter your details</h4>
+			</div>
+			<%= form_for @applicant, url: careers_applicant_path, html: {remote: true, class: 'form-horizontal', multipart: true} do |applicant| %>
+				<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+				<%= hidden_field_tag :job_url, request.original_url %>
+				<div class="modal-body">
+					<input type="hidden" name="job_id" value="<%= @job.id %>" />
+					<div class="form-group">
+						<label class="col-lg-3 control-label">Name</label>
+						<div class="col-lg-9">
+							<%= applicant.text_field :name, class: 'form-control', required: true %>
+							<%= @applicant.errors[:name].join(', ') %>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-lg-3 control-label">Email id</label>
+						<div class="col-lg-9">
+							<%= applicant.email_field :email, class: 'form-control', required: true %>
+							<%= @applicant.errors[:email].join(', ') %>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-lg-3 control-label">Mobile no</label>
+						<div class="col-lg-9">
+							<%= applicant.number_field :mobile_no, class: 'form-control', required: true %>
+							<%= @applicant.errors[:mobile_no].join(', ') %>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-lg-3 control-label">Location</label>
+						<div class="col-lg-9">
+							<%= applicant.text_field :location, class: 'form-control', required: true %>
+							<%= @applicant.errors[:location].join(', ') %>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-lg-3 control-label">Experience</label>
+						<div class="col-lg-9">
+							<%= applicant.select :experience, options_for_select({ "1 Year" => "1", "2 Years" => "2", "3 Years" => "3", "4 Years" => "4",  "5 Years" => "5", "6 Years" => "6", "7 Years" => "7", "8 Years" => "8", "9 Years" => "9", "10 Years" => "10" }, selected: @applicant.experience ), { :prompt => 'Please select experience'},{:class=>"form-control", required: true} %>
+							<%= @applicant.errors[:experience].join(', ') %>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">File input</label>
+						<div class="col-sm-9">
+							<%= applicant.file_field :resume, class: 'form-control filestyle', classinput: 'form-control inline', data: {:classbutton => "btn btn-default"} , required: true %>
+							<strong class="file-message"></strong>
+							<strong class="btn-danger"><%= @applicant.errors[:resume].join(', ') %></strong>
+							<span>Note: Only allowed format .pdf, .doc, .docx.</span>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<%= button_tag "Save", :class => "btn btn-primary m-t-10" do %>
+						<em class="fa fa-check fa-fw"></em>Apply
+					<% end %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
+<!-- Ends Modal-->
+<script>
+jQuery(document).ready(function() {
+	$('#myModal').on('shown.bs.modal', function () {
+		$('#applicant_name').focus();
+	});
+	var errors = '<%= @applicant_errors.count if @applicant_errors.present? %>';
+	if(errors > 1){
+		jQuery('#myModal').modal("show");		
+	}
+});
+</script>

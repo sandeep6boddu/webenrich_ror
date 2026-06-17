@@ -1,0 +1,141 @@
+<% content_for :title do %>
+	Who We Are | About WebEnrich ? WebEnrich Solutions Pvt. Ltd.
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="Our Team, WebEnrich">
+	<!-- <meta name="keywords" content=" "> -->
+<% end %>
+<div class="mobile-page-main">
+	<div class="main-title">
+		<div class="container">
+			<h1>
+				<%= link_to root_path, :class => 'left' do %>
+					<%= image_tag image_path('mobile/back-arrow.png') %>
+				<% end %>
+				WebEnrich Team
+			</h1>
+		</div>
+	</div>
+	<div class="container">
+		<div class="title-content">
+			<div class="about-img">
+				<%= image_tag image_path('team/we-team-img.png') %>
+			</div>
+			<p class="white-text center">
+				Success comes with planning, exceptional execution and a superb relationship.
+			</p>
+		</div>
+	</div>
+</div>
+<div class="services-text margin-top">
+	<div class="container">
+		<p>
+			We've built a talented, full service team. Our people lead and deliver projects with energy and accountability. We're flexible and responsive, adapting our approach to meet the needs of individual assignments. We stay close to our clients, partnering with them, to create and deliver as one team.
+		</p>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="container">
+	<div class="card">
+		<div class="person-image">
+			<%= image_tag 'mobile/md.png', :alt => 'Managing Director', :class => 'img-responsive' %>
+		</div>
+		<div class="card-content person-content">
+			<h2>Nikhil Reddy</h2>
+			<span>Managing Director</span>
+			<p>
+				Is the founder of WebEnrich. Passionate about web design and development, he has helped the company go from strength to strength and continues to nurture its growth.
+			</p>
+			<%= link_to 'mailto:info@webenrich.com', class: 'btn waves-effect' do %>
+				<strong>
+					<i class="material-icons dp48">email</i>
+				</strong>
+				Send An Email
+			<% end %>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="container">
+	<div class="card">
+		<div class="person-image order-image">
+			<%= image_tag 'mobile/coo.png', :alt => 'Managing Director', :class => 'img-responsive' %>
+		</div>
+		<div class="card-content person-content">
+			<h2>INDRASENA REDDY</h2>
+			<span>Chief Operating Officer</span>
+			<p>
+				Is the multitasking king who organises the office. He keeps everything on track and makes sure we deliver our projects on spec and on time.
+			</p>
+			<%= link_to 'mailto:info@webenrich.com', class: 'btn waves-effect' do %>
+				<strong>
+					<i class="material-icons dp48">email</i>
+				</strong>
+				Send An Email
+			<% end %>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="container">
+	<div class="card">
+		<div class="person-image">
+			<%= image_tag 'mobile/cto.png', :alt => 'Managing Director', :class => 'img-responsive' %>
+		</div>
+		<div class="card-content person-content">
+			<h2>ANIL KUMAR</h2>
+			<span>Chief Technology Officer</span>
+			<p>
+				Is the brains & force behind our development and database design. A master in multi-platform, he is the key to strengthen our Ruby on Rails team from ground zero.
+			</p>
+			<%= link_to 'mailto:info@webenrich.com', class: 'btn waves-effect' do %>
+				<strong>
+					<i class="material-icons dp48">email</i>
+				</strong>
+				Send An Email
+			<% end %>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="container">
+	<div class="card">
+		<div class="person-image">
+			<%= image_tag 'mobile/ch.png', :alt => 'Managing Director', :class => 'img-responsive' %>
+		</div>
+		<div class="card-content person-content">
+			<h2>R.PADMANABHAN</h2>
+			<span>Creative Head</span>
+			<p>
+				Is our user interface design expert. He ensures our websites have great, user-centred design with new and exciting ways to make our clients' websites come to life and stand out..
+			</p>
+			<%= link_to 'mailto:info@webenrich.com', class: 'btn waves-effect' do %>
+				<strong>
+					<i class="material-icons dp48">email</i>
+				</strong>
+				Send An Email
+			<% end %>
+		</div>
+	</div>
+</div>
+<div class="clear"></div>
+<div class="container">
+	<div class="team-members">
+		<div class="range-heading">
+			<h1 class="margin-top">
+				<span>&nbsp;</span>
+				Meet the Team Behind WebEnrich
+			</h1>
+		</div>
+		<div class="card">
+			<div class="card-content">
+				<% @team.each do |team| %>
+					<div class="team-list-bar">
+						<%= image_tag team.team_img.url(:original), :class => "img-circle team-imgbar", :alt => "Employee Image" %>
+						<h4><%= team.name %></h4>
+					</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,28 @@
+<div class="quick-enquiry hidden-sm">
+	<div class="quick-form-title">
+		Quick Enquiry
+	</div>
+	<%= form_for @contact, :url => quick_contact_form_path do |f| %>
+		<%= hidden_field_tag "from_page", request.path.gsub(/\//, "") %>
+		<div class="form-fields">
+			<div class="alert-danger pull-right contact-errors"><%= @contact.errors[:full_name].join(', ') %></div>
+			<%= f.text_field :full_name, :placeholder => 'Full Name', :class => 'form-control' %>
+			<div class="alert-danger pull-right contact-errors"><%= @contact.errors[:email_address].join(', ') %></div>
+			<%= f.email_field :email_address, :placeholder => 'Email Address', :class => 'form-control' %>
+			<div class="alert-danger pull-right contact-errors"><%= @contact.errors[:phone].join(', ') %></div>
+			<%= f.text_field :phone, :placeholder => 'Phone Number', :class => 'form-control' %>
+			<div class="alert-danger pull-right contact-errors"><%= @contact.errors[:message].join(', ') %></div>
+			<%= f.text_area  :message, :placeholder => 'Message', :rows => '3', :class => 'form-control' %>
+			<div class="form-group">
+				 <%= recaptcha_tags %>
+				 <div class="alert-danger pull-left contact-errors">
+				 	<%= @contact.errors["g-recaptcha-response"].join(', ') %>
+				 </div>
+			</div>
+			<%= submit_tag 'Submit', :class => 'btn' %>
+		</div>
+	<% end %>
+	<span>
+		<%= image_tag "query-form-btm-img.png" %>
+	</span>
+</div>

@@ -1,0 +1,87 @@
+<div class="content-heading">Testimonial</div>
+<%= form_for @testimonial, html: {class: "form-horizontal"}, :data => {:parsley_validate=>""}, :html => {:multipart => true} do |f| %>
+	<div class="row">
+		<!-- Job Content-->
+		<!-- START panel-->
+		<div class="col-md-12 col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<fieldset>
+						<legend>New Testimonials</legend>
+					</fieldset>
+					<fieldset>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Upload Avatar</label>
+							<div class="col-md-8">
+								<%= f.file_field :avatar, class: 'form-control filestyle', classinput: 'form-control inline', data: {:classbutton => "btn btn-default", :multiple => "true"} %>
+								<%= @testimonial.errors[:avatar].join(', ') %>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Name</label>
+							<div class="col-md-8">
+								<%= f.text_field :name, class: "form-control", placeholder: "Name...", required: true %>
+								<%= @testimonial.errors[:name].join(', ') %>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Designation</label>
+							<div class="col-md-8">
+								<%= f.text_field :designation, class: "form-control", placeholder: "Designation...", required: true %>
+								<%= @testimonial.errors[:designation].join(', ') %>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Website Name</label>
+							<div class="col-md-8">
+								<%= f.text_field :app_name, class: "form-control", placeholder: "Website Name..." %>
+								<%= @testimonial.errors[:app_name].join(', ') %>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Content</label>
+							<div class="col-md-8">
+								<%= f.text_area :content, class: "wysihtml5 form-control", placeholder: "Content...", required: true %>
+								<%= @testimonial.errors[:content].join(', ') %>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset>
+						<div class="form-group">
+							<label class="col-md-2 control-label">Status:</label>
+							<div class="col-md-8">
+								<%= f.select :status, enum_option_pairs(Testimonial, :status), { :prompt => 'Please select status'}, {class: "form-control", required: true} %>
+								<%= @testimonial.errors[:status].join(', ') %>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+		<!-- END panel-->
+	</div>
+	<div class="row">
+		<div class="col-md-12 col-lg-12">
+			<div class="clearfix">
+				<div class="pull-right">
+					<%= f.button "Save", :class => "btn btn-primary m-t-10" do %>
+						<em class="fa fa-check fa-fw"></em> save
+					<% end %>
+				</div>
+				<div class="pull-left">
+					<%= link_to testimonials_path, :class => "btn btn-danger" do %>
+						<i class="fa fa-undo"></i> Cancel
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>

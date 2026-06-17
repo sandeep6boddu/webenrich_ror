@@ -1,0 +1,12 @@
+<div class="mdl-cell--4-col-desktop mdl-cell--8-col-tablet ">
+ 	<div class="blog-categories mdl-shadow--4dp">
+		<h2 class="mdl-color--red mdl-color-text--white">Categories</h2>
+		<ul class="blog-technologies mdl-color--white">
+			<% Category.find("blog").children.each do |category| %>
+				<li>
+					<%= link_to category.name, blog_category_path(category.slug), :class => "#{ 'active' if category.slug == params[:category]}" %>
+				</li>
+			<% end %>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,68 @@
+<h3>File Upload</h3>
+<blockquote class="box-placeholder">
+	 <p>File Upload widget with multiple file selection, drag&amp;drop support.</p>
+</blockquote>
+<!-- The fileupload-buttonbar contains buttons to add/delete files and start/cancel the upload-->
+<div class="row fileupload-buttonbar">
+	<div class="col-lg-7">
+		 <!-- The fileinput-button span is used to style the file input field as button-->
+			<%= form_for Client.new, :html => {:multipart => true, :class=>"col-lg-2"}  do |f| %>
+				<span class="btn btn-success fileinput-button"><i class="fa fa-fw fa-plus"></i>
+					<span>Add files...</span>
+					<%= f.file_field(:logo, :name => "client[logo]", class: "form-control client-images", :multiple => true, required: true) %>
+				</span>
+							<%#= @upload.errors[:logo].join(', ') %>
+							<%#= f.submit class: "btn btn-primary", value: "Add Client" %>
+			<% end %>
+	</div>
+</div>
+<!-- <div class="content-heading">Clients</div> -->
+<!-- Zero Configuration-->
+<div class="panel panel-default">
+	<!-- <div class="panel-heading">Clients manager</div> -->
+	<div class="panel-body">
+		<div class="table-responsive b0">
+			<table id="datatable1" class="table table-striped table-hover">
+				<!-- <thead>
+					<tr>
+						<th class="wd-md">Image</th>
+						<th>Actions</th>
+					</tr>
+				</thead> -->
+				<tbody>
+					<ul id="uploads" class="sortable" data-update-url="<%= sort_clients_path %>">
+						<% @clients.each do |client| %>
+							<%= content_tag_for :li, client, :class => 'col-md-3' do %>
+								<%= image_tag client.logo.url(:original) %>
+								<div class="btn-actions">
+									<%#= link_to edit_client_path(client.id), :class => "btn btn-sm btn-default" do %>
+										<!-- <em class="fa fa-pencil"></em> -->
+									<%# end %>
+									<%= link_to "/admin/clients/#{client.id}", :class => "btn btn-sm btn-danger", method: :delete, :data => {:confirm => "Are you sure?"} do %>
+										<em class="fa fa-trash"></em>
+									<% end %>
+								</div>
+							<% end %>
+						<% end %>
+					</ul>
+					<%# @clients.each do |client| %>
+						<!-- <tr id=<%#= client.id %>> -->
+							<!-- <td><%#= image_tag client.logo.url(:original) %></td> -->
+							<!-- <td class="text-left">
+								<%#= link_to edit_client_path(client.id), :class => "btn btn-sm btn-default" do %>
+									<em class="fa fa-pencil"></em>
+								<%# end %>
+								<%#= link_to "/admin/clients/#{client.id}", :class => "btn btn-sm btn-danger", method: :delete, :data => {:confirm => "Are you sure?"} do %>
+									<em class="fa fa-trash"></em>
+								<%# end %>
+								<%#= link_to '/clients', class: 'btn btn-sm btn-success', target: '_blank' do %>
+									<em class="fa fa-check"></em>
+								<%# end %>
+							</td>
+						</tr> -->
+					<%# end %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

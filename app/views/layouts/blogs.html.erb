@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<%= render 'layouts/parts/blogs/head' %>
+	<body>
+		<div class="mdl-layout mdl-js-layout mdl-layout--overlay-drawer-button">
+			<%= render 'layouts/parts/blogs/header' %>
+			<div class="clear"></div>
+			<%= yield %>
+			<div class="clear"></div>
+			<%= render 'layouts/parts/blogs/footer' %>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<div class="banner-title">
+	<h2>Services</h2>
+	<%= link_to '#' do %>
+		<i class="fa fa-chevron-circle-right" id = "service-menu"></i>
+		<div class="tooltip bottom" role="tooltip">
+			<div class="tooltip-arrow"></div>
+			<div class="tooltip-inner">
+				View Our List of Services
+			</div>
+		</div>
+	<% end %>
+</div>
+<ul class="services-menu-list">
+	<li>
+		<%= link_to  'Web Design', web_design_path %>
+	</li>
+	<li>
+		<%= link_to  'Web Development', web_development_path %>
+	</li>
+	<li>
+		<%= link_to  'Online Marketing', online_marketing_path %>
+	</li>
+	<li>
+		<%= link_to  'Mobile App Development', '#' %>
+	</li>
+	<li>
+		<%= link_to  'UI Development', ui_development_path %>
+	</li>
+	<li>
+		<%= link_to  'Other Services', other_services_path %>
+	</li>
+</ul>

@@ -1,0 +1,51 @@
+<div class="content-heading">Careers</div>
+<!-- Zero Configuration-->
+<div class="panel panel-default">
+	<div class="panel-heading">Careers manager</div>
+	<div class="panel-body">
+		<div class="table-responsive b0">
+			<table id="datatable1" class="table table-striped table-hover">
+				<thead>
+					<tr>
+						<th class="wd-md">Career title</th>
+						<th>Tags</th>
+						<th>Created</th>
+						<th>Updated</th>
+						<th>Current status</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% if @jobs.count > 0 %>
+						<% @jobs.each do |job| %>
+							<tr>
+								<td><%= link_to job.title, career_path(job.slug) %></td>
+								<td>
+									<% job.tags.each do |tag| %>
+										<%= link_to tag, '#', class: 'mr-sm label label-primary' %>
+									<% end %>
+								</td>
+								<td><%= date_format(job.created_at) %></td>
+								<td><%= date_format(job.updated_at) %></td>
+								<td><%= link_to job.job_status.upcase, "#", class: "mr-sm label label-#{ job.job_status == :pending ? 'warning' : 'success' }" %></td>
+								<td class="text-left">
+									<%= link_to edit_career_path(job), :class => "btn btn-sm btn-default" do %>
+										<em class="fa fa-pencil"></em>
+									<% end %>
+									<%= link_to "/admin/careers/#{job.id}", :class => "btn btn-sm btn-danger", method: :delete, :data => {:confirm => "Are you sure?"} do %>
+										<em class="fa fa-trash"></em>
+									<% end %>
+									<%= link_to career_path(job.slug), class: 'btn btn-sm btn-success', target: '_blank' do %>
+										<em class="fa fa-check"></em>
+									<% end %>
+								</td>
+							</tr>
+						<% end %>
+					<% else %>
+						<tr><td><%= flash.now[:notice] = "No records found." %></td></tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,73 @@
+<% content_for :title do %>
+	Jobs at WebEnrich Solutions Pvt. Ltd |SEO, PPC, Social Media, Web Design & Development Jobs in India
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="Welcome to the WebEnrich Solutions Pvt. Ltd. Careers page. Please go through the available jobs in Hyderabad and Bangalore, India.">
+	<meta name="keywords" content="Build your career at one of the fastest growing Web Design, Development, Marketing Company, Web Marketing,  Development careers">
+<% end %>
+<div class="services-page">
+	<div class="mobile-page-main">
+		<div class="main-title">
+			<div class="container">
+				<h1>
+					<%= link_to root_path, :class => 'left' do %>
+						<%= image_tag image_path('mobile/back-arrow.png') %>
+					<% end %>
+					Careers
+					<!-- <a class='dropdown-button right' href='#' data-activates='dropdown1'>
+						<%= image_tag image_path('mobile/options-icon-white.png') %>
+					</a>
+					<ul id='dropdown1' class='dropdown-content'>
+						<li><a href="#!">one</a></li>
+						<li><a href="#!">two</a></li>
+					</ul> -->
+				</h1>
+			</div>
+		</div>
+		<div class="container">
+			<div class="title-content">
+				<h2>
+					We are growing like crazy. We always require new talents.
+				</h2>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<% if @jobs.count > 0  %>
+		<% @jobs.each_with_index do |job, i| %>
+			<% if job.job_status_cd == "public" %>
+				<div class="job-description">
+					<div class="container">
+						<div class="col s12 m6">
+							<div class="card job-card">
+								<div class="card-content">
+									<span class="card-title">JOB CODE - <em><%= job.code %></em></span>
+									<h2 class="left"><%= job.title %></h2>
+									<span class="exp-field left">
+										<em class="left">
+											Experience <%= job.experience %>+ yrs
+										</em>
+										<strong class="left">
+											Location - <%= job.location %>
+										</strong>
+									</span>
+									<p class="left clear">
+										<%= truncate(job.description, length: 150) %>
+									</p>
+								</div>
+								<div class="card-action left">
+									<%= link_to "View details", careers_details_path(job), :class => 'read-more' %>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			<% end %>
+		<% end %>
+		<% else %>
+		<div class="container">
+			<h2 class="no-content">There are no JOBS to display now!</h2>
+		</div>
+	<% end %>
+</div>

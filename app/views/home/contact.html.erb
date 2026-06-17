@@ -1,0 +1,142 @@
+<% content_for :title do %>
+	Contact Us | WebEnrich Solutions Pvt Ltd
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="Please contact WebEnrich for your Web Marketing, Design, Development or any other related information.">
+	<meta name="keywords" content="contact us, webenrich, seo, ppc, sem, web design, development">
+<% end %>
+<div class="page-banner">
+	<div class="services-page clients-page contact-page">
+		<div class="clients-content contact-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="about-we">
+							<div class="banner-title">
+								<h2>Contact Us</h2>
+							</div>
+							<div class="about-intro">
+								<p>If you are curious to hear more about what we can offer, do not hesitate to get in touch.</p>
+								<strong>Send us your brief and learn how we work!</strong>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="client-inner-content contact-inner-content">
+			<div class="container">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="contact-form">
+							<div class="col-md-8">
+								<div class="form-fields">
+									<%= form_for @contact, :url => {:action => 'contact_details'} do |f| %>
+										<div class="col-md-6 no-padding-left">
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+												<%= f.text_field :full_name, :class => 'mdl-textfield__input' %>
+												<%= label_tag 'name', :class => 'mdl-textfield__label' do %>
+													Full Name: <sup>*</sup>
+													<div class="alert-danger pull-right contact-errors"><%= @contact.errors[:full_name].join(', ') %></div>
+												<% end %>
+											</div>
+										</div>
+										<div class="col-md-6 no-padding-right">
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+												<%= f.email_field :email_address, :class => 'mdl-textfield__input' %>
+												<%= label_tag 'name', :class => 'mdl-textfield__label' do %>
+													Email Address: <sup>*</sup>
+													<div class="alert-danger pull-right contact-errors"><%= @contact.errors[:email_address].join(', ') %></div>
+												<% end %>
+											</div>
+										</div>
+										<div class="col-md-6 no-padding-left">
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+												<%= f.text_field :phone, :class => 'mdl-textfield__input', :pattern => '-?[0-9]*(\.[0-9]+)?' %>
+												<%= label_tag 'name', :class => 'mdl-textfield__label' do %>
+													Phone: <sup>*</sup>
+													<div class="alert-danger pull-right contact-errors"><%= @contact.errors[:phone].join(', ') %></div>
+												<% end %>
+											</div>
+										</div>
+										<div class="col-md-6 no-padding-right">
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+												<%= f.text_field :company_name, :class => 'mdl-textfield__input' %>
+												<%= label_tag 'name', :class => 'mdl-textfield__label' do %>
+													Company Name: <!-- <sup>*</sup> -->
+													<div class="alert-danger pull-right"><%= @contact.errors[:company_name].join(', ') %></div>
+												<% end %>
+											</div>
+										</div>
+										<div class="col-md-12 no-padding">
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+												<%= f.text_field :website_url, :class => 'mdl-textfield__input' %>
+												<%= label_tag 'name', :class => 'mdl-textfield__label' do %>
+													Website URL (eg:- http://www.yourwebsite.com)
+													<div class="alert-danger pull-right"><%= @contact.errors[:website_url].join(', ') %></div>
+												<% end %>
+											</div>
+										</div>
+										<div class="col-md-6 no-padding-left">
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+												<%= f.text_area :message, :class => 'mdl-textfield__input' %>
+												<%= label_tag 'name', :class => 'mdl-textfield__label' do %>
+													Message: <sup>*</sup>
+													<div class="alert-danger pull-right contact-errors"><%= @contact.errors[:message].join(', ') %></div>
+												<% end %>
+											</div>
+										</div>
+										<!-- <div class="col-md-6 no-padding-left">
+											<div class="demo">
+												<div class="mdl-selectfield">
+													<label>Best time to get back to you</label>
+													<%#= f.select :best_time, options_for_select([[ "Monday", "Monday" ], [ "Tuesday", "Tuesday" ], [ "Wednesday", "Wednesday" ], [ "Thursday", "Thursday" ], [ "Friday", "Friday" ], [ "Saturday", "Saturday" ], [ "Sunday", "Sunday" ]], @contact.best_time), { :prompt => 'Select Best Time To Call'}, { :class => "browser-default", required: true} %>
+														<div class="alert-danger pull-right contact-errors"><%#= @contact.errors[:best_time].join(', ') %></div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6 no-padding-left preferred-time">
+											<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label textfield-demo">
+												<%#= f.text_field :preferred_time, :class => 'mdl-textfield__input' %>
+												<%#= label_tag 'name', :class => 'mdl-textfield__label' do %>
+													Please mention the time: <sup>*</sup>
+													<div class="alert-danger pull-right"><%#= @contact.errors[:preferred_time].join(', ') %></div>
+												<%# end %>
+											</div>
+										</div> -->
+										<div class="col-md-6 no-padding-right">
+											 <%= recaptcha_tags %>
+											 <div class="alert-danger pull-left contact-errors"><%= @contact.errors["g-recaptcha-response"].join(', ') %></div>
+											<%= submit_tag 'Submit', :class => 'btn' %>
+										</div>
+									<% end %>
+								</div>
+								<div class="google-map">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d724.9542169731671!2d78.39885896948296!3d17.414711578601025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb96b11bd7bf11%3A0x69fd9be37eee3f5!2s201%2C%2045%2C%20Bharani%20Layout%2C%20Jubilee%20Hills%2C%20Hyderabad%2C%20Telangana%20500033%2C%20India!5e1!3m2!1sen!2sus!4v1752591208065!5m2!1sen!2sus"
+    width="100%" 
+    height="350" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+  <%= link_to 'View on Google Map', 'https://www.google.com/maps/place/201,+45,+Bharani+Layout,+Jubilee+Hills,+Hyderabad,+Telangana+500033,+India', target: '_blank', class: 'btn pull-right read-more' %>
+</div>
+							</div>
+						</div>
+						<div class="col-md-1 spacer col-sm-12 hidden-sm"></div>
+						<div class="col-md-3">
+							<div class="contact-address-part">
+								<%= render 'layouts/widgets/contact_address' %>
+							</div>
+							<div class="testimonials-part">
+								<%= render 'layouts/widgets/testimonials' %>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

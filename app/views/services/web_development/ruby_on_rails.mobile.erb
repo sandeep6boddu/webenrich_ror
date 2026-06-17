@@ -1,0 +1,84 @@
+<% content_for :title do %>
+	Ruby on Rails ROR Development Services Company Hyderabad, Bangalore, India
+<% end %>
+<div class="services-page">
+	<div class="mobile-page-main mobile-page-inner">
+		<div class="main-title">
+			<div class="container">
+				<h1>
+					<%= link_to web_development_path, :class => 'left' do %>
+						<%= image_tag image_path('mobile/back-arrow.png') %>
+					<% end %>
+					Ruby On Rails
+				</h1>
+			</div>
+		</div>
+		<div class="container">
+			<div class="title-content">
+				<div class="services-img services-inner-img">
+					<%= image_tag image_path('mobile/ruby-icon2.png'), alt: 'services-inner-img' %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="services-text">
+		<div class="container">
+			<div class="benefits-of-ror">
+				<p>
+					We are one of India's top few Ruby on Rails development companies. We are passionate about code quality, performance and agility.Technologies such as Ruby on Rails, allows us to implement your ideas faster than you might believe and we can easily turn challenging projects into outstanding web applications.
+				</p>
+				<article>
+					We specialize in web and software development using Ruby, Rails, HTML5 and other latest technologies such as Node.js, Backbone.js, Angular.js and cloud technology such as Amazon AWS and Heroku.
+				</article>
+				<%= link_to "Continue Reading", '#', :class => 'waves-effect waves-light btn hide' %>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="card ror-applications">
+			<div class="card-content">
+				<h2>We have developed many large-scale &amp; complex ROR applications, below are few areas we have worked on:</h2>
+				<ul class="collection">
+					<li class="collection-item">Social Networking</li>
+					<li class="collection-item">Web Applications</li>
+					<li class="collection-item">Classifieds</li>
+					<li class="collection-item">Ecommerce</li>
+					<li class="collection-item">Portals</li>
+					<li class="collection-item">Content Management System</li>
+					<li class="collection-item">Data Visualization</li>
+				</ul>
+				<p><%= link_to 'Contact', contact_us_path %> us now to discuss your requirements in detail.</p>
+			</div>
+		</div>
+	</div>
+	<div class="list-of-services list-of-detail-services">
+		<div class="container">
+			<div class="list-of-services-inner">
+				<h2>Other Web Development Services</h2>
+				<div class="card">
+					<ul>
+						<li>
+							<%= link_to core_php_path do %>
+								<strong>Core PHP</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to ecommerce_development_path do %>
+								<strong>E-Commerce Development</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to cms_development_path do %>
+								<strong>CMS Development</strong>
+							<% end %>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Our Clients -->
+	<%= render 'layouts/widgets/our_clients' %>
+	<!-- start-project -->
+	<%= render 'layouts/widgets/start_project' %>
+</div>

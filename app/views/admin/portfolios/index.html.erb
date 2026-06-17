@@ -1,0 +1,35 @@
+<div class="content-heading">Portfolios</div>
+<!-- Zero Configuration-->
+<div class="panel panel-default">
+	<div class="panel-body">
+		<div class="table-responsive b0">
+			<table id="datatable1" class="table table-striped table-hover">
+				<%= link_to new_portfolio_path, {class: "btn btn-sm btn-primary pull-right", :style => 'margin-bottom:20px;'} do %>
+					<em class="fa fa-plus"></em> Add New
+				<% end %>
+				<tbody>
+					<ul id="uploads" class="sortable" data-update-url="<%= sort_portfolios_path %>">
+						<% if @portfolios.count > 0 %>
+							<% @portfolios.each do |portfolio| %>
+								<%= content_tag_for :li, portfolio, :class => 'col-md-4' do %>
+									<strong><%= portfolio.title %></strong>
+									<%= image_tag portfolio.thumb.url(:original) %>
+									<div class="btn-actions">
+										<%= link_to edit_portfolio_path(portfolio.id), :class => "btn btn-sm btn-danger" do %>
+											<em class="fa fa-pencil"></em>
+										<% end %>
+										<%= link_to "/admin/portfolios/#{portfolio.id}", :class => "btn btn-sm btn-danger", method: :delete, :data => {:confirm => "Are you sure?"} do %>
+											<em class="fa fa-trash"></em>
+										<% end %>
+									</div>
+								<% end %>
+							<% end %>
+						<% else %>
+							<tr><td><%= flash.now[:notice] = "No records found." %></td></tr>
+						<% end %>
+					</ul>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,64 @@
+<% content_for :title do %>
+Clients of WebEnrich - A Web Marketing, Design & Development Company
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="WebEnrich's client base includes global leaders and companies from following areas of business like Aviation, Online FundRaising, Coupons, Technology - IT, Real Estate, B2B, B2C, Health, Hospitality services.">
+	<meta name="keywords" content="Clients, seo, ppc, sem, web design, development, webenrich">
+<% end %>
+<div class="page-banner">
+	<div class="services-page clients-page">
+		<div class="clients-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="about-we">
+							<div class="banner-title">
+								<h2>Clients</h2>
+							</div>
+							<div class="about-intro">
+								<p>WebEnrich has had the privilege of working with some of the best clients, as well as many exciting entrepreneurial and start-up companies. No matter what size the client, we are dedicated to providing the highest quality work and the greatest possible return on investment.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="client-inner-content">
+			<div class="container">
+				<div class="col-md-12">
+					<div class="client-logos">
+						<div class="row">
+							<div class="col-md-8 col-sm-12">
+								<div class="row">
+									<ul>
+										<% cache ['clients_list', Client.get_sweep_id] do %>
+											<% if @clients.count > 0 %>
+												<% @clients.each do |client| %>
+													<% cache ['client', client] do %>
+														<li><%= image_tag client.logo.url(:original), :alt => 'client-logo' %>
+														</li>
+													<% end %>
+												<% end %>
+											<% else %>
+												<h2>COMING SOON..!</h2>
+											<% end %>
+										<% end %>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-1 spacer hidden-sm"></div>
+							<div class="col-md-3 hidden-sm">
+								<div class="enquiry-form-part">
+									<%= render 'layouts/widgets/quick_enquiry_form' %>
+								</div>
+								<div class="testimonials-part">
+									<%= render 'layouts/widgets/testimonials' %>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

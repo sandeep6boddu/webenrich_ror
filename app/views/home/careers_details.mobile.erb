@@ -1,0 +1,132 @@
+<% content_for :title do %>
+	<%= @job.meta_title %>
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="<%= @job.meta_description %>">
+	<meta name="keywords" content="<%= @job.meta_keywords %>">
+<% end %>
+<div class="jobs-inner-page">
+	<div class="mobile-page-main">
+		<div class="main-title">
+			<div class="container">
+				<h1>
+					<%= link_to career_home_path, :class => 'left' do %>
+						<%= image_tag image_path('mobile/back-arrow.png') %>
+					<% end %>
+					<%= @job.title %>
+					<%= link_to career_home_path, :class => 'right' do %>
+						<%= image_tag image_path('mobile/close-icon.png') %>
+					<% end %>
+				</h1>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div class="job-description job-detaile-page">
+		<div class="container">
+			<div class="col s12 m6">
+			<div class="card job-card">
+				<div class="card-content">
+					<span class="card-title">JOB CODE - <em><%= @job.code %></em></span>
+					<h2 class="left"><%= @job.title %></h2>
+					<span class="exp-field left">
+						<em class="left">
+							Experience - <%= @job.experience %>+ yrs
+						</em>
+						<strong class="left">
+							Location - <%= @job.location %>
+						</strong>
+					</span>
+					<p class="left">
+						<%= @job.description %>
+					</p>
+					<div class="desired-profile left">
+						<h2>Desired Profile</h2>
+						<ul class="left">
+							<%= raw @job.desired_profile %>
+						</ul>
+					</div>
+					<div class="clear"></div>
+					<div class="apply-section">
+						<%= link_to "Apply", '#modal1', :class => 'btn apply-btn modal-trigger' %>
+					</div>
+					<div class="clear"></div>
+					<strong class="left or">OR</strong>
+					<div class="clear"></div>
+					<div class="send-resume left">
+						<strong>
+							Send Resume to:
+						</strong>
+						<%= mail_to "info@webenrich.com", :class => 'left' do %>
+							<span>info@webenrich.com</span>
+						<% end %>
+					</div>
+					<!-- Modal Structure -->
+					<div id="modal1" class="modal bottom-sheet custom-modal">
+						<div class="modal-content">
+							<h4>Enter your details</h4>
+							<%= form_for @applicant, url: careers_applicant_path, html: {remote: true, class: 'form-horizontal', multipart: true} do |applicant| %>
+								<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+								<div class="row">
+									<div class="col s12">
+										<div class="row">
+											<div class="input-field col s12">
+												<%= applicant.text_field :name, class: 'form-control', required: true %>
+												<%= @applicant.errors[:name].join(', ') %>
+												<label for="name">Name</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="input-field col s12">
+												<%= applicant.email_field :email, class: 'form-control', required: true %>
+												<%= @applicant.errors[:email].join(', ') %>
+												<label for="email">Email</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="input-field col s12">
+												<%= applicant.number_field :mobile_no, class: 'form-control', required: true %>
+												<%= @applicant.errors[:mobile_no].join(', ') %>
+												<label for="number">Mobile No</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="input-field col s12">
+												<%= applicant.text_field :location, class: 'form-control', required: true %>
+												<%= @applicant.errors[:location].join(', ') %>
+												<label for="location_name">Location</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="input-field col s12">
+												<%= applicant.select :experience, options_for_select(0..10), { :prompt => 'Please select experience'},{:class=>"form-control", required: true} %>
+												<%= @applicant.errors[:experience].join(', ') %>
+												<label>Experience</label>
+											</div>
+										</div>
+										<div class="row">
+											<div class="input-field col s12">
+												<%= applicant.file_field :resume, class: 'form-control filestyle', classinput: 'form-control inline', data: {:classbutton => "btn btn-default"} , required: true %>
+												<strong class="file-message"></strong>
+												<%= @applicant.errors[:resume].join(', ') %>
+												<span>Note: Only allowed format .pdf, .doc, .docx.</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+							<div class="modal-footer">
+								<a href="#!" class="right modal-action modal-close waves-effect waves-green btn-flat ">Close</a>
+								<%= button_tag "Save", :class => "btn btn-primary m-t-10 left" do %>
+									<em class="fa fa-check fa-fw"></em>Apply
+								<% end %>
+							</div>
+						<% end %>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>

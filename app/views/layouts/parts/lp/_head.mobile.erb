@@ -1,0 +1,9 @@
+<head>
+	<title>WebEnrich<%= content_for?(:title) ? " - " + yield(:title) : "" %></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="favicon.ico" type="image/png">
+	<%= stylesheet_link_tag 'lp' %>
+	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+	<%= javascript_include_tag 'lp' %>
+	<%= csrf_meta_tags %>
+</head>

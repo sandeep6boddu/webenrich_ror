@@ -1,0 +1,20 @@
+<div class="clients-widget">
+	<div class="testimonials-title clients-title">
+		<h3>Our Clients
+			<span>
+			<%= image_tag 'testimonial-title-span.png', :class => 'img-responsive', :alt => 'Arrow Image' %>
+		</span>
+		</h3>
+	</div>
+	<div class="client-logo single-item">
+		<% cache ['clients_list_scroll', Client.get_sweep_id] do %>
+			<% if @clients.count > 0 %>
+				<% @clients.each do |client| %>
+					<% cache ['client_slide', client] do %>
+						<%= image_tag client.logo.url(:original), :alt => 'client-logo' %>
+					<% end %>
+				<% end %>
+			<% end %>
+		<% end %>
+	</div>
+</div>

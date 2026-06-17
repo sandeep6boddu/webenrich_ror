@@ -1,0 +1,74 @@
+<% content_for :title do %>
+	Clients Testimonials | WebEnrich Solutions Pvt. Ltd.
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="Here are some of our happy clients. Web design, PHP development, SEO, PPC, Social Media client testimonials.">
+	<meta name="keywords" content="Web Design Company, Web Design Firm, Web Designers India, Web Development, website development, Web Design and Development, SEO and web marketing services, SEO Company, CMS and SEO services, PPC, SEM, SMO, India">
+<% end %>
+<div class="page-banner">
+	<div class="clients-page testimonials-page">
+		<div class="clients-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="about-we">
+							<div class="banner-title">
+								<h2>Testimonials</h2>
+							</div>
+							<div class="about-intro">
+								<p>WebEnrich has had the privilege of working with some of the best clients, as well as many exciting entrepreneurial and start-up companies. No matter what size the client, we are dedicated to providing the highest quality work and the greatest possible return on investment.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="testimonials-inner-content">
+			<div class="container">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="client-testimonials">
+							<div class="col-md-9 col-sm-12">
+							<% cache ['testmonials_list', Testimonial.get_sweep_id] do %>
+								<% if @testimonials.count > 1  %>
+										<% @testimonials.each_slice(3) do |testimonial| %>
+												<div class="row">
+													<% testimonial.each do |item| %>
+														<% cache ['testimonial', item] do %>
+															<div class="col-md-4">
+																<div class="testimonials-widget">
+																	<div class="testimonials-widget-img">
+																		<%= image_tag item.avatar.url(:original), :class => 'img-responsive img-circle' %>
+																	</div>
+																	<div class="testimonials-widget-content">
+																		<strong><%= item.name %></strong>
+																		<br/>
+																		<em><%= item.designation %> <% if item.app_name? %>|<% end %> <%= item.app_name %>  </em>
+																		<p><%= raw item.content %> </p>
+																	</div>
+																</div>
+															</div>
+														<% end %>
+													<% end %>
+												</div>
+										<% end %>
+									<% else %>
+										<h2>There are no testimonials to display now!</h2>
+									<% end %>
+								<% end %>
+							</div>
+							<div class="col-md-3 hidden-sm">
+								<div class="enquiry-form-part">
+									<%= render 'layouts/widgets/quick_enquiry_form' %>
+								</div>
+								<div class="clients-slider hidden-sm">
+									<%= render 'layouts/widgets/our_clients_single' %>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

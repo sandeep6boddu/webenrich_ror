@@ -1,0 +1,66 @@
+<div class="ror-form">
+	<div class="container no-gutter">
+		<h3 class="text-center">We can help kick start your project &amp; deliver great results.</h3>
+		<div class="col-md-1"></div>
+		<%= form_for LpContact.new, :url => lp_contact_us_path do |f| %>
+			<div class="col-md-5 no-gutter">
+				<div class="left-form">
+					<div class="form-group <%= flash[:error].present? && flash[:error]['full_name'].present? ? 'error' : '' %>">
+						<%= label_tag '', 'Fullname', class: 'col-sm-3 control-label no-gutter' %>
+						<div class="col-sm-9">
+							<%= f.text_field :full_name, class: 'form-control name ror-form-input' %>
+							<span><%= flash[:error].present? && flash[:error]['full_name'].present? ? flash[:error]['full_name'] : '' %></span>
+						</div>
+					</div>
+					<div class="form-group <%= flash[:error].present? && flash[:error]['full_name'].present? ? 'error' : '' %>">
+						<%= label_tag '', 'Phone', class: 'col-sm-3 control-label no-gutter' %>
+						<div class="col-sm-9">
+							<%= f.text_field :phone, :class => 'ror-form-input form-control', :pattern => '-?[0-9]*(\.[0-9]+)?' %>
+							<span><%= flash[:error].present? && flash[:error]['full_name'].present? ? flash[:error]['phone'] : '' %></span>
+
+						</div>
+					</div>
+					<div class="form-group <%= flash[:error].present? && flash[:error]['full_name'].present? ? 'error' : '' %>">
+						<%= label_tag '', 'Message', class: 'col-sm-3 control-label no-gutter' %>
+						<div class="col-sm-9">
+							<%= f.text_area :message, class: 'form-control ror-form-input' %>
+							<span><%= flash[:error].present? && flash[:error]['full_name'].present? ? flash[:error]['message'] : '' %></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-5 no-gutter">
+				<div class="right-form">
+					<div class="form-group <%= flash[:error].present? && flash[:error]['full_name'].present? ? 'error' : '' %>">
+						<%= label_tag '', 'Email', class: 'col-sm-3 control-label no-gutter' %>
+						<div class="col-sm-9">
+							<%= f.email_field :email_address, class: 'form-control ror-form-input' %>
+							<span><%= flash[:error].present? && flash[:error]['full_name'].present? ? flash[:error]['email_address'] : '' %></span>
+						</div>
+					</div>
+					<div class="form-group <%= flash[:error].present? && flash[:error]['full_name'].present? ? 'error' : '' %>">
+						<%= label_tag '', 'Company', class: 'col-sm-3 control-label no-gutter' %>
+						<div class="col-sm-9">
+							<%= f.text_field :company_name, class: 'form-control ror-form-input' %>
+							<span><%= flash[:error].present? && flash[:error]['full_name'].present? ? flash[:error]['company_name'] : '' %></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<%= label_tag '', 'Captcha', class: 'col-sm-3 control-label no-gutter' %>
+						<div class="col-sm-9">
+						 	<%= recaptcha_tags %>
+							 <div class="alert-danger pull-left contact-errors"><%#= @contact.errors["g-recaptcha-response"].join(', ') %>
+							 </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="ror-submit-btn">
+					<%= submit_tag 'Submit and get started now!!', class: 'text-center text-uppercase submit-btn' %>
+				</div>
+			</div>
+		<% end %>
+		<div class="col-md-1"></div>
+	</div>
+</div>

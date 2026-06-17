@@ -1,0 +1,5 @@
+<% if @uploads.new_record? %>
+	alert("Failed to upload client image: <%= j @uploads.errors.full_messages.join(', ').html_safe %>");
+<% else %>
+	jQuery('#uploads').append("<%= j render :partial => 'admin/clients/uploads', :object => @uploads %>");
+<% end %>

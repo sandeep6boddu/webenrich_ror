@@ -1,0 +1,71 @@
+<% content_for :title do %>
+	Portfolio | WebEnrich
+<% end %>
+<div class="page-banner">
+	<div class="services-page portfolio-page">
+		<div class="services-content portfolio-content">
+			<div class="container">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="banner-title">
+							<h2>Portfolio</h2>
+						</div>
+						<div class="portfolio-list">
+							<div class="service-inner-title portfolio-inner-title">
+								<ul class="nav" id="FilterSelect">
+									<li><a href="#" class="filter active" data-filter="all">All Works</a></li>
+									<% cache ['category_slugs', Category.get_sweep_id] do %>
+										<% Category.find("portfolio").children.order(:position => "asc").each do |category| %>
+											<% cache ['single_category', category] do %>
+												<li><a href="#" class="filter" data-filter=".<%= category.slug %>"><%= category.name %></a></li>
+											<% end %>
+										<% end %>
+									<% end %>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="portfolio-level2">
+							<div class="pager-list"></div>
+							<div class="portfolio-level-bar" id="portfolio-level-bar">
+								<% cache ['portfolio_list', Portfolio.get_sweep_id] do %>
+									<% @portfolios.each do |portfolio| %>
+										<% cache ['portfolio_details', portfolio] do %>
+											<div class="col-md-6 col-sm-12 mix all
+												<% portfolio.categories.each do |category| %>
+													<%= Category.find(category).slug %>
+												<% end %>" >
+												<div class="list-portfolio">
+													<div class="portfolio-img">
+														<%= image_tag portfolio.thumb.url(:original), :class => 'img-responsive', :alt => 'Portfolio Image' %>
+													</div>
+													<div class="portfolio-project-details">
+														<h3><%= portfolio.title %></h3>
+														<div class="portfolio-links">
+															<ul>
+																<li class="portfolio-more">
+																	<%= link_to 'Details', portfolio_details_path(portfolio) %>
+																</li>
+																<% if portfolio.link.present? %>
+																	<li class="portfolio-website">
+																			<%= link_to 'Visit Website', "http://#{portfolio.link}", :target => '_blank' %>
+																	</li>
+																<% end %>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										<% end %>
+									<% end %>
+								<% end %>
+							</div>
+							<div class="pager-list"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

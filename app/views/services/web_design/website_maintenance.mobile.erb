@@ -1,0 +1,85 @@
+<% content_for :title do %>
+	Monthly Website Maintenance Services in Hyderabad, Bangalore, India
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="Try WebEnrich hassle free and affordable website maintenance services for your regular website changes. You can pay as you go or on a monthly or annual contract for your website tweaks, updates, support maintenance tasks.">
+	<meta name="keywords" content="website maintenance, web design maintenance services, tweaks, updates, support, best, affordable, cheap, professional, India">
+<% end %>
+<div class="services-page">
+	<div class="mobile-page-main mobile-page-inner">
+		<div class="main-title">
+			<div class="container">
+				<h1>
+					<%= link_to web_design_path, :class => 'left' do %>
+						<%= image_tag image_path('mobile/back-arrow.png') %>
+					<% end %>
+					Website Maintenance
+				</h1>
+			</div>
+		</div>
+		<div class="container">
+			<div class="title-content">
+				<div class="services-img services-inner-img">
+					<%= image_tag image_path('mobile/website-maintenance-icon.png'), alt: 'services-inner-img' %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="services-text">
+		<div class="container">
+			<div class="web-maintenance-article">
+				<p>
+					Your website is the mirror of your businesses and like any mirror can develop cracks, so can your business. WebEnrich believes that bad codes and faulty website design can damage your online presence.
+				</p>
+				<article>
+					WebEnrich's website maintenance and support services cater to diverse range of problems that your business could face. Our professionals are always prepared to solve any crack that your business may develop, before it actually does.
+				</article>
+				<%= link_to "Continue Reading", '#', :class => 'waves-effect waves-light btn hide' %>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="card web-design-services">
+			<div class="card-content web-maintain-services">
+				<h2>Our Services</h2>
+				<ul class="collection">
+					<li class="collection-item">Elimination of irrelevant and extra codes</li>
+					<li class="collection-item">Updating the content on your website from time to time</li>
+					<li class="collection-item">Changing the graphics to match the revised text</li>
+					<li class="collection-item">Solving any urgent technical issues your website may face instantly.</li>
+				</ul>
+				<p>We also provide you with a comprehensive report of all that we've done. This makes our business solutions sophisticated, cost effective and very much in demand!</p>
+			</div>
+		</div>
+	</div>
+	<div class="list-of-services list-of-detail-services">
+		<div class="container">
+			<div class="list-of-services-inner">
+				<h1>Other Web Design Services</h1>
+				<div class="card">
+					<ul>
+						<li>
+							<%= link_to corporate_branding_path do %>
+								<strong>Corporate Branding</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to mobile_website_design_path do %>
+								<strong>Mobile Website Design</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to responsive_website_design_path do %>
+								<strong>Responsive Website Design</strong>
+							<% end %>
+						</li>
+					</ul>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<!-- Our Clients -->
+	<%= render 'layouts/widgets/our_clients' %>
+	<!-- start-project -->
+	<%= render 'layouts/widgets/start_project' %>
+</div>

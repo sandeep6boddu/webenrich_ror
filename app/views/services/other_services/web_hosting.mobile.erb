@@ -1,0 +1,71 @@
+<% content_for :title do %>
+	Reliable Web Hosting Services in Hyderabad, Bangalore, India
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="WebEnrich provides website hosting services for your personal and business website needs. Best website hosting services in Hyderabad, Bangalore, India.">
+	<meta name="keywords" content="website hosting, web hosting services, best, affordable, cheap, professional, India">
+<% end %>
+<div class="services-page">
+	<div class="mobile-page-main mobile-page-inner">
+		<div class="main-title">
+			<div class="container">
+				<h1>
+					<%= link_to other_services_path, :class => 'left' do %>
+						<%= image_tag image_path('mobile/back-arrow.png') %>
+					<% end %>
+					Web Hosting
+				</h1>
+			</div>
+		</div>
+		<div class="container">
+			<div class="title-content">
+				<div class="services-img services-inner-img">
+					<%= image_tag image_path('mobile/web-hosting-icon.png'), alt: 'services-inner-img' %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="services-text">
+		<div class="container">
+			<div class="corporate-article">
+				<p>
+					At present, Companies are no longer judged by the branches it has but by its clients and off-course its website. WebEnrich helps you expand your online presence through its Web Hosting solutions.
+				</p>
+				<p>
+					WebEnrich is an experienced entry in this field. Our prices are modest, our services reliable and work pattern dedicated to offer you premium features that are flexible and easy to use. At WebEnrich we focus on vital web hosting infrastructure. Our whole approach towards hosting is simple, reliable and just right for your business needs online.
+				</p>
+				<%= link_to "Continue Reading", '#', :class => 'waves-effect waves-light btn hide' %>
+			</div>
+		</div>
+	</div>
+	<div class="list-of-services list-of-detail-services">
+		<div class="container">
+			<div class="other-services-list">
+				<h1>Other Services</h1>
+				<div class="card">
+					<ul>
+						<li>
+							<%= link_to domain_registration_path do %>
+								<strong>Domain Registration</strong>
+							<% end %>
+						</li>
+						<li>
+							<%= link_to content_development_path do %>
+								<strong>Content Development</strong>
+							<% end %>
+						</li>
+						<!-- <li>
+							<%#= link_to corporate_video_presentation_path do %>
+								<strong>Corporate Video Presentation</strong>
+							<%# end %>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Our Clients -->
+	<%= render 'layouts/widgets/our_clients' %>
+	<!-- start-project -->
+	<%= render 'layouts/widgets/start_project' %>
+</div>

@@ -1,0 +1,43 @@
+<header>
+	<div class="row">
+		<div class="container">
+			<%= link_to '/' do %>
+				<%= image_tag ('logo.png'), :class => 'left mobile-logo', :alt => 'Brand Logo' %>
+			<% end %>
+			<a href="#" data-activates="slide-out" class="button-collapse dropdown-icon">
+				<%= image_tag image_path('mobile/mobile-menu-icon.png'), :class => 'right', :alt => 'mobile-dropdown-icon' %>
+			</a>
+		</div>
+	</div>
+</header>
+<ul id="slide-out" class="side-nav fixed mobile-nav">
+	<li class="">
+		<div class="mdl-layout-drawer-icons mdl-color--light-blue mdl-color-text--white">
+			<%=link_to '/blog', :class => 'left' do %>
+				<i class="material-icons">chevron_left</i>
+			<% end %>
+			<%=link_to '/blog', :class => 'right' do %>
+				<i class="material-icons" role="presentation">home</i>
+			<% end %>
+		</div>
+	</li>
+	<li class="clear"></li>
+	<li>
+		Categories
+	</li>
+	<% Category.find("blog").children.each do |category| %>
+		<li class="categories-list">
+			<%= link_to category.name, blog_category_path(category.slug), :class => "#{ 'active' if category.slug == params[:category]}" %>
+		</li>
+	<% end %>
+</ul>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		fjs.parentNode.insertBefore(js, fjs);
+}
+(document, 'script', 'facebook-jssdk'));
+</script>

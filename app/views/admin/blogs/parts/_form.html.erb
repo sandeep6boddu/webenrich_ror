@@ -1,0 +1,103 @@
+
+<section>
+		<!-- Page content-->
+	<div class="content-wrapper">
+		<div class="content-heading">New Article</div>
+		<div class="alert alert-info">
+			<em class="fa fa-exclamation-circle fa-lg fa-fw"></em>
+			<span>There is an autosaved version of this article that is more recent than the version below. <a href="#" class="text-white">Restore</a>
+			</span>
+		</div>
+		<%= form_for @blog, html: {class: "form-horizontal"}, :data => {:parsley_validate=>""} do |f| %>
+			<div class="row">
+				<!-- Article Content-->
+				<div class="col-lg-9">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<fieldset>
+								<div class="form-group">
+									<label class="col-md-3 control-label text-left">Blog Title: </label>
+									<div class="col-md-9">
+										<%= f.text_field :title, class: "form-control", placeholder: "Blog Title...", required: true %>
+										<%= @blog.errors[:title].join(', ') %>
+									</div>
+								</div>
+							</fieldset>
+							<fieldset>
+								<div class="form-group">
+									<label class="col-md-3 text-left control-label ">Upload Banner: </label>
+									<div class="col-md-9">
+										<%= f.file_field :banner, class: 'form-control filestyle', classinput: 'form-control inline', data: {:classbutton => "btn btn-default"} %>
+										<%= @blog.errors[:banner].join(', ') %>
+										<span>*Upload only JPG or PNG images</span>
+									</div>
+								</div>
+							</fieldset>
+							<fieldset>
+								<div class="form-group">
+									<label class="col-md-3 control-label">Category: </label>
+									<div class="col-md-8">
+										<%= select_tag "categories[]", options_from_collection_for_select(Category.where(name: "Blog").first.children, 'id', 'name',  @blog.categories),  :multiple => 'multiple', :required => 'true' %>
+										<%= @blog.errors[:category].join(', ') %>
+										<span>*You can select Multiple categories</span>
+									</div>
+								</div>
+							</fieldset>
+							<fieldset>
+								<!-- Wysiswyg tooblbar-->
+								<%= label_tag 'Description:' %>
+									<div  class="text-small">
+										<%= f.text_area :content, class: 'form-control ', classinput: 'form-control inline', id: "eg-basic" %>
+										<%= @blog.errors[:content].join(', ') %>
+									</div>
+								<!-- Wysiswyg Editor-->
+							</fieldset>
+							<%= f.check_box(:featured, {}, "yes", "no") %>
+							<%= label_tag '', 'Featured:', class:'pull-left', style: 'margin-right: 10px;' %>
+							<%= @blog.errors[:featured].join(', ') %>
+							<div class="row">
+								<div class="col-lg-12 col-md-12">
+									<div class="clearfix">
+										<div class="pull-right">
+											<%= f.button "Save", :class => "btn btn-primary m-t-10" do %>
+												<em class="fa fa-check fa-fw"></em> Save
+											<% end %>
+										</div>
+										<div class="pull-left">
+											<%= link_to admin_path, :class => "btn btn-danger" do %>
+												<i class="fa fa-undo"></i> Cancel
+											<% end %>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Article sidebar-->
+				<div class="col-lg-3">
+					<div class="panel panel-default">
+						<div class="panel-body" style="margin: 10px;">
+							<p class="lead">SEO Metadata</p>
+							<div class="form-group">
+								<p>Title</p>
+								<%= f.text_field :meta_title, class: "form-control", placeholder: "Meta Title...", required: true %>
+								<%= @blog.errors[:meta_title].join(', ') %>
+							</div>
+							<div class="form-group">
+								<p>Description:</p>
+								<%= f.text_area :meta_description, class: "form-control", placeholder: "Max 255 characters...", rows: 5, required: true %>
+								<%= @blog.errors[:meta_description].join(', ') %>
+							</div>
+							<div class="form-group">
+								<p>Keywords:</p>
+								<%= f.text_area :meta_keywords, class: "form-control", placeholder: "Max 1000 characters...", rows: 5, required: true %>
+								<%= @blog.errors[:meta_keywords].join(', ') %>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<% end %>
+	</div>	
+</section>

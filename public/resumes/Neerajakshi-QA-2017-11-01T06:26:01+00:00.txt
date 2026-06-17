@@ -1,0 +1,301 @@
+NEERAJAKSHI.K 
+Email: neerajakshi@gmail.com; Contact: 91 9160732312
+
+TEST Lead
+Around 8+ years of successful experience in Software Manual  and Automation Testing, which includes one year on test planning and team management skills.
+
+PROFILE
+
+
+Extensive experience in Google's SAML APP's Auto provisioning and Data Migration with different server's
+Experience on Payroll applications like Pay@work and Service@Work, travel domains and content management.
+In-depth understanding and expertise in Software Testing on Windows Environment & Web portal Environment
+Skilled in preparing the effort estimation, project planning, identifying technical solutions and mitigating risks.
+Strong work experience in test pack preparation including identification of test scenarios, test case, test steps and test data.
+Proven ability to manage in dynamic environments.
+Played a significant role in managing in all testing activities from my projects.
+Highly proficient with the Manual Testing, Quality Center and Test Management activities.
+Extensive experience in preparing Test Plans, QA Process document, Use Cases, User Guide, Release Notes, Checklists, KT Plan and Installation Guide.
+Extensive experience in Authoring and execution of Test Cases, Test Reports, and Bug Reports.
+Analyze high-risk areas of the assigned project section and create the risk analysis document to ensure appropriate priority is placed on the conditions being tested.
+Extensive experience in Web Based applications testing and applying relevant Optimization techniques 
+Extensive experience in preparing Daily, Weekly status reports, Productivity and Test Metrics.
+Overall testing responsibilities include Functional Testing, Database testing, System Testing, Regression Testing, UAT, Cross browser, Interoperability testing and Webservices testing.
+Extensive experience in using Quality Centre and Manual reports for Bug reporting and tracking. And used various defect tracking tools like Rally, QC, Bug zilla, mantis, MS Product Studio and VSO
+Coordinating with the Clients, Testing and Development team members on regular basis for test execution.
+Done various types of testing like Service Test passes, Buddy Testing, CV List validation testing for IE browser on various OS and browsers combinations.
+Have good exposure Selenium Webdriver.
+Profound experience of automated testing tools database management such as QTP (9.2) and VB Scripting language.
+Good  experience of systems and  SQL Queries
+Good working knowledge of data analysis, and SQL testing
+Knowledge and exposure on Mobile application testing
+Exposure on adb commands in android studio.
+
+
+Highlights:  8+ years of strong functional and 1 year in Automation Tool like QTP
+
+8+ years of experience in Software testing which includes manual, SAML APPS, DMS, Web services and automation testing using QTP.
+Having ability to work with any type of Service provider for Auto provisioning
+Proven ability to work on different servers for Data migration.
+Having ability in developing theÿscripts in Webdriver with TestNG.
+Very good Knowledge and experience in various frameworks like Keyword Driven, Data Driven and Hybrid Frameworks
+Experience in project oversight and independent validation & verification.
+Thorough hand on experience with all levels of testing including Sanity, Usability, Functional, Integration, Regression, Re-testing and User Acceptance Testing.
+Solid skills in defining the test approach and laying a strong foundation for the test set up
+Experience and knowledge in preparing test effort estimations.
+Proven ability to deliver high quality IT products and services on schedule and under budget.
+In depth knowledge of defect tracking and defect reporting using test management tools like Quality Centre, Bug Zilla, Mantis, Product studio and VSO. 
+Track record of meeting project deadlines.
+An enthusiastic, goal oriented, dependable team player and problem solver.
+Analytical, adaptable and committed to work. Detail oriented with ability to learn and lead.
+Ability to develop positive relationships with individuals on the project team, partners and customers.
+
+Core Competencies : Google SAML APP's Auto Provisioning, Data migration with different servers, Payroll applications, Travel domain, content management and Microsoft Internet explorer browser compatibility and CV list validation testing.
+
+Strong work experience on Different projects
+
+Google- SAML App's Auto provisioning and Data Migration Services.
+ADP- S@W and P@W Payroll Application
+MS IE browser compatibility, accessibility, functionality and CV list validation
+CCH
+Pepsi-co
+Texas Instruments
+Travel Port 
+
+Employment details
+
+Working as a Lead QA in Google Inc., under Indecomm Global Services from May 2016 to till date.
+Worked as a Senior QA in ADP under Resource square payroll from Feb 2015 to till date.
+Worked as Test Specialist at Mindtree Ltd, Hyderabad from June 2007 till Feb 2015.
+
+International work experience
+
+Infineon Technologies at Munich, Germany (MS internship)
+  
+EDUCATIONAL CREDENTIALS
+
+MS in 2005
+RWTH University, Aachen (Germany); Grade: 3
+
+B Tech in 2001
+JNT University Hyderabad (A.P); 76%
+
+Diploma in Electrical Engineering, 1997
+Andhra polytechnic, Kakinada (AP); 75% First class
+
+10th, 1993
+Tadepalligudem (AP); 77%
+
+References: Available on Request
+
+Project Experience summary
+
+At Google (Vendor), Hyderabad
+ 
+Project Title	Autoprov-ENG and DMS	   
+Client	Google India.	   
+Role 	Sr. QA	   
+Duration	May 2016 to till Date.	   
+Team Size	15	   
+Application Synopsis	SAML  is an XML-based open standard data format for exchanging authentication and authorization data between parties, in particular, between an identity provider and a service provider. Enterprise customers use various Services (applications) from different providers, and they want users to login once and have their credentials recognized by all these applications. Administrators manage user identities and access to applications. They would like to create, modify, or delete an identity once, and have that identity respected by all applications in the organization. They would like to create, modify or delete access one time, and have that access respected by all applications. Administrators should be able to make these changes in one place. To be able to centrally manage their Identities with Google, one option is to make Google SAML Identity Provider
+Data Migration Service (DMS) will provide an ability to migrate apps data from Legacy System (Exchange) to Google Apps. This would be useful when an organization wants to migrate from a legacy system like Exchange, Dropbox, Box, etc. to Google Apps.
+
+SAML - APP's Auto provisioning ( including Salesforce, Facebook, slack etc.,)
+Data Migration Service with Mails, Contacts and Calendar .
+	   
+Accountabilities	Worked on all SAML App's launched till now. (salesforce, Facebook, Slack, Box and Salesforce Sandbox)
+Working on planned launch of APPs as Freshdesk, LucidChart, Asana, Dialpad, RingCentral Office and SmartSheet.
+Worked on Data Migration Services From Gsuite to Exchange servers, office 365, godaddy and gmail.
+Tested all binary changes in QA environment.
+Worked on feature changes of the DMS and SAML APPs
+Worked with Linux commands
+Performed Regression testing on weekly basis for all of the release SAML APP's
+Worked on all end to end scenarios for all the new SAML App's provisioned for Auto provisioned
+Review of test cases, develop test cases and share it in sheets.
+Involved in bug triage meetings.
+Verified all of the assigned bugs in buganizer
+Logged feature request in buganizer.
+Escalated issues with regards to applications and  forward with new ideas.
+Involved in all Sanity check's for all releases
+Worked on Customer support issues.
+Frequent status check with the Team Lead to ensure timely delivery of different launches
+	 
+At ADP (Contractor), Hyderabad
+ 
+Project Title	Pay@Work and Service@Work, HCM Domain	   
+Client	ES canada.	   
+Role 	Sr. Member Technical	   
+Duration	Feb 2015 to Nov 2016.	   
+Team Size	10	   
+Application Synopsis	ADP Canada provides a host of business solutions for small/medium/large business ranging from Employee Screening to Payroll Processing and Tax processing. Customers are free to choose all of these services or start with one or two offerings and upgrade over a period of time to other services.
+
+Pay@work is a web application, which allows the users to manage the payroll data and process the employee's payroll. It is an application used by various market segments like national and international Canadian clients. Various operations like Opening a pay period schedule, Creating payroll entries, request preview payroll, view preview results, process final payroll and viewing payroll reports can be performed using this application. It also maintains the details of Hiring and Terminating an employee. The data in this application is protected providing multiple levels of security and digital certificates. pay@work application is standalone as well as integrated with people@work, User Admin, ATA and Ezlm applications
+
+Service@work is an interface to the paytech mainframe system. The following high level functionalities can be done through Service@work application
+
+Company Setup ( including setting up of earnings and deductions )
+Client billing related information.
+Validating the customer tables 
+Validating the mainframe reports for the inserting billing units.
+	   
+Accountabilities	Working on User stories, involved in all grooming sessions
+Involved in manual mainly focused on functional and accessibility with different browser version.
+Worked on all end to end scenarios.
+Providing suggestions to the BA's in making the product more users friendly
+Review of test cases, develop test cases and import to Rally tool.
+Involved in Effort estimation for each Sprint.
+Developed defect categorization and site categorization reports
+Escalated issues with regards to requirements & participating in driving the team forward with new ideas.
+Identify the test cases needs to automated
+Involved in health check for all releases
+Worked for all production support issues.
+Keeping track of Hardware and software requirements for the Test Environment.
+Frequent status check with the Team Lead to ensure timely delivery of different milestones
+Development of PDV documents after every release.
+Projecting the Execution progress using the Pivot tables & charts to the Senior Leadership teams.
+Escalating the issues or concerns to the Management and timely follow-up.
+Participated in daily project review meetings & discussions with the client
+	 
+
+Project Experience summary
+At Mindtree, Hyderabad
+ 
+Project Title	MS IE Testing	   
+Client	Microsoft Inc.	   
+Role 	Test Specialist 	   
+Duration	Aug 2011 to till Feb 2015.	   
+Team Size	9	   
+Application Synopsis	MS IE Testing is a Microsoft project.  The scope of the project is to test functionality and compatibility of different domains (websites) 
+Furnished by Microsoft on different browsers with several OS combinations.  The browsers that are tested in the project are IE9 and IE10. This project involves the testing (functionality and compatibility) on different domains on OS like Windows 7 and Windows 8 with different browser combination like IE9 Native mode, IE8 -Native Mode, Firefox, Google Chrome and safari.  Functionality testing includes the testing various features of browser like Installation/ Uninstallation, Add-ons, windows apps, accessibility,
+Tracking protection, ActiveX filtering. It also includes the testing of Metro style browser in Windows 8 and Windows 8.1 OS.
+	   
+Accountabilities	Identification of test scenario, Scenario's preparation and developing   Test cases and test environment set-up.
+Involved in manual mainly focused on functional and compatibility with different browser version.
+Review of test pack, defect management, QA, publishing of daily and Weekly status.
+Weekly and monthly project report/Productivity status preparation.
+Effort estimation for each test pass and ad-hoc tasks.
+Developed defect categorization and site categorization reports
+Ensures employee training on quality issues and conducting sessions to share domain knowledge to new joiners as well as to the team members.
+Escalated issues with regards to requirements & participating in driving the team forward with new ideas.
+Worked on Functionality and Compatibility testing of different sites on different browsers with different OS.
+Performed CV list validation and removal validation testing means leading with CVList version.
+Involved in different types of tasks like Ad hoc testing, Bug scrubbing, Patch testing, Accessibility testing , ASP.Net testing and Buddy testing.
+Involved in build copy and installation process to set up the test bed.
+Mentoring the junior team members and delivering KT sessions.
+Performing the smoke testing and Report the status to TL
+Perform Regression testing and upload the bugs in VSO
+Identify the test cases needs to automated
+Keeping track of Hardware and software requirements for the Test Environment.
+Frequent status check with the Team Lead to ensure timely delivery of different milestones
+	   
+Title	Commerce Clearance House (CCH) ( CCH-UAT-ECA)	   
+Client	Wolters Kluwer	   
+Role 	Test Specialist	   
+Duration	Jan 2010 to Aug-2010	   
+Team Size	4	   
+Application Synopsis	INTELLICONNECT is a Research Web Interface developed on Atlas Core. It has most of the key features of Atlas Core. Research Web Interface is a template or white-label web interface and this template must be first instantiated to produce the resulting Web User Interface (Research Site) that is accessed by customers through a specific URL. The Intelli Connect application suite provides you with all of the research tools to operate at its maximum capacity
+	   
+Accountabilities
+
+
+
+
+
+
+	Participated in functional study of the Application
+Developed Business scenario's and test cases. Reviewed other team member's test cases.
+Participated in Functional testing
+Debugging and defect reporting
+Analyse test results 
+Involved in Client discussions
+Involved in knowledge transfer session on scenario's
+Helping the team members in case of any issues concerned while executing test cases
+Maintaining the documentation of reported bugs for further reference
+Involved in QA process 	 
+
+  
+Title	PEPSI CUSTOMER CONNECT  (PCC) 	   
+Client	Pepsi PCC, USA	   
+Role 	Senior Test Engineer	   
+Duration	May 2009 to December 2009	   
+Team Size	15	   
+Application Synopsis	Pepsi PCC (Pepsi Customer Connect PCNA)
+PCNA (Pepsi Cola North America is a fully owned subsidiary of PepsiCo Inc., Headquarters is at Purchase, New York, U.S.
+Main business industry belongs to Food and Non-alcoholic beverage, primarily sells concentrate for carbonated soft drinks to North America Market. Products from PCNA are Pepsi, Diet Pepsi, Mountain Dew, Sierra Mist, Lay's, Fritos, Ruffles, etc.,  Revenue is USD 43.251 Billion (2008).
+Removal of Legacy system numbering schemes and limitations across applications along with removal of PCNA reliance on Mainframe Technology and antiquated techniques for data (Productivity).Development of single source of distribution and maintenance for Customer data and development of a PCNA solution that can integrate with the PepsiCo Enterprise solution by 2012.
+	   
+Accountabilities
+
+
+
+
+
+
+	Preparation of Test Cases through requirements based on Wireframe diagrams
+Developing Functional and Business scenario's 
+Participated in functional study of the Application
+Participated in Functional, debugging and defect reporting
+Developed test cases and execution.
+Hands on experience to connect to database and verify the front end data with back end database. Worked on all DML commands.
+Run database queries to validate the front end applications results
+Analyse test results and Bugs reported in H P Quality center
+Involved in Client discussions
+Involved in knowledge transfer session on scenario's
+Helping the team members in case of any issues concerned while developing test cases
+Maintaining the documentation of reported bugs for further reference.
+	   
+Title	CDDS (Collaborative Design and Delivery System)
+	   
+Client	Texas Instruments, USA	   
+Role 	Senior Test Engineer	   
+Duration	July 2008 to May 2009	   
+Team Size	5	   
+Application Synopsis	Collaborative Design and Delivery System (CDDS, Texas Instruments)
+TI's Collaborative Design and Delivery System (CDDS) is a secure web-based application that provides a centralized environment to manage and exchange Intellectual Property (IP) and associated design data. The primary purpose of this product is to allow Customers of Texas Instruments is able to make a Repository of their Designs documents and inserting the incidents, bugs, change requests, actions, alerts and Requirements. It has mainly five modules concerned with Document Management, Design Repository (mainly for IC's and IC components), Bug and Change Managements, Design Management and User Management. It is a web based application tested through automation using QTP 9.2 using keyword driven framework.
+	   
+Accountabilities
+
+
+
+
+
+
+	Preparation of Test script through requirements based on keyword driven framework
+Participated in functional study of the Application
+Participated in Functional testing using QTP tool.
+ Debugging and defect reporting.
+Analyse test results and Bugs reported in Mercury Quality center
+Involved in Client discussions
+Suggestions on handling the functions while executing scripts.
+Helping the team members in case of any issues concerned while running the scripts
+Maintaining the documentation of reported bugs for further reference
+	   
+Title	FA Calculator (Financial Assistance Calculator)
+	   
+Client	Travel Port, UK	   
+Role 	Test Engineer	   
+Duration	July 2007 to December 2007	   
+Team Size	5	   
+Application Synopsis	FA CALCULATOR (Travelport_EU QA_COE)
+Airline vendors give payments to Galileo GDS (Global Distribution System) for the bookings done for the Airlines by Galileo GDS. Galileo International in turn give an incentive to the Travel Agents who do their bookings using Galileo's GDS. 
+	   
+Accountabilities
+
+
+
+
+
+
+	Participated in functional study of the Application
+Developed test cases in QC and executed them
+Participated in Functional, Regression Testing and Ad hoc testing 
+Done webservices testing using Soap UI tool
+Analyse test results and Bugs reported in Mercury Quality centre
+Involved in Client calls and discussions
+Handled the whole Project responsibility and Prepared final presentations for Knowledge transfer.
+Mentoring two of my team mates
+Review test cases.
+	 
+
+
+

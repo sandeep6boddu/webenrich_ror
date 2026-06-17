@@ -1,0 +1,78 @@
+<% content_for :title do %>
+	Jobs at WebEnrich Solutions Pvt. Ltd |SEO, PPC, Social Media, Web Design & Development Jobs in India
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="Welcome to the WebEnrich Solutions Pvt. Ltd. Careers page. Please go through the available jobs in Hyderabad and Bangalore, India.">
+	<meta name="keywords" content="Build your career at one of the fastest growing Web Design, Development, Marketing Company, Web Marketing,  Development careers">
+<% end %>
+<div class="page-banner">
+	<div class="services-page careers-page">
+		<div class="services-content careers-content">
+			<div class="container">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="banner-title">
+							<h2>Careers</h2>
+						</div>
+						<div class="services-intro careers-intro">
+							<div class="col-md-6 col-sm-12 left-content">
+								<%= image_tag 'careers-content-img.png', :alt => 'Careers Image' %>
+							</div>
+							<div class="col-md-6 col-sm-12 right-content">
+								<h2>Want to join the band?</h2>
+								<h3>We’re growing like crazy.<br /><br />
+									So we always need more talented people to join our team.
+								</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="services-list careers-list">
+			<div class="container">
+				<div class="show-careers">
+					<div class="col-md-12">
+						<% cache ['careers_list', Career.get_sweep_id] do %>
+							<% if @jobs.count > 0 %>
+								<% @jobs.each_with_index do |job, i| %>
+									<% cache ['single_career', job] do %>
+										<div class="row">
+											<div class="col-md-7 <%= i.odd? ? 'col-md-offset-5' : 'no-padding-right'%>">
+												<div class="<%= i.odd? ? 'career-desc-right' : 'career-desc-left' %>">
+													<div class="career-brief">
+														<div class="job-code-block">
+															<h2 class="job-code-title">Job Code</h2>
+															<h2 class="job-code"><%= job.code %></h2>
+														</div>
+														<div class="job-title-block">
+															<div class="job-title">
+																<h2><%= job.title %></h2>
+																<ul>
+																	<li><strong>Experience:</strong> <%= job.experience %>+ yrs</li>
+																	<li class="job-location"><strong>Location:</strong> <%= job.location %></li>
+																</ul>
+															</div>
+															<div class="job-description">
+																<p><%= truncate(job.description, length: 150) %></p>
+																<%= link_to 'Know More', careers_details_path(job), :class => 'btn read-more know-more' %>
+															</div>
+														</div>
+														<em class="sl-number"><%= sprintf '%02d', i + 1 %></em>
+														<span><%= image_tag "career-brief-arrow-#{i.odd? ? 'left' : 'right' }.png", :alt => 'career-arrow' %></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									<% end %>
+								<% end %>
+							<% else %>
+								<h2>There are no JOBS to display now!</h2>
+							<% end %>
+						<% end %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

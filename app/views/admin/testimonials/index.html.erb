@@ -1,0 +1,45 @@
+<div class="content-heading">Testimonials</div>
+<!-- Zero Configuration-->
+<div class="panel panel-default">
+	<div class="panel-heading">Testimonial manager</div>
+	<div class="panel-body">
+		<div class="table-responsive b0">
+			<table id="datatable1" class="table table-striped table-hover">
+				<thead>
+					<tr>
+						<th class="wd-md">Avatar</th>
+						<th>Name</th>
+						<th>Website Name</th>
+						<th>Current status</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% if @testimonials.count > 0 %>
+						<% @testimonials.each do |testimonial| %>
+							<tr>
+								<td><%= image_tag testimonial.avatar.url(:original) %></td>
+								<td><%= link_to testimonial.name %></td>
+								<td><%= testimonial.app_name %></td>
+								<td><%= link_to testimonial.status.upcase, "#", class: "mr-sm label label-#{ testimonial.status == :pending ? 'warning' : 'success' }" %></td>
+								<td class="text-left">
+									<%= link_to edit_testimonial_path(testimonial.id), :class => "btn btn-sm btn-default" do %>
+										<em class="fa fa-pencil"></em>
+									<% end %>
+									<%= link_to "/admin/testimonials/#{testimonial.id}", :class => "btn btn-sm btn-danger", method: :delete, :data => {:confirm => "Are you sure?"} do %>
+										<em class="fa fa-trash"></em>
+									<% end %>
+									<%= link_to '/testimonials', class: 'btn btn-sm btn-success', target: '_blank' do %>
+										<em class="fa fa-check"></em>
+									<% end %>
+								</td>
+							</tr>
+						<% end %>
+					<% else %>
+						<tr><td><%= flash.now[:notice] = "No records found." %></td></tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

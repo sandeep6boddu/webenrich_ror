@@ -1,0 +1,98 @@
+<% content_for :title do %>
+	Our Process | WebEnrich
+<% end %>
+<% content_for :meta_tags do %>
+	<meta name="description" content="Our Process, WebEnrich">
+	<!-- <meta name="keywords" content=" "> -->
+<% end %>
+<div class="services-page">
+	<div class="mobile-page-main mobile-page-inner">
+		<div class="main-title">
+			<div class="container">
+				<h1>
+					<%= link_to root_path, :class => 'left' do %>
+						<%= image_tag image_path('mobile/back-arrow.png') %>
+					<% end %>
+					Our Process
+				</h1>
+			</div>
+		</div>
+	</div>
+	<div class="services-text">
+		<div class="container">
+			<div class="cust-accordian">
+				<div class="clear"></div>
+				<div class="process-image">
+					<%= image_tag image_path('mobile/step1-img.png') %>
+				</div>
+				<ul class="collapsible popout" data-collapsible="accordion">
+					<li>
+						<div class="collapsible-header">
+							<%= image_tag image_path('step1-content-img.png') %>
+							LEARN
+						</div>
+						<div class="collapsible-body"><p>Tell us about your business, your industry and your aspirations. The first stage of planning is learning all the facts.</p></div>
+					</li>
+					<li>
+						<div class="collapsible-header">
+							<%= image_tag image_path('step1-content2-img.png') %>
+							ANALYSIS
+						</div>
+						<div class="collapsible-body"><p>Great strategies require true understanding. We devote considerable thinking time and research into each of our projects.</p></div>
+					</li>
+					<li>
+						<div class="collapsible-header">
+							<%= image_tag image_path('step1-content3-img.png') %>
+							STRATEGY
+						</div>
+						<div class="collapsible-body"><p>Once we understand you and your market, we apply creativity, experience and expertise to create a winning strategy.</p></div>
+					</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+			<div class="cust-accordian">
+				<div class="clear"></div>
+				<div class="process-image">
+					<%= image_tag image_path('mobile/step2-img.png') %>
+				</div>
+				<ul class="collapsible popout" data-collapsible="accordion">
+					<li>
+						<div class="collapsible-header">
+							<%= image_tag image_path('step2-content1-img.png') %>
+							DESIGN
+						</div>
+						<div class="collapsible-body"><p>Based on our learning we use all our skills to produce the industry specific designs.</p></div>
+					</li>
+					<li>
+						<div class="collapsible-header">
+							<%= image_tag image_path('step2-content2-img.png') %>
+							BUILD
+						</div>
+						<div class="collapsible-body"><p>Our developers jump in to take it to the next level by bringing learning to the reality.</p></div>
+					</li>
+					<li>
+						<div class="collapsible-header">
+							<%= image_tag image_path('step2-content3-img.png') %>
+							TEST
+						</div>
+						<div class="collapsible-body"><p>During all the process testing to the details to ensure project quality and on time delivery.</p></div>
+					</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+			<div class="cust-accordian">
+				<div class="clear"></div>
+				<div class="process-image">
+					<%= image_tag image_path('mobile/step3-img.png') %>
+				</div>
+				<div class="clear"></div>
+				<p>As we complete the project cycle we deploy the application to the server to go live.</p>
+				<div class="clear"></div>
+				<%= link_to "Visit Portfolio", '#' %> | <%= link_to "View Services", services_path %>
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<!-- Our Clients -->
+	<%= render 'layouts/widgets/our_clients' %>	
+</div>
